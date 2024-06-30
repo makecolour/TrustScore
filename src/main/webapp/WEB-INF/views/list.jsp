@@ -73,7 +73,7 @@
         <div class="breadcrumb-row">
             <div class="container">
                 <ul class="list-inline">
-                    <li><a href="#">Home</a></li>
+                    <li><a href="/">Home</a></li>
                     <li>Service Providers</li>
                 </ul>
             </div>
@@ -92,7 +92,7 @@
                             <div class="widget courses-search-bx placeani">
                                 <div class="form-group">
                                     <div class="input-group">
-                                        <form action="${pageContext.request.contextPath}/test/list" method="get">
+                                        <form action="${pageContext.request.contextPath}/list" method="get">
                                             <div class="input-group">
                                                 <label>Search Service Provider</label>
                                                 <input name="q" type="text" class="form-control"
@@ -147,12 +147,12 @@
                                                             <img src="/assets/images/gallery/FUHL.jpg" alt="">
                                                         </c:otherwise>
                                                     </c:choose>
-                                                    <a href="${pageContext.request.contextPath}/test/profile?owner=${fn:replace(object.get('owner').asText(), '\"', '')}"
+                                                    <a href="${pageContext.request.contextPath}/profile?owner=${fn:replace(object.get('owner').asText(), '\"', '')}"
                                                        class="btn">View Profile</a>
                                                 </div>
                                                 <div class="info-bx text-center">
 
-                                                    <h5><a href="/test/profile?owner=${fn:replace(object.get('owner').asText(), '\"', '')}">
+                                                    <h5><a href="/profile?owner=${fn:replace(object.get('owner').asText(), '\"', '')}">
                                                                 ${object.hasNonNull('facebook_name') ? object.get('facebook_name').asText() : fn:replace(object.get('owner').asText(), '\"', '')}
                                                     </a></h5>
                                                         <span>${object.get('owner')}</span>
@@ -189,20 +189,20 @@
                                 <ul class="pagination">
                                     <c:if test="${currentPage > 0}">
                                         <li class="page-item">
-                                            <a class="page-link" href="${pageContext.request.contextPath}/test/list?q=${query}&page=${currentPage - 1}">Previous</a>
+                                            <a class="page-link" href="${pageContext.request.contextPath}/list?q=${query}&page=${currentPage - 1}">Previous</a>
                                         </li>
                                     </c:if>
                                     <c:if test="${totalPages < 3}">
                                         <c:forEach var="i" begin="0" end="${totalPages}">
                                             <li class="page-item ${i == currentPage ? 'active' : ''}">
-                                                <a class="page-link" href="${pageContext.request.contextPath}/test/list?q=${query}&page=${i}">${i+1}</a>
+                                                <a class="page-link" href="${pageContext.request.contextPath}/list?q=${query}&page=${i}">${i+1}</a>
                                             </li>
                                         </c:forEach>
                                     </c:if>
                                     <c:if test="${totalPages > 3}">
                                         <c:forEach var="i" begin="0" end="3">
                                             <li class="page-item ${i == currentPage ? 'active' : ''}">
-                                                <a class="page-link" href="${pageContext.request.contextPath}/test/list?q=${query}&page=${i}">${i+1}</a>
+                                                <a class="page-link" href="${pageContext.request.contextPath}/list?q=${query}&page=${i}">${i+1}</a>
                                             </li>
                                         </c:forEach>
 
@@ -217,7 +217,7 @@
                                             <c:if test="${currentPage > 3}">
                                             <c:forEach var="i" begin="${currentPage-1}" end="${currentPage+1}">
                                                 <li class="page-item ${i == currentPage ? 'active' : ''}">
-                                                    <a class="page-link" href="${pageContext.request.contextPath}/test/list?q=${query}&page=${i}">${i+1}</a>
+                                                    <a class="page-link" href="${pageContext.request.contextPath}/list?q=${query}&page=${i}">${i+1}</a>
                                                 </li>
                                             </c:forEach>
                                             </c:if>
@@ -227,12 +227,12 @@
                                         </c:if>
                                         <c:forEach var="i" begin="${totalPages - 2}" end="${totalPages}">
                                             <li class="page-item ${i == currentPage ? 'active' : ''}">
-                                                <a class="page-link" href="${pageContext.request.contextPath}/test/list?q=${query}&page=${i}">${i+1}</a>
+                                                <a class="page-link" href="${pageContext.request.contextPath}/list?q=${query}&page=${i}">${i+1}</a>
                                             </li>
                                         </c:forEach>
                                     </c:if>
                                         <li class="page-item">
-                                            <a class="page-link" href="${pageContext.request.contextPath}/test/list?q=${query}&page=${currentPage + 1}">Next</a>
+                                            <a class="page-link" href="${pageContext.request.contextPath}/list?q=${query}&page=${currentPage + 1}">Next</a>
                                         </li>
                                 </ul>
                             </div>

@@ -219,10 +219,10 @@ function barChart (data2)  {
         .attr("transform", `translate(0,${height - marginBottom})`)
         .call(xAxis);
 
-    // const gy = svg.append("g")
-    //     .attr("transform", `translate(${marginLeft},0)`)
-    //     .call(d3.axisLeft(y).tickFormat((y) => (y * 100).toFixed()))
-    //     .call(g => g.select(".domain").remove());
+    const gy = svg.append("g")
+        .attr("transform", `translate(${marginLeft},0)`)
+        .call(d3.axisLeft(y).tickFormat((y) => (y * 100).toFixed()))
+        .call(g => g.select(".domain").remove());
 
 
     // Return the chart, with an update function that takes as input a domain
@@ -258,7 +258,11 @@ window.onload = async function() {
     const barChartSVG = barChart(data2);
     const disjointSVG = disjointChart(node, link);
 
-    document.getElementById('bar-chart-append').append(barChartSVG);
+    barChartSVG.style.marginTop = '20px';
+    barChartSVG.style.marginTop = 20;
+    const barChartAppend = document.getElementById('bar-chart-append');
+
+    barChartAppend.append(barChartSVG);
     const append = document.getElementById('disjoint-append');
     append.appendChild(disjointSVG);
 

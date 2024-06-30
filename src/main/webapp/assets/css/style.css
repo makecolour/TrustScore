@@ -1764,7 +1764,7 @@ footer .widget_services ul li:hover {
     background: #303030;
     background-size: cover;
     background-position: center;
-    padding: 0 0 20px;
+    padding: 0 0 0px;
 	font-family:rubik;
 }
 .footer-bottom {
@@ -1830,7 +1830,7 @@ button.back-to-top {
     border-width: 0;
     bottom: 15px;
     box-shadow: 2px 2px 12px -5px #000000;
-    color: #fff;
+    color: #ff5e14;
     cursor: pointer;
     display: none;
     height: 40px;
@@ -2171,7 +2171,7 @@ button.back-to-top {
 	padding-bottom:50px;
 }
 .section-sp2{
-	padding-top:80px;
+	padding-top:40px;
 	padding-bottom:80px;
 }
 .section-sp3{
@@ -3221,8 +3221,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#391800', end
 		padding-bottom: 20px;
 	}
 	.section-sp2 {
-		padding-top: 50px;
-		padding-bottom: 50px;
+		padding-top: 20px;
+		padding-bottom: 40px;
 	}
 	.upcoming-event-carousel.owl-btn-1 .owl-prev, 
 	.upcoming-event-carousel.owl-btn-1 .owl-next{

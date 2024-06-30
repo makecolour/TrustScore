@@ -14,12 +14,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
-import java.io.IOException;
 import java.util.List;
 
 @AllArgsConstructor
 @Controller
-@RequestMapping("/test")
+@RequestMapping("")
 public class UtilsController {
     private final DataService dataService;
     private final Application application;
@@ -34,7 +33,7 @@ public class UtilsController {
         return new ModelAndView("cdn");
     }
 
-    @GetMapping("/home")
+    @RequestMapping(value = {"/", "/home", "", "/index"})
     public  ModelAndView home() {
         ModelAndView modelAndView = new ModelAndView("home");
         List<JsonNode> objects = dataService.top10Users();
@@ -78,5 +77,11 @@ public class UtilsController {
         return modelAndView;
     }
 
+    @GetMapping("/about")
+    public ModelAndView about() {
+        ModelAndView modelAndView = new ModelAndView("about");
+        modelAndView.addObject("FUHL", application.getFuhl());
+        return modelAndView;
+    }
 
 }

@@ -305,7 +305,7 @@
                    data-paddingbottom="[10,10,10,10]"
                    data-paddingleft="[0,0,0,0]"
                    style="z-index: 6; font-family:rubik; font-weight:700; text-align:center; white-space: normal;text-transform:uppercase;">
-                Welcome To University
+                Trust Management Project
               </div>
 
               <!-- LAYER NR. 3 -->
@@ -327,7 +327,7 @@
                    data-paddingbottom="[0,0,0,0]"
                    data-paddingleft="[0,0,0,0]"
                    style="z-index: 7; white-space: nowrap;text-transform:uppercase; color:#fff; font-family:rubik; font-size:18px; font-weight:400;">
-                Trust Management
+                FPT Edu Research Festival
               </div>
 
               <!-- LAYER NR. 3 -->
@@ -352,7 +352,7 @@
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the
               </div>
               <!-- LAYER NR. 4 -->
-              <div onclick="window.location.href='/test/list'"
+              <div onclick="window.location.href='/list'"
                    class="tp-caption Newspaper-Button rev-btn "
                    id="slide-200-layer-5"
                    data-x="['center','center','center','center']"
@@ -469,7 +469,7 @@
       </div>
       <!-- Popular Courses -->
     <c:if test="${not empty objects}">
-      <div class="section-area section-sp2 popular-courses-bx">
+      <div class="section-area section-sp1 popular-courses-bx">
         <div class="container">
 <%--          <div class="row">--%>
 <%--            <div class="col-md-12 heading-bx left">--%>
@@ -491,10 +491,10 @@
                         <img src="/assets/images/gallery/FUHL.jpg" alt="">
                       </c:otherwise>
                     </c:choose>
-                     <a href="/test/profile?owner=${fn:replace(object.get('owner').asText(), '\"', '')}" class="btn">Read More</a>
+                     <a href="/profile?owner=${fn:replace(object.get('owner').asText(), '\"', '')}" class="btn">Read More</a>
                   </div>
                   <div class="info-bx text-center">
-                    <h5><a href="/test/profile?owner=${fn:replace(object.get('owner').asText(), '\"', '')}"> ${object.hasNonNull('facebook_name') ? object.get('facebook_name').asText() : fn:replace(object.get('owner').asText(), '\"', '')}</a></h5>
+                    <h5><a href="/profile?owner=${fn:replace(object.get('owner').asText(), '\"', '')}"> ${object.hasNonNull('facebook_name') ? object.get('facebook_name').asText() : fn:replace(object.get('owner').asText(), '\"', '')}</a></h5>
                     <span>${object.get('owner')}</span>
                   </div>
                   <div class="cours-more-info">
@@ -528,7 +528,7 @@
       </div>
       <!-- Popular Courses END -->
 </c:if>
-      <div class="section-area section-sp1 popular-courses-bx">
+      <div class="section-area section-sp2 popular-courses-bx">
         <div class="container">
           <div class="row">
             <div class="col-md-12 heading-bx left">
@@ -549,7 +549,7 @@
             <div class="col-md-12 text-center text-white">
               <h2>Trust Management</h2>
               <h5>Find Who You Trust</h5>
-              <form class="cours-search" action="/test/list">
+              <form class="cours-search" action="/list">
                 <div class="input-group">
                   <input type="text" class="form-control" placeholder="What do you want to find?" name="q">
                   <div class="input-group-append">
@@ -592,75 +592,7 @@
       <!-- Form END -->
 
       <!-- Testimonials -->
-      <div class="section-area section-sp2 bg-fix ovbl-dark" style="background-image:url(/assets/images/background/bg1.jpg);">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12 text-white heading-bx left">
-              <h2 class="title-head text-uppercase">Who <span>we are</span></h2>
-              <p>A research by</p>
-            </div>
-          </div>
-          <div class="testimonial-carousel owl-carousel owl-btn-1 col-12 p-lr0">
-            <div class="item">
-              <div class="testimonial-bx">
-                <div class="testimonial-thumb">
-                  <img src="/assets/images/testimonials/pic2.jpg" alt="">
-                </div>
-                <div class="testimonial-info">
-                  <h5 class="name">Mr.Pham Van Duong</h5>
-                  <p>-Instructor</p>
-                </div>
-                <div class="testimonial-content">
-                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type...</p>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="testimonial-bx">
-                <div class="testimonial-thumb">
-                  <img src="/assets/images/testimonials/pic2.jpg" alt="">
-                </div>
-                <div class="testimonial-info">
-                  <h5 class="name">Mai Phu Trong</h5>
-                  <p>-AI</p>
-                </div>
-                <div class="testimonial-content">
-                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type...</p>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="testimonial-bx">
-                <div class="testimonial-thumb">
-                  <img src="/assets/images/testimonials/pic2.jpg" alt="">
-                </div>
-                <div class="testimonial-info">
-                  <h5 class="name">Bui Duc Hieu</h5>
-                  <p>-AI</p>
-                </div>
-                <div class="testimonial-content">
-                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type...</p>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="testimonial-bx">
-                <div class="testimonial-thumb">
-                  <img src="/assets/images/testimonials/pic2.jpg" alt="">
-                </div>
-                <div class="testimonial-info">
-                  <h5 class="name">Nguyen Thuong Quyen</h5>
-                  <p>-SE</p>
-                </div>
-                <div class="testimonial-content">
-                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type...</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Testimonials END -->
+      <jsp:include page="team.jsp"/>
 
     </div>
     <!-- contact area END -->
@@ -789,10 +721,10 @@
   });
 
   document.getElementById("slide-200-layer-5").addEventListener("click", function() {
-    window.location.href = "/test/list";
+    window.location.href = "/list";
   });
     document.getElementById("slide-100-layer-5").addEventListener("click", function() {
-        window.location.href = "/test/list";
+        window.location.href = "/list";
     });
 </script>
   <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>

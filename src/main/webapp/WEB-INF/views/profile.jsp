@@ -77,7 +77,7 @@
         <div class="breadcrumb-row">
             <div class="container">
                 <ul class="list-inline">
-                    <li><a href="${pageContext.request.contextPath}/test/home">Home</a></li>
+                    <li><a href="${pageContext.request.contextPath}/">Home</a></li>
                     <li> ${object.hasNonNull('facebook_name') ? object.get('facebook_name').asText() : fn:replace(object.get('owner').asText(), '\"', '')}'s Details</li>
                 </ul>
             </div>
