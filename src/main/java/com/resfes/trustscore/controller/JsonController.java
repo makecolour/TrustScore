@@ -3,11 +3,9 @@ package com.resfes.trustscore.controller;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.resfes.trustscore.model.Application;
 import com.resfes.trustscore.service.DataService;
-import com.resfes.trustscore.service.DatabaseService;
 import com.resfes.trustscore.service.MergeService;
 import org.springframework.core.io.FileSystemResource;
 import org.springframework.core.io.Resource;
-import org.springframework.core.io.ResourceLoader;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -21,13 +19,11 @@ import java.nio.file.Path;
 public class JsonController {
 
     private final MergeService mergeService;
-    private final DatabaseService databaseService;
     private final Application application;
     private final DataService data;
 
-    public JsonController(MergeService mergeService, DatabaseService databaseService, Application application, DataService data) {
+    public JsonController(MergeService mergeService, Application application, DataService data) {
         this.mergeService = mergeService;
-        this.databaseService = databaseService;
         this.application = application;
         this.data = data;
     }
@@ -44,16 +40,6 @@ public class JsonController {
         return new ResponseEntity<>("Invalid key", headers, HttpStatus.OK);
     }
 
-    @RequestMapping(value = "/database", method = RequestMethod.GET)
-    public ResponseEntity<String> convertJsonToDatabase(@RequestParam String key) {
-        HttpHeaders headers = new HttpHeaders();
-        headers.add(HttpHeaders.CONTENT_TYPE, "application/json; charset=UTF-8");
-        if(mergeService.checkKey(key)){
-            databaseService.convertJsonToDatabase();
-            return new ResponseEntity<>("JSON data saved to database successfully", headers, HttpStatus.OK);
-        }
-        return new ResponseEntity<>("Invalid key", headers, HttpStatus.OK);
-    }
 
 
     @RequestMapping(value = "/node", method = RequestMethod.GET)
