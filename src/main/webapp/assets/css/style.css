@@ -2188,7 +2188,7 @@ button.back-to-top {
 background: #ff5e14; /* Old browsers */
 background: -moz-linear-gradient(45deg, #ff5e14 0%, #ff8e14 100%); /* FF3.6-15 */
 background: -webkit-linear-gradient(45deg, #ff5e14 0%,#ff8e14 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(45deg, #ff5e14 0%,#ff8e14 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+background: linear-gradient(315deg, #00BFFF, #FF7F3F); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff5e14', endColorstr='#ff8e14',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
 /* Event Box */

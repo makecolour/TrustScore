@@ -12,7 +12,7 @@
         <div class="pt-exebar">
             <div class="container">
                 <div class="d-flex align-items-stretch">
-                    <div class="pt-logo mr-auto">
+                    <div class="pt-logo mr-auto col-3">
                         <a href="index.html"><img src="/assets/images/logo-white.png" alt=""/></a>
                     </div>
                     <div class="pt-social-link">
@@ -36,10 +36,10 @@
                         <h5 class="footer-title">Sign Up For A Newsletter</h5>
                         <p class="text-capitalize m-b20">Weekly Breaking news analysis and cutting edge advices on job searching.</p>
                         <div class="subscribe-form m-b20">
-                            <form class="subscription-form" action="http://educhamp.themetrades.com/demo//assets/script/mailchamp.php" method="post">
+                            <form class="subscription-form" action="http://educhamp.themetrades.com/demo/assets/script/mailchamp.php" method="post">
                                 <div class="ajax-message"></div>
                                 <div class="input-group">
-                                    <input name="email" required="required"  class="form-control" placeholder="Your Email Address" type="email">
+                                    <input name="email" required="required http://localhost:8080/test/homeed"  class="form-control" placeholder="Your Email Address" type="email">
                                     <span class="input-group-btn">
 											<button name="submit" value="Submit" type="submit" class="btn"><i class="fa fa-arrow-right"></i></button>
 										</span>

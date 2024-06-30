@@ -191,18 +191,18 @@ try {
                 // If the owner already exists in the map, merge the current ObjectNode with the existing one
                 existingNode.setAll(objectNode);
             }
-            try {
-                String accessToken = application.getFacebookToken(); // Replace with your access token
-                RestTemplate restTemplate = new RestTemplate();
-                String facebookApiUrl = "https://graph.facebook.com/" + owner + "?fields=name,profile_pic&access_token=" + accessToken;
-                JsonNode facebookResponse = restTemplate.getForObject(facebookApiUrl, JsonNode.class);
-                if (facebookResponse != null && facebookResponse.has("name")) {
-                    existingNode.put("facebook_name", facebookResponse.get("name").asText());
-                    existingNode.put("facebook_profile_pic", facebookResponse.get("profile_pic").asText());
+                try {
+                    String accessToken = application.getFacebookToken(); // Replace with your access token
+                    RestTemplate restTemplate = new RestTemplate();
+                    String facebookApiUrl = "https://graph.facebook.com/" + owner + "?fields=name,profile_pic&access_token=" + accessToken;
+                    JsonNode facebookResponse = restTemplate.getForObject(facebookApiUrl, JsonNode.class);
+                    if (facebookResponse != null && facebookResponse.has("name")) {
+                        existingNode.put("facebook_name", facebookResponse.get("name").asText());
+                        existingNode.put("facebook_profile_pic", facebookResponse.get("profile_pic").asText());
+                    }
+                } catch (Exception e) {
+                    System.err.println("An error occurred while fetching the Facebook name: " + e.getMessage());
                 }
-            } catch (Exception e) {
-                System.err.println("An error occurred while fetching the Facebook name: " + e.getMessage());
-            }
         }
         else {
             // If the owner isn't a key in the map, add the current ObjectNode to the map with its owner as the key
