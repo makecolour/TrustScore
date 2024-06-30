@@ -4,7 +4,6 @@ import com.fasterxml.jackson.databind.JsonNode;
 import org.springframework.data.domain.Page;
 
 import java.io.IOException;
-import java.lang.reflect.Array;
 import java.util.List;
 
 public interface DataService {
