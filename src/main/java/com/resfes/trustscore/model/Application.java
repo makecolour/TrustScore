@@ -28,4 +28,10 @@ public class Application {
 
     @Value("${classpath.rawDir}")
     private String rawDir;
+
+    @Value("${facebook.token}")
+    private String facebookToken;
+
+    @Value("${FUHL}")
+    private String fuhl;
 }

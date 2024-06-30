@@ -33,13 +33,15 @@ public class MvcConfig implements WebMvcConfigurer {
         registry
                 .addResourceHandler("/images/**")
                 .addResourceLocations("/assets/images/");
-        registry.addResourceHandler("/stylesheets/**")
-                .addResourceLocations("/assets/stylesheets/");
-        registry.addResourceHandler("/javascripts/**")
-                .addResourceLocations("/assets/javascripts/");
+        registry.addResourceHandler("/css/**")
+                .addResourceLocations("/assets/css/");
+        registry.addResourceHandler("/js/**")
+                .addResourceLocations("/assets/js/");
         registry.addResourceHandler("/assets/**")
                 .addResourceLocations("/assets/");
         registry.addResourceHandler("/fonts/**")
                 .addResourceLocations("/assets/fonts/");
+        registry.addResourceHandler("/vendors/**")
+                .addResourceLocations("/assets/vendors/");
     }
 }

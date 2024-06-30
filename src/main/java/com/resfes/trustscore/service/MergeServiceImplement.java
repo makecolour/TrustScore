@@ -8,8 +8,10 @@ import com.resfes.trustscore.model.Application;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.ResourceLoader;
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
 
 import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.*;
 
@@ -31,17 +33,11 @@ public class MergeServiceImplement implements MergeService {
         Resource nResource = resourceLoader.getResource(application.getRawDir()+"n.json");
         Resource updateCommonInfoResource = resourceLoader.getResource(application.getRawDir()+"update_common_info.json");
         Resource userAndServiceProvideResource = resourceLoader.getResource(application.getRawDir()+"user_and_service_provide.json");
-        // Read each JSON file into an ObjectNode
-
-        // Create a new ObjectNode that will hold the combined data
-
-        // Map the data from the original ObjectNodes to the new combined ObjectNode
-        // ... (same as the previous code)
-        // Create a map to hold the combined data
         Map<String, ObjectNode> combinedData = new HashMap<>();
 try {
     // List of all JSON resources
     List<Resource> allResources = Arrays.asList(differentRankingResource, nResource, updateCommonInfoResource, userAndServiceProvideResource);
+
 
     for (Resource resource : allResources) {
         JsonNode jsonNode = objectMapper.readTree(resource.getInputStream());
@@ -62,16 +58,30 @@ try {
         }
     }
 
-    System.out.println(combinedData.values());
+    List<Map.Entry<String, ObjectNode>> list = new ArrayList<>(combinedData.entrySet());
+
+// Sort the list
+    list.sort((entry1, entry2) -> {
+        double rank1 = entry1.getValue().has("old_page_rank") ? entry1.getValue().get("old_page_rank").asDouble() : 0;
+        double rank2 = entry2.getValue().has("old_page_rank") ? entry2.getValue().get("old_page_rank").asDouble() : 0;
+        return Double.compare(rank2, rank1);
+    });
+
+// Create a new LinkedHashMap and put the sorted entries
+    Map<String, ObjectNode> sortedMap = new LinkedHashMap<>();
+    for (Map.Entry<String, ObjectNode> entry : list) {
+        sortedMap.put(entry.getKey(), entry.getValue());
+    }
+
+//    System.out.println(combinedData.values());
     // Write the combined ObjectNode back to a new JSON file
     objectMapper.enable(SerializationFeature.INDENT_OUTPUT);
-    objectMapper.writeValue(resourceLoader.getResource(application.getResultDir()+application.getNodeFile()).getFile(), combinedData.values());
-//    FileWriter crunchifyFile = new FileWriter(application.getOutputFolder() + application.getNodeFile());
-//    objectMapper.writeValue(crunchifyFile, combinedData.values());
+    objectMapper.writeValue(resourceLoader.getResource(application.getResultDir()+application.getNodeFile()).getFile(), sortedMap.values());
+    FileWriter crunchifyFile = new FileWriter(application.getOutputFolder() + application.getNodeFile());
+    objectMapper.writeValue(crunchifyFile, sortedMap.values());
 //    crunchifyFile.write(combinedData.values().toString());
 //    crunchifyFile.flush();
 //    crunchifyFile.close();
-
     }
     catch (Exception e) {
         System.err.println("An error occurred while merging the JSON files:");
@@ -88,7 +98,6 @@ try {
         String owner = null;
         String elementId = null;
         JsonNode group = null;  // Changed from labels to group
-        JsonNode properties = null;
         String categories = null;
         int anUong = 0;
         int thuePhong = 0;
@@ -105,24 +114,15 @@ try {
             owner = objectNode.get("User").asText();
         } else if (objectNode.has("username")) {
             owner = objectNode.get("username").asText();
+//            System.out.println(objectNode.toString());
         }
 
-        if (objectNode.has("elementId")) {
-            elementId = objectNode.get("elementId").asText();
-        } else if (objectNode.has("n") && objectNode.get("n").has("elementId")) {
+        if (objectNode.has("n") && objectNode.get("n").has("elementId")) {
             elementId = objectNode.get("n").get("elementId").asText();
         }
 
-        if (objectNode.has("labels")) {
-            group = objectNode.get("labels");
-        } else if (objectNode.has("n") && objectNode.get("n").has("labels")) {
+        if (objectNode.has("n") && objectNode.get("n").has("labels")) {
             group = objectNode.get("n").get("labels");
-        }
-
-        if (objectNode.has("properties")) {
-            properties = objectNode.get("properties").get("");
-        } else if (objectNode.has("n") && objectNode.get("n").has("properties")) {
-            properties = objectNode.get("n").get("properties");
         }
 
         if (objectNode.has("Categories")) {
@@ -140,10 +140,43 @@ try {
             if (existingNode == null) {
                 // If the owner does not exist in the map, create a new ObjectNode
                 existingNode = objectMapper.createObjectNode();
+                existingNode.put("owner", owner);
                 combinedData.put(owner, existingNode);
             }
 
-            if (categories != null) {
+            if (objectNode.has("degree_centrality") && objectNode.get("degree_centrality") != null) {
+                existingNode.put("degree_centrality", objectNode.get("degree_centrality").asDouble());
+            }
+
+            if (objectNode.has("closeness_centrality") && objectNode.get("closeness_centrality") != null) {
+                existingNode.put("closeness_centrality", objectNode.get("closeness_centrality").asDouble());
+            }
+
+            if (objectNode.has("betweenness_centrality") && objectNode.get("betweenness_centrality") != null) {
+                existingNode.put("betweenness_centrality", objectNode.get("betweenness_centrality").asDouble());
+            }
+            if (objectNode.has("old_page_rank") && objectNode.get("old_page_rank") != null) {
+                existingNode.put("old_page_rank", objectNode.get("old_page_rank").asDouble());
+            }
+
+            if (objectNode.has("improved_pagerank") && objectNode.get("improved_pagerank") != null) {
+                existingNode.put("improved_pagerank", objectNode.get("improved_pagerank").asDouble());
+            }
+
+            if(objectNode.has("owner_weight") && objectNode.get("owner_weight") != null){
+                existingNode.put("owner_weight", objectNode.get("owner_weight").asDouble());
+            }
+
+            if (objectNode.has("n")) {
+                //existingNode.set("properties", properties);
+                existingNode.put("id", elementId);
+                existingNode.set("group", group);
+
+            }
+
+
+
+            else if (categories != null) {
                 ObjectNode labelsNode = objectMapper.createObjectNode();
                 labelsNode.put("Categories", categories);
                 labelsNode.put("an_uong", anUong);
@@ -154,14 +187,21 @@ try {
                 labelsNode.put("my_pham", myPham);
                 existingNode.set("services", labelsNode);
             }
-
-            else if(elementId != null && group != null) {
-                ObjectNode newNode = objectMapper.createObjectNode();
-                newNode.put("id", elementId);
-                newNode.set("group", group);
-                combinedData.put(owner, newNode);
-            } else{
-                combinedData.get(owner).putAll(objectNode);
+            else{
+                // If the owner already exists in the map, merge the current ObjectNode with the existing one
+                existingNode.setAll(objectNode);
+            }
+            try {
+                String accessToken = application.getFacebookToken(); // Replace with your access token
+                RestTemplate restTemplate = new RestTemplate();
+                String facebookApiUrl = "https://graph.facebook.com/" + owner + "?fields=name,profile_pic&access_token=" + accessToken;
+                JsonNode facebookResponse = restTemplate.getForObject(facebookApiUrl, JsonNode.class);
+                if (facebookResponse != null && facebookResponse.has("name")) {
+                    existingNode.put("facebook_name", facebookResponse.get("name").asText());
+                    existingNode.put("facebook_profile_pic", facebookResponse.get("profile_pic").asText());
+                }
+            } catch (Exception e) {
+                System.err.println("An error occurred while fetching the Facebook name: " + e.getMessage());
             }
         }
         else {

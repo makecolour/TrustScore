@@ -2,6 +2,7 @@ package com.resfes.trustscore.controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.resfes.trustscore.model.Application;
+import com.resfes.trustscore.service.DataService;
 import com.resfes.trustscore.service.DatabaseService;
 import com.resfes.trustscore.service.MergeService;
 import org.springframework.core.io.FileSystemResource;
@@ -22,11 +23,13 @@ public class JsonController {
     private final MergeService mergeService;
     private final DatabaseService databaseService;
     private final Application application;
+    private final DataService data;
 
-    public JsonController(MergeService mergeService, DatabaseService databaseService, Application application) {
+    public JsonController(MergeService mergeService, DatabaseService databaseService, Application application, DataService data) {
         this.mergeService = mergeService;
         this.databaseService = databaseService;
         this.application = application;
+        this.data = data;
     }
     
     @RequestMapping(value = "/mergeAll", method = RequestMethod.GET)
@@ -74,5 +77,28 @@ public class JsonController {
         return new ResponseEntity<>(content, headers, HttpStatus.OK);
     }
 
+    @GetMapping("/top10")
+    public ResponseEntity<String> top10Users() throws IOException {
+        HttpHeaders headers = new HttpHeaders();
+        headers.add(HttpHeaders.CONTENT_TYPE, "application/json; charset=UTF-8");
+        ObjectMapper objectMapper = new ObjectMapper();
+        return new ResponseEntity<>(objectMapper.writeValueAsString(data.top10Users()), headers, HttpStatus.OK);
+    }
+
+    @GetMapping("/profile")
+    public ResponseEntity<String> getUser(@RequestParam String owner) throws IOException {
+        HttpHeaders headers = new HttpHeaders();
+        headers.add(HttpHeaders.CONTENT_TYPE, "application/json; charset=UTF-8");
+        ObjectMapper objectMapper = new ObjectMapper();
+        return new ResponseEntity<>(objectMapper.writeValueAsString(data.getUser(owner)), headers, HttpStatus.OK);
+    }
+
+    @GetMapping("/objects")
+    public ResponseEntity<String> getObjectsWithId() throws IOException {
+        HttpHeaders headers = new HttpHeaders();
+        headers.add(HttpHeaders.CONTENT_TYPE, "application/json; charset=UTF-8");
+        ObjectMapper objectMapper = new ObjectMapper();
+        return new ResponseEntity<>(objectMapper.writeValueAsString(data.getObjectsWithId()), headers, HttpStatus.OK);
+    }
 
 }

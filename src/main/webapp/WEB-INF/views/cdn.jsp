@@ -11,8 +11,13 @@
     <title>Title</title>
 </head>
 <body>
-<div id="container"></div>
+<div id="tooltip" style="position: absolute; opacity: 0;"></div>
+
+<div id="append-bar-chart" class="bar-chart">
+    <svg id="bar-chart" width="1400" height="500"></svg>
+</div>
 <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
-<script src="/javascripts/graph.js"></script>
+<script src="/js/graph/disjoint-graph.js"></script>
+
 </body>
 </html>

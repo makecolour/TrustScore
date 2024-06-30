@@ -1,900 +1,803 @@
 <%--
   Created by IntelliJ IDEA.
   User: quyen
-  Date: 23/06/2024
-  Time: 22:03
+  Date: 27/06/2024
+  Time: 04:05
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <title>Home | E-Shopper</title>
-    <link href="/stylesheets/bootstrap.min.css" rel="stylesheet">
-    <link href="/stylesheets/font-awesome.min.css" rel="stylesheet">
-    <link href="/stylesheets/prettyPhoto.css" rel="stylesheet">
-    <link href="/stylesheets/price-range.css" rel="stylesheet">
-    <link href="/stylesheets/animate.css" rel="stylesheet">
-    <link href="/stylesheets/main.css" rel="stylesheet">
-    <link href="/stylesheets/responsive.css" rel="stylesheet">
-    <!--[if lt IE 9]>
-    <script src="/javascripts/html5shiv.js"></script>
-    <script src="/javascripts/respond.min.js"></script>
-    <![endif]-->
-    <link rel="shortcut icon" href="/images/ico/favicon.ico">
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/images/ico/apple-touch-icon-114-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/images/ico/apple-touch-icon-72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="/images/ico/apple-touch-icon-57-precomposed.png">
-</head><!--/head-->
 
-<body>
+  <!-- META ============================================= -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="keywords" content="" />
+  <meta name="author" content="" />
+  <meta name="robots" content="" />
 
-<jsp:include page="header.jsp"></jsp:include>
+  <!-- DESCRIPTION -->
+  <meta name="description" content="EduChamp : Education HTML Template" />
 
+  <!-- OG -->
+  <meta property="og:title" content="EduChamp : Education HTML Template" />
+  <meta property="og:description" content="EduChamp : Education HTML Template" />
+  <meta property="og:image" content="" />
+  <meta name="format-detection" content="telephone=no">
 
-<div class="header-middle"><!--header-middle-->
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-4">
-                <div class="logo pull-left">
-                    <a href="index.html"><img src="/images/home/logo.png" alt="" /></a>
-                </div>
-                <div class="btn-group pull-right">
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-default dropdown-toggle usa" data-toggle="dropdown">
-                            USA
-                            <span class="caret"></span>
-                        </button>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Canada</a></li>
-                            <li><a href="#">UK</a></li>
-                        </ul>
-                    </div>
+  <!-- FAVICONS ICON ============================================= -->
+  <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" type="image/x-icon" href="/assets/images/favicon.png" />
 
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-default dropdown-toggle usa" data-toggle="dropdown">
-                            DOLLAR
-                            <span class="caret"></span>
-                        </button>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Canadian Dollar</a></li>
-                            <li><a href="#">Pound</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-8">
-                <div class="shop-menu pull-right">
-                    <ul class="nav navbar-nav">
-                        <li><a href="#"><i class="fa fa-user"></i> Account</a></li>
-                        <li><a href="#"><i class="fa fa-star"></i> Wishlist</a></li>
-                        <li><a href="checkout.html"><i class="fa fa-crosshairs"></i> Checkout</a></li>
-                        <li><a href="cart.html"><i class="fa fa-shopping-cart"></i> Cart</a></li>
-                        <li><a href="login.html"><i class="fa fa-lock"></i> Login</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+  <!-- PAGE TITLE HERE ============================================= -->
+  <title>EduChamp : Education HTML Template </title>
+
+  <!-- MOBILE SPECIFIC ============================================= -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!--[if lt IE 9]>
+  <script src="/assets/js/html5shiv.min.js"></script>
+  <script src="/assets/js/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- All PLUGINS CSS ============================================= -->
+  <link rel="stylesheet" type="text/css" href="/assets/css/assets.css">
+
+  <!-- TYPOGRAPHY ============================================= -->
+  <link rel="stylesheet" type="text/css" href="/assets/css/typography.css">
+
+  <!-- SHORTCODES ============================================= -->
+  <link rel="stylesheet" type="text/css" href="/assets/css/shortcodes/shortcodes.css">
+
+  <!-- STYLESHEETS ============================================= -->
+  <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+  <link class="skin" rel="stylesheet" type="text/css" href="/assets/css/color/color-1.css">
+
+  <!-- REVOLUTION SLIDER CSS ============================================= -->
+  <link rel="stylesheet" type="text/css" href="/assets/vendors/revolution/css/layers.css">
+  <link rel="stylesheet" type="text/css" href="/assets/vendors/revolution/css/settings.css">
+  <link rel="stylesheet" type="text/css" href="/assets/vendors/revolution/css/navigation.css">
+  <!-- REVOLUTION SLIDER END -->
+</head>
+<body id="bg">
+<div class="page-wraper">
+  <div id="loading-icon-bx"></div>
+  <!-- Header Top ==== -->
+  <jsp:include page="header.jsp" />
+  <!-- Header Top END ==== -->
+  <!-- Content -->
+  <div class="page-content bg-white">
+    <!-- Main Slider -->
+    <div class="rev-slider">
+      <div id="rev_slider_486_1_wrapper" class="rev_slider_wrapper fullwidthbanner-container" data-alias="news-gallery36" data-source="gallery" style="margin:0px auto;background-color:#ffffff;padding:0px;margin-top:0px;margin-bottom:0px;">
+        <!-- START REVOLUTION SLIDER 5.3.0.2 fullwidth mode -->
+        <div id="rev_slider_486_1" class="rev_slider fullwidthabanner" style="display:none;" data-version="5.3.0.2">
+          <ul>	<!-- SLIDE  -->
+            <li data-index="rs-100"
+                data-transition="parallaxvertical"
+                data-slotamount="default"
+                data-hideafterloop="0"
+                data-hideslideonmobile="off"
+                data-easein="default"
+                data-easeout="default"
+                data-masterspeed="default"
+                data-thumb="error-404.html"
+                data-rotate="0"
+                data-fstransition="fade"
+                data-fsmasterspeed="1500"
+                data-fsslotamount="7"
+                data-saveperformance="off"
+                data-title="FU Hòa Lạc"
+                data-param1="" data-param2=""
+                data-param3="" data-param4=""
+                data-param5="" data-param6=""
+                data-param7="" data-param8=""
+                data-param9="" data-param10=""
+                data-description="FU Hòa Lạc">
+              <!-- MAIN IMAGE -->
+              <img src="/assets/images/gallery/FUHL.jpg" alt=""
+                   data-bgposition="center center"
+                   data-bgfit="cover"
+                   data-bgrepeat="no-repeat"
+                   data-bgparallax="10"
+                   class="rev-slidebg"
+                   data-no-retina />
+
+              <!-- LAYER NR. 1 -->
+              <div class="tp-caption tp-shape tp-shapewrapper "
+                   id="slide-100-layer-1"
+                   data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+                   data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']"
+                   data-width="full"
+                   data-height="full"
+                   data-whitespace="nowrap"
+                   data-type="shape"
+                   data-basealign="slide"
+                   data-responsive_offset="off"
+                   data-responsive="off"
+                   data-frames='[{"from":"opacity:0;","speed":1,"to":"o:1;","delay":0,"ease":"Power4.easeOut"},{"delay":"wait","speed":1,"to":"opacity:0;","ease":"Power4.easeOut"}]'
+                   data-textAlign="['left','left','left','left']"
+                   data-paddingtop="[0,0,0,0]"
+                   data-paddingright="[0,0,0,0]"
+                   data-paddingbottom="[0,0,0,0]"
+                   data-paddingleft="[0,0,0,0]"
+                   style="z-index: 5;background-color:rgba(2, 0, 11, 0.80);border-color:rgba(0, 0, 0, 0);border-width:0px;"> </div>
+              <!-- LAYER NR. 2 -->
+              <div class="tp-caption Newspaper-Title   tp-resizeme"
+                   id="slide-100-layer-2"
+                   data-x="['center','center','center','center']"
+                   data-hoffset="['0','0','0','0']"
+                   data-y="['top','top','top','top']"
+                   data-voffset="['250','250','250','240']"
+                   data-fontsize="['50','50','50','30']"
+                   data-lineheight="['55','55','55','35']"
+                   data-width="full"
+                   data-height="none"
+                   data-whitespace="normal"
+                   data-type="text"
+                   data-responsive_offset="on"
+                   data-frames='[{"from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'
+                   data-textAlign="['center','center','center','center']"
+                   data-paddingtop="[0,0,0,0]"
+                   data-paddingright="[0,0,0,0]"
+                   data-paddingbottom="[10,10,10,10]"
+                   data-paddingleft="[0,0,0,0]"
+                   style="z-index: 6; font-family:rubik; font-weight:700; text-align:center; white-space: normal;">
+                Trust Management Project
+              </div>
+
+              <!-- LAYER NR. 3 -->
+              <div class="tp-caption Newspaper-Subtitle   tp-resizeme"
+                   id="slide-100-layer-3"
+                   data-x="['center','center','center','center']"
+                   data-hoffset="['0','0','0','0']"
+                   data-y="['top','top','top','top']"
+                   data-voffset="['210','210','210','210']"
+                   data-width="none"
+                   data-height="none"
+                   data-whitespace="nowrap"
+                   data-type="text"
+                   data-responsive_offset="on"
+                   data-frames='[{"from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'
+                   data-textAlign="['left','left','left','left']"
+                   data-paddingtop="[0,0,0,0]"
+                   data-paddingright="[0,0,0,0]"
+                   data-paddingbottom="[0,0,0,0]"
+                   data-paddingleft="[0,0,0,0]"
+                   style="z-index: 7; white-space: nowrap; color:#fff; font-family:rubik; font-size:18px; font-weight:400;">
+                FPT Edu Research Festival
+              </div>
+
+              <!-- LAYER NR. 3 -->
+              <div class="tp-caption Newspaper-Subtitle   tp-resizeme"
+                   id="slide-100-layer-4"
+                   data-x="['center','center','center','center']"
+                   data-hoffset="['0','0','0','0']"
+                   data-y="['top','top','top','top']"
+                   data-voffset="['320','320','320','290']"
+                   data-width="['800','800','700','420']"
+                   data-height="['100','100','100','120']"
+                   data-whitespace="unset"
+                   data-type="text"
+                   data-responsive_offset="on"
+                   data-frames='[{"from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'
+                   data-textAlign="['center','center','center','center']"
+                   data-paddingtop="[0,0,0,0]"
+                   data-paddingright="[0,0,0,0]"
+                   data-paddingbottom="[0,0,0,0]"
+                   data-paddingleft="[0,0,0,0]"
+                   style="z-index: 7; text-transform:capitalize; white-space: unset; color:#fff; font-family:rubik; font-size:18px; line-height:28px; font-weight:400;">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the
+              </div>
+              <!-- LAYER NR. 4 -->
+              <div class="tp-caption Newspaper-Button rev-btn "
+                   id="slide-100-layer-5"
+                   data-x="['center','center','center','center']"
+                   data-hoffset="['90','80','75','90']"
+                   data-y="['top','top','top','top']"
+                   data-voffset="['400','400','400','420']"
+                   data-width="none"
+                   data-height="none"
+                   data-whitespace="nowrap"
+                   data-type="button"
+                   data-responsive_offset="on"
+                   data-responsive="off"
+                   data-frames='[{"from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"300","ease":"Power1.easeInOut","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(0, 0, 0, 1.00);bg:rgba(255, 255, 255, 1.00);bc:rgba(255, 255, 255, 1.00);bw:1px 1px 1px 1px;"}]'
+                   data-textAlign="['center','center','center','center']"
+                   data-paddingtop="[12,12,12,12]"
+                   data-paddingright="[30,35,35,15]"
+                   data-paddingbottom="[12,12,12,12]"
+                   data-paddingleft="[30,35,35,15]"
+                   style="z-index: 8; white-space: nowrap; outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer; background-color:var(--primary) !important; border:0; border-radius:30px; margin-right:5px;">READ MORE </div>
+              <div class="tp-caption Newspaper-Button rev-btn"
+                   id="slide-100-layer-6"
+                   data-x="['center','center','center','center']"
+                   data-hoffset="['-90','-80','-75','-90']"
+                   data-y="['top','top','top','top']"
+                   data-voffset="['400','400','400','420']"
+                   data-width="none"
+                   data-height="none"
+                   data-whitespace="nowrap"
+                   data-type="button"
+                   data-responsive_offset="on"
+                   data-responsive="off"
+                   data-frames='[{"from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"300","ease":"Power1.easeInOut","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(0, 0, 0, 1.00);bg:rgba(255, 255, 255, 1.00);bc:rgba(255, 255, 255, 1.00);bw:1px 1px 1px 1px;"}]'
+                   data-textAlign="['center','center','center','center']"
+                   data-paddingtop="[12,12,12,12]"
+                   data-paddingright="[30,35,35,15]"
+                   data-paddingbottom="[12,12,12,12]"
+                   data-paddingleft="[30,35,35,15]"
+                   style="z-index: 8; white-space: nowrap; outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer; border-radius:30px;">CONTACT US</div>
+            </li>
+            <li data-index="rs-200"
+                data-transition="parallaxvertical"
+                data-slotamount="default"
+                data-hideafterloop="0"
+                data-hideslideonmobile="off"
+                data-easein="default"
+                data-easeout="default"
+                data-masterspeed="default"
+                data-thumb="/assets/images/slider/1.jpg"
+                data-rotate="0"
+                data-fstransition="fade"
+                data-fsmasterspeed="1500"
+                data-fsslotamount="7"
+                data-saveperformance="off"
+                data-title="FU Hòa Lạc"
+                data-param1="" data-param2=""
+                data-param3="" data-param4=""
+                data-param5="" data-param6=""
+                data-param7="" data-param8=""
+                data-param9="" data-param10=""
+                data-description="FU Hòa Lạc">
+              <!-- MAIN IMAGE -->
+              <img src="/assets/images/slider/2.jpg" alt=""
+                   data-bgposition="center center"
+                   data-bgfit="cover"
+                   data-bgrepeat="no-repeat"
+                   data-bgparallax="10"
+                   class="rev-slidebg"
+                   data-no-retina />
+
+              <!-- LAYER NR. 1 -->
+              <div class="tp-caption tp-shape tp-shapewrapper "
+                   id="slide-200-layer-1"
+                   data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+                   data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']"
+                   data-width="full"
+                   data-height="full"
+                   data-whitespace="nowrap"
+                   data-type="shape"
+                   data-basealign="slide"
+                   data-responsive_offset="off"
+                   data-responsive="off"
+                   data-frames='[{"from":"opacity:0;","speed":1,"to":"o:1;","delay":0,"ease":"Power4.easeOut"},{"delay":"wait","speed":1000,"to":"opacity:1;","ease":"Power4.easeOut"}]'
+                   data-textAlign="['left','left','left','left']"
+                   data-paddingtop="[0,0,0,0]"
+                   data-paddingright="[0,0,0,0]"
+                   data-paddingbottom="[0,0,0,0]"
+                   data-paddingleft="[0,0,0,0]"
+                   style="z-index: 5;background-color:rgba(2, 0, 11, 0.80);border-color:rgba(0, 0, 0, 0);border-width:0px;">
+              </div>
+
+              <!-- LAYER NR. 2 -->
+              <div class="tp-caption Newspaper-Title   tp-resizeme"
+                   id="slide-200-layer-2"
+                   data-x="['center','center','center','center']"
+                   data-hoffset="['0','0','0','0']"
+                   data-y="['top','top','top','top']"
+                   data-voffset="['250','250','250','240']"
+                   data-fontsize="['50','50','50','30']"
+                   data-lineheight="['55','55','55','35']"
+                   data-width="full"
+                   data-height="none"
+                   data-whitespace="normal"
+                   data-type="text"
+                   data-responsive_offset="on"
+                   data-frames='[{"from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'
+                   data-textAlign="['center','center','center','center']"
+                   data-paddingtop="[0,0,0,0]"
+                   data-paddingright="[0,0,0,0]"
+                   data-paddingbottom="[10,10,10,10]"
+                   data-paddingleft="[0,0,0,0]"
+                   style="z-index: 6; font-family:rubik; font-weight:700; text-align:center; white-space: normal;text-transform:uppercase;">
+                Welcome To University
+              </div>
+
+              <!-- LAYER NR. 3 -->
+              <div class="tp-caption Newspaper-Subtitle   tp-resizeme"
+                   id="slide-200-layer-3"
+                   data-x="['center','center','center','center']"
+                   data-hoffset="['0','0','0','0']"
+                   data-y="['top','top','top','top']"
+                   data-voffset="['210','210','210','210']"
+                   data-width="none"
+                   data-height="none"
+                   data-whitespace="nowrap"
+                   data-type="text"
+                   data-responsive_offset="on"
+                   data-frames='[{"from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'
+                   data-textAlign="['left','left','left','left']"
+                   data-paddingtop="[0,0,0,0]"
+                   data-paddingright="[0,0,0,0]"
+                   data-paddingbottom="[0,0,0,0]"
+                   data-paddingleft="[0,0,0,0]"
+                   style="z-index: 7; white-space: nowrap;text-transform:uppercase; color:#fff; font-family:rubik; font-size:18px; font-weight:400;">
+                Trust Management
+              </div>
+
+              <!-- LAYER NR. 3 -->
+              <div class="tp-caption Newspaper-Subtitle   tp-resizeme"
+                   id="slide-200-layer-4"
+                   data-x="['center','center','center','center']"
+                   data-hoffset="['0','0','0','0']"
+                   data-y="['top','top','top','top']"
+                   data-voffset="['320','320','320','290']"
+                   data-width="['800','800','700','420']"
+                   data-height="['100','100','100','120']"
+                   data-whitespace="unset"
+                   data-type="text"
+                   data-responsive_offset="on"
+                   data-frames='[{"from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'
+                   data-textAlign="['center','center','center','center']"
+                   data-paddingtop="[0,0,0,0]"
+                   data-paddingright="[0,0,0,0]"
+                   data-paddingbottom="[0,0,0,0]"
+                   data-paddingleft="[0,0,0,0]"
+                   style="z-index: 7; text-transform:capitalize; white-space: unset; color:#fff; font-family:rubik; font-size:18px; line-height:28px; font-weight:400;">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the
+              </div>
+              <!-- LAYER NR. 4 -->
+              <div onclick="window.location.href='/test/list'"
+                   class="tp-caption Newspaper-Button rev-btn "
+                   id="slide-200-layer-5"
+                   data-x="['center','center','center','center']"
+                   data-hoffset="['90','80','75','90']"
+                   data-y="['top','top','top','top']"
+                   data-voffset="['400','400','400','420']"
+                   data-width="none"
+                   data-height="none"
+                   data-whitespace="nowrap"
+                   data-type="button"
+                   data-responsive_offset="on"
+                   data-responsive="off"
+                   data-frames='[{"from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"300","ease":"Power1.easeInOut","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(0, 0, 0, 1.00);bg:rgba(255, 255, 255, 1.00);bc:rgba(255, 255, 255, 1.00);bw:1px 1px 1px 1px;"}]'
+                   data-textAlign="['center','center','center','center']"
+                   data-paddingtop="[12,12,12,12]"
+                   data-paddingright="[30,35,35,15]"
+                   data-paddingbottom="[12,12,12,12]"
+                   data-paddingleft="[30,35,35,15]"
+                   style="z-index: 8; white-space: nowrap; outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer; background-color:var(--primary) !important; border:0; border-radius:30px; margin-right:5px;" >READ MORE </div>
+              <div class="tp-caption Newspaper-Button rev-btn"
+                   id="slide-200-layer-6"
+                   data-x="['center','center','center','center']"
+                   data-hoffset="['-90','-80','-75','-90']"
+                   data-y="['top','top','top','top']"
+                   data-voffset="['400','400','400','420']"
+                   data-width="none"
+                   data-height="none"
+                   data-whitespace="nowrap"
+                   data-type="button"
+                   data-responsive_offset="on"
+                   data-responsive="off"
+                   data-frames='[{"from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"300","ease":"Power1.easeInOut","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(0, 0, 0, 1.00);bg:rgba(255, 255, 255, 1.00);bc:rgba(255, 255, 255, 1.00);bw:1px 1px 1px 1px;"}]'
+                   data-textAlign="['center','center','center','center']"
+                   data-paddingtop="[12,12,12,12]"
+                   data-paddingright="[30,35,35,15]"
+                   data-paddingbottom="[12,12,12,12]"
+                   data-paddingleft="[30,35,35,15]"
+                   style="z-index: 8; white-space: nowrap; outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer; border-radius:30px;">CONTACT US</div>
+            </li>
+            <!-- SLIDE  -->
+          </ul>
+        </div><!-- END REVOLUTION SLIDER -->
+      </div>
     </div>
-</div><!--/header-middle-->
+    <!-- Main Slider -->
+    <div class="content-block">
 
-<div class="header-bottom"><!--header-bottom-->
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-9">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
+      <!-- Our Services -->
+      <div class="section-area content-inner service-info-bx">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-6">
+              <div class="service-bx">
+                <div class="action-box">
+                  <img src="/assets/images/our-services/pic1.jpg" alt="">
                 </div>
-                <div class="mainmenu pull-left">
-                    <ul class="nav navbar-nav collapse navbar-collapse">
-                        <li><a href="index.html" class="active">Home</a></li>
-                        <li class="dropdown"><a href="#">Shop<i class="fa fa-angle-down"></i></a>
-                            <ul role="menu" class="sub-menu">
-                                <li><a href="shop.html">Products</a></li>
-                                <li><a href="product-details.html">Product Details</a></li>
-                                <li><a href="checkout.html">Checkout</a></li>
-                                <li><a href="cart.html">Cart</a></li>
-                                <li><a href="login.html">Login</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown"><a href="#">Blog<i class="fa fa-angle-down"></i></a>
-                            <ul role="menu" class="sub-menu">
-                                <li><a href="blog.html">Blog List</a></li>
-                                <li><a href="blog-single.html">Blog Single</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="404.html">404</a></li>
-                        <li><a href="contact-us.html">Contact</a></li>
-                    </ul>
+                <div class="info-bx text-center">
+                  <div class="feature-box-sm radius bg-white">
+                    <i class="fa fa-bank text-primary"></i>
+                  </div>
+                  <h4><a href="#">Địt mẹ mày</a></h4>
+                  <a href="#" class="btn radius-xl">View More</a>
                 </div>
+              </div>
             </div>
-            <div class="col-sm-3">
-                <div class="search_box pull-right">
-                    <input type="text" placeholder="Search"/>
+            <div class="col-lg-4 col-md-4 col-sm-6">
+              <div class="service-bx">
+                <div class="action-box">
+                  <img src="/assets/images/our-services/pic2.jpg" alt="">
                 </div>
+                <div class="info-bx text-center">
+                  <div class="feature-box-sm radius bg-white">
+                    <i class="fa fa-book text-primary"></i>
+                  </div>
+                  <h4><a href="#">Learn Courses Online</a></h4>
+                  <a href="#" class="btn radius-xl">View More</a>
+                </div>
+              </div>
             </div>
+            <div class="col-lg-4 col-md-4 col-sm-12">
+              <div class="service-bx m-b0">
+                <div class="action-box">
+                  <img src="/assets/images/our-services/pic3.jpg" alt="">
+                </div>
+                <div class="info-bx text-center">
+                  <div class="feature-box-sm radius bg-white">
+                    <i class="fa fa-file-text-o text-primary"></i>
+                  </div>
+                  <h4><a href="#">Book Library & Store</a></h4>
+                  <a href="#" class="btn radius-xl">View More</a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-    </div>
-</div><!--/header-bottom-->
-</header><!--/header-->
-
-<section id="slider"><!--slider-->
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-12">
-                <div id="slider-carousel" class="carousel slide" data-ride="carousel">
-                    <ol class="carousel-indicators">
-                        <li data-target="#slider-carousel" data-slide-to="0" class="active"></li>
-                        <li data-target="#slider-carousel" data-slide-to="1"></li>
-                        <li data-target="#slider-carousel" data-slide-to="2"></li>
-                    </ol>
-
-                    <div class="carousel-inner">
-                        <div class="item active">
-                            <div class="col-sm-6">
-                                <h1><span>E</span>-SHOPPER</h1>
-                                <h2>Free E-Commerce Template</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                                <button type="button" class="btn btn-default get">Get it now</button>
-                            </div>
-                            <div class="col-sm-6">
-                                <img src="/images/home/girl1.jpg" class="girl img-responsive" alt="" />
-                                <img src="/images/home/pricing.png"  class="pricing" alt="" />
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="col-sm-6">
-                                <h1><span>E</span>-SHOPPER</h1>
-                                <h2>100% Responsive Design</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                                <button type="button" class="btn btn-default get">Get it now</button>
-                            </div>
-                            <div class="col-sm-6">
-                                <img src="/images/home/girl2.jpg" class="girl img-responsive" alt="" />
-                                <img src="/images/home/pricing.png"  class="pricing" alt="" />
-                            </div>
-                        </div>
-
-                        <div class="item">
-                            <div class="col-sm-6">
-                                <h1><span>E</span>-SHOPPER</h1>
-                                <h2>Free Ecommerce Template</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                                <button type="button" class="btn btn-default get">Get it now</button>
-                            </div>
-                            <div class="col-sm-6">
-                                <img src="/images/home/girl3.jpg" class="girl img-responsive" alt="" />
-                                <img src="/images/home/pricing.png" class="pricing" alt="" />
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <a href="#slider-carousel" class="left control-carousel hidden-xs" data-slide="prev">
-                        <i class="fa fa-angle-left"></i>
-                    </a>
-                    <a href="#slider-carousel" class="right control-carousel hidden-xs" data-slide="next">
-                        <i class="fa fa-angle-right"></i>
-                    </a>
-                </div>
-
+      </div>
+      <!-- Our Services END -->
+      <div class="section-area section-sp1 popular-courses-bx">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 heading-bx left">
+              <h2 class="title-head">TOP 10 <span>Service Providers</span></h2>
+              <p>Most trusted service providers by consumers</p>
             </div>
+            </div>
+          <div class="row" id="bar-chart-append">
+              <select id="select-order">
+                <option value="alphabetical">Alphabetical</option>
+                <option value="ascending">Page rank, ascending</option>
+                <option value="descending" selected>Page rank, descending</option>
+              </select>
+          </div>
         </div>
-    </div>
-</section><!--/slider-->
-
-<section>
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-3">
-                <div class="left-sidebar">
-                    <h2>Category</h2>
-                    <div class="panel-group category-products" id="accordian"><!--category-productsr-->
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h4 class="panel-title">
-                                    <a data-toggle="collapse" data-parent="#accordian" href="#sportswear">
-                                        <span class="badge pull-right"><i class="fa fa-plus"></i></span>
-                                        Sportswear
-                                    </a>
-                                </h4>
-                            </div>
-                            <div id="sportswear" class="panel-collapse collapse">
-                                <div class="panel-body">
-                                    <ul>
-                                        <li><a href="#">Nike </a></li>
-                                        <li><a href="#">Under Armour </a></li>
-                                        <li><a href="#">Adidas </a></li>
-                                        <li><a href="#">Puma</a></li>
-                                        <li><a href="#">ASICS </a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h4 class="panel-title">
-                                    <a data-toggle="collapse" data-parent="#accordian" href="#mens">
-                                        <span class="badge pull-right"><i class="fa fa-plus"></i></span>
-                                        Mens
-                                    </a>
-                                </h4>
-                            </div>
-                            <div id="mens" class="panel-collapse collapse">
-                                <div class="panel-body">
-                                    <ul>
-                                        <li><a href="#">Fendi</a></li>
-                                        <li><a href="#">Guess</a></li>
-                                        <li><a href="#">Valentino</a></li>
-                                        <li><a href="#">Dior</a></li>
-                                        <li><a href="#">Versace</a></li>
-                                        <li><a href="#">Armani</a></li>
-                                        <li><a href="#">Prada</a></li>
-                                        <li><a href="#">Dolce and Gabbana</a></li>
-                                        <li><a href="#">Chanel</a></li>
-                                        <li><a href="#">Gucci</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h4 class="panel-title">
-                                    <a data-toggle="collapse" data-parent="#accordian" href="#womens">
-                                        <span class="badge pull-right"><i class="fa fa-plus"></i></span>
-                                        Womens
-                                    </a>
-                                </h4>
-                            </div>
-                            <div id="womens" class="panel-collapse collapse">
-                                <div class="panel-body">
-                                    <ul>
-                                        <li><a href="#">Fendi</a></li>
-                                        <li><a href="#">Guess</a></li>
-                                        <li><a href="#">Valentino</a></li>
-                                        <li><a href="#">Dior</a></li>
-                                        <li><a href="#">Versace</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h4 class="panel-title"><a href="#">Kids</a></h4>
-                            </div>
-                        </div>
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h4 class="panel-title"><a href="#">Fashion</a></h4>
-                            </div>
-                        </div>
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h4 class="panel-title"><a href="#">Households</a></h4>
-                            </div>
-                        </div>
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h4 class="panel-title"><a href="#">Interiors</a></h4>
-                            </div>
-                        </div>
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h4 class="panel-title"><a href="#">Clothing</a></h4>
-                            </div>
-                        </div>
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h4 class="panel-title"><a href="#">Bags</a></h4>
-                            </div>
-                        </div>
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h4 class="panel-title"><a href="#">Shoes</a></h4>
-                            </div>
-                        </div>
-                    </div><!--/category-products-->
-
-                    <div class="brands_products"><!--brands_products-->
-                        <h2>Brands</h2>
-                        <div class="brands-name">
-                            <ul class="nav nav-pills nav-stacked">
-                                <li><a href="#"> <span class="pull-right">(50)</span>Acne</a></li>
-                                <li><a href="#"> <span class="pull-right">(56)</span>Grüne Erde</a></li>
-                                <li><a href="#"> <span class="pull-right">(27)</span>Albiro</a></li>
-                                <li><a href="#"> <span class="pull-right">(32)</span>Ronhill</a></li>
-                                <li><a href="#"> <span class="pull-right">(5)</span>Oddmolly</a></li>
-                                <li><a href="#"> <span class="pull-right">(9)</span>Boudestijn</a></li>
-                                <li><a href="#"> <span class="pull-right">(4)</span>Rösch creative culture</a></li>
-                            </ul>
-                        </div>
-                    </div><!--/brands_products-->
-
-                    <div class="price-range"><!--price-range-->
-                        <h2>Price Range</h2>
-                        <div class="well text-center">
-                            <input type="text" class="span2" value="" data-slider-min="0" data-slider-max="600" data-slider-step="5" data-slider-value="[250,450]" id="sl2" ><br />
-                            <b class="pull-left">$ 0</b> <b class="pull-right">$ 600</b>
-                        </div>
-                    </div><!--/price-range-->
-
-                    <div class="shipping text-center"><!--shipping-->
-                        <img src="/images/home/shipping.jpg" alt="" />
-                    </div><!--/shipping-->
-
+      </div>
+      <!-- Popular Courses -->
+    <c:if test="${not empty objects}">
+      <div class="section-area section-sp2 popular-courses-bx">
+        <div class="container">
+<%--          <div class="row">--%>
+<%--            <div class="col-md-12 heading-bx left">--%>
+<%--              <h2 class="title-head">TOP 10 <span>Service Providers</span></h2>--%>
+<%--              <p>Most trusted service providers by consumers</p>--%>
+<%--            </div>--%>
+<%--          </div>--%>
+          <div class="row">
+            <div class="courses-carousel owl-carousel owl-btn-1 col-12 p-lr0">
+              <c:forEach var="object" items="${objects}" varStatus="loop">
+              <div class="item">
+                <div class="cours-bx">
+                  <div class="action-box">
+                    <c:choose>
+                      <c:when test="${object.hasNonNull('facebook_profile_pic')}">
+                        <img src="${object.get('facebook_profile_pic').asText()}" alt="">
+                      </c:when>
+                      <c:otherwise>
+                        <img src="/assets/images/gallery/FUHL.jpg" alt="">
+                      </c:otherwise>
+                    </c:choose>
+                     <a href="/test/profile?owner=${fn:replace(object.get('owner').asText(), '\"', '')}" class="btn">Read More</a>
+                  </div>
+                  <div class="info-bx text-center">
+                    <h5><a href="/test/profile?owner=${fn:replace(object.get('owner').asText(), '\"', '')}"> ${object.hasNonNull('facebook_name') ? object.get('facebook_name').asText() : fn:replace(object.get('owner').asText(), '\"', '')}</a></h5>
+                    <span>${object.get('owner')}</span>
+                  </div>
+                  <div class="cours-more-info">
+                    <div class="review">
+                      <span>${object.get('old_page_rank')}</span>
+                      <ul class="cours-star">
+                        <c:forEach var="i" begin="1" end="5">
+                          <c:choose>
+                            <c:when test="${i <= (object.get('old_page_rank').asDouble() / highest.get('old_page_rank').asDouble() * 5)}">
+                              <li class="active"><i class="fa fa-star"></i></li>
+                            </c:when>
+                            <c:otherwise>
+                              <li><i class="fa fa-star"></i></li>
+                            </c:otherwise>
+                          </c:choose>
+                        </c:forEach>
+                      </ul>
+                    </div>
+                    <div class="price">
+                        <%--                                                        <del>$190</del>--%>
+                      <h5>#${loop.count}</h5>
+                    </div>
+                  </div>
                 </div>
-            </div>
-
-            <div class="col-sm-9 padding-right">
-                <div class="features_items"><!--features_items-->
-                    <h2 class="title text-center">Features Items</h2>
-                    <div class="col-sm-4">
-                        <div class="product-image-wrapper">
-                            <div class="single-products">
-                                <div class="productinfo text-center">
-                                    <img src="/images/home/product1.jpg" alt="" />
-                                    <h2>$56</h2>
-                                    <p>Easy Polo Black Edition</p>
-                                    <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-                                </div>
-                                <div class="product-overlay">
-                                    <div class="overlay-content">
-                                        <h2>$56</h2>
-                                        <p>Easy Polo Black Edition</p>
-                                        <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="choose">
-                                <ul class="nav nav-pills nav-justified">
-                                    <li><a href="#"><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
-                                    <li><a href="#"><i class="fa fa-plus-square"></i>Add to compare</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="product-image-wrapper">
-                            <div class="single-products">
-                                <div class="productinfo text-center">
-                                    <img src="/images/home/product2.jpg" alt="" />
-                                    <h2>$56</h2>
-                                    <p>Easy Polo Black Edition</p>
-                                    <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-                                </div>
-                                <div class="product-overlay">
-                                    <div class="overlay-content">
-                                        <h2>$56</h2>
-                                        <p>Easy Polo Black Edition</p>
-                                        <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="choose">
-                                <ul class="nav nav-pills nav-justified">
-                                    <li><a href="#"><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
-                                    <li><a href="#"><i class="fa fa-plus-square"></i>Add to compare</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="product-image-wrapper">
-                            <div class="single-products">
-                                <div class="productinfo text-center">
-                                    <img src="/images/home/product3.jpg" alt="" />
-                                    <h2>$56</h2>
-                                    <p>Easy Polo Black Edition</p>
-                                    <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-                                </div>
-                                <div class="product-overlay">
-                                    <div class="overlay-content">
-                                        <h2>$56</h2>
-                                        <p>Easy Polo Black Edition</p>
-                                        <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="choose">
-                                <ul class="nav nav-pills nav-justified">
-                                    <li><a href="#"><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
-                                    <li><a href="#"><i class="fa fa-plus-square"></i>Add to compare</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="product-image-wrapper">
-                            <div class="single-products">
-                                <div class="productinfo text-center">
-                                    <img src="/images/home/product4.jpg" alt="" />
-                                    <h2>$56</h2>
-                                    <p>Easy Polo Black Edition</p>
-                                    <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-                                </div>
-                                <div class="product-overlay">
-                                    <div class="overlay-content">
-                                        <h2>$56</h2>
-                                        <p>Easy Polo Black Edition</p>
-                                        <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-                                    </div>
-                                </div>
-                                <img src="/images/home/new.png" class="new" alt="" />
-                            </div>
-                            <div class="choose">
-                                <ul class="nav nav-pills nav-justified">
-                                    <li><a href="#"><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
-                                    <li><a href="#"><i class="fa fa-plus-square"></i>Add to compare</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="product-image-wrapper">
-                            <div class="single-products">
-                                <div class="productinfo text-center">
-                                    <img src="/images/home/product5.jpg" alt="" />
-                                    <h2>$56</h2>
-                                    <p>Easy Polo Black Edition</p>
-                                    <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-                                </div>
-                                <div class="product-overlay">
-                                    <div class="overlay-content">
-                                        <h2>$56</h2>
-                                        <p>Easy Polo Black Edition</p>
-                                        <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-                                    </div>
-                                </div>
-                                <img src="/images/home/sale.png" class="new" alt="" />
-                            </div>
-                            <div class="choose">
-                                <ul class="nav nav-pills nav-justified">
-                                    <li><a href="#"><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
-                                    <li><a href="#"><i class="fa fa-plus-square"></i>Add to compare</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="product-image-wrapper">
-                            <div class="single-products">
-                                <div class="productinfo text-center">
-                                    <img src="/images/home/product6.jpg" alt="" />
-                                    <h2>$56</h2>
-                                    <p>Easy Polo Black Edition</p>
-                                    <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-                                </div>
-                                <div class="product-overlay">
-                                    <div class="overlay-content">
-                                        <h2>$56</h2>
-                                        <p>Easy Polo Black Edition</p>
-                                        <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="choose">
-                                <ul class="nav nav-pills nav-justified">
-                                    <li><a href="#"><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
-                                    <li><a href="#"><i class="fa fa-plus-square"></i>Add to compare</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                </div><!--features_items-->
-
-                <div class="category-tab"><!--category-tab-->
-                    <div class="col-sm-12">
-                        <ul class="nav nav-tabs">
-                            <li class="active"><a href="#tshirt" data-toggle="tab">T-Shirt</a></li>
-                            <li><a href="#blazers" data-toggle="tab">Blazers</a></li>
-                            <li><a href="#sunglass" data-toggle="tab">Sunglass</a></li>
-                            <li><a href="#kids" data-toggle="tab">Kids</a></li>
-                            <li><a href="#poloshirt" data-toggle="tab">Polo shirt</a></li>
-                        </ul>
-                    </div>
-                    <div class="tab-content">
-                        <div class="tab-pane fade active in" id="tshirt" >
-                            <div class="col-sm-3">
-                                <div class="product-image-wrapper">
-                                    <div class="single-products">
-                                        <div class="productinfo text-center">
-                                            <img src="/images/home/gallery1.jpg" alt="" />
-                                            <h2>$56</h2>
-                                            <p>Easy Polo Black Edition</p>
-                                            <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-3">
-                                <div class="product-image-wrapper">
-                                    <div class="single-products">
-                                        <div class="productinfo text-center">
-                                            <img src="/images/home/gallery2.jpg" alt="" />
-                                            <h2>$56</h2>
-                                            <p>Easy Polo Black Edition</p>
-                                            <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-3">
-                                <div class="product-image-wrapper">
-                                    <div class="single-products">
-                                        <div class="productinfo text-center">
-                                            <img src="/images/home/gallery3.jpg" alt="" />
-                                            <h2>$56</h2>
-                                            <p>Easy Polo Black Edition</p>
-                                            <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-3">
-                                <div class="product-image-wrapper">
-                                    <div class="single-products">
-                                        <div class="productinfo text-center">
-                                            <img src="/images/home/gallery4.jpg" alt="" />
-                                            <h2>$56</h2>
-                                            <p>Easy Polo Black Edition</p>
-                                            <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="tab-pane fade" id="blazers" >
-                            <div class="col-sm-3">
-                                <div class="product-image-wrapper">
-                                    <div class="single-products">
-                                        <div class="productinfo text-center">
-                                            <img src="/images/home/gallery4.jpg" alt="" />
-                                            <h2>$56</h2>
-                                            <p>Easy Polo Black Edition</p>
-                                            <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-3">
-                                <div class="product-image-wrapper">
-                                    <div class="single-products">
-                                        <div class="productinfo text-center">
-                                            <img src="/images/home/gallery3.jpg" alt="" />
-                                            <h2>$56</h2>
-                                            <p>Easy Polo Black Edition</p>
-                                            <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-3">
-                                <div class="product-image-wrapper">
-                                    <div class="single-products">
-                                        <div class="productinfo text-center">
-                                            <img src="/images/home/gallery2.jpg" alt="" />
-                                            <h2>$56</h2>
-                                            <p>Easy Polo Black Edition</p>
-                                            <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-3">
-                                <div class="product-image-wrapper">
-                                    <div class="single-products">
-                                        <div class="productinfo text-center">
-                                            <img src="/images/home/gallery1.jpg" alt="" />
-                                            <h2>$56</h2>
-                                            <p>Easy Polo Black Edition</p>
-                                            <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="tab-pane fade" id="sunglass" >
-                            <div class="col-sm-3">
-                                <div class="product-image-wrapper">
-                                    <div class="single-products">
-                                        <div class="productinfo text-center">
-                                            <img src="/images/home/gallery3.jpg" alt="" />
-                                            <h2>$56</h2>
-                                            <p>Easy Polo Black Edition</p>
-                                            <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-3">
-                                <div class="product-image-wrapper">
-                                    <div class="single-products">
-                                        <div class="productinfo text-center">
-                                            <img src="/images/home/gallery4.jpg" alt="" />
-                                            <h2>$56</h2>
-                                            <p>Easy Polo Black Edition</p>
-                                            <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-3">
-                                <div class="product-image-wrapper">
-                                    <div class="single-products">
-                                        <div class="productinfo text-center">
-                                            <img src="/images/home/gallery1.jpg" alt="" />
-                                            <h2>$56</h2>
-                                            <p>Easy Polo Black Edition</p>
-                                            <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-3">
-                                <div class="product-image-wrapper">
-                                    <div class="single-products">
-                                        <div class="productinfo text-center">
-                                            <img src="/images/home/gallery2.jpg" alt="" />
-                                            <h2>$56</h2>
-                                            <p>Easy Polo Black Edition</p>
-                                            <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="tab-pane fade" id="kids" >
-                            <div class="col-sm-3">
-                                <div class="product-image-wrapper">
-                                    <div class="single-products">
-                                        <div class="productinfo text-center">
-                                            <img src="/images/home/gallery1.jpg" alt="" />
-                                            <h2>$56</h2>
-                                            <p>Easy Polo Black Edition</p>
-                                            <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-3">
-                                <div class="product-image-wrapper">
-                                    <div class="single-products">
-                                        <div class="productinfo text-center">
-                                            <img src="/images/home/gallery2.jpg" alt="" />
-                                            <h2>$56</h2>
-                                            <p>Easy Polo Black Edition</p>
-                                            <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-3">
-                                <div class="product-image-wrapper">
-                                    <div class="single-products">
-                                        <div class="productinfo text-center">
-                                            <img src="/images/home/gallery3.jpg" alt="" />
-                                            <h2>$56</h2>
-                                            <p>Easy Polo Black Edition</p>
-                                            <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-3">
-                                <div class="product-image-wrapper">
-                                    <div class="single-products">
-                                        <div class="productinfo text-center">
-                                            <img src="/images/home/gallery4.jpg" alt="" />
-                                            <h2>$56</h2>
-                                            <p>Easy Polo Black Edition</p>
-                                            <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="tab-pane fade" id="poloshirt" >
-                            <div class="col-sm-3">
-                                <div class="product-image-wrapper">
-                                    <div class="single-products">
-                                        <div class="productinfo text-center">
-                                            <img src="/images/home/gallery2.jpg" alt="" />
-                                            <h2>$56</h2>
-                                            <p>Easy Polo Black Edition</p>
-                                            <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-3">
-                                <div class="product-image-wrapper">
-                                    <div class="single-products">
-                                        <div class="productinfo text-center">
-                                            <img src="/images/home/gallery4.jpg" alt="" />
-                                            <h2>$56</h2>
-                                            <p>Easy Polo Black Edition</p>
-                                            <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-3">
-                                <div class="product-image-wrapper">
-                                    <div class="single-products">
-                                        <div class="productinfo text-center">
-                                            <img src="/images/home/gallery3.jpg" alt="" />
-                                            <h2>$56</h2>
-                                            <p>Easy Polo Black Edition</p>
-                                            <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-3">
-                                <div class="product-image-wrapper">
-                                    <div class="single-products">
-                                        <div class="productinfo text-center">
-                                            <img src="/images/home/gallery1.jpg" alt="" />
-                                            <h2>$56</h2>
-                                            <p>Easy Polo Black Edition</p>
-                                            <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div><!--/category-tab-->
-
-                <div class="recommended_items"><!--recommended_items-->
-                    <h2 class="title text-center">recommended items</h2>
-
-                    <div id="recommended-item-carousel" class="carousel slide" data-ride="carousel">
-                        <div class="carousel-inner">
-                            <div class="item active">
-                                <div class="col-sm-4">
-                                    <div class="product-image-wrapper">
-                                        <div class="single-products">
-                                            <div class="productinfo text-center">
-                                                <img src="/images/home/recommend1.jpg" alt="" />
-                                                <h2>$56</h2>
-                                                <p>Easy Polo Black Edition</p>
-                                                <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-4">
-                                    <div class="product-image-wrapper">
-                                        <div class="single-products">
-                                            <div class="productinfo text-center">
-                                                <img src="/images/home/recommend2.jpg" alt="" />
-                                                <h2>$56</h2>
-                                                <p>Easy Polo Black Edition</p>
-                                                <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-4">
-                                    <div class="product-image-wrapper">
-                                        <div class="single-products">
-                                            <div class="productinfo text-center">
-                                                <img src="/images/home/recommend3.jpg" alt="" />
-                                                <h2>$56</h2>
-                                                <p>Easy Polo Black Edition</p>
-                                                <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="col-sm-4">
-                                    <div class="product-image-wrapper">
-                                        <div class="single-products">
-                                            <div class="productinfo text-center">
-                                                <img src="/images/home/recommend1.jpg" alt="" />
-                                                <h2>$56</h2>
-                                                <p>Easy Polo Black Edition</p>
-                                                <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-4">
-                                    <div class="product-image-wrapper">
-                                        <div class="single-products">
-                                            <div class="productinfo text-center">
-                                                <img src="/images/home/recommend2.jpg" alt="" />
-                                                <h2>$56</h2>
-                                                <p>Easy Polo Black Edition</p>
-                                                <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-4">
-                                    <div class="product-image-wrapper">
-                                        <div class="single-products">
-                                            <div class="productinfo text-center">
-                                                <img src="/images/home/recommend3.jpg" alt="" />
-                                                <h2>$56</h2>
-                                                <p>Easy Polo Black Edition</p>
-                                                <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <a class="left recommended-item-control" href="#recommended-item-carousel" data-slide="prev">
-                            <i class="fa fa-angle-left"></i>
-                        </a>
-                        <a class="right recommended-item-control" href="#recommended-item-carousel" data-slide="next">
-                            <i class="fa fa-angle-right"></i>
-                        </a>
-                    </div>
-                </div><!--/recommended_items-->
+              </div>
+              </c:forEach>
 
             </div>
+          </div>
         </div>
+      </div>
+      <!-- Popular Courses END -->
+</c:if>
+      <div class="section-area section-sp1 popular-courses-bx">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 heading-bx left">
+              <h2 class="title-head">Data <span>Visualize</span></h2>
+              <p>Most trusted service providers by consumers</p>
+            </div>
+          </div>
+          <div class="row" id="disjoint-append">
+            <div id="tooltip" style="position: absolute; opacity: 0;" class="tooltip bs-tooltip-auto valid-tooltip"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Form -->
+      <div class="section-area section-sp1 ovpr-dark bg-fix online-cours" style="background-image:url(/assets/images/gallery/FUHL.jpg);">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 text-center text-white">
+              <h2>Trust Management</h2>
+              <h5>Find Who You Trust</h5>
+              <form class="cours-search" action="/test/list">
+                <div class="input-group">
+                  <input type="text" class="form-control" placeholder="What do you want to find?" name="q">
+                  <div class="input-group-append">
+                    <button class="btn" type="submit">Search</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="mw800 m-auto">
+            <div class="row">
+              <div class="col-md-4 col-sm-6">
+                <div class="cours-search-bx m-b30">
+                  <div class="icon-box">
+                    <h3><i class="ti-user"></i><span class="counter">50</span>K</h3>
+                  </div>
+                  <span class="cours-search-text">Over 50000 Facebook users</span>
+                </div>
+              </div>
+              <div class="col-md-4 col-sm-6">
+                <div class="cours-search-bx m-b30">
+                  <div class="icon-box">
+                    <h3><i class="ti-book"></i><span class="counter">100</span></h3>
+                  </div>
+                  <span class="cours-search-text">More than 100 Service Providers</span>
+                </div>
+              </div>
+              <div class="col-md-4 col-sm-12">
+                <div class="cours-search-bx m-b30">
+                  <div class="icon-box">
+                    <h3><i class="ti-layout-list-post"></i><span class="counter">100</span>K</h3>
+                  </div>
+                  <span class="cours-search-text">Based on 100000 posts and reviews</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Form END -->
+
+      <!-- Testimonials -->
+      <div class="section-area section-sp2 bg-fix ovbl-dark" style="background-image:url(/assets/images/background/bg1.jpg);">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 text-white heading-bx left">
+              <h2 class="title-head text-uppercase">Who <span>we are</span></h2>
+              <p>A research by</p>
+            </div>
+          </div>
+          <div class="testimonial-carousel owl-carousel owl-btn-1 col-12 p-lr0">
+            <div class="item">
+              <div class="testimonial-bx">
+                <div class="testimonial-thumb">
+                  <img src="/assets/images/testimonials/pic2.jpg" alt="">
+                </div>
+                <div class="testimonial-info">
+                  <h5 class="name">Mr.Pham Van Duong</h5>
+                  <p>-Instructor</p>
+                </div>
+                <div class="testimonial-content">
+                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type...</p>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="testimonial-bx">
+                <div class="testimonial-thumb">
+                  <img src="/assets/images/testimonials/pic2.jpg" alt="">
+                </div>
+                <div class="testimonial-info">
+                  <h5 class="name">Mai Phu Trong</h5>
+                  <p>-AI</p>
+                </div>
+                <div class="testimonial-content">
+                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type...</p>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="testimonial-bx">
+                <div class="testimonial-thumb">
+                  <img src="/assets/images/testimonials/pic2.jpg" alt="">
+                </div>
+                <div class="testimonial-info">
+                  <h5 class="name">Bui Duc Hieu</h5>
+                  <p>-AI</p>
+                </div>
+                <div class="testimonial-content">
+                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type...</p>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="testimonial-bx">
+                <div class="testimonial-thumb">
+                  <img src="/assets/images/testimonials/pic2.jpg" alt="">
+                </div>
+                <div class="testimonial-info">
+                  <h5 class="name">Nguyen Thuong Quyen</h5>
+                  <p>-SE</p>
+                </div>
+                <div class="testimonial-content">
+                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type...</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Testimonials END -->
+
     </div>
-</section>
+    <!-- contact area END -->
+  </div>
+  <!-- Content END-->
+  <!-- Footer ==== -->
+<jsp:include page="footer.jsp"/>
+  <!-- Footer END ==== -->
+  <button class="back-to-top fa fa-chevron-up" ></button>
+</div>
 
-    <jsp:include page="footer.jsp"></jsp:include>
+<!-- External JavaScripts -->
+<script src="/assets/js/jquery.min.js"></script>
+<script src="/assets/vendors/bootstrap/js/popper.min.js"></script>
+<script src="/assets/vendors/bootstrap/js/bootstrap.min.js"></script>
+<script src="/assets/vendors/bootstrap-select/bootstrap-select.min.js"></script>
+<script src="/assets/vendors/bootstrap-touchspin/jquery.bootstrap-touchspin.js"></script>
+<script src="/assets/vendors/magnific-popup/magnific-popup.js"></script>
+<script src="/assets/vendors/counter/waypoints-min.js"></script>
+<script src="/assets/vendors/counter/counterup.min.js"></script>
+<script src="/assets/vendors/imagesloaded/imagesloaded.js"></script>
+<script src="/assets/vendors/masonry/masonry.js"></script>
+<script src="/assets/vendors/masonry/filter.js"></script>
+<script src="/assets/vendors/owl-carousel/owl.carousel.js"></script>
+<script src="/assets/js/functions.js"></script>
+<script src="/assets/js/contact.js"></script>
+<script src='/assets/vendors/switcher/switcher.js'></script>
+<!-- Revolution JavaScripts Files -->
+<script src="/assets/vendors/revolution/js/jquery.themepunch.tools.min.js"></script>
+<script src="/assets/vendors/revolution/js/jquery.themepunch.revolution.min.js"></script>
+<!-- Slider revolution 5.0 Extensions  (Load Extensions only on Local File Systems !  The following part can be removed on Server for On Demand Loading) -->
+<script src="/assets/vendors/revolution/js/extensions/revolution.extension.actions.min.js"></script>
+<script src="/assets/vendors/revolution/js/extensions/revolution.extension.carousel.min.js"></script>
+<script src="/assets/vendors/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
+<script src="/assets/vendors/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+<script src="/assets/vendors/revolution/js/extensions/revolution.extension.migration.min.js"></script>
+<script src="/assets/vendors/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+<script src="/assets/vendors/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
+<script src="/assets/vendors/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+<script src="/assets/vendors/revolution/js/extensions/revolution.extension.video.min.js"></script>
+<script>
+  jQuery(document).ready(function() {
+    var ttrevapi;
+    var tpj =jQuery;
+    if(tpj("#rev_slider_486_1").revolution == undefined){
+      revslider_showDoubleJqueryError("#rev_slider_486_1");
+    }else{
+      ttrevapi = tpj("#rev_slider_486_1").show().revolution({
+        sliderType:"standard",
+        jsFileLocation:"/assets/vendors/revolution/js/",
+        sliderLayout:"fullwidth",
+        dottedOverlay:"none",
+        delay:9000,
+        navigation: {
+          keyboardNavigation:"on",
+          keyboard_direction: "horizontal",
+          mouseScrollNavigation:"off",
+          mouseScrollReverse:"default",
+          onHoverStop:"on",
+          touch:{
+            touchenabled:"on",
+            swipe_threshold: 75,
+            swipe_min_touches: 1,
+            swipe_direction: "horizontal",
+            drag_block_vertical: false
+          }
+          ,
+          arrows: {
+            style: "uranus",
+            enable: true,
+            hide_onmobile: false,
+            hide_onleave: false,
+            tmp: '',
+            left: {
+              h_align: "left",
+              v_align: "center",
+              h_offset: 10,
+              v_offset: 0
+            },
+            right: {
+              h_align: "right",
+              v_align: "center",
+              h_offset: 10,
+              v_offset: 0
+            }
+          },
 
+        },
+        viewPort: {
+          enable:true,
+          outof:"pause",
+          visible_area:"80%",
+          presize:false
+        },
+        responsiveLevels:[1240,1024,778,480],
+        visibilityLevels:[1240,1024,778,480],
+        gridwidth:[1240,1024,778,480],
+        gridheight:[768,600,600,600],
+        lazyType:"none",
+        parallax: {
+          type:"scroll",
+          origo:"enterpoint",
+          speed:400,
+          levels:[5,10,15,20,25,30,35,40,45,50,46,47,48,49,50,55],
+          type:"scroll",
+        },
+        shadow:0,
+        spinner:"off",
+        stopLoop:"off",
+        stopAfterLoops:-1,
+        stopAtSlide:-1,
+        shuffle:"off",
+        autoHeight:"off",
+        hideThumbsOnMobile:"off",
+        hideSliderAtLimit:0,
+        hideCaptionAtLimit:0,
+        hideAllCaptionAtLilmit:0,
+        debugMode:false,
+        fallbacks: {
+          simplifyAll:"off",
+          nextSlideOnWindowFocus:"off",
+          disableFocusListener:false,
+        }
+      });
+    }
+  });
 
-
-
-<script src="/javascripts/jquery.js"></script>
-<script src="/javascripts/bootstrap.min.js"></script>
-<script src="/javascripts/jquery.scrollUp.min.js"></script>
-<script src="/javascripts/price-range.js"></script>
-<script src="/javascripts/jquery.prettyPhoto.js"></script>
-<script src="/javascripts/main.js"></script>
-
+  document.getElementById("slide-200-layer-5").addEventListener("click", function() {
+    window.location.href = "/test/list";
+  });
+    document.getElementById("slide-100-layer-5").addEventListener("click", function() {
+        window.location.href = "/test/list";
+    });
+</script>
+  <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+  <script src="/js/graph/graphs.js"></script>
+<%--  <script src="/js/graph/disjoint-graph.js"></script>--%>
 </body>
+
 </html>
