@@ -104,7 +104,7 @@
                                 </div>
                                 <div class="ttr-post-info">
                                     <div class="ttr-post-title ">
-                                        <h2 class="post-title">Good Intentions or Good Results?</h2>
+                                        <h2 class="post-title">${object.hasNonNull('facebook_name') ? object.get('facebook_name').asText() : fn:replace(object.get('owner').asText(), '\"', '')}</h2>
                                     </div>
                                     <div class="ttr-post-text">
                                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>

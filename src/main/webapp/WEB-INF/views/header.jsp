@@ -36,7 +36,7 @@
                 <!-- Search Box ==== -->
                 <div class="nav-search-bar">
                     <form action="/list" accept-charset="UTF-8">
-                        <input name="search" value="" type="text" class="form-control" name="q" placeholder="Type to search">
+                        <input name="search" value="" type="text" class="form-control" name="q" placeholder="Find a service provider">
                         <span><i class="ti-search"></i></span>
                     </form>
                     <span id="search-remove"><i class="ti-close"></i></span>
