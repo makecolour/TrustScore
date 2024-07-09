@@ -21,11 +21,11 @@
   <meta name="robots" content="" />
 
   <!-- DESCRIPTION -->
-  <meta name="description" content="EduChamp : Education HTML Template" />
+  <meta name="description" content="Trust Management: Home" />
 
   <!-- OG -->
-  <meta property="og:title" content="EduChamp : Education HTML Template" />
-  <meta property="og:description" content="EduChamp : Education HTML Template" />
+  <meta property="og:title" content="Trust Management: Home" />
+  <meta property="og:description" content="Trust Management: Home" />
   <meta property="og:image" content="" />
   <meta name="format-detection" content="telephone=no">
 
@@ -34,7 +34,7 @@
   <link rel="shortcut icon" type="image/x-icon" href="/assets/images/favicon.png" />
 
   <!-- PAGE TITLE HERE ============================================= -->
-  <title>EduChamp : Education HTML Template </title>
+  <title>Trust Management: Home</title>
 
   <!-- MOBILE SPECIFIC ============================================= -->
   <meta name="viewport" content="width=device-width, initial-scale=1">

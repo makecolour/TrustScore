@@ -20,11 +20,11 @@
     <meta name="robots" content="" />
 
     <!-- DESCRIPTION -->
-    <meta name="description" content="EduChamp : Education HTML Template" />
+    <meta name="description" content="${object.get('owner').asText()} Profile" />
 
     <!-- OG -->
-    <meta property="og:title" content="EduChamp : Education HTML Template" />
-    <meta property="og:description" content="EduChamp : Education HTML Template" />
+    <meta property="og:title" content="${object.get('owner').asText()} Profile" />
+    <meta property="og:description" content="${object.get('owner').asText()} Profile" />
     <meta property="og:image" content="" />
     <meta name="format-detection" content="telephone=no">
 
@@ -33,7 +33,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="/assets/images/favicon.png" />
 
     <!-- PAGE TITLE HERE ============================================= -->
-    <title>EduChamp : Education HTML Template </title>
+    <title>${object.get('owner').asText()} Profile</title>
 
     <!-- MOBILE SPECIFIC ============================================= -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
