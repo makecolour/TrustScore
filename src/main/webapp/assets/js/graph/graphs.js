@@ -1,3 +1,23 @@
+function shadeColor(color, percent) {
+
+    var R = parseInt(color.substring(1,3),16);
+    var G = parseInt(color.substring(3,5),16);
+    var B = parseInt(color.substring(5,7),16);
+
+    R = parseInt(R * (100 + percent) / 100);
+    G = parseInt(G * (100 + percent) / 100);
+    B = parseInt(B * (100 + percent) / 100);
+
+    R = (R<255)?R:255;
+    G = (G<255)?G:255;
+    B = (B<255)?B:255;
+
+    var RR = ((R.toString(16).length==1)?"0"+R.toString(16):R.toString(16));
+    var GG = ((G.toString(16).length==1)?"0"+G.toString(16):G.toString(16));
+    var BB = ((B.toString(16).length==1)?"0"+B.toString(16):B.toString(16));
+
+    return "#"+RR+GG+BB;
+}
 
 function disjointChart(nodeFile={}, linkFile={}) {
     // Specify the dimensions of the chart.
@@ -18,6 +38,7 @@ function disjointChart(nodeFile={}, linkFile={}) {
         .force("charge", d3.forceManyBody())
         .force("x", d3.forceX())
         .force("y", d3.forceY());
+
 
     // Create the SVG container.
     const svg = d3.create("svg")
@@ -72,40 +93,15 @@ function disjointChart(nodeFile={}, linkFile={}) {
         .text(d => d.owner);
 
 
-    //add
-    // const Tooltip = d3.select('#tooltip').style('opacity', 0); // Start with the tooltip hidden
-
-
-    var mouseover = function(d) {
-        Tooltip
-            .style("opacity", 1)
-        d3.select(this)
-            .style("stroke", "black")
-            .style("opacity", 1)
-    }
-
-    var mouseleave = function(d) {
-        Tooltip
-            .style("opacity", 0)
-        d3.select(this)
-            .style("stroke", "none")
-            .style("opacity", 0.8)
-    }
-
-    function showTooltip(event, d) {
-        Tooltip
-            .style('opacity', 1)
-            .html(`Node data: `) // Example content, replace with your data
-            .style('left', `${event.pageX}px`)
-            .style('top', `${event.pageY}px`);
-    }
     function clicked(event, d) {
         if (event.defaultPrevented) return; // dragged
+
         d3.select('#tooltip')
             .style('opacity', 1)
             .html(`Node data: ${JSON.stringify(d)}`) // Display all attributes of the node
             .style('left', `${event.pageX}px`)
             .style('top', `${event.pageY}px`);
+
 
         d3.select(this).transition()
             .attr("fill", "white")
@@ -123,7 +119,7 @@ function disjointChart(nodeFile={}, linkFile={}) {
             .style('opacity', 0); // Hide the tooltip
     }
 
-    // node.on("mouseout", mouseout);
+    node.on("mouseover", mouseout);
     //node.on("mouseover", mouseover)
     //node.on("mouseleave", mouseleave)
     // Add a drag behavior.
@@ -183,6 +179,7 @@ function barChart (data2)  {
     const marginRight = 0;
     const marginBottom = 30;
     const marginLeft = 40;
+    const bar_color = "#ff8c00";
 
     // Declare the x (horizontal position) scale and the corresponding axis generator.
     const x = d3.scaleBand()
@@ -202,9 +199,21 @@ function barChart (data2)  {
         .attr("viewBox", [0, 0, width, height])
         .attr("style", `max-width: ${width}px; height: auto; font: 10px rubik; overflow: visible;`);
 
+    // const tooltip = d3.select("body")
+    //     .append("div")
+    //     .attr("class","d3-tooltip")
+    //     .style("position", "absolute")
+    //     .style("z-index", "10")
+    //     .style("visibility", "hidden")
+    //     .style("padding", "15px")
+    //     .style("background", "rgba(0,0,0,0.6)")
+    //     .style("border-radius", "5px")
+    //     .style("color", "#fff")
+    //     .text("Tool");
+
     // Create a bar for each letter.
     const bar = svg.append("g")
-        .attr("fill", "steelblue")
+        .attr("fill", bar_color) // Default color of the bars.
         .selectAll("rect")
         .data(data2)
         .join("rect")
@@ -212,7 +221,21 @@ function barChart (data2)  {
         .attr("x", d => x(d.owner))
         .attr("y", d => y(d.old_page_rank))
         .attr("height", d => y(0) - y(d.old_page_rank))
-        .attr("width", x.bandwidth());
+        .attr("width", x.bandwidth())
+        .on("mouseover", function(event, d) {
+            d3.select('#tooltip2').html(`Data: ${d.old_page_rank}`).style("visibility", "visible").style("opacity", 1);
+            d3.select(this)
+                .attr("fill", shadeColor(bar_color, -15));
+        })
+        .on("mousemove", function(event, d){
+            d3.select('#tooltip2')
+                .style("top", (event.pageY-10)+"px")
+                .style("left",(event.pageX+10)+"px");
+        })
+        .on("mouseout", function() {
+            d3.select('#tooltip2').html(``).style("visibility", "hidden").style("opacity", 0);
+            d3.select(this).attr("fill", bar_color);
+        });
 
     // Create the axes.
     const gx = svg.append("g")
@@ -221,9 +244,14 @@ function barChart (data2)  {
 
     const gy = svg.append("g")
         .attr("transform", `translate(${marginLeft},0)`)
-        .call(d3.axisLeft(y).tickFormat((y) => (y * 100).toFixed()))
+        .call(d3.axisLeft(y).tickFormat((y) => y))
+        .call(g => g.append("text")
+            .attr("x", -marginLeft)
+            .attr("y", 0)
+            .attr("fill", "currentColor")
+            .attr("text-anchor", "start")
+            .text("↑ Page Rank"))
         .call(g => g.select(".domain").remove());
-
 
     // Return the chart, with an update function that takes as input a domain
     // comparator and transitions the x axis and bar positions accordingly.
@@ -258,8 +286,8 @@ window.onload = async function() {
     const barChartSVG = barChart(data2);
     const disjointSVG = disjointChart(node, link);
 
-    barChartSVG.style.marginTop = '20px';
-    barChartSVG.style.marginTop = 20;
+    barChartSVG.style.marginTop = '50px';
+    barChartSVG.style.marginTop = 50;
     const barChartAppend = document.getElementById('bar-chart-append');
 
     barChartAppend.append(barChartSVG);
@@ -268,7 +296,6 @@ window.onload = async function() {
 
     $(document).ready(function() {
         $('.selectpicker').selectpicker();
-
         // Attach the change event listener
         $('#select-order').on('changed.bs.select', function(e, clickedIndex, isSelected, previousValue) {
             console.log('Selected value:', $(this).val());
@@ -284,26 +311,9 @@ window.onload = async function() {
                     break;
             }
         });
+
     });
 
-    setInterval(function() {
-        switch (getRndInteger(1, 3))
-        {
-            case 1:
-                barChartSVG.update((a, b) => a.owner.localeCompare(b.owner));
-                break;
-            case 2:
-                barChartSVG.update((a, b) => a.old_page_rank - b.old_page_rank);
-                break;
-            case 3:
-                barChartSVG.update((a, b) => b.old_page_rank - a.old_page_rank);
-                break;
-        }
-    }, 5000);
-}
-
-function getRndInteger(min, max) {
-    return Math.floor(Math.random() * (max - min + 1) ) + min;
 }
 
 

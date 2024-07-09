@@ -11,7 +11,7 @@ public class TrustScoreApplication {
     }
 
 //    @Bean
-//    public CommandLineRunner run(MergeService mergeService) throws Exception {
+//    public CommandLineRunner run(FileService mergeService) throws Exception {
 //        return args -> {
 //            mergeService.mergeJsonFiles();
 //        };

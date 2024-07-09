@@ -1764,7 +1764,7 @@ footer .widget_services ul li:hover {
     background: #303030;
     background-size: cover;
     background-position: center;
-    padding: 0 0 0px;
+    padding: 0 0 20px;
 	font-family:rubik;
 }
 .footer-bottom {
@@ -1972,7 +1972,7 @@ button.back-to-top {
 	display: inline-block;
 	font-size: 13px;
 	text-transform: capitalize;
-	font-family: Rubik;
+	font-family: ;
 	margin-right: 5px;
 }
 .media-post li a{
@@ -2099,7 +2099,7 @@ button.back-to-top {
 .recent-news-carousel .owl-nav .owl-prev:hover,
 .testimonial-carousel .owl-nav .owl-next:hover,
 .testimonial-carousel .owl-nav .owl-prev:hover{
-	background-color:var(--sc-primary);
+	background-color:var(--secondary);
 }
 /* Online Cours */
 .online-cours h2{
@@ -2171,7 +2171,7 @@ button.back-to-top {
 	padding-bottom:50px;
 }
 .section-sp2{
-	padding-top:40px;
+	padding-top:80px;
 	padding-bottom:80px;
 }
 .section-sp3{
@@ -2186,9 +2186,9 @@ button.back-to-top {
 .ovpr-dark:after{
 	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ff5e14+0,ff8e14+100 */
 background: #ff5e14; /* Old browsers */
-background: -moz-linear-gradient(45deg, #ff5e14 0%, #ff8e14 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(45deg, #ff5e14 0%,#ff8e14 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(315deg, #00BFFF, #FF7F3F); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+background: -moz-linear-gradient(315deg, #00BFFF,#FF7F3F); /* FF3.6-15 */
+background: -webkit-linear-gradient(315deg, #00BFFF,#FF7F3F); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(315deg, #00BFFF,#FF7F3F); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff5e14', endColorstr='#ff8e14',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
 /* Event Box */
@@ -3221,8 +3221,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#391800', end
 		padding-bottom: 20px;
 	}
 	.section-sp2 {
-		padding-top: 20px;
-		padding-bottom: 40px;
+		padding-top: 50px;
+		padding-bottom: 50px;
 	}
 	.upcoming-event-carousel.owl-btn-1 .owl-prev, 
 	.upcoming-event-carousel.owl-btn-1 .owl-next{

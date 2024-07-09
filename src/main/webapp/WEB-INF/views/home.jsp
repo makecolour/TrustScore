@@ -62,6 +62,21 @@
   <link rel="stylesheet" type="text/css" href="/assets/vendors/revolution/css/settings.css">
   <link rel="stylesheet" type="text/css" href="/assets/vendors/revolution/css/navigation.css">
   <!-- REVOLUTION SLIDER END -->
+  <style>
+    .tooltip{
+      margin: 10px;
+      margin-right: 7vw;
+      position: absolute;
+      opacity: 0;
+      overflow: auto;
+      overflow-wrap: anywhere;
+      background: linear-gradient(315deg, rgba(0, 191, 255, 0.8), rgba(255, 127, 63, 0.8));;
+      border-radius: 5px;
+      padding: 10px;
+      border: 1px solid #F0F0F0;
+      color: white;
+    }
+  </style>
 </head>
 <body id="bg">
 <div class="page-wraper">
@@ -413,7 +428,7 @@
                   <div class="feature-box-sm radius bg-white">
                     <i class="fa fa-bank text-primary"></i>
                   </div>
-                  <h4><a href="#">Địt mẹ mày</a></h4>
+                  <h4><a href="/list">Service Providers</a></h4>
                   <a href="#" class="btn radius-xl">View More</a>
                 </div>
               </div>
@@ -427,7 +442,7 @@
                   <div class="feature-box-sm radius bg-white">
                     <i class="fa fa-book text-primary"></i>
                   </div>
-                  <h4><a href="#">Learn Courses Online</a></h4>
+                  <h4><a href="/documents/list">Research Documents</a></h4>
                   <a href="#" class="btn radius-xl">View More</a>
                 </div>
               </div>
@@ -441,7 +456,7 @@
                   <div class="feature-box-sm radius bg-white">
                     <i class="fa fa-file-text-o text-primary"></i>
                   </div>
-                  <h4><a href="#">Book Library & Store</a></h4>
+                  <h4><a href="/about">About Us</a></h4>
                   <a href="#" class="btn radius-xl">View More</a>
                 </div>
               </div>
@@ -464,6 +479,7 @@
                 <option value="ascending">Page rank, ascending</option>
                 <option value="descending" selected>Page rank, descending</option>
               </select>
+            <div id="tooltip2" class="tooltip bs-tooltip-bottom"></div>
           </div>
         </div>
       </div>
@@ -536,8 +552,8 @@
               <p>Most trusted service providers by consumers</p>
             </div>
           </div>
-          <div class="row" id="disjoint-append">
-            <div id="tooltip" style="position: absolute; opacity: 0;" class="tooltip bs-tooltip-auto valid-tooltip"></div>
+          <div class="row" id="disjoint-append" >
+            <div id="tooltip"  class="tooltip bs-tooltip-bottom"></div>
           </div>
         </div>
       </div>

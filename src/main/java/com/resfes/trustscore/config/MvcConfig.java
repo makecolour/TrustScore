@@ -43,5 +43,7 @@ public class MvcConfig implements WebMvcConfigurer {
                 .addResourceLocations("/assets/fonts/");
         registry.addResourceHandler("/vendors/**")
                 .addResourceLocations("/assets/vendors/");
+        registry.addResourceHandler("/pdf/**")
+                .addResourceLocations("classpath:/static/pdf/");
     }
 }

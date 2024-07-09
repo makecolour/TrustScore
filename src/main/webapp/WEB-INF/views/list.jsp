@@ -78,8 +78,6 @@
                 </ul>
             </div>
         </div>
-        <!-- Breadcrumb row END -->
-        <!-- inner page banner END -->
         <div class="content-block">
             <!-- About Us -->
             <div class="section-area section-sp1">
@@ -92,7 +90,7 @@
                             <div class="widget courses-search-bx placeani">
                                 <div class="form-group">
                                     <div class="input-group">
-                                        <form action="${pageContext.request.contextPath}/list" method="get">
+                                        <form action="${pageContext.request.contextPath}/list" method="get" accept-charset="UTF-8">
                                             <div class="input-group">
                                                 <label>Search Service Provider</label>
                                                 <input name="q" type="text" class="form-control"
@@ -130,11 +128,12 @@
 
 
                         <div class="col-lg-9 col-md-8 col-sm-12">
+                            <c:if test="${empty objects}">
+                                <p>No service provider available.</p>
+                            </c:if>
+                            <c:if test="${not empty objects}">
                             <div class="row">
-                                <c:if test="${empty objects}">
-                                    <p>No course available.</p>
-                                </c:if>
-                                <c:if test="${not empty objects}">
+
                                     <c:forEach items="${objects}" var="object" varStatus="loop">
                                         <div class="col-md-6 col-lg-4 col-sm-6 m-b30">
                                             <div class="cours-bx">
@@ -175,69 +174,66 @@
                                                     </div>
                                                     <div class="price">
 <%--                                                        <del>$190</del>--%>
-                                                    <h5>${loop.count}</h5>
+                                                    <h5>#${loop.count}</h5>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </c:forEach>
-                                </c:if>
-
 
                             </div>
-                            <div aria-label="Page navigation">
+                            <div class="col-lg-12 m-b20">
+                            <div aria-label="Page navigation" class="pagination-bx rounded-sm gray clearfix">
                                 <ul class="pagination">
                                     <c:if test="${currentPage > 0}">
-                                        <li class="page-item">
-                                            <a class="page-link" href="${pageContext.request.contextPath}/list?q=${query}&page=${currentPage - 1}">Previous</a>
-                                        </li>
+                                        <li class="previous"><a href="${pageContext.request.contextPath}/list?q=${query}&page=${currentPage - 1}"><i class="ti-arrow-left"></i> Prev</a></li>
                                     </c:if>
-                                    <c:if test="${totalPages < 3}">
-                                        <c:forEach var="i" begin="0" end="${totalPages}">
-                                            <li class="page-item ${i == currentPage ? 'active' : ''}">
-                                                <a class="page-link" href="${pageContext.request.contextPath}/list?q=${query}&page=${i}">${i+1}</a>
+                                    <c:if test="${totalPages <= 3}">
+                                        <c:forEach var="i" begin="0" end="${totalPages-1}">
+                                            <li class=" ${i == currentPage ? 'active' : ''}"> <a href="${pageContext.request.contextPath}/list?q=${query}&page=${i}">
+                                                ${i+1}</a>
                                             </li>
                                         </c:forEach>
                                     </c:if>
                                     <c:if test="${totalPages > 3}">
                                         <c:forEach var="i" begin="0" end="3">
-                                            <li class="page-item ${i == currentPage ? 'active' : ''}">
-                                                <a class="page-link" href="${pageContext.request.contextPath}/list?q=${query}&page=${i}">${i+1}</a>
+                                            <li class="${i == currentPage ? 'active' : ''}"><a href="${pageContext.request.contextPath}/list?q=${query}&page=${i}">
+                                                ${i+1}</a>
                                             </li>
+
                                         </c:forEach>
-
-                                        <c:if test="${currentPage > 3}">
-                                            <li class="page-item">
-                                                <span class="page-link">...</span>
-                                            </li>
-
-                                        </c:if>
-
+                                        <li>
+                                            <a>...</a>
+                                        </li>
                                         <c:if test="${currentPage < totalPages - 2}">
                                             <c:if test="${currentPage > 3}">
                                             <c:forEach var="i" begin="${currentPage-1}" end="${currentPage+1}">
-                                                <li class="page-item ${i == currentPage ? 'active' : ''}">
-                                                    <a class="page-link" href="${pageContext.request.contextPath}/list?q=${query}&page=${i}">${i+1}</a>
+                                                <li class="${i == currentPage ? 'active' : ''}">
+                                                    <a href="${pageContext.request.contextPath}/list?q=${query}&page=${i}">${i+1}</a>
                                                 </li>
                                             </c:forEach>
+                                                <li>
+                                                    <a>...</a>
+                                                </li>
                                             </c:if>
-                                            <li class="page-item">
-                                                <span class="page-link">...</span>
-                                            </li>
+
                                         </c:if>
-                                        <c:forEach var="i" begin="${totalPages - 2}" end="${totalPages}">
-                                            <li class="page-item ${i == currentPage ? 'active' : ''}">
-                                                <a class="page-link" href="${pageContext.request.contextPath}/list?q=${query}&page=${i}">${i+1}</a>
+                                        <c:forEach var="i" begin="${totalPages - 2}" end="${totalPages-1}">
+                                            <li class=" ${i == currentPage ? 'active' : ''}">
+                                                <a href="${pageContext.request.contextPath}/list?q=${query}&page=${i}">${i+1}</a>
                                             </li>
                                         </c:forEach>
                                     </c:if>
-                                        <li class="page-item">
-                                            <a class="page-link" href="${pageContext.request.contextPath}/list?q=${query}&page=${currentPage + 1}">Next</a>
-                                        </li>
-                                </ul>
+                                    <c:if test="${currentPage < totalPages - 1}">
+                                        <li class="next">
+                                            <a href="${pageContext.request.contextPath}/list?q=${query}&page=${currentPage + 1}">Next <i class="ti-arrow-right"></i></a></li>
+                                    </c:if>
+                                        </ul>
                             </div>
                         </div>
-                    </div>
+                        </div>
+                        </c:if>
+                        </div>
                 </div>
             </div>
         </div>

@@ -62,8 +62,9 @@
                         </div>
                         <div class="col-6 col-lg-6 col-md-6 col-sm-6">
                             <div class="widget footer_widget">
-                                <h5 class="footer-title">Research Document</h5>
+                                <h5 class="footer-title">Research Documents</h5>
                                 <ul>
+<%--                                    link cac document--%>
                                     <li><a href="http://educhamp.themetrades.com/admin/index.html">Dashboard</a></li>
                                     <li><a href="blog-classic-grid.html">Blog</a></li>
                                 </ul>
@@ -88,7 +89,7 @@
     <div class="footer-bottom">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12 text-center"> <a target="_blank" href="https://www.templateshub.net">Trust Management</a></div>
+                <div class="col-lg-12 col-md-12 col-sm-12 text-center"> <a target="_blank" href="/">Trust Management</a></div>
             </div>
         </div>
     </div>

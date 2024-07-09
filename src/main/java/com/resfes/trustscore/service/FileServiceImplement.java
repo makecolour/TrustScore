@@ -4,7 +4,14 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.databind.node.ObjectNode;
+
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageImpl;
+import org.springframework.data.domain.PageRequest;
+
 import com.resfes.trustscore.model.Application;
+import com.resfes.trustscore.model.PDFInfo;
+import lombok.AllArgsConstructor;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.ResourceLoader;
 import org.springframework.stereotype.Service;
@@ -13,19 +20,23 @@ import org.springframework.web.client.RestTemplate;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.*;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
+import java.time.Instant;
+import java.util.*;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
+import static org.springframework.boot.logging.LoggingSystemProperty.APPLICATION_NAME;
+
+@AllArgsConstructor
 @Service
-public class MergeServiceImplement implements MergeService {
+public class FileServiceImplement implements FileService {
     private final ResourceLoader resourceLoader;
     private final ObjectMapper objectMapper;
     private final Application application;
-
-    public MergeServiceImplement(ResourceLoader resourceLoader, ObjectMapper objectMapper, Application application) {
-        this.resourceLoader = resourceLoader;
-        this.objectMapper = objectMapper;
-        this.application = application;
-    }
 
     public void mergeJsonFiles() throws IOException {
         // Load the JSON files
@@ -259,4 +270,119 @@ try {
             e.printStackTrace();
         }
     }
+
+    @Override
+    public Page<PDFInfo> findPdfFiles(String query, String directoryPath, int page, int size) throws IOException {
+        Resource directoryResource = resourceLoader.getResource("classpath:/static/pdf/" + directoryPath);
+        Path path = Paths.get(directoryResource.getURI());
+
+        try (Stream<Path> walk = Files.walk(path)) {
+            List<PDFInfo> pdfFilesInfo = walk.filter(Files::isRegularFile)
+                    .filter(p -> p.toString().endsWith(".pdf") && (p.getFileName().toString().toLowerCase().contains(query.toLowerCase())))
+                    .map(p -> {// You need to implement this method
+                        return new PDFInfo(
+                                p.getFileName().toString(),
+                                (double) Math.round(p.toFile().length() / 1024.0 * 100) / 100,
+                                p.toString(),
+                                Date.from(Instant.ofEpochMilli(p.toFile().lastModified())),
+                                getThumbnailPath(p)); // Set the owner here
+                    })
+                    .collect(Collectors.toList());
+
+            int start = Math.min(page * size, pdfFilesInfo.size());
+            int end = Math.min((start + size), pdfFilesInfo.size());
+            List<PDFInfo> paginatedFilesInfo = pdfFilesInfo.subList(start, end);
+
+            return new PageImpl<>(paginatedFilesInfo, PageRequest.of(page, size), pdfFilesInfo.size());
+        }
+    }
+
+    @Override
+    public List<PDFInfo> find3NewestFiles(String directoryPath) throws IOException {
+        Resource directoryResource = resourceLoader.getResource("classpath:/static/pdf/" + directoryPath);
+        Path path = Paths.get(directoryResource.getURI());
+
+        try (Stream<Path> walk = Files.walk(path)) {
+            List<PDFInfo> pdfFilesInfo = walk.filter(Files::isRegularFile)
+                    .filter(p -> p.toString().endsWith(".pdf"))
+                    .map(p -> {
+                        try {
+                            return new PDFInfo(
+                                    p.getFileName().toString(),
+                                    (double) Math.round(p.toFile().length() / 1024.0 * 100) / 100,
+                                    p.toString(),
+                                    Date.from(Instant.ofEpochMilli(p.toFile().lastModified())),
+                                    getThumbnailPath(p)); // Set the owner here
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                            return null;
+                        }
+                    })
+                    .collect(Collectors.toList());
+
+            pdfFilesInfo.sort(Comparator.comparing(PDFInfo::getLastModified).reversed());
+
+            return pdfFilesInfo.subList(0, Math.min(3, pdfFilesInfo.size()));
+        }
+    }
+
+    @Override
+    public String getPdfFilePath(String fileName) {
+        String filePath = "classpath:/static/pdf/" + fileName;
+        Resource resource = resourceLoader.getResource(filePath);
+        try {
+            if (resource.exists() && resource.getFile().exists()) {
+                return "/pdf/" + fileName;
+            } else {
+                // File does not exist
+                return "File does not exist";
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+            return "Error checking file existence";
+        }
+    }
+
+    @Override
+    public Optional<PDFInfo> findPdfFile(String fileName) {
+        String filePath = "classpath:/static/pdf/" + fileName;
+        Resource resource = resourceLoader.getResource(filePath);
+        try {
+            if (resource.exists() && resource.getFile().exists()) {
+                return Optional.of(new PDFInfo(
+                        fileName,
+                        (double) Math.round(resource.getFile().length() / 1024.0 * 100) / 100,
+                        resource.getFile().getAbsolutePath(),
+                        Date.from(Instant.ofEpochMilli(resource.getFile().lastModified())),
+                        getThumbnailPath(Paths.get(resource.getFile().getAbsolutePath()))));
+            } else {
+                // File does not exist
+                return Optional.empty();
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+            return Optional.empty();
+        }
+    }
+
+    private String getThumbnailPath(Path pdfPath) {
+        String pdfFileName = pdfPath.getFileName().toString();
+        // Change the file extension from .pdf to .png for the thumbnail file name
+        String thumbnailFileName = pdfFileName.replaceAll("\\.pdf$", ".png");
+        String path = "/assets/images/thumbnails/" + thumbnailFileName;
+        if(doesThumbnailExist(path)){
+            return path;
+        }
+        return "/assets/images/thumbnails/default-thumbnail.png";
+    }
+    public boolean doesThumbnailExist(String thumbnailPath) {
+        String basePath = "src/main/webapp";
+        if (thumbnailPath.startsWith("/assets/images/thumbnails/")) {
+            thumbnailPath = basePath + thumbnailPath;
+        }
+        Path path = Paths.get(thumbnailPath).toAbsolutePath();
+        return Files.exists(path);
+    }
+
+
 }

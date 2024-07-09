@@ -13,7 +13,7 @@
             <div class="container clearfix">
                 <!-- Header Logo ==== -->
                 <div class="menu-logo">
-                    <a href="index.html"><img src="/assets/images/logo-white.png" alt=""></a>
+                    <a href="/"><img src="/assets/images/logo-white.png" alt=""></a>
                 </div>
                 <!-- Mobile Nav Button ==== -->
                 <button class="navbar-toggler collapsed menuicon justify-content-end" type="button" data-toggle="collapse" data-target="#menuDropdown" aria-controls="menuDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -35,7 +35,7 @@
                 </div>
                 <!-- Search Box ==== -->
                 <div class="nav-search-bar">
-                    <form action="/list">
+                    <form action="/list" accept-charset="UTF-8">
                         <input name="search" value="" type="text" class="form-control" name="q" placeholder="Type to search">
                         <span><i class="ti-search"></i></span>
                     </form>
@@ -90,7 +90,7 @@
                                 <li class="add-menu-left">
                                     <h5 class="menu-adv-title">Documents</h5>
                                     <ul>
-                                        <li><a href="courses.html">Courses </a></li>
+                                        <li><a href="/documents/list">Research Documents </a></li>
                                         <li><a href="courses-details.html">Courses Details</a></li>
                                         <li><a href="profile.html">Instructor Profile</a></li>
                                         <li><a href="event.html">Upcoming Event</a></li>

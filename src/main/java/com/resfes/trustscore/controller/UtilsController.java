@@ -55,11 +55,10 @@ public class UtilsController {
 
     @RequestMapping("/list")
     public ModelAndView list(HttpSession session, @RequestParam(value = "q", required = false) String query, @RequestParam(value = "page", defaultValue = "0") int page, @RequestParam(value = "size", defaultValue = "12") int size) {
-        ModelAndView modelAndView = new ModelAndView("list");
-        Pageable pageable = PageRequest.of(page, size); // Page is 0-indexed for PageRequest
+        ModelAndView modelAndView = new ModelAndView("list");// Page is 0-indexed for PageRequest
         Page<JsonNode> objects = null;
         try {
-            if (query != null && !query.isEmpty()) {
+            if (query != null && !query.trim().isEmpty()) {
                 objects = dataService.searchObjects(query, page, size); // Page is 0-indexed for searchObjects
             } else {
                 objects = dataService.getAllObjects(page, size); // Page is 0-indexed for getAllObjects
@@ -84,4 +83,9 @@ public class UtilsController {
         return modelAndView;
     }
 
+    @GetMapping("/test")
+    public ModelAndView test() {
+        ModelAndView modelAndView = new ModelAndView("test");
+        return modelAndView;
+    }
 }
