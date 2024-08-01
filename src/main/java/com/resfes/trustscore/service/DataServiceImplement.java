@@ -97,8 +97,8 @@ public class DataServiceImplement implements DataService{
             }
         }).reversed());
 
-        int start = (int) Math.min(page * size, nodes.size());
-        int end = (int) Math.min((page + 1) * size, nodes.size());
+        int start = Math.min(page * size, nodes.size());
+        int end = Math.min((page + 1) * size, nodes.size());
         List<JsonNode> sublist = nodes.subList(start, end);
         Page<JsonNode> pageOfNodes = new PageImpl<>(sublist, PageRequest.of(page, size), nodes.size());
         return pageOfNodes;
@@ -115,8 +115,8 @@ public class DataServiceImplement implements DataService{
                 .collect(Collectors.toList());
 
         // Create a Page object from the filtered list
-        int start = (int) Math.min(page * size, nodes.size());
-        int end = (int) Math.min((page + 1) * size, nodes.size());
+        int start = Math.min(page * size, nodes.size());
+        int end = Math.min((page + 1) * size, nodes.size());
         List<JsonNode> sublist = nodes.subList(start, end);
         Page<JsonNode> pageOfNodes = new PageImpl<>(sublist, PageRequest.of(page, size), nodes.size());
 

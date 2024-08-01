@@ -85,7 +85,7 @@
 <%--                                <li><a href="error-404.html">404 Page</a></li>--%>
 <%--                            </ul>--%>
                         </li>
-                        <li class="add-mega-menu"><a href="javascript:;">Documents <i class="fa fa-chevron-down"></i></a>
+                        <li class="add-mega-menu"><a href="javascript:">Documents <i class="fa fa-chevron-down"></i></a>
                             <ul class="sub-menu add-menu">
                                 <li class="add-menu-left">
                                     <h5 class="menu-adv-title">Documents</h5>
@@ -113,9 +113,9 @@
                         </li>
                     </ul>
                     <div class="nav-social-link">
-                        <a href="javascript:;"><i class="fa fa-facebook"></i></a>
-                        <a href="javascript:;"><i class="fa fa-google-plus"></i></a>
-                        <a href="javascript:;"><i class="fa fa-linkedin"></i></a>
+                        <a href="javascript:"><i class="fa fa-facebook"></i></a>
+                        <a href="javascript:"><i class="fa fa-google-plus"></i></a>
+                        <a href="javascript:"><i class="fa fa-linkedin"></i></a>
                     </div>
                 </div>
                 <!-- Navigation Menu END ==== -->

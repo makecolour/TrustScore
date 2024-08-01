@@ -1,5 +1,6 @@
 [ {
   "owner" : "canhdung.nguyen.927",
+  "contact" : "0983556183",
   "degree_centrality" : 0.1690647482,
   "closeness_centrality" : 0.1676258993,
   "betweenness_centrality" : 0.0,
@@ -34,6 +35,7 @@
   }
 }, {
   "owner" : "manhtuan255",
+  "contact" : "0964276613, 0964276613",
   "degree_centrality" : 0.126618705,
   "closeness_centrality" : 0.1251798561,
   "betweenness_centrality" : 0.0,
@@ -68,6 +70,7 @@
   }
 }, {
   "owner" : "sun.sunn121512",
+  "contact" : "0989763333, 0942451991",
   "degree_centrality" : 0.0489208633,
   "closeness_centrality" : 0.0486330935,
   "betweenness_centrality" : 0.0,
@@ -102,6 +105,7 @@
   }
 }, {
   "owner" : "100083821839754",
+  "contact" : "0363290499",
   "degree_centrality" : 0.0482014388,
   "closeness_centrality" : 0.0466898391,
   "betweenness_centrality" : 3.15946E-5,
@@ -136,6 +140,7 @@
   }
 }, {
   "owner" : "vuong.buithi.3194",
+  "contact" : "0964397165",
   "degree_centrality" : 0.0345323741,
   "closeness_centrality" : 0.0315866226,
   "betweenness_centrality" : 0.0,
@@ -204,6 +209,7 @@
   }
 }, {
   "owner" : "minhnguyet.tran.39108297",
+  "contact" : "0914069658, 0832086935",
   "degree_centrality" : 0.0309352518,
   "closeness_centrality" : 0.0273381295,
   "betweenness_centrality" : 1.351834E-4,
@@ -238,6 +244,7 @@
   }
 }, {
   "owner" : "100087964496323",
+  "contact" : "0975740259",
   "degree_centrality" : 0.0143884892,
   "closeness_centrality" : 0.0163219424,
   "betweenness_centrality" : 0.0,
@@ -272,6 +279,7 @@
   }
 }, {
   "owner" : "thin.kieu.12",
+  "contact" : "0988948583",
   "degree_centrality" : 0.0223021583,
   "closeness_centrality" : 0.0208865166,
   "betweenness_centrality" : 0.0,
@@ -306,6 +314,7 @@
   }
 }, {
   "owner" : "100004859954881",
+  "contact" : "0984916161",
   "degree_centrality" : 0.028057554,
   "closeness_centrality" : 0.026618705,
   "betweenness_centrality" : 0.0,
@@ -408,6 +417,7 @@
   }
 }, {
   "owner" : "thuylinh.pham.75286",
+  "contact" : "0867522992",
   "degree_centrality" : 0.0251798561,
   "closeness_centrality" : 0.0237410072,
   "betweenness_centrality" : 0.0,
@@ -578,6 +588,7 @@
   }
 }, {
   "owner" : "ksxdgiang",
+  "contact" : "0978329696",
   "degree_centrality" : 0.0107913669,
   "closeness_centrality" : 0.0189191504,
   "betweenness_centrality" : 9.71145E-5,
@@ -680,6 +691,7 @@
   }
 }, {
   "owner" : "100015533707067",
+  "contact" : "0365686985, 0365686985",
   "degree_centrality" : 0.0122302158,
   "closeness_centrality" : 0.0100719424,
   "betweenness_centrality" : 7.2512E-6,
@@ -714,6 +726,7 @@
   }
 }, {
   "owner" : "100048348670248",
+  "contact" : "0989207185, 0989207185",
   "degree_centrality" : 0.0122302158,
   "closeness_centrality" : 0.0115107914,
   "betweenness_centrality" : 0.0,
@@ -816,6 +829,7 @@
   }
 }, {
   "owner" : "maiphuong.levu.5",
+  "contact" : "0927783370",
   "degree_centrality" : 0.0129496403,
   "closeness_centrality" : 0.0115107914,
   "betweenness_centrality" : 0.0,
@@ -850,6 +864,7 @@
   }
 }, {
   "owner" : "100029203716978",
+  "contact" : "0975740259",
   "degree_centrality" : 0.0136690647,
   "closeness_centrality" : 0.0115107914,
   "betweenness_centrality" : 7.7692E-6,
@@ -986,6 +1001,7 @@
   }
 }, {
   "owner" : "minhloc.nguyen.98892615",
+  "contact" : "0981540179",
   "degree_centrality" : 0.0079136691,
   "closeness_centrality" : 0.0060939484,
   "betweenness_centrality" : 1.24307E-5,
@@ -1020,6 +1036,7 @@
   }
 }, {
   "owner" : "xxtremtroixx",
+  "contact" : "0376965627",
   "degree_centrality" : 0.0122302158,
   "closeness_centrality" : 0.0100719424,
   "betweenness_centrality" : 6.7333E-6,
@@ -1088,6 +1105,7 @@
   }
 }, {
   "owner" : "bong.kem.7543653",
+  "contact" : "0989696491",
   "degree_centrality" : 0.0100719424,
   "closeness_centrality" : 0.0086330935,
   "betweenness_centrality" : 0.0,
@@ -1190,6 +1208,7 @@
   }
 }, {
   "owner" : "100026939822740",
+  "contact" : "0348532222",
   "degree_centrality" : 0.0086330935,
   "closeness_centrality" : 0.0071942446,
   "betweenness_centrality" : 0.0,
@@ -1224,6 +1243,7 @@
   }
 }, {
   "owner" : "nguyenhung.2608",
+  "contact" : "0982983443",
   "degree_centrality" : 0.0043165468,
   "closeness_centrality" : 0.014303851,
   "betweenness_centrality" : 2.69331E-5,
@@ -1360,6 +1380,7 @@
   }
 }, {
   "owner" : "100024362661598",
+  "contact" : "0986866819, 0335807397, 0986866819",
   "degree_centrality" : 0.0079136691,
   "closeness_centrality" : 0.0064748201,
   "betweenness_centrality" : 0.0,
@@ -1394,6 +1415,7 @@
   }
 }, {
   "owner" : "ozaydo.00",
+  "contact" : "0972321440",
   "degree_centrality" : 0.0057553957,
   "closeness_centrality" : 0.0057553957,
   "betweenness_centrality" : 0.0,
@@ -1428,6 +1450,7 @@
   }
 }, {
   "owner" : "100053198689624",
+  "contact" : "0363290499",
   "degree_centrality" : 0.0107913669,
   "closeness_centrality" : 0.0301115629,
   "betweenness_centrality" : 6.2153E-6,
@@ -1462,6 +1485,7 @@
   }
 }, {
   "owner" : "giat.say.nhanh.718341",
+  "contact" : "0385852696",
   "degree_centrality" : 0.0079136691,
   "closeness_centrality" : 0.0064748201,
   "betweenness_centrality" : 0.0,
@@ -1530,6 +1554,7 @@
   }
 }, {
   "owner" : "daohuonng",
+  "contact" : "0378037068",
   "degree_centrality" : 0.0071942446,
   "closeness_centrality" : 0.0057553957,
   "betweenness_centrality" : 0.0,
@@ -1564,6 +1589,7 @@
   }
 }, {
   "owner" : "100053973183321",
+  "contact" : "0947330685",
   "degree_centrality" : 0.0064748201,
   "closeness_centrality" : 0.0050359712,
   "betweenness_centrality" : 0.0,
@@ -1598,6 +1624,7 @@
   }
 }, {
   "owner" : "truonggiagn",
+  "contact" : "0366623722",
   "degree_centrality" : 0.0064748201,
   "closeness_centrality" : 0.0050359712,
   "betweenness_centrality" : 0.0,
@@ -1734,6 +1761,7 @@
   }
 }, {
   "owner" : "100043446799122",
+  "contact" : "0365360748, 0365360748",
   "degree_centrality" : 0.0050359712,
   "closeness_centrality" : 0.0035971223,
   "betweenness_centrality" : 0.0,
@@ -1768,6 +1796,7 @@
   }
 }, {
   "owner" : "100053641449623",
+  "contact" : "0965484357",
   "degree_centrality" : 0.0071942446,
   "closeness_centrality" : 0.0057553957,
   "betweenness_centrality" : 0.0,
@@ -1802,6 +1831,7 @@
   }
 }, {
   "owner" : "100017738509118",
+  "contact" : "0394630552",
   "degree_centrality" : 0.0050359712,
   "closeness_centrality" : 0.0035971223,
   "betweenness_centrality" : 0.0,
@@ -1836,6 +1866,7 @@
   }
 }, {
   "owner" : "100048702969177",
+  "contact" : "0392437027",
   "degree_centrality" : 0.0071942446,
   "closeness_centrality" : 0.0057553957,
   "betweenness_centrality" : 0.0,
@@ -1870,6 +1901,7 @@
   }
 }, {
   "owner" : "100017622678856",
+  "contact" : "0981530526",
   "degree_centrality" : 0.0071942446,
   "closeness_centrality" : 0.0050359712,
   "betweenness_centrality" : 3.6256E-6,
@@ -1904,6 +1936,7 @@
   }
 }, {
   "owner" : "100014188833892",
+  "contact" : "0982813699",
   "degree_centrality" : 0.0043165468,
   "closeness_centrality" : 0.0041623844,
   "betweenness_centrality" : 0.0,
@@ -1938,6 +1971,7 @@
   }
 }, {
   "owner" : "100015149620052",
+  "contact" : "0338393656, 0338393656, 0338393656, 0338393656",
   "degree_centrality" : 0.0043165468,
   "closeness_centrality" : 0.0028776978,
   "betweenness_centrality" : 0.0,
@@ -2006,6 +2040,7 @@
   }
 }, {
   "owner" : "100026994051337",
+  "contact" : "0398879507",
   "degree_centrality" : 0.0035971223,
   "closeness_centrality" : 0.0035971223,
   "betweenness_centrality" : 0.0,
@@ -2040,6 +2075,7 @@
   }
 }, {
   "owner" : "100022774022817",
+  "contact" : "0879952398",
   "degree_centrality" : 0.0050359712,
   "closeness_centrality" : 0.0035971223,
   "betweenness_centrality" : 0.0,
@@ -2074,6 +2110,7 @@
   }
 }, {
   "owner" : "100050400739267",
+  "contact" : "0868823118, 0825269777",
   "degree_centrality" : 0.0050359712,
   "closeness_centrality" : 0.0035971223,
   "betweenness_centrality" : 0.0,
@@ -2108,6 +2145,7 @@
   }
 }, {
   "owner" : "pe.vit.773",
+  "contact" : "0971759220",
   "degree_centrality" : 0.0043165468,
   "closeness_centrality" : 0.0028776978,
   "betweenness_centrality" : 0.0,
@@ -2142,6 +2180,7 @@
   }
 }, {
   "owner" : "100087089285259",
+  "contact" : "0385886570, 0355457920",
   "degree_centrality" : 0.0043165468,
   "closeness_centrality" : 0.0028776978,
   "betweenness_centrality" : 0.0,
@@ -2176,6 +2215,7 @@
   }
 }, {
   "owner" : "100082412047966",
+  "contact" : "0378965982",
   "degree_centrality" : 0.0064748201,
   "closeness_centrality" : 0.0035971223,
   "betweenness_centrality" : 4.6615E-6,
@@ -2244,6 +2284,7 @@
   }
 }, {
   "owner" : "popodoo.luna.7",
+  "contact" : "0961612218, 0979635174",
   "degree_centrality" : 0.0035971223,
   "closeness_centrality" : 0.0021582734,
   "betweenness_centrality" : 0.0,
@@ -2346,6 +2387,7 @@
   }
 }, {
   "owner" : "J0ke.Serious",
+  "contact" : "0862842297, 0862660365",
   "degree_centrality" : 0.0035971223,
   "closeness_centrality" : 0.0021582734,
   "betweenness_centrality" : 0.0,
@@ -2380,6 +2422,7 @@
   }
 }, {
   "owner" : "phan.yenthu.58",
+  "contact" : "0964028796",
   "degree_centrality" : 0.0035971223,
   "closeness_centrality" : 0.0021582734,
   "betweenness_centrality" : 0.0,
@@ -2448,6 +2491,7 @@
   }
 }, {
   "owner" : "lehoa.pham.315",
+  "contact" : "0354901882, 0979973826",
   "degree_centrality" : 0.0028776978,
   "closeness_centrality" : 0.0028776978,
   "betweenness_centrality" : 0.0,
@@ -2516,6 +2560,7 @@
   }
 }, {
   "owner" : "long.xuyen.52493",
+  "contact" : "0989549088, 0989549088, 0989549088",
   "degree_centrality" : 0.0021582734,
   "closeness_centrality" : 0.0021582734,
   "betweenness_centrality" : 0.0,
@@ -2550,6 +2595,7 @@
   }
 }, {
   "owner" : "100006379714289",
+  "contact" : "0964216004, 0964216004",
   "degree_centrality" : 0.0028776978,
   "closeness_centrality" : 0.0014388489,
   "betweenness_centrality" : 0.0,
@@ -2584,6 +2630,7 @@
   }
 }, {
   "owner" : "koy.tien.712",
+  "contact" : "0867966789",
   "degree_centrality" : 0.0043165468,
   "closeness_centrality" : 0.0028776978,
   "betweenness_centrality" : 0.0,
@@ -2618,6 +2665,7 @@
   }
 }, {
   "owner" : "TrinhspaTT",
+  "contact" : "0962652869",
   "degree_centrality" : 0.0028776978,
   "closeness_centrality" : 0.0014388489,
   "betweenness_centrality" : 0.0,
@@ -2686,6 +2734,7 @@
   }
 }, {
   "owner" : "s.a.n.iscomin",
+  "contact" : "0397634525",
   "degree_centrality" : 0.0028776978,
   "closeness_centrality" : 0.0028776978,
   "betweenness_centrality" : 0.0,
@@ -2788,6 +2837,7 @@
   }
 }, {
   "owner" : "100086642153584",
+  "contact" : "0382805685",
   "degree_centrality" : 0.0028776978,
   "closeness_centrality" : 0.0014388489,
   "betweenness_centrality" : 0.0,
@@ -2856,6 +2906,7 @@
   }
 }, {
   "owner" : "ha.khanhly.528",
+  "contact" : "0867522992",
   "degree_centrality" : 0.0028776978,
   "closeness_centrality" : 0.0014388489,
   "betweenness_centrality" : 0.0,
@@ -2890,6 +2941,7 @@
   }
 }, {
   "owner" : "bit.ko.503",
+  "contact" : "0812008195, 0367688670",
   "degree_centrality" : 0.0028776978,
   "closeness_centrality" : 0.0014388489,
   "betweenness_centrality" : 0.0,
@@ -2958,6 +3010,7 @@
   }
 }, {
   "owner" : "vuong.ngan.904",
+  "contact" : "0912683799",
   "degree_centrality" : 0.0014388489,
   "closeness_centrality" : 0.0014388489,
   "betweenness_centrality" : 0.0,
@@ -2992,6 +3045,7 @@
   }
 }, {
   "owner" : "phi.thituyet",
+  "contact" : "0974520175",
   "degree_centrality" : 0.0021582734,
   "closeness_centrality" : 7.194245E-4,
   "betweenness_centrality" : 0.0,
@@ -3026,6 +3080,7 @@
   }
 }, {
   "owner" : "nguyenvanngocdat",
+  "contact" : "0936362883",
   "degree_centrality" : 0.0035971223,
   "closeness_centrality" : 0.0021582734,
   "betweenness_centrality" : 0.0,
@@ -3060,6 +3115,7 @@
   }
 }, {
   "owner" : "oanhoanh.ha.3781",
+  "contact" : "0899292833",
   "degree_centrality" : 0.0021582734,
   "closeness_centrality" : 7.194245E-4,
   "betweenness_centrality" : 0.0,
@@ -3128,6 +3184,7 @@
   }
 }, {
   "owner" : "nich.moi.9210",
+  "contact" : "0389665555",
   "degree_centrality" : 0.0021582734,
   "closeness_centrality" : 7.194245E-4,
   "betweenness_centrality" : 0.0,
@@ -3162,6 +3219,7 @@
   }
 }, {
   "owner" : "100081218593203",
+  "contact" : "0986766245",
   "degree_centrality" : 0.0021582734,
   "closeness_centrality" : 7.194245E-4,
   "betweenness_centrality" : 0.0,
@@ -3264,6 +3322,7 @@
   }
 }, {
   "owner" : "100048778724244",
+  "contact" : "0356065063",
   "degree_centrality" : 0.0035971223,
   "closeness_centrality" : 0.0023021583,
   "betweenness_centrality" : 0.0,
@@ -3434,6 +3493,7 @@
   }
 }, {
   "owner" : "100004192127954",
+  "contact" : "0978600402",
   "degree_centrality" : 0.0014388489,
   "closeness_centrality" : 9.592326E-4,
   "betweenness_centrality" : 0.0,
@@ -3468,6 +3528,7 @@
   }
 }, {
   "owner" : "100042310899057",
+  "contact" : "0962267886",
   "degree_centrality" : 7.194245E-4,
   "closeness_centrality" : 7.194245E-4,
   "betweenness_centrality" : 0.0,
@@ -3502,6 +3563,7 @@
   }
 }, {
   "owner" : "quanghuynh.tuaf",
+  "contact" : "0973362783",
   "degree_centrality" : 7.194245E-4,
   "closeness_centrality" : 7.194245E-4,
   "betweenness_centrality" : 0.0,
@@ -3536,6 +3598,7 @@
   }
 }, {
   "owner" : "100022611367431",
+  "contact" : "0343675725",
   "degree_centrality" : 0.0028776978,
   "closeness_centrality" : 0.0014388489,
   "betweenness_centrality" : 0.0,
@@ -3604,6 +3667,7 @@
   }
 }, {
   "owner" : "100046198032758",
+  "contact" : "0389884950",
   "degree_centrality" : 0.0021582734,
   "closeness_centrality" : 0.0014388489,
   "betweenness_centrality" : 5.179E-7,
@@ -3813,6 +3877,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "Chinnguonguo",
+  "contact" : "0962652869",
   "degree_centrality" : 7.194245E-4,
   "closeness_centrality" : 0.0,
   "betweenness_centrality" : 0.0,
@@ -3963,6 +4028,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100007161606287",
+  "contact" : "0986866819, 0335807397, 0986866819",
   "degree_centrality" : 7.194245E-4,
   "closeness_centrality" : 0.0,
   "betweenness_centrality" : 0.0,
@@ -4388,6 +4454,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "quynhngoc.pham.1428",
+  "contact" : "0333120098",
   "degree_centrality" : 7.194245E-4,
   "closeness_centrality" : 0.0,
   "betweenness_centrality" : 0.0,
@@ -5397,6 +5464,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100007624937209",
+  "contact" : "0868823118, 0825269777",
   "degree_centrality" : 7.194245E-4,
   "closeness_centrality" : 0.0,
   "betweenness_centrality" : 0.0,
@@ -5747,6 +5815,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100034396791775",
+  "contact" : "0394630552",
   "degree_centrality" : 7.194245E-4,
   "closeness_centrality" : 0.0,
   "betweenness_centrality" : 0.0,
@@ -6147,6 +6216,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100005438629145",
+  "contact" : "0886723333",
   "degree_centrality" : 7.194245E-4,
   "closeness_centrality" : 0.0,
   "betweenness_centrality" : 0.0,
@@ -6222,6 +6292,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "bepabeofu",
+  "contact" : "0355876899",
   "degree_centrality" : 7.194245E-4,
   "closeness_centrality" : 0.0,
   "betweenness_centrality" : 0.0,
@@ -6247,6 +6318,7 @@
   "self_comment" : 173.0
 }, {
   "owner" : "100008942529287",
+  "contact" : "0587246246",
   "degree_centrality" : 7.194245E-4,
   "closeness_centrality" : 0.0,
   "betweenness_centrality" : 0.0,
@@ -6422,6 +6494,7 @@
   "self_comment" : 3.0
 }, {
   "owner" : "100013707139267",
+  "contact" : "0989162133",
   "degree_centrality" : 0.0014388489,
   "closeness_centrality" : 0.0,
   "betweenness_centrality" : 0.0,
@@ -7072,6 +7145,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100032785950804",
+  "contact" : "0985952687",
   "degree_centrality" : 7.194245E-4,
   "closeness_centrality" : 0.0,
   "betweenness_centrality" : 0.0,
@@ -7647,6 +7721,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "thanh.hoa.37454",
+  "contact" : "0968589523",
   "degree_centrality" : 7.194245E-4,
   "closeness_centrality" : 0.0,
   "betweenness_centrality" : 0.0,
@@ -8472,6 +8547,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100035377260725",
+  "contact" : "0976382866, 0976382866, 0976382866",
   "degree_centrality" : 0.0021582734,
   "closeness_centrality" : 7.194245E-4,
   "betweenness_centrality" : 7.769E-7,
@@ -8581,6 +8657,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100084181089002",
+  "contact" : "0988872404",
   "degree_centrality" : 7.194245E-4,
   "closeness_centrality" : 0.0,
   "betweenness_centrality" : 0.0,
@@ -8806,6 +8883,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100013547675848",
+  "contact" : "0337703103",
   "degree_centrality" : 0.0014388489,
   "closeness_centrality" : 0.0,
   "betweenness_centrality" : 0.0,
@@ -8856,6 +8934,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100034868414200",
+  "contact" : "0334521991",
   "degree_centrality" : 7.194245E-4,
   "closeness_centrality" : 0.0,
   "betweenness_centrality" : 0.0,
@@ -8881,6 +8960,7 @@
   "self_comment" : 5.0
 }, {
   "owner" : "anhcan.coem.716",
+  "contact" : "0962189988",
   "degree_centrality" : 7.194245E-4,
   "closeness_centrality" : 0.0,
   "betweenness_centrality" : 0.0,
@@ -9615,6 +9695,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "thuong.hanh.9461",
+  "contact" : "0988115991",
   "degree_centrality" : 7.194245E-4,
   "closeness_centrality" : 0.0,
   "betweenness_centrality" : 0.0,
@@ -9990,6 +10071,7 @@
   "self_comment" : 4.0
 }, {
   "owner" : "100057556206197",
+  "contact" : "0327146083, 0327146083",
   "degree_centrality" : 7.194245E-4,
   "closeness_centrality" : 0.0,
   "betweenness_centrality" : 0.0,
@@ -10199,6 +10281,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "vietanh09858185",
+  "contact" : "0889115368, 0889115368",
   "degree_centrality" : 7.194245E-4,
   "closeness_centrality" : 0.0,
   "betweenness_centrality" : 0.0,
@@ -11199,6 +11282,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100073034409569",
+  "contact" : "0343038568",
   "degree_centrality" : 7.194245E-4,
   "closeness_centrality" : 0.0,
   "betweenness_centrality" : 0.0,
@@ -11524,6 +11608,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "minh.hai.9638",
+  "contact" : "0972536738",
   "degree_centrality" : 7.194245E-4,
   "closeness_centrality" : 0.0,
   "betweenness_centrality" : 0.0,
@@ -11708,6 +11793,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "manhduc0607",
+  "contact" : "0964276613, 0964276613",
   "degree_centrality" : 7.194245E-4,
   "closeness_centrality" : 0.0,
   "betweenness_centrality" : 0.0,
@@ -11908,6 +11994,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100035627865747",
+  "contact" : "0918949230",
   "degree_centrality" : 7.194245E-4,
   "closeness_centrality" : 0.0,
   "betweenness_centrality" : 0.0,
@@ -12208,6 +12295,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "xuanquang.phung",
+  "contact" : "0985893186, 0985893186",
   "degree_centrality" : 0.0057553957,
   "closeness_centrality" : 0.0,
   "betweenness_centrality" : 0.0,
@@ -12967,6 +13055,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "nhi.chi.336717",
+  "contact" : "0353153607",
   "degree_centrality" : 0.0014388489,
   "closeness_centrality" : 0.0,
   "betweenness_centrality" : 0.0,
@@ -13451,6 +13540,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "viethung.can.5",
+  "contact" : "0376461828",
   "degree_centrality" : 7.194245E-4,
   "closeness_centrality" : 0.0,
   "betweenness_centrality" : 0.0,
@@ -13826,6 +13916,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "tamrois2",
+  "contact" : "0988546230",
   "degree_centrality" : 7.194245E-4,
   "closeness_centrality" : 0.0,
   "betweenness_centrality" : 0.0,
@@ -14185,6 +14276,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100063046131396",
+  "contact" : "0964276613, 0964276613",
   "degree_centrality" : 7.194245E-4,
   "closeness_centrality" : 0.0,
   "betweenness_centrality" : 0.0,
@@ -14644,6 +14736,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "hanhphucxaxivkl",
+  "contact" : "0974968695, 0339932735, 0339932735, 0974968695, 0339932735",
   "degree_centrality" : 0.0014388489,
   "closeness_centrality" : 0.0,
   "betweenness_centrality" : 0.0,
@@ -15003,6 +15096,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "damnbaosonsodope",
+  "contact" : "0382492494, 0382492494",
   "degree_centrality" : 7.194245E-4,
   "closeness_centrality" : 0.0,
   "betweenness_centrality" : 0.0,
@@ -15228,6 +15322,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100074638206878",
+  "contact" : "0984601982",
   "degree_centrality" : 0.0014388489,
   "closeness_centrality" : 0.0,
   "betweenness_centrality" : 0.0,
@@ -16021,6 +16116,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "xedu.lich.5015",
+  "contact" : "0968255583, 0904123122",
   "degree_centrality" : 7.194245E-4,
   "closeness_centrality" : 0.0,
   "betweenness_centrality" : 0.0,
@@ -16621,6 +16717,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "duytacktanben",
+  "contact" : "0813067099",
   "degree_centrality" : 7.194245E-4,
   "closeness_centrality" : 7.194245E-4,
   "betweenness_centrality" : 0.0,
@@ -16855,6 +16952,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "mai.bong.94064176",
+  "contact" : "0399125102",
   "degree_centrality" : 7.194245E-4,
   "closeness_centrality" : 0.0,
   "betweenness_centrality" : 0.0,
@@ -17680,6 +17778,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "yen.3894",
+  "contact" : "0966432134",
   "degree_centrality" : 7.194245E-4,
   "closeness_centrality" : 0.0,
   "betweenness_centrality" : 0.0,
@@ -18405,6 +18504,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "nguyenanh.nghia.710",
+  "contact" : "0968575319",
   "degree_centrality" : 7.194245E-4,
   "closeness_centrality" : 0.0,
   "betweenness_centrality" : 0.0,
@@ -18880,6 +18980,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100007454865255",
+  "contact" : "0978745809",
   "degree_centrality" : 7.194245E-4,
   "closeness_centrality" : 0.0,
   "betweenness_centrality" : 0.0,
@@ -19580,6 +19681,7 @@
   "self_comment" : 16.0
 }, {
   "owner" : "100071774685142",
+  "contact" : "0363290499",
   "degree_centrality" : 0.0014388489,
   "closeness_centrality" : 0.0,
   "betweenness_centrality" : 0.0,
@@ -19730,6 +19832,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "ducminhtoiday",
+  "contact" : "0869379296",
   "degree_centrality" : 7.194245E-4,
   "closeness_centrality" : 0.0,
   "betweenness_centrality" : 0.0,
@@ -19905,6 +20008,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "BuiThiLinhDan.Official",
+  "contact" : "0867522992",
   "degree_centrality" : 7.194245E-4,
   "closeness_centrality" : 0.0,
   "betweenness_centrality" : 0.0,
@@ -19955,6 +20059,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100009273470276",
+  "contact" : "0363290499",
   "degree_centrality" : 7.194245E-4,
   "closeness_centrality" : 0.0,
   "betweenness_centrality" : 0.0,
@@ -20555,6 +20660,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "giacmo.tan.507",
+  "contact" : "0869399285, 0869399285",
   "degree_centrality" : 7.194245E-4,
   "closeness_centrality" : 0.0,
   "betweenness_centrality" : 0.0,
@@ -21255,6 +21361,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "hola.tour.5893",
+  "contact" : "0982809745, 0879581993",
   "degree_centrality" : 7.194245E-4,
   "closeness_centrality" : 0.0,
   "betweenness_centrality" : 0.0,
@@ -22689,6 +22796,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100071808518384",
+  "contact" : "0869616996",
   "degree_centrality" : 7.194245E-4,
   "closeness_centrality" : 0.0,
   "betweenness_centrality" : 0.0,
@@ -23439,6 +23547,7 @@
   "self_comment" : 1.0
 }, {
   "owner" : "100074016635270",
+  "contact" : "0927783370",
   "degree_centrality" : 7.194245E-4,
   "closeness_centrality" : 0.0,
   "betweenness_centrality" : 0.0,
@@ -24673,6 +24782,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "kun.con.71",
+  "contact" : "0977578338",
   "degree_centrality" : 7.194245E-4,
   "closeness_centrality" : 0.0,
   "betweenness_centrality" : 0.0,
@@ -24823,6 +24933,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100048186893819",
+  "contact" : "0365686985, 0365686985",
   "degree_centrality" : 7.194245E-4,
   "closeness_centrality" : 0.0,
   "betweenness_centrality" : 0.0,
@@ -25257,6 +25368,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "Jolly250495",
+  "contact" : "0962986586",
   "degree_centrality" : 0.0014388489,
   "closeness_centrality" : 7.194245E-4,
   "betweenness_centrality" : 0.0,
@@ -25391,6 +25503,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100031218879527",
+  "contact" : "0973819123, 0973819123",
   "degree_centrality" : 0.0014388489,
   "closeness_centrality" : 0.0,
   "betweenness_centrality" : 0.0,
@@ -25416,6 +25529,7 @@
   "self_comment" : 1.0
 }, {
   "owner" : "100001390858248",
+  "contact" : "0977231188",
   "degree_centrality" : 0.0028776978,
   "closeness_centrality" : 0.0,
   "betweenness_centrality" : 0.0,
@@ -25441,6 +25555,7 @@
   "self_comment" : 1.0
 }, {
   "owner" : "oanh.buithimy.5",
+  "contact" : "0333089233",
   "degree_centrality" : 0.0021582734,
   "closeness_centrality" : 0.0,
   "betweenness_centrality" : 0.0,
@@ -25959,6 +26074,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100010297143374",
+  "contact" : "0812075555",
   "degree_centrality" : 7.194245E-4,
   "closeness_centrality" : 0.0,
   "betweenness_centrality" : 0.0,
@@ -26184,6 +26300,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "n.lgianghg04",
+  "contact" : "0961405709",
   "degree_centrality" : 7.194245E-4,
   "closeness_centrality" : 0.0,
   "betweenness_centrality" : 0.0,
@@ -26284,6 +26401,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "binn.hung.710",
+  "contact" : "0984217495",
   "degree_centrality" : 0.0021582734,
   "closeness_centrality" : 7.194245E-4,
   "betweenness_centrality" : 0.0,
@@ -26768,6 +26886,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100042785202173",
+  "contact" : "0396053666",
   "degree_centrality" : 7.194245E-4,
   "closeness_centrality" : 0.0,
   "betweenness_centrality" : 0.0,
@@ -26818,6 +26937,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "themgicungcotn",
+  "contact" : "0867522992",
   "degree_centrality" : 0.0014388489,
   "closeness_centrality" : 0.0,
   "betweenness_centrality" : 0.0,
@@ -27327,6 +27447,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100013605310645",
+  "contact" : "0853383423, 0972760489",
   "degree_centrality" : 7.194245E-4,
   "closeness_centrality" : 0.0,
   "betweenness_centrality" : 0.0,
@@ -27927,6 +28048,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100011728596597",
+  "contact" : "0338360204",
   "degree_centrality" : 7.194245E-4,
   "closeness_centrality" : 0.0,
   "betweenness_centrality" : 0.0,
@@ -27986,6 +28108,7 @@
   "self_comment" : 7.0
 }, {
   "owner" : "luan.hoang.902819",
+  "contact" : "0967880366, 0967880366",
   "degree_centrality" : 0.0035971223,
   "closeness_centrality" : 0.0,
   "betweenness_centrality" : 0.0,
@@ -28311,6 +28434,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100041121615877",
+  "contact" : "0396535197, 0342363222, 0342363222",
   "degree_centrality" : 7.194245E-4,
   "closeness_centrality" : 0.0,
   "betweenness_centrality" : 0.0,
@@ -29045,6 +29169,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100010582118742",
+  "contact" : "0972692604",
   "degree_centrality" : 7.194245E-4,
   "closeness_centrality" : 0.0,
   "betweenness_centrality" : 0.0,
@@ -29620,6 +29745,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100091769288098",
+  "contact" : "0869552159",
   "degree_centrality" : 7.194245E-4,
   "closeness_centrality" : 0.0,
   "betweenness_centrality" : 0.0,
@@ -29795,6 +29921,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "vu.phung.31",
+  "contact" : "0382805685",
   "degree_centrality" : 0.0014388489,
   "closeness_centrality" : 0.0,
   "betweenness_centrality" : 0.0,
@@ -29945,6 +30072,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "hieu.truong.3386",
+  "contact" : "0976883562",
   "degree_centrality" : 7.194245E-4,
   "closeness_centrality" : 0.0,
   "betweenness_centrality" : 0.0,
@@ -29979,6 +30107,7 @@
   }
 }, {
   "owner" : "CauChu11111",
+  "contact" : "0986128092, 0986128092",
   "degree_centrality" : 7.194245E-4,
   "closeness_centrality" : 0.0,
   "betweenness_centrality" : 0.0,
@@ -30154,6 +30283,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "chicong.nguyen.50999",
+  "contact" : "0944540791",
   "degree_centrality" : 7.194245E-4,
   "closeness_centrality" : 0.0,
   "betweenness_centrality" : 0.0,
@@ -30904,6 +31034,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100010758660477",
+  "contact" : "0965484357",
   "degree_centrality" : 7.194245E-4,
   "closeness_centrality" : 0.0,
   "betweenness_centrality" : 0.0,
@@ -31254,6 +31385,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "hung2603xt",
+  "contact" : "0927081234",
   "degree_centrality" : 7.194245E-4,
   "closeness_centrality" : 0.0,
   "betweenness_centrality" : 0.0,
@@ -31622,6 +31754,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "thyen298",
+  "contact" : "0865963234",
   "degree_centrality" : 7.194245E-4,
   "closeness_centrality" : 0.0,
   "betweenness_centrality" : 0.0,
@@ -31956,6 +32089,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "biaclub89",
+  "contact" : "0986828285, 0966499341",
   "degree_centrality" : 7.194245E-4,
   "closeness_centrality" : 0.0,
   "betweenness_centrality" : 0.0,
@@ -32556,6 +32690,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "LDAJun98",
+  "contact" : "0981150498",
   "degree_centrality" : 7.194245E-4,
   "closeness_centrality" : 0.0,
   "betweenness_centrality" : 0.0,
@@ -34299,6 +34434,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100037511971436",
+  "contact" : "0989549088, 0989549088, 0989549088",
   "degree_centrality" : 7.194245E-4,
   "closeness_centrality" : 0.0,
   "betweenness_centrality" : 0.0,
@@ -34524,6 +34660,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100076716728721",
+  "contact" : "0955965088",
   "degree_centrality" : 7.194245E-4,
   "closeness_centrality" : 0.0,
   "betweenness_centrality" : 0.0,
@@ -34599,6 +34736,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "cham.le.9480111",
+  "contact" : "0867522992",
   "degree_centrality" : 7.194245E-4,
   "closeness_centrality" : 0.0,
   "betweenness_centrality" : 0.0,
@@ -34983,6 +35121,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "Then.Theoo",
+  "contact" : "0923265088, 0923265088",
   "degree_centrality" : 7.194245E-4,
   "closeness_centrality" : 0.0,
   "betweenness_centrality" : 0.0,
@@ -35533,6 +35672,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100071775279043",
+  "contact" : "0333089233",
   "Unnamed: 0" : 1463,
   "num_likes" : 0,
   "num_hahas" : 0,
@@ -35773,6 +35913,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100039951220329",
+  "contact" : "0986428195",
   "Unnamed: 0" : 4130,
   "num_likes" : 2,
   "num_hahas" : 0,
@@ -35863,6 +36004,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "tohop.hinhhoc",
+  "contact" : "0913417182",
   "Unnamed: 0" : 22,
   "num_likes" : 8,
   "num_hahas" : 0,
@@ -36001,6 +36143,7 @@
   }
 }, {
   "owner" : "100012758089118",
+  "contact" : "0987458206",
   "Unnamed: 0" : 3501,
   "num_likes" : 0,
   "num_hahas" : 0,
@@ -36340,6 +36483,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100039765244936",
+  "contact" : "0889319714",
   "Unnamed: 0" : 2173,
   "num_likes" : 2,
   "num_hahas" : 0,
@@ -36490,6 +36634,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100050550465586",
+  "contact" : "0988481015",
   "Unnamed: 0" : 1321,
   "num_likes" : 1,
   "num_hahas" : 0,
@@ -36996,6 +37141,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "hoangthu.phuong.127201",
+  "contact" : "0349616268",
   "Unnamed: 0" : 2671,
   "num_likes" : 1,
   "num_hahas" : 0,
@@ -37356,6 +37502,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "ham.loc.3591",
+  "contact" : "0325748321",
   "Unnamed: 0" : 1009,
   "num_likes" : 7,
   "num_hahas" : 0,
@@ -37629,6 +37776,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "pizzafatthachhoa",
+  "contact" : "0358192286, 0358192286",
   "id" : "4:c016f366-ab36-488e-ac4b-e1a3080209cb:316",
   "group" : [ "service_provider" ],
   "Unnamed: 0" : 2063,
@@ -37745,6 +37893,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100026801580149",
+  "contact" : "0333652548, 0981714603",
   "Unnamed: 0" : 4665,
   "num_likes" : 10,
   "num_hahas" : 0,
@@ -37805,6 +37954,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "nguyenvuong28102017",
+  "contact" : "0356721667",
   "Unnamed: 0" : 241,
   "num_likes" : 64,
   "num_hahas" : 0,
@@ -38648,6 +38798,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100071371502591",
+  "contact" : "0385852696",
   "Unnamed: 0" : 5069,
   "num_likes" : 7,
   "num_hahas" : 0,
@@ -38723,6 +38874,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100020804239011",
+  "contact" : "0865488628",
   "Unnamed: 0" : 2283,
   "num_likes" : 1,
   "num_hahas" : 0,
@@ -38738,6 +38890,7 @@
   "self_comment" : 6.0
 }, {
   "owner" : "duongthiet123",
+  "contact" : "0964725222, 0348220259",
   "Unnamed: 0" : 2815,
   "num_likes" : 2,
   "num_hahas" : 0,
@@ -38873,6 +39026,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "hoanganhtuan.68",
+  "contact" : "0362939519",
   "Unnamed: 0" : 5511,
   "num_likes" : 2,
   "num_hahas" : 0,
@@ -39077,6 +39231,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "iammuoi23082005",
+  "contact" : "0963472305",
   "Unnamed: 0" : 3415,
   "num_likes" : 5,
   "num_hahas" : 0,
@@ -39131,6 +39286,7 @@
   "self_comment" : 2.0
 }, {
   "owner" : "100094380651339",
+  "contact" : "0353153607",
   "Unnamed: 0" : 1224,
   "num_likes" : 42,
   "num_hahas" : 1,
@@ -39206,6 +39362,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "thuyminhdenxam06568",
+  "contact" : "0389424418",
   "Unnamed: 0" : 255,
   "num_likes" : 1,
   "num_hahas" : 0,
@@ -39356,6 +39513,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100016617758982",
+  "contact" : "0987458206",
   "Unnamed: 0" : 2943,
   "num_likes" : 11,
   "num_hahas" : 10,
@@ -40325,6 +40483,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100063712362083",
+  "contact" : "0977069006",
   "Unnamed: 0" : 3603,
   "num_likes" : 2,
   "num_hahas" : 0,
@@ -40550,6 +40709,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100035068154077",
+  "contact" : "0977567833",
   "Unnamed: 0" : 816,
   "num_likes" : 4,
   "num_hahas" : 0,
@@ -40580,6 +40740,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100006559657236",
+  "contact" : "0971958185, 0963989323",
   "Unnamed: 0" : 4589,
   "num_likes" : 9,
   "num_hahas" : 0,
@@ -40754,6 +40915,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "dung.huy.581187",
+  "contact" : "0982318879",
   "Unnamed: 0" : 6007,
   "num_likes" : 1,
   "num_hahas" : 0,
@@ -40859,6 +41021,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "hung.nguyenmanhhung.37",
+  "contact" : "0968499173, 0968499173, 0968499173, 0968499173",
   "Unnamed: 0" : 4444,
   "num_likes" : 4,
   "num_hahas" : 0,
@@ -40889,6 +41052,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "tuan.ken.332",
+  "contact" : "0394167901, 0868216382",
   "Unnamed: 0" : 2479,
   "num_likes" : 36,
   "num_hahas" : 0,
@@ -41174,6 +41338,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "haikieu.1234",
+  "contact" : "0888852882, 0819825556",
   "Unnamed: 0" : 2142,
   "num_likes" : 43,
   "num_hahas" : 0,
@@ -41363,6 +41528,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "rophi.ca.397",
+  "contact" : "0977037041, 0359618818, 0977037041",
   "Unnamed: 0" : 5174,
   "num_likes" : 30,
   "num_hahas" : 0,
@@ -41762,6 +41928,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100036573050024",
+  "contact" : "0978604991, 0972880730",
   "Unnamed: 0" : 1678,
   "num_likes" : 1,
   "num_hahas" : 0,
@@ -42032,6 +42199,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "ha.hihihehe.3",
+  "contact" : "0385852696",
   "Unnamed: 0" : 5514,
   "num_likes" : 22,
   "num_hahas" : 0,
@@ -42092,6 +42260,7 @@
   "self_comment" : 12.0
 }, {
   "owner" : "100041103410705",
+  "contact" : "0979786614",
   "Unnamed: 0" : 456,
   "num_likes" : 0,
   "num_hahas" : 0,
@@ -42236,6 +42405,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "phuongredamancy",
+  "contact" : "0354243448, 0988879188",
   "Unnamed: 0" : 315,
   "num_likes" : 4,
   "num_hahas" : 0,
@@ -42266,6 +42436,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "tu.oanh.9803150",
+  "contact" : "0325234000",
   "Unnamed: 0" : 2908,
   "num_likes" : 1,
   "num_hahas" : 0,
@@ -42395,6 +42566,7 @@
   }
 }, {
   "owner" : "trang.vu.7587370",
+  "contact" : "0386333259",
   "Unnamed: 0" : 3855,
   "num_likes" : 3,
   "num_hahas" : 0,
@@ -42947,6 +43119,7 @@
   "self_comment" : 12.0
 }, {
   "owner" : "02ndSeptember",
+  "contact" : "0936800243, 0395073788",
   "Unnamed: 0" : 5399,
   "num_likes" : 7,
   "num_hahas" : 0,
@@ -43271,6 +43444,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "ncc0495",
+  "contact" : "0372040295",
   "Unnamed: 0" : 1280,
   "num_likes" : 4,
   "num_hahas" : 0,
@@ -43400,6 +43574,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "nemnuongcotdien.hola",
+  "contact" : "0378979597",
   "Unnamed: 0" : 3286,
   "num_likes" : 32,
   "num_hahas" : 0,
@@ -43844,6 +44019,7 @@
   "self_comment" : 12.0
 }, {
   "owner" : "100087806402908",
+  "contact" : "0967148188",
   "Unnamed: 0" : 3155,
   "num_likes" : 0,
   "num_hahas" : 0,
@@ -43964,6 +44140,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "Estenaocomuithomcuahoanhai",
+  "contact" : "0344244980",
   "Unnamed: 0" : 841,
   "num_likes" : 0,
   "num_hahas" : 0,
@@ -44063,6 +44240,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100087348190927",
+  "contact" : "0375870866",
   "Unnamed: 0" : 5462,
   "num_likes" : 10,
   "num_hahas" : 0,
@@ -44183,6 +44361,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "Kieu.minh.nga.999",
+  "contact" : "0974643766",
   "Unnamed: 0" : 5849,
   "num_likes" : 0,
   "num_hahas" : 0,
@@ -44453,6 +44632,7 @@
   "self_comment" : 1.0
 }, {
   "owner" : "ntthanh0723",
+  "contact" : "0947156688",
   "Unnamed: 0" : 1739,
   "num_likes" : 1,
   "num_hahas" : 0,
@@ -44648,6 +44828,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "hoa.my.040803",
+  "contact" : "0344273629",
   "Unnamed: 0" : 1394,
   "num_likes" : 2,
   "num_hahas" : 0,
@@ -44693,6 +44874,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "phungha1996",
+  "contact" : "0356721667",
   "Unnamed: 0" : 89,
   "num_likes" : 11,
   "num_hahas" : 0,
@@ -44873,6 +45055,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100008517601942",
+  "contact" : "0925999568",
   "Unnamed: 0" : 2449,
   "num_likes" : 0,
   "num_hahas" : 0,
@@ -44918,6 +45101,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "duynam.le.581",
+  "contact" : "0327637073",
   "Unnamed: 0" : 1010,
   "num_likes" : 3,
   "num_hahas" : 0,
@@ -44933,6 +45117,7 @@
   "self_comment" : 5.0
 }, {
   "owner" : "100036329680845",
+  "contact" : "0385852696",
   "Unnamed: 0" : 4636,
   "num_likes" : 6,
   "num_hahas" : 0,
@@ -45233,6 +45418,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "yonghee.kim.96155",
+  "contact" : "0376085244, 0376085244",
   "Unnamed: 0" : 3573,
   "num_likes" : 2,
   "num_hahas" : 0,
@@ -45551,6 +45737,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "dungkhoi.96",
+  "contact" : "0363266546",
   "Unnamed: 0" : 2637,
   "num_likes" : 115,
   "num_hahas" : 1,
@@ -45581,6 +45768,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "minhchinh.nguyen.12177",
+  "contact" : "0338722888",
   "Unnamed: 0" : 704,
   "num_likes" : 1,
   "num_hahas" : 0,
@@ -45686,6 +45874,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "thuan.van.925",
+  "contact" : "0961150113",
   "Unnamed: 0" : 5905,
   "num_likes" : 0,
   "num_hahas" : 0,
@@ -45896,6 +46085,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "quynhanh.bui.9216",
+  "contact" : "0978390825",
   "Unnamed: 0" : 2672,
   "num_likes" : 0,
   "num_hahas" : 0,
@@ -46190,6 +46380,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100087123401821",
+  "contact" : "0964725222, 0348220259",
   "Unnamed: 0" : 2227,
   "num_likes" : 1,
   "num_hahas" : 0,
@@ -46400,6 +46591,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100029486420301",
+  "contact" : "0348656388",
   "Unnamed: 0" : 856,
   "num_likes" : 10,
   "num_hahas" : 0,
@@ -46505,6 +46697,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "tuancan.bds",
+  "contact" : "0817966661",
   "Unnamed: 0" : 5640,
   "num_likes" : 2,
   "num_hahas" : 0,
@@ -46895,6 +47088,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100022208551118",
+  "contact" : "0396027585",
   "Unnamed: 0" : 5351,
   "num_likes" : 0,
   "num_hahas" : 0,
@@ -47090,6 +47284,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "mi.thao.908579",
+  "contact" : "0337068583",
   "Unnamed: 0" : 3731,
   "num_likes" : 13,
   "num_hahas" : 2,
@@ -47255,6 +47450,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100087426346783",
+  "contact" : "0913383603",
   "Unnamed: 0" : 4405,
   "num_likes" : 4,
   "num_hahas" : 0,
@@ -47315,6 +47511,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "s2dragon02",
+  "contact" : "0354243448, 0988879188",
   "Unnamed: 0" : 488,
   "num_likes" : 3,
   "num_hahas" : 0,
@@ -47540,6 +47737,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100087350439016",
+  "contact" : "0975486919",
   "Unnamed: 0" : 5622,
   "num_likes" : 8,
   "num_hahas" : 0,
@@ -48002,6 +48200,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "anhh.quangg.310803",
+  "contact" : "0916618585",
   "Unnamed: 0" : 3953,
   "num_likes" : 49,
   "num_hahas" : 4,
@@ -48092,6 +48291,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100060348184034",
+  "contact" : "0393956926",
   "Unnamed: 0" : 2827,
   "num_likes" : 0,
   "num_hahas" : 0,
@@ -48467,6 +48667,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100030173269057",
+  "contact" : "0876885666",
   "Unnamed: 0" : 1581,
   "num_likes" : 10,
   "num_hahas" : 0,
@@ -48767,6 +48968,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "linhan.hoangngoc.1",
+  "contact" : "0966615212",
   "Unnamed: 0" : 2305,
   "num_likes" : 5,
   "num_hahas" : 2,
@@ -49112,6 +49314,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "huyentrang.le.161",
+  "contact" : "0904755081",
   "Unnamed: 0" : 3719,
   "num_likes" : 19,
   "num_hahas" : 1,
@@ -49325,6 +49528,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100028042264718",
+  "contact" : "0346202172",
   "id" : "4:c016f366-ab36-488e-ac4b-e1a3080209cb:668",
   "group" : [ "service_provider" ],
   "Unnamed: 0" : 4709,
@@ -49366,6 +49570,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100018565807340",
+  "contact" : "0981496182",
   "Unnamed: 0" : 3852,
   "num_likes" : 21,
   "num_hahas" : 0,
@@ -49396,6 +49601,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "zonzon.dung",
+  "contact" : "0912640185",
   "id" : "4:c016f366-ab36-488e-ac4b-e1a3080209cb:1283",
   "group" : [ "service_provider" ],
   "Unnamed: 0" : 6061,
@@ -49761,6 +49967,7 @@
   "self_comment" : 1.0
 }, {
   "owner" : "buchika03",
+  "contact" : "0972264889",
   "Unnamed: 0" : 5206,
   "num_likes" : 47,
   "num_hahas" : 1,
@@ -50061,6 +50268,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "dung.tet",
+  "contact" : "0377753995",
   "Unnamed: 0" : 1545,
   "num_likes" : 6,
   "num_hahas" : 0,
@@ -50745,6 +50953,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100037088643801",
+  "contact" : "0866555987",
   "Unnamed: 0" : 926,
   "num_likes" : 51,
   "num_hahas" : 0,
@@ -50919,6 +51128,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "duyan.phat",
+  "contact" : "0363693888",
   "Unnamed: 0" : 4126,
   "num_likes" : 3,
   "num_hahas" : 0,
@@ -51309,6 +51519,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100088721710405",
+  "contact" : "0964725222, 0348220259",
   "Unnamed: 0" : 368,
   "num_likes" : 0,
   "num_hahas" : 0,
@@ -51414,6 +51625,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "lenguyenkhanhlinhh",
+  "contact" : "0343515044, 0866197103",
   "Unnamed: 0" : 3184,
   "num_likes" : 27,
   "num_hahas" : 1,
@@ -51618,6 +51830,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "phamhoa.lq1",
+  "contact" : "0362131115",
   "Unnamed: 0" : 6299,
   "num_likes" : 2,
   "num_hahas" : 0,
@@ -51828,6 +52041,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100085515694259",
+  "contact" : "0333742687, 0586632345",
   "Unnamed: 0" : 4129,
   "num_likes" : 13,
   "num_hahas" : 2,
@@ -51918,6 +52132,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "Toan2o2",
+  "contact" : "0971316112",
   "Unnamed: 0" : 3539,
   "num_likes" : 3,
   "num_hahas" : 0,
@@ -51963,6 +52178,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "vuthiphuong1783",
+  "contact" : "0976934099",
   "Unnamed: 0" : 141,
   "num_likes" : 39,
   "num_hahas" : 1,
@@ -51978,6 +52194,7 @@
   "self_comment" : 21.0
 }, {
   "owner" : "tien.koi.77",
+  "contact" : "0967213398",
   "Unnamed: 0" : 2160,
   "num_likes" : 2,
   "num_hahas" : 0,
@@ -52068,6 +52285,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100060911370581",
+  "contact" : "0966282287",
   "Unnamed: 0" : 4909,
   "num_likes" : 6,
   "num_hahas" : 1,
@@ -52383,6 +52601,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "duckminh05",
+  "contact" : "0978835586, 0869917905",
   "Unnamed: 0" : 4199,
   "num_likes" : 1,
   "num_hahas" : 0,
@@ -52692,6 +52911,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100021240283817",
+  "contact" : "0981077438",
   "Unnamed: 0" : 3335,
   "num_likes" : 4,
   "num_hahas" : 0,
@@ -52722,6 +52942,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "sdt0928681992",
+  "contact" : "0702598888",
   "Unnamed: 0" : 1335,
   "num_likes" : 1,
   "num_hahas" : 0,
@@ -52857,6 +53078,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100028084036600",
+  "contact" : "0913417182",
   "Unnamed: 0" : 6059,
   "num_likes" : 2,
   "num_hahas" : 0,
@@ -52971,6 +53193,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "Dang.Nu3020",
+  "contact" : "0343885666, 0984648244",
   "Unnamed: 0" : 5979,
   "num_likes" : 0,
   "num_hahas" : 0,
@@ -53190,6 +53413,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "lisa.lala.33821",
+  "contact" : "0369620659",
   "Unnamed: 0" : 2555,
   "num_likes" : 11,
   "num_hahas" : 0,
@@ -53439,6 +53663,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100087312330975",
+  "contact" : "0973200688",
   "Unnamed: 0" : 2787,
   "num_likes" : 48,
   "num_hahas" : 9,
@@ -53853,6 +54078,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "hanoi.mottraitim",
+  "contact" : "0973200688",
   "Unnamed: 0" : 5453,
   "num_likes" : 13,
   "num_hahas" : 2,
@@ -53943,6 +54169,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "thanhtruc101095",
+  "contact" : "0389487955",
   "Unnamed: 0" : 5139,
   "num_likes" : 2,
   "num_hahas" : 0,
@@ -53958,6 +54185,7 @@
   "self_comment" : 4.0
 }, {
   "owner" : "minchu.nguyen.378",
+  "contact" : "0971308135, 0973212181, 0973212181",
   "Unnamed: 0" : 3513,
   "num_likes" : 3,
   "num_hahas" : 0,
@@ -54072,6 +54300,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "chilly.nig",
+  "contact" : "0946786898",
   "Unnamed: 0" : 5855,
   "num_likes" : 0,
   "num_hahas" : 0,
@@ -54278,6 +54507,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "thuy.quach.3705157",
+  "contact" : "0985478487",
   "Unnamed: 0" : 617,
   "num_likes" : 9,
   "num_hahas" : 0,
@@ -54683,6 +54913,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "tuyen.linh.14",
+  "contact" : "0968293235, 0968293235, 0968293235",
   "Unnamed: 0" : 4838,
   "num_likes" : 7,
   "num_hahas" : 0,
@@ -55253,6 +55484,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "quynhngan.nguyenthi.904",
+  "contact" : "0963519603",
   "Unnamed: 0" : 157,
   "num_likes" : 0,
   "num_hahas" : 0,
@@ -55313,6 +55545,7 @@
   "self_comment" : 5.0
 }, {
   "owner" : "bep.me.kem.867006",
+  "contact" : "0972656833, 0972656833, 0889998883",
   "Unnamed: 0" : 1458,
   "num_likes" : 21,
   "num_hahas" : 0,
@@ -55388,6 +55621,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "chaenomeles.mayn",
+  "contact" : "0828891796",
   "Unnamed: 0" : 304,
   "num_likes" : 4,
   "num_hahas" : 0,
@@ -55412,6 +55646,7 @@
   }
 }, {
   "owner" : "ngoc.em.7771",
+  "contact" : "0348656388",
   "Unnamed: 0" : 533,
   "num_likes" : 8,
   "num_hahas" : 0,
@@ -55697,6 +55932,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100056956670177",
+  "contact" : "0975787200, 0986100899, 0978334212",
   "Unnamed: 0" : 4843,
   "num_likes" : 9,
   "num_hahas" : 0,
@@ -55922,6 +56158,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100004934679580",
+  "contact" : "0363266546",
   "Unnamed: 0" : 5404,
   "num_likes" : 3,
   "num_hahas" : 0,
@@ -56042,6 +56279,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100006736386420",
+  "contact" : "0962188128, 0961602245",
   "Unnamed: 0" : 5723,
   "num_likes" : 22,
   "num_hahas" : 0,
@@ -57142,6 +57380,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100011338378459",
+  "contact" : "0915676933",
   "Unnamed: 0" : 3128,
   "num_likes" : 1,
   "num_hahas" : 0,
@@ -57247,6 +57486,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "phlinh316",
+  "contact" : "0987493950",
   "Unnamed: 0" : 5527,
   "num_likes" : 12,
   "num_hahas" : 0,
@@ -57262,6 +57502,7 @@
   "self_comment" : 10.0
 }, {
   "owner" : "camly.tran.73307",
+  "contact" : "0343038568",
   "Unnamed: 0" : 5700,
   "num_likes" : 9,
   "num_hahas" : 1,
@@ -57727,6 +57968,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "dulux.fam",
+  "contact" : "0925272989, 0925272989",
   "id" : "4:c016f366-ab36-488e-ac4b-e1a3080209cb:33",
   "group" : [ "service_provider" ],
   "Unnamed: 0" : 4368,
@@ -57798,6 +58040,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "rong.217",
+  "contact" : "0982219911",
   "Unnamed: 0" : 3969,
   "num_likes" : 16,
   "num_hahas" : 0,
@@ -57918,6 +58161,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "phamthuong2k2",
+  "contact" : "0343038568",
   "Unnamed: 0" : 5948,
   "num_likes" : 0,
   "num_hahas" : 0,
@@ -57948,6 +58192,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "trungdungdaynee",
+  "contact" : "0325760281",
   "Unnamed: 0" : 5518,
   "num_likes" : 1,
   "num_hahas" : 0,
@@ -58311,6 +58556,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100027592593036",
+  "contact" : "0988546230",
   "Unnamed: 0" : 5355,
   "num_likes" : 8,
   "num_hahas" : 0,
@@ -58848,6 +59094,7 @@
   "self_comment" : 3.0
 }, {
   "owner" : "100059918114237",
+  "contact" : "0862074965",
   "Unnamed: 0" : 1771,
   "num_likes" : 7,
   "num_hahas" : 0,
@@ -59013,6 +59260,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "maianhdang2712",
+  "contact" : "0945509918",
   "Unnamed: 0" : 3350,
   "num_likes" : 23,
   "num_hahas" : 0,
@@ -59313,6 +59561,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "tuyetmaihy",
+  "contact" : "0988468658",
   "Unnamed: 0" : 5637,
   "num_likes" : 5,
   "num_hahas" : 0,
@@ -59793,6 +60042,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100032473332910",
+  "contact" : "0396215292",
   "Unnamed: 0" : 5912,
   "num_likes" : 3,
   "num_hahas" : 0,
@@ -59868,6 +60118,7 @@
   "self_comment" : 8.0
 }, {
   "owner" : "100019030964374",
+  "contact" : "0985560669",
   "Unnamed: 0" : 5646,
   "num_likes" : 1,
   "num_hahas" : 0,
@@ -59898,6 +60149,7 @@
   "self_comment" : 1.0
 }, {
   "owner" : "vuong.phamnhat.7773",
+  "contact" : "0333652548",
   "Unnamed: 0" : 4773,
   "num_likes" : 8,
   "num_hahas" : 0,
@@ -60522,6 +60774,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100068067792267",
+  "contact" : "0946637989",
   "Unnamed: 0" : 2701,
   "num_likes" : 9,
   "num_hahas" : 0,
@@ -61133,6 +61386,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "thuhiend3",
+  "contact" : "0986753695",
   "Unnamed: 0" : 5792,
   "num_likes" : 45,
   "num_hahas" : 0,
@@ -61481,6 +61735,7 @@
   }
 }, {
   "owner" : "100035790682357",
+  "contact" : "0972341020",
   "Unnamed: 0" : 2392,
   "num_likes" : 3,
   "num_hahas" : 0,
@@ -62225,6 +62480,7 @@
   "self_comment" : 14.0
 }, {
   "owner" : "100004686510644",
+  "contact" : "0987246933",
   "Unnamed: 0" : 2618,
   "num_likes" : 2,
   "num_hahas" : 0,
@@ -62255,6 +62511,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "noi.n.phuongxa",
+  "contact" : "0985386135, 0986304789",
   "id" : "4:c016f366-ab36-488e-ac4b-e1a3080209cb:59",
   "group" : [ "service_provider" ],
   "Unnamed: 0" : 4639,
@@ -62506,6 +62763,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "kog11",
+  "contact" : "0348609595, 0337892644, 0927199077, 0916216689",
   "Unnamed: 0" : 2868,
   "num_likes" : 4,
   "num_hahas" : 1,
@@ -62686,6 +62944,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "utco.hoangho.1",
+  "contact" : "0374165989, 0374165989",
   "Unnamed: 0" : 2300,
   "num_likes" : 6,
   "num_hahas" : 0,
@@ -62959,6 +63218,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "HaAnn.1986",
+  "contact" : "0987093091",
   "Unnamed: 0" : 3813,
   "num_likes" : 3,
   "num_hahas" : 0,
@@ -62989,6 +63249,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "Authnhtrng28",
+  "contact" : "0383961003",
   "Unnamed: 0" : 4057,
   "num_likes" : 311,
   "num_hahas" : 3,
@@ -63124,6 +63385,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "tramy.do.756",
+  "contact" : "0325760281",
   "Unnamed: 0" : 6006,
   "num_likes" : 3,
   "num_hahas" : 0,
@@ -63139,6 +63401,7 @@
   "self_comment" : 4.0
 }, {
   "owner" : "100004438770954",
+  "contact" : "0966578853",
   "Unnamed: 0" : 5782,
   "num_likes" : 0,
   "num_hahas" : 0,
@@ -63604,6 +63867,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100025427379496",
+  "contact" : "0868823118, 0825269777",
   "Unnamed: 0" : 5983,
   "num_likes" : 1,
   "num_hahas" : 0,
@@ -63739,6 +64003,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "giap.ngo.399488",
+  "contact" : "0344276687",
   "Unnamed: 0" : 5218,
   "num_likes" : 0,
   "num_hahas" : 0,
@@ -63988,6 +64253,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "giang.nguyenminh.169",
+  "contact" : "0985071093",
   "Unnamed: 0" : 326,
   "num_likes" : 7,
   "num_hahas" : 0,
@@ -64018,6 +64284,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "hung.nguyen.190521",
+  "contact" : "0868363047",
   "Unnamed: 0" : 202,
   "num_likes" : 4,
   "num_hahas" : 0,
@@ -64123,6 +64390,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "ThanhThuyHR",
+  "contact" : "0335187815",
   "Unnamed: 0" : 4106,
   "num_likes" : 0,
   "num_hahas" : 0,
@@ -64348,6 +64616,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100011751443925",
+  "contact" : "0926366386",
   "Unnamed: 0" : 4100,
   "num_likes" : 11,
   "num_hahas" : 1,
@@ -64408,6 +64677,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100032029860593",
+  "contact" : "0973131112",
   "Unnamed: 0" : 5829,
   "num_likes" : 0,
   "num_hahas" : 0,
@@ -64423,6 +64693,7 @@
   "self_comment" : 2.0
 }, {
   "owner" : "100037965105865",
+  "contact" : "0899999902",
   "Unnamed: 0" : 3979,
   "num_likes" : 34,
   "num_hahas" : 1,
@@ -64522,6 +64793,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "suka.nhok.5",
+  "contact" : "0377335686",
   "Unnamed: 0" : 1670,
   "num_likes" : 41,
   "num_hahas" : 0,
@@ -64687,6 +64959,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "hungcoi254",
+  "contact" : "0333742687, 0586632345",
   "Unnamed: 0" : 3447,
   "num_likes" : 4,
   "num_hahas" : 0,
@@ -64762,6 +65035,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "Wyket",
+  "contact" : "0363634832",
   "Unnamed: 0" : 4517,
   "num_likes" : 5,
   "num_hahas" : 0,
@@ -65017,6 +65291,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "thanhxuan.vuong.90",
+  "contact" : "0963700465",
   "Unnamed: 0" : 3768,
   "num_likes" : 0,
   "num_hahas" : 0,
@@ -65347,6 +65622,7 @@
   "self_comment" : 1.0
 }, {
   "owner" : "100066846368212",
+  "contact" : "0886135555",
   "Unnamed: 0" : 5442,
   "num_likes" : 13,
   "num_hahas" : 0,
@@ -65755,6 +66031,7 @@
   }
 }, {
   "owner" : "100078574899969",
+  "contact" : "0963560386",
   "Unnamed: 0" : 4544,
   "num_likes" : 38,
   "num_hahas" : 1,
@@ -66145,6 +66422,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "leha.41848",
+  "contact" : "0964760086",
   "Unnamed: 0" : 2212,
   "num_likes" : 3,
   "num_hahas" : 0,
@@ -66291,6 +66569,7 @@
   "self_comment" : 3.0
 }, {
   "owner" : "luan.khuat.35",
+  "contact" : "0984734968",
   "Unnamed: 0" : 4704,
   "num_likes" : 2,
   "num_hahas" : 0,
@@ -66321,6 +66600,7 @@
   "self_comment" : 30.0
 }, {
   "owner" : "kiemdung.kiemdung.9",
+  "contact" : "0961570999, 0961570999",
   "Unnamed: 0" : 6167,
   "num_likes" : 26,
   "num_hahas" : 0,
@@ -66525,6 +66805,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100039158989707",
+  "contact" : "0378956566",
   "Unnamed: 0" : 460,
   "num_likes" : 11,
   "num_hahas" : 0,
@@ -66990,6 +67271,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100021953674232",
+  "contact" : "0989542005, 0989542005, 0989542005, 0989542005",
   "Unnamed: 0" : 3401,
   "num_likes" : 12,
   "num_hahas" : 0,
@@ -67239,6 +67521,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "trong.tan.1990",
+  "contact" : "0785848888",
   "Unnamed: 0" : 2642,
   "num_likes" : 3,
   "num_hahas" : 0,
@@ -67734,6 +68017,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "hong.hoa.14289210",
+  "contact" : "0989992851",
   "Unnamed: 0" : 4861,
   "num_likes" : 0,
   "num_hahas" : 0,
@@ -68490,6 +68774,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100070507399645",
+  "contact" : "0983582179, 0334456635",
   "Unnamed: 0" : 6143,
   "num_likes" : 54,
   "num_hahas" : 0,
@@ -68814,6 +69099,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "hakiwi.nguyen",
+  "contact" : "0985241197",
   "Unnamed: 0" : 3467,
   "num_likes" : 23,
   "num_hahas" : 0,
@@ -69048,6 +69334,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "b0bnguyen",
+  "contact" : "0335991345",
   "Unnamed: 0" : 5949,
   "num_likes" : 1,
   "num_hahas" : 0,
@@ -69447,6 +69734,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100084205121862",
+  "contact" : "0977625684",
   "Unnamed: 0" : 5326,
   "num_likes" : 0,
   "num_hahas" : 0,
@@ -69876,6 +70164,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100033947722423",
+  "contact" : "0853383423, 0972760489",
   "Unnamed: 0" : 4533,
   "num_likes" : 0,
   "num_hahas" : 0,
@@ -70131,6 +70420,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "banhmi.teoem",
+  "contact" : "0903492891",
   "Unnamed: 0" : 2222,
   "num_likes" : 30,
   "num_hahas" : 0,
@@ -70251,6 +70541,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "mai.nguyen.260703",
+  "contact" : "0979013360",
   "Unnamed: 0" : 5473,
   "num_likes" : 11,
   "num_hahas" : 3,
@@ -70305,6 +70596,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "whodeadinside",
+  "contact" : "0867795405",
   "Unnamed: 0" : 1746,
   "num_likes" : 18,
   "num_hahas" : 0,
@@ -70365,6 +70657,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "nghia.hoalac",
+  "contact" : "0848858123",
   "Unnamed: 0" : 2915,
   "num_likes" : 3,
   "num_hahas" : 0,
@@ -70914,6 +71207,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "nguyeens.phuowng.thaos",
+  "contact" : "0975740259",
   "Unnamed: 0" : 4556,
   "num_likes" : 37,
   "num_hahas" : 1,
@@ -70989,6 +71283,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100021741843336",
+  "contact" : "0962250022",
   "Unnamed: 0" : 152,
   "num_likes" : 1,
   "num_hahas" : 0,
@@ -71079,6 +71374,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100028370613052",
+  "contact" : "0355691997",
   "Unnamed: 0" : 4458,
   "num_likes" : 19,
   "num_hahas" : 0,
@@ -71184,6 +71480,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100055246843056",
+  "contact" : "0862805212",
   "Unnamed: 0" : 727,
   "num_likes" : 3,
   "num_hahas" : 0,
@@ -71292,6 +71589,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "giayxinhlamthu",
+  "contact" : "0971965165, 0971965165, 0968170386",
   "Unnamed: 0" : 2269,
   "num_likes" : 11,
   "num_hahas" : 0,
@@ -72192,6 +72490,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100038097851835",
+  "contact" : "0394818999",
   "Unnamed: 0" : 3789,
   "num_likes" : 14,
   "num_hahas" : 1,
@@ -72297,6 +72596,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100039237672067",
+  "contact" : "0355202082",
   "Unnamed: 0" : 706,
   "num_likes" : 0,
   "num_hahas" : 0,
@@ -72516,6 +72816,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100027102667647",
+  "contact" : "0392419023",
   "Unnamed: 0" : 3045,
   "num_likes" : 14,
   "num_hahas" : 0,
@@ -73116,6 +73417,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100081017873016",
+  "contact" : "0917614366",
   "Unnamed: 0" : 2834,
   "num_likes" : 0,
   "num_hahas" : 0,
@@ -73191,6 +73493,7 @@
   "self_comment" : 8.0
 }, {
   "owner" : "100090021699142",
+  "contact" : "0981657319, 0981657319",
   "Unnamed: 0" : 5926,
   "num_likes" : 12,
   "num_hahas" : 0,
@@ -73236,6 +73539,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100012437746851",
+  "contact" : "0981591604",
   "Unnamed: 0" : 5596,
   "num_likes" : 1,
   "num_hahas" : 0,
@@ -73581,6 +73885,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "hainghiack68tl",
+  "contact" : "0947877298",
   "Unnamed: 0" : 2622,
   "num_likes" : 11,
   "num_hahas" : 0,
@@ -74274,6 +74579,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100030464963954",
+  "contact" : "0945277495",
   "Unnamed: 0" : 19,
   "num_likes" : 237,
   "num_hahas" : 10,
@@ -74304,6 +74610,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100077549402186",
+  "contact" : "0782384888",
   "Unnamed: 0" : 1741,
   "num_likes" : 1,
   "num_hahas" : 0,
@@ -74538,6 +74845,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "ba.manh.7169",
+  "contact" : "0829498899, 0962594628",
   "Unnamed: 0" : 447,
   "num_likes" : 19,
   "num_hahas" : 0,
@@ -74892,6 +75200,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100009947134523",
+  "contact" : "0979930043, 0979930043",
   "Unnamed: 0" : 3244,
   "num_likes" : 2,
   "num_hahas" : 0,
@@ -75261,6 +75570,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "kens.nguyens.796",
+  "contact" : "0398699567",
   "Unnamed: 0" : 4785,
   "num_likes" : 5,
   "num_hahas" : 0,
@@ -75336,6 +75646,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "pham.v.quan.75",
+  "contact" : "0962288790",
   "Unnamed: 0" : 3892,
   "num_likes" : 4,
   "num_hahas" : 0,
@@ -75351,6 +75662,7 @@
   "self_comment" : 1.0
 }, {
   "owner" : "100032063745302",
+  "contact" : "0981202526",
   "Unnamed: 0" : 3026,
   "num_likes" : 2,
   "num_hahas" : 0,
@@ -75486,6 +75798,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "ThuLuanAlobit",
+  "contact" : "0973351263",
   "Unnamed: 0" : 2483,
   "num_likes" : 33,
   "num_hahas" : 0,
@@ -75570,6 +75883,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100005360013089",
+  "contact" : "0978371288",
   "Unnamed: 0" : 2379,
   "num_likes" : 6,
   "num_hahas" : 0,
@@ -75600,6 +75914,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "vu.xedich.7330",
+  "contact" : "0975937954",
   "Unnamed: 0" : 1260,
   "num_likes" : 1,
   "num_hahas" : 0,
@@ -75705,6 +76020,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100017372529582",
+  "contact" : "0327392576",
   "Unnamed: 0" : 243,
   "num_likes" : 8,
   "num_hahas" : 15,
@@ -75855,6 +76171,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100091427875212",
+  "contact" : "0986766245",
   "Unnamed: 0" : 635,
   "num_likes" : 18,
   "num_hahas" : 0,
@@ -75885,6 +76202,7 @@
   "self_comment" : 1.0
 }, {
   "owner" : "xuyen.cach",
+  "contact" : "0866456566, 0866456566",
   "Unnamed: 0" : 3879,
   "num_likes" : 1,
   "num_hahas" : 0,
@@ -76110,6 +76428,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100087773361257",
+  "contact" : "0964216004, 0964216004",
   "Unnamed: 0" : 4760,
   "num_likes" : 0,
   "num_hahas" : 0,
@@ -76380,6 +76699,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "ve.nguyen.7545",
+  "contact" : "0369105631",
   "Unnamed: 0" : 5964,
   "num_likes" : 38,
   "num_hahas" : 0,
@@ -77244,6 +77564,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100041502970868",
+  "contact" : "0976267084",
   "Unnamed: 0" : 4218,
   "num_likes" : 12,
   "num_hahas" : 0,
@@ -77439,6 +77760,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100022016236272",
+  "contact" : "0985345705",
   "id" : "4:c016f366-ab36-488e-ac4b-e1a3080209cb:1210",
   "group" : [ "service_provider" ],
   "Unnamed: 0" : 2111,
@@ -77480,6 +77802,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "long.letuan.568",
+  "contact" : "0816188588",
   "Unnamed: 0" : 4594,
   "num_likes" : 0,
   "num_hahas" : 0,
@@ -77495,6 +77818,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100012581261825",
+  "contact" : "0338796166",
   "Unnamed: 0" : 5140,
   "num_likes" : 13,
   "num_hahas" : 0,
@@ -77525,6 +77849,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "anhtung.ng.1",
+  "contact" : "0344497413",
   "Unnamed: 0" : 823,
   "num_likes" : 11,
   "num_hahas" : 0,
@@ -77675,6 +78000,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "notfound420",
+  "contact" : "0344185387, 0384740304",
   "Unnamed: 0" : 251,
   "num_likes" : 6,
   "num_hahas" : 0,
@@ -78014,6 +78340,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "gnouht18",
+  "contact" : "0787097753",
   "Unnamed: 0" : 2050,
   "num_likes" : 25,
   "num_hahas" : 0,
@@ -78029,6 +78356,7 @@
   "self_comment" : 32.0
 }, {
   "owner" : "hongnhien.nguyen.96742277",
+  "contact" : "0867522992",
   "Unnamed: 0" : 931,
   "num_likes" : 4,
   "num_hahas" : 0,
@@ -78443,6 +78771,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "ngatpeooo",
+  "contact" : "0983923822",
   "id" : "4:c016f366-ab36-488e-ac4b-e1a3080209cb:466",
   "group" : [ "service_provider" ],
   "Unnamed: 0" : 2860,
@@ -78739,6 +79068,7 @@
   "self_comment" : 3.0
 }, {
   "owner" : "100010437906107",
+  "contact" : "0985976842",
   "Unnamed: 0" : 4899,
   "num_likes" : 45,
   "num_hahas" : 1,
@@ -78769,6 +79099,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "hung.huan.5872",
+  "contact" : "0378734725",
   "Unnamed: 0" : 319,
   "num_likes" : 9,
   "num_hahas" : 0,
@@ -79009,6 +79340,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100030265261889",
+  "contact" : "0395200104, 0395200104",
   "Unnamed: 0" : 2685,
   "num_likes" : 7,
   "num_hahas" : 0,
@@ -79339,6 +79671,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100087299341233",
+  "contact" : "0353542752, 0989207185",
   "Unnamed: 0" : 1057,
   "num_likes" : 0,
   "num_hahas" : 0,
@@ -79573,6 +79906,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100056761366962",
+  "contact" : "0981543438",
   "Unnamed: 0" : 5014,
   "num_likes" : 5,
   "num_hahas" : 2,
@@ -79723,6 +80057,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100019273186810",
+  "contact" : "0395769189",
   "Unnamed: 0" : 350,
   "num_likes" : 0,
   "num_hahas" : 0,
@@ -79933,6 +80268,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "trang.bocau.5623",
+  "contact" : "0942529592, 0816166686",
   "Unnamed: 0" : 3259,
   "num_likes" : 7,
   "num_hahas" : 0,
@@ -79948,6 +80284,7 @@
   "self_comment" : 15.0
 }, {
   "owner" : "truongbach.hoang.5",
+  "contact" : "0325832982",
   "Unnamed: 0" : 4815,
   "num_likes" : 18,
   "num_hahas" : 0,
@@ -79978,6 +80315,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "phuong.buithu.501",
+  "contact" : "0848041102",
   "Unnamed: 0" : 5858,
   "num_likes" : 49,
   "num_hahas" : 14,
@@ -80383,6 +80721,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "huy.kaka.16",
+  "contact" : "0345861456",
   "Unnamed: 0" : 5865,
   "num_likes" : 8,
   "num_hahas" : 0,
@@ -81448,6 +81787,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "tho.hoangthanh.332",
+  "contact" : "0983436656, 0393989639",
   "Unnamed: 0" : 1272,
   "num_likes" : 14,
   "num_hahas" : 0,
@@ -81538,6 +81878,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "khuong.kenny",
+  "contact" : "0934671235",
   "Unnamed: 0" : 6064,
   "num_likes" : 0,
   "num_hahas" : 0,
@@ -81673,6 +82014,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100011561464476",
+  "contact" : "0383329264",
   "Unnamed: 0" : 2547,
   "num_likes" : 3,
   "num_hahas" : 0,
@@ -82387,6 +82729,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "hieu.thanh.777158",
+  "contact" : "0985093750",
   "Unnamed: 0" : 4902,
   "num_likes" : 9,
   "num_hahas" : 0,
@@ -82507,6 +82850,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "nghia.tien.90",
+  "contact" : "0986395587, 0967864323",
   "Unnamed: 0" : 378,
   "num_likes" : 3,
   "num_hahas" : 0,
@@ -82777,6 +83121,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100089758141791",
+  "contact" : "0374755706",
   "Unnamed: 0" : 1863,
   "num_likes" : 17,
   "num_hahas" : 0,
@@ -83017,6 +83362,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100043109170483",
+  "contact" : "0986509169, 0393116865",
   "Unnamed: 0" : 6074,
   "num_likes" : 5,
   "num_hahas" : 0,
@@ -83386,6 +83732,7 @@
   "self_comment" : 15.0
 }, {
   "owner" : "vu.thienluu.7946",
+  "contact" : "0342721485",
   "Unnamed: 0" : 6077,
   "num_likes" : 1,
   "num_hahas" : 0,
@@ -83701,6 +84048,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100071109104151",
+  "contact" : "0865709342",
   "Unnamed: 0" : 5090,
   "num_likes" : 19,
   "num_hahas" : 5,
@@ -83716,6 +84064,7 @@
   "self_comment" : 36.0
 }, {
   "owner" : "havietn",
+  "contact" : "0795387911, 0353759456",
   "Unnamed: 0" : 340,
   "num_likes" : 9,
   "num_hahas" : 0,
@@ -83851,6 +84200,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "EliteGrey.142",
+  "contact" : "0927081234",
   "Unnamed: 0" : 4207,
   "num_likes" : 0,
   "num_hahas" : 0,
@@ -83926,6 +84276,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100016669876169",
+  "contact" : "0853383423, 0972760489",
   "Unnamed: 0" : 356,
   "num_likes" : 1,
   "num_hahas" : 0,
@@ -84181,6 +84532,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100047413808466",
+  "contact" : "0346866655",
   "Unnamed: 0" : 2845,
   "num_likes" : 12,
   "num_hahas" : 0,
@@ -84361,6 +84713,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100006999318370",
+  "contact" : "0912506705",
   "Unnamed: 0" : 4374,
   "num_likes" : 38,
   "num_hahas" : 6,
@@ -84889,6 +85242,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100011370490405",
+  "contact" : "0374629459",
   "Unnamed: 0" : 3016,
   "num_likes" : 1,
   "num_hahas" : 0,
@@ -85279,6 +85633,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "congtu.nhanong.902819",
+  "contact" : "0942529592, 0816166686",
   "Unnamed: 0" : 2866,
   "num_likes" : 6,
   "num_hahas" : 0,
@@ -85294,6 +85649,7 @@
   "self_comment" : 7.0
 }, {
   "owner" : "100073805637494",
+  "contact" : "0985916178",
   "id" : "4:c016f366-ab36-488e-ac4b-e1a3080209cb:896",
   "group" : [ "service_provider" ],
   "Unnamed: 0" : 169,
@@ -85425,6 +85781,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "caothang.ong.739",
+  "contact" : "0982621545, 0982621545",
   "Unnamed: 0" : 4230,
   "num_likes" : 5,
   "num_hahas" : 0,
@@ -85500,6 +85857,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "leanh.huy.250905",
+  "contact" : "0357250905",
   "Unnamed: 0" : 5130,
   "num_likes" : 1,
   "num_hahas" : 0,
@@ -85599,6 +85957,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "iamtranduclong25112002",
+  "contact" : "0326955912",
   "Unnamed: 0" : 6243,
   "num_likes" : 40,
   "num_hahas" : 1,
@@ -85674,6 +86033,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "minhquang.bui.79",
+  "contact" : "0916160015",
   "Unnamed: 0" : 3711,
   "num_likes" : 1,
   "num_hahas" : 0,
@@ -85779,6 +86139,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "congtu.huy.319452",
+  "contact" : "0762030841",
   "Unnamed: 0" : 1141,
   "num_likes" : 3,
   "num_hahas" : 0,
@@ -85824,6 +86185,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100004293401677",
+  "contact" : "0943119168",
   "Unnamed: 0" : 1542,
   "num_likes" : 2,
   "num_hahas" : 0,
@@ -85989,6 +86351,7 @@
   "self_comment" : 37.0
 }, {
   "owner" : "ip.japan.j",
+  "contact" : "0348220259, 0964725222",
   "Unnamed: 0" : 4466,
   "num_likes" : 2,
   "num_hahas" : 0,
@@ -86232,6 +86595,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "phapp.nga.1",
+  "contact" : "0971840083",
   "Unnamed: 0" : 2533,
   "num_likes" : 0,
   "num_hahas" : 0,
@@ -86382,6 +86746,7 @@
   "self_comment" : 1.0
 }, {
   "owner" : "100009387165887",
+  "contact" : "0389500144",
   "Unnamed: 0" : 4013,
   "num_likes" : 3,
   "num_hahas" : 0,
@@ -87081,6 +87446,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100054202194534",
+  "contact" : "0364418057",
   "Unnamed: 0" : 23,
   "num_likes" : 20,
   "num_hahas" : 0,
@@ -87141,6 +87507,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100037593337857",
+  "contact" : "0982246088, 0326782002",
   "Unnamed: 0" : 344,
   "num_likes" : 2,
   "num_hahas" : 1,
@@ -87291,6 +87658,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "tuan.tuanduong.370",
+  "contact" : "0985322337",
   "Unnamed: 0" : 539,
   "num_likes" : 35,
   "num_hahas" : 0,
@@ -87516,6 +87884,7 @@
   "self_comment" : 30.0
 }, {
   "owner" : "100004680305516",
+  "contact" : "0338686660",
   "Unnamed: 0" : 3537,
   "num_likes" : 0,
   "num_hahas" : 0,
@@ -87561,6 +87930,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "hnganh0503",
+  "contact" : "0936800243, 0395073788",
   "Unnamed: 0" : 6153,
   "num_likes" : 12,
   "num_hahas" : 8,
@@ -87600,6 +87970,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100071309211035",
+  "contact" : "0363477923",
   "Unnamed: 0" : 5891,
   "num_likes" : 10,
   "num_hahas" : 0,
@@ -87864,6 +88235,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "linh.su.75491",
+  "contact" : "0584861666",
   "Unnamed: 0" : 1536,
   "num_likes" : 17,
   "num_hahas" : 0,
@@ -87969,6 +88341,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "linhbe100499",
+  "contact" : "0376670667",
   "Unnamed: 0" : 5096,
   "num_likes" : 1,
   "num_hahas" : 0,
@@ -88158,6 +88531,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "anhducngo02",
+  "contact" : "0327267136",
   "Unnamed: 0" : 3269,
   "num_likes" : 10,
   "num_hahas" : 0,
@@ -88458,6 +88832,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100039630015072",
+  "contact" : "0559237777",
   "Unnamed: 0" : 2098,
   "num_likes" : 1,
   "num_hahas" : 0,
@@ -88533,6 +88908,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100013378815575",
+  "contact" : "0385852696",
   "Unnamed: 0" : 2095,
   "num_likes" : 3,
   "num_hahas" : 0,
@@ -88548,6 +88924,7 @@
   "self_comment" : 3.0
 }, {
   "owner" : "100085195073522",
+  "contact" : "0967675371",
   "Unnamed: 0" : 220,
   "num_likes" : 5,
   "num_hahas" : 0,
@@ -88608,6 +88985,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100051126422048",
+  "contact" : "0862871854",
   "Unnamed: 0" : 1327,
   "num_likes" : 16,
   "num_hahas" : 3,
@@ -88728,6 +89106,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100065957572202",
+  "contact" : "0355358532",
   "Unnamed: 0" : 337,
   "num_likes" : 1,
   "num_hahas" : 0,
@@ -89133,6 +89512,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100024168669509",
+  "contact" : "0975486919",
   "Unnamed: 0" : 99,
   "num_likes" : 6,
   "num_hahas" : 0,
@@ -89208,6 +89588,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100077639886436",
+  "contact" : "0582556364, 0325450959",
   "Unnamed: 0" : 1362,
   "num_likes" : 5,
   "num_hahas" : 0,
@@ -89253,6 +89634,7 @@
   "self_comment" : 30.0
 }, {
   "owner" : "uyphuong59",
+  "contact" : "0969531200, 0969531200, 0969531200",
   "Unnamed: 0" : 2375,
   "num_likes" : 19,
   "num_hahas" : 0,
@@ -89373,6 +89755,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100084013687715",
+  "contact" : "0963144058",
   "Unnamed: 0" : 741,
   "num_likes" : 3,
   "num_hahas" : 0,
@@ -89568,6 +89951,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100005318317288",
+  "contact" : "0985066461, 0985066461",
   "Unnamed: 0" : 4599,
   "num_likes" : 16,
   "num_hahas" : 0,
@@ -89823,6 +90207,7 @@
   "self_comment" : 10.0
 }, {
   "owner" : "100006243308836",
+  "contact" : "0869344867",
   "Unnamed: 0" : 840,
   "num_likes" : 5,
   "num_hahas" : 0,
@@ -89898,6 +90283,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "thanhthu.phung.9",
+  "contact" : "0399162189, 0399162189",
   "Unnamed: 0" : 2078,
   "num_likes" : 31,
   "num_hahas" : 0,
@@ -89958,6 +90344,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "linh112213324",
+  "contact" : "0842160503",
   "Unnamed: 0" : 4803,
   "num_likes" : 0,
   "num_hahas" : 0,
@@ -90018,6 +90405,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "heolazy95",
+  "contact" : "0972813195, 0375140862, 0972813195, 0375140862",
   "Unnamed: 0" : 2459,
   "num_likes" : 51,
   "num_hahas" : 0,
@@ -90243,6 +90631,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "hapmotba",
+  "contact" : "0357722003",
   "Unnamed: 0" : 4651,
   "num_likes" : 5,
   "num_hahas" : 0,
@@ -90273,6 +90662,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100086937536366",
+  "contact" : "0944049333, 0356225955",
   "Unnamed: 0" : 1036,
   "num_likes" : 6,
   "num_hahas" : 0,
@@ -91041,6 +91431,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100076518241627",
+  "contact" : "0913033189",
   "Unnamed: 0" : 5397,
   "num_likes" : 3,
   "num_hahas" : 0,
@@ -91056,6 +91447,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100011675379399",
+  "contact" : "0961876382",
   "Unnamed: 0" : 4690,
   "num_likes" : 14,
   "num_hahas" : 0,
@@ -91296,6 +91688,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "nlinh251",
+  "contact" : "0964725222, 0348220259",
   "Unnamed: 0" : 4369,
   "num_likes" : 7,
   "num_hahas" : 0,
@@ -91371,6 +91764,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "land.son.77",
+  "contact" : "0866823822, 0866823822",
   "Unnamed: 0" : 4363,
   "num_likes" : 91,
   "num_hahas" : 0,
@@ -91731,6 +92125,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "chauduong.2412",
+  "contact" : "0395516687, 0559599208",
   "Unnamed: 0" : 3082,
   "num_likes" : 14,
   "num_hahas" : 0,
@@ -91971,6 +92366,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "uyen.buito.7927",
+  "contact" : "0984945173",
   "Unnamed: 0" : 2579,
   "num_likes" : 64,
   "num_hahas" : 4,
@@ -92421,6 +92817,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100003041927278",
+  "contact" : "0972656833, 0972656833, 0889998883",
   "Unnamed: 0" : 4887,
   "num_likes" : 0,
   "num_hahas" : 0,
@@ -92775,6 +93172,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100084281473902",
+  "contact" : "0963144058, 0963144058",
   "Unnamed: 0" : 2728,
   "num_likes" : 0,
   "num_hahas" : 0,
@@ -93267,6 +93665,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "pho.nguyenviet.73",
+  "contact" : "0987831231",
   "Unnamed: 0" : 4496,
   "num_likes" : 16,
   "num_hahas" : 0,
@@ -93861,6 +94260,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "anvat.goc.581",
+  "contact" : "0398154019",
   "Unnamed: 0" : 1830,
   "num_likes" : 15,
   "num_hahas" : 0,
@@ -94037,6 +94437,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100070915857139",
+  "contact" : "0947280344",
   "Unnamed: 0" : 6318,
   "num_likes" : 0,
   "num_hahas" : 0,
@@ -94217,6 +94618,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "cuacoicoc98",
+  "contact" : "0858081993, 0858081993",
   "Unnamed: 0" : 3749,
   "num_likes" : 0,
   "num_hahas" : 0,
@@ -95027,6 +95429,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100024539715383",
+  "contact" : "0979935583",
   "Unnamed: 0" : 273,
   "num_likes" : 18,
   "num_hahas" : 1,
@@ -95195,6 +95598,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "linhtrn110",
+  "contact" : "0373311526",
   "Unnamed: 0" : 2614,
   "num_likes" : 6,
   "num_hahas" : 0,
@@ -95726,6 +96130,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100083930043282",
+  "contact" : "0963144058",
   "Unnamed: 0" : 4206,
   "num_likes" : 7,
   "num_hahas" : 0,
@@ -95756,6 +96161,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100022342876397",
+  "contact" : "0853383423, 0972760489",
   "Unnamed: 0" : 1169,
   "num_likes" : 3,
   "num_hahas" : 0,
@@ -96773,6 +97179,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100034294644245",
+  "contact" : "0364599095",
   "Unnamed: 0" : 1568,
   "num_likes" : 1,
   "num_hahas" : 1,
@@ -96953,6 +97360,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100039180696535",
+  "contact" : "0943476492",
   "Unnamed: 0" : 3980,
   "num_likes" : 5,
   "num_hahas" : 0,
@@ -97013,6 +97421,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "cherry.thuy.1029",
+  "contact" : "0392239345",
   "Unnamed: 0" : 3003,
   "num_likes" : 2,
   "num_hahas" : 0,
@@ -97163,6 +97572,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "cuncoi.ngoc",
+  "contact" : "0332502672",
   "Unnamed: 0" : 646,
   "num_likes" : 2,
   "num_hahas" : 0,
@@ -97208,6 +97618,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100074647803444",
+  "contact" : "0394167901, 0868216382",
   "Unnamed: 0" : 5773,
   "num_likes" : 42,
   "num_hahas" : 0,
@@ -97292,6 +97703,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "quangthutmhd",
+  "contact" : "0983987587",
   "Unnamed: 0" : 2291,
   "num_likes" : 12,
   "num_hahas" : 0,
@@ -97571,6 +97983,7 @@
   }
 }, {
   "owner" : "Concoc2001",
+  "contact" : "0372291003",
   "id" : "4:c016f366-ab36-488e-ac4b-e1a3080209cb:286",
   "group" : [ "service_provider" ],
   "Unnamed: 0" : 3077,
@@ -97642,6 +98055,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100049040388454",
+  "contact" : "0969026775",
   "Unnamed: 0" : 4138,
   "num_likes" : 8,
   "num_hahas" : 0,
@@ -98026,6 +98440,7 @@
   "self_comment" : 3.0
 }, {
   "owner" : "100057010442935",
+  "contact" : "0966378633",
   "Unnamed: 0" : 2601,
   "num_likes" : 24,
   "num_hahas" : 1,
@@ -98155,6 +98570,7 @@
   }
 }, {
   "owner" : "my.lee.100483",
+  "contact" : "0912863799",
   "Unnamed: 0" : 1862,
   "num_likes" : 48,
   "num_hahas" : 0,
@@ -98485,6 +98901,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "hoangdao.can",
+  "contact" : "0989992851",
   "Unnamed: 0" : 888,
   "num_likes" : 3,
   "num_hahas" : 0,
@@ -98704,6 +99121,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "tuyennguyenduc1999",
+  "contact" : "0888839515",
   "Unnamed: 0" : 5943,
   "num_likes" : 0,
   "num_hahas" : 0,
@@ -98938,6 +99356,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100073677708287",
+  "contact" : "0963560386",
   "Unnamed: 0" : 5686,
   "num_likes" : 3,
   "num_hahas" : 0,
@@ -99172,6 +99591,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "quyettien14052000",
+  "contact" : "0826461626",
   "Unnamed: 0" : 4125,
   "num_likes" : 0,
   "num_hahas" : 0,
@@ -99697,6 +100117,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100086085863858",
+  "contact" : "0343038568",
   "Unnamed: 0" : 977,
   "num_likes" : 0,
   "num_hahas" : 0,
@@ -100009,6 +100430,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100005848569041",
+  "contact" : "0585733522",
   "Unnamed: 0" : 4765,
   "num_likes" : 8,
   "num_hahas" : 0,
@@ -100024,6 +100446,7 @@
   "self_comment" : 4.0
 }, {
   "owner" : "100088231902464",
+  "contact" : "0989989682",
   "Unnamed: 0" : 6221,
   "num_likes" : 1,
   "num_hahas" : 0,
@@ -100303,6 +100726,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100087157414095",
+  "contact" : "0332598997, 0865957151",
   "Unnamed: 0" : 1958,
   "num_likes" : 1,
   "num_hahas" : 0,
@@ -100363,6 +100787,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "haiyen.pham.587268",
+  "contact" : "0336218939",
   "Unnamed: 0" : 2435,
   "num_likes" : 0,
   "num_hahas" : 0,
@@ -100906,6 +101331,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100030079787129",
+  "contact" : "0853383423, 0972760489",
   "Unnamed: 0" : 548,
   "num_likes" : 5,
   "num_hahas" : 0,
@@ -100966,6 +101392,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100014946367280",
+  "contact" : "0368476086",
   "Unnamed: 0" : 3599,
   "num_likes" : 0,
   "num_hahas" : 0,
@@ -101056,6 +101483,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "linh.linhh.18",
+  "contact" : "0888852882, 0819825556",
   "Unnamed: 0" : 2153,
   "num_likes" : 20,
   "num_hahas" : 0,
@@ -101086,6 +101514,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100062076619709",
+  "contact" : "0389630058",
   "Unnamed: 0" : 2557,
   "num_likes" : 5,
   "num_hahas" : 0,
@@ -101731,6 +102160,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100030517069461",
+  "contact" : "0984477461",
   "Unnamed: 0" : 5257,
   "num_likes" : 8,
   "num_hahas" : 0,
@@ -102001,6 +102431,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "khanhchi.le.50364",
+  "contact" : "0388163730",
   "Unnamed: 0" : 3474,
   "num_likes" : 13,
   "num_hahas" : 0,
@@ -102271,6 +102702,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "nghia.levan.25",
+  "contact" : "0963580725",
   "Unnamed: 0" : 312,
   "num_likes" : 1,
   "num_hahas" : 0,
@@ -102421,6 +102853,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100064874454917",
+  "contact" : "0972995442",
   "Unnamed: 0" : 3379,
   "num_likes" : 1,
   "num_hahas" : 0,
@@ -102910,6 +103343,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "amMinhChien",
+  "contact" : "0345955009",
   "Unnamed: 0" : 1488,
   "num_likes" : 9,
   "num_hahas" : 3,
@@ -102970,6 +103404,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100063640869531",
+  "contact" : "0338393656, 0338393656, 0338393656, 0338393656",
   "Unnamed: 0" : 6069,
   "num_likes" : 0,
   "num_hahas" : 0,
@@ -103210,6 +103645,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "buiminh.quan.750983",
+  "contact" : "0961845275",
   "Unnamed: 0" : 6306,
   "num_likes" : 2,
   "num_hahas" : 0,
@@ -103255,6 +103691,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "de.viett1209",
+  "contact" : "0965096268",
   "Unnamed: 0" : 4399,
   "num_likes" : 12,
   "num_hahas" : 0,
@@ -103300,6 +103737,7 @@
   "self_comment" : 6.0
 }, {
   "owner" : "jn.xjnk.ju.ank",
+  "contact" : "0858899330",
   "Unnamed: 0" : 3032,
   "num_likes" : 3,
   "num_hahas" : 0,
@@ -103690,6 +104128,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100065242504448",
+  "contact" : "0966651129, 0869811129",
   "id" : "4:c016f366-ab36-488e-ac4b-e1a3080209cb:220",
   "group" : [ "service_provider" ],
   "Unnamed: 0" : 4632,
@@ -103881,6 +104320,7 @@
   "self_comment" : 11.0
 }, {
   "owner" : "duycong.dientu.5ngay",
+  "contact" : "0353587681",
   "Unnamed: 0" : 618,
   "num_likes" : 1,
   "num_hahas" : 0,
@@ -104160,6 +104600,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "mut.keo.5243817",
+  "contact" : "0969941907",
   "Unnamed: 0" : 2913,
   "num_likes" : 2,
   "num_hahas" : 0,
@@ -104370,6 +104811,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100055926949927",
+  "contact" : "0358623458",
   "Unnamed: 0" : 1261,
   "num_likes" : 1,
   "num_hahas" : 0,
@@ -104658,6 +105100,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100006573889395",
+  "contact" : "0968972994, 0963981994, 0963981994",
   "Unnamed: 0" : 2397,
   "num_likes" : 14,
   "num_hahas" : 0,
@@ -105228,6 +105671,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "kpn2114",
+  "contact" : "0963384633, 0559052434",
   "Unnamed: 0" : 2896,
   "num_likes" : 8,
   "num_hahas" : 0,
@@ -105584,6 +106028,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "Vuonghuyen21942",
+  "contact" : "0343515044, 0866197103",
   "Unnamed: 0" : 5549,
   "num_likes" : 9,
   "num_hahas" : 0,
@@ -105674,6 +106119,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "Namalan000",
+  "contact" : "0332528218",
   "Unnamed: 0" : 5972,
   "num_likes" : 0,
   "num_hahas" : 0,
@@ -105758,6 +106204,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100046765188233",
+  "contact" : "0835442666, 0835442666",
   "Unnamed: 0" : 891,
   "num_likes" : 1,
   "num_hahas" : 0,
@@ -106328,6 +106775,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100009519527188",
+  "contact" : "0866963258",
   "Unnamed: 0" : 1366,
   "num_likes" : 0,
   "num_hahas" : 0,
@@ -106493,6 +106941,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "cuahangtienloigicols",
+  "contact" : "0988403530",
   "Unnamed: 0" : 3528,
   "num_likes" : 8,
   "num_hahas" : 0,
@@ -106508,6 +106957,7 @@
   "self_comment" : 16.0
 }, {
   "owner" : "phuongthanh.nguyen.56863",
+  "contact" : "0987131283",
   "Unnamed: 0" : 88,
   "num_likes" : 2,
   "num_hahas" : 0,
@@ -106946,6 +107396,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100029938013795",
+  "contact" : "0961605152",
   "Unnamed: 0" : 4314,
   "num_likes" : 89,
   "num_hahas" : 0,
@@ -107411,6 +107862,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100071886482016",
+  "contact" : "0962622519",
   "Unnamed: 0" : 4293,
   "num_likes" : 5,
   "num_hahas" : 0,
@@ -107542,6 +107994,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "lamchi.nguyenthu",
+  "contact" : "0971965165, 0971965165",
   "Unnamed: 0" : 4531,
   "num_likes" : 0,
   "num_hahas" : 0,
@@ -107557,6 +108010,7 @@
   "self_comment" : 1.0
 }, {
   "owner" : "100003900466268",
+  "contact" : "0983795300",
   "Unnamed: 0" : 5938,
   "num_likes" : 1,
   "num_hahas" : 0,
@@ -108151,6 +108605,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100071886195611",
+  "contact" : "0333089233",
   "Unnamed: 0" : 2474,
   "num_likes" : 14,
   "num_hahas" : 0,
@@ -108310,6 +108765,7 @@
   }
 }, {
   "owner" : "100022673183185",
+  "contact" : "0369960429",
   "Unnamed: 0" : 2303,
   "num_likes" : 5,
   "num_hahas" : 1,
@@ -108325,6 +108781,7 @@
   "self_comment" : 6.0
 }, {
   "owner" : "uyen.t.uyen.3572",
+  "contact" : "0961720368",
   "Unnamed: 0" : 2458,
   "num_likes" : 19,
   "num_hahas" : 1,
@@ -108625,6 +109082,7 @@
   "self_comment" : 5.0
 }, {
   "owner" : "hongtuoi.dangiuuu",
+  "contact" : "0964725222, 0348220259",
   "Unnamed: 0" : 4628,
   "num_likes" : 6,
   "num_hahas" : 0,
@@ -108784,6 +109242,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100010299875486",
+  "contact" : "0984289591",
   "Unnamed: 0" : 3767,
   "num_likes" : 34,
   "num_hahas" : 1,
@@ -108799,6 +109258,7 @@
   "self_comment" : 5.0
 }, {
   "owner" : "100008701999080",
+  "contact" : "0963408066",
   "Unnamed: 0" : 1548,
   "num_likes" : 6,
   "num_hahas" : 0,
@@ -108883,6 +109343,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100063298323342",
+  "contact" : "0975992382",
   "Unnamed: 0" : 1483,
   "num_likes" : 5,
   "num_hahas" : 1,
@@ -109123,6 +109584,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "oanhimau",
+  "contact" : "0936800243, 0395073788",
   "Unnamed: 0" : 345,
   "num_likes" : 14,
   "num_hahas" : 1,
@@ -109537,6 +109999,7 @@
   "self_comment" : 14.0
 }, {
   "owner" : "100008033792761",
+  "contact" : "0359593789",
   "Unnamed: 0" : 2040,
   "num_likes" : 0,
   "num_hahas" : 2,
@@ -110446,6 +110909,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "luy.mar.31542",
+  "contact" : "0375870866",
   "Unnamed: 0" : 5543,
   "num_likes" : 54,
   "num_hahas" : 0,
@@ -110476,6 +110940,7 @@
   "self_comment" : 0.0
 }, {
   "owner" : "100045884431322",
+  "contact" : "0923819055",
   "Unnamed: 0" : 3348,
   "num_likes" : 0,
   "num_hahas" : 0,
@@ -111160,6 +111625,7 @@
   }
 }, {
   "owner" : "haphuongg2911",
+  "contact" : "0868823118, 0825269777",
   "Unnamed: 0" : 837,
   "num_likes" : 2,
   "num_hahas" : 0,

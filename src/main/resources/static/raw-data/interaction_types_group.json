@@ -1,0 +1,788 @@
+{
+  "100004192127954": {
+    "ask_for_service": 0,
+    "bad": 0,
+    "good": 1,
+    "non_related": 0
+  },
+  "100004703889359": {
+    "ask_for_service": 3,
+    "bad": 1,
+    "good": 0,
+    "non_related": 3
+  },
+  "100004859954881": {
+    "ask_for_service": 27,
+    "bad": 0,
+    "good": 9,
+    "non_related": 16
+  },
+  "100006379714289": {
+    "ask_for_service": 8,
+    "bad": 0,
+    "good": 0,
+    "non_related": 2
+  },
+  "100007608847072": {
+    "ask_for_service": 3,
+    "bad": 0,
+    "good": 0,
+    "non_related": 0
+  },
+  "100008943377030": {
+    "ask_for_service": 4,
+    "bad": 19,
+    "good": 0,
+    "non_related": 11
+  },
+  "100009236504363": {
+    "ask_for_service": 5,
+    "bad": 2,
+    "good": 0,
+    "non_related": 1
+  },
+  "100014167714788": {
+    "ask_for_service": 3,
+    "bad": 0,
+    "good": 1,
+    "non_related": 3
+  },
+  "100014188833892": {
+    "ask_for_service": 4,
+    "bad": 0,
+    "good": 0,
+    "non_related": 0
+  },
+  "100015149620052": {
+    "ask_for_service": 4,
+    "bad": 0,
+    "good": 0,
+    "non_related": 0
+  },
+  "100015533707067": {
+    "ask_for_service": 18,
+    "bad": 1,
+    "good": 1,
+    "non_related": 1
+  },
+  "100016274867134": {
+    "ask_for_service": 0,
+    "bad": 1,
+    "good": 0,
+    "non_related": 0
+  },
+  "100017622678856": {
+    "ask_for_service": 5,
+    "bad": 0,
+    "good": 0,
+    "non_related": 2
+  },
+  "100017698838560": {
+    "ask_for_service": 13,
+    "bad": 5,
+    "good": 2,
+    "non_related": 17
+  },
+  "100017738509118": {
+    "ask_for_service": 11,
+    "bad": 0,
+    "good": 5,
+    "non_related": 1
+  },
+  "100022016236272": {
+    "ask_for_service": 0,
+    "bad": 0,
+    "good": 0,
+    "non_related": 2
+  },
+  "100022344594117": {
+    "ask_for_service": 0,
+    "bad": 0,
+    "good": 0,
+    "non_related": 1
+  },
+  "100022611367431": {
+    "ask_for_service": 1,
+    "bad": 0,
+    "good": 0,
+    "non_related": 1
+  },
+  "100022774022817": {
+    "ask_for_service": 7,
+    "bad": 0,
+    "good": 0,
+    "non_related": 0
+  },
+  "100024362661598": {
+    "ask_for_service": 24,
+    "bad": 4,
+    "good": 0,
+    "non_related": 30
+  },
+  "100024821463794": {
+    "ask_for_service": 3,
+    "bad": 0,
+    "good": 0,
+    "non_related": 2
+  },
+  "100025235064333": {
+    "ask_for_service": 8,
+    "bad": 0,
+    "good": 1,
+    "non_related": 3
+  },
+  "100025448752152": {
+    "ask_for_service": 8,
+    "bad": 0,
+    "good": 0,
+    "non_related": 2
+  },
+  "100026939822740": {
+    "ask_for_service": 9,
+    "bad": 0,
+    "good": 0,
+    "non_related": 1
+  },
+  "100026994051337": {
+    "ask_for_service": 3,
+    "bad": 1,
+    "good": 0,
+    "non_related": 1
+  },
+  "100028042264718": {
+    "ask_for_service": 0,
+    "bad": 0,
+    "good": 0,
+    "non_related": 1
+  },
+  "100029203716978": {
+    "ask_for_service": 15,
+    "bad": 1,
+    "good": 0,
+    "non_related": 2
+  },
+  "100030375253561": {
+    "ask_for_service": 10,
+    "bad": 0,
+    "good": 0,
+    "non_related": 15
+  },
+  "100034872071247": {
+    "ask_for_service": 0,
+    "bad": 0,
+    "good": 0,
+    "non_related": 1
+  },
+  "100035377260725": {
+    "ask_for_service": 0,
+    "bad": 0,
+    "good": 0,
+    "non_related": 3
+  },
+  "100039833584464": {
+    "ask_for_service": 8,
+    "bad": 0,
+    "good": 1,
+    "non_related": 7
+  },
+  "100042310899057": {
+    "ask_for_service": 1,
+    "bad": 0,
+    "good": 0,
+    "non_related": 1
+  },
+  "100043446799122": {
+    "ask_for_service": 22,
+    "bad": 10,
+    "good": 61,
+    "non_related": 3
+  },
+  "100046198032758": {
+    "ask_for_service": 1,
+    "bad": 0,
+    "good": 0,
+    "non_related": 1
+  },
+  "100046461504004": {
+    "ask_for_service": 14,
+    "bad": 3,
+    "good": 0,
+    "non_related": 9
+  },
+  "100048348670248": {
+    "ask_for_service": 13,
+    "bad": 1,
+    "good": 0,
+    "non_related": 2
+  },
+  "100048702969177": {
+    "ask_for_service": 6,
+    "bad": 1,
+    "good": 0,
+    "non_related": 1
+  },
+  "100048724684355": {
+    "ask_for_service": 4,
+    "bad": 2,
+    "good": 0,
+    "non_related": 5
+  },
+  "100048778724244": {
+    "ask_for_service": 1,
+    "bad": 0,
+    "good": 0,
+    "non_related": 3
+  },
+  "100050144121576": {
+    "ask_for_service": 0,
+    "bad": 0,
+    "good": 0,
+    "non_related": 2
+  },
+  "100050400739267": {
+    "ask_for_service": 4,
+    "bad": 0,
+    "good": 1,
+    "non_related": 0
+  },
+  "100053198689624": {
+    "ask_for_service": 8,
+    "bad": 1,
+    "good": 0,
+    "non_related": 8
+  },
+  "100053641449623": {
+    "ask_for_service": 4,
+    "bad": 0,
+    "good": 3,
+    "non_related": 4
+  },
+  "100053973183321": {
+    "ask_for_service": 7,
+    "bad": 2,
+    "good": 0,
+    "non_related": 1
+  },
+  "100063816548031": {
+    "ask_for_service": 11,
+    "bad": 2,
+    "good": 0,
+    "non_related": 2
+  },
+  "100064223987339": {
+    "ask_for_service": 3,
+    "bad": 0,
+    "good": 1,
+    "non_related": 0
+  },
+  "100065242504448": {
+    "ask_for_service": 1,
+    "bad": 0,
+    "good": 0,
+    "non_related": 0
+  },
+  "100071299936111": {
+    "ask_for_service": 10,
+    "bad": 0,
+    "good": 0,
+    "non_related": 1
+  },
+  "100073805637494": {
+    "ask_for_service": 0,
+    "bad": 0,
+    "good": 0,
+    "non_related": 1
+  },
+  "100075992085490": {
+    "ask_for_service": 43,
+    "bad": 0,
+    "good": 1,
+    "non_related": 11
+  },
+  "100080623885130": {
+    "ask_for_service": 0,
+    "bad": 0,
+    "good": 0,
+    "non_related": 1
+  },
+  "100081218593203": {
+    "ask_for_service": 2,
+    "bad": 0,
+    "good": 0,
+    "non_related": 0
+  },
+  "100081222690712": {
+    "ask_for_service": 682,
+    "bad": 15,
+    "good": 126,
+    "non_related": 52
+  },
+  "100082412047966": {
+    "ask_for_service": 4,
+    "bad": 0,
+    "good": 0,
+    "non_related": 1
+  },
+  "100082820547230": {
+    "ask_for_service": 0,
+    "bad": 0,
+    "good": 0,
+    "non_related": 1
+  },
+  "100083821839754": {
+    "ask_for_service": 206,
+    "bad": 65,
+    "good": 32,
+    "non_related": 72
+  },
+  "100084004304892": {
+    "ask_for_service": 2,
+    "bad": 0,
+    "good": 0,
+    "non_related": 3
+  },
+  "100086642153584": {
+    "ask_for_service": 2,
+    "bad": 0,
+    "good": 0,
+    "non_related": 0
+  },
+  "100087089285259": {
+    "ask_for_service": 4,
+    "bad": 0,
+    "good": 0,
+    "non_related": 0
+  },
+  "100087964496323": {
+    "ask_for_service": 18,
+    "bad": 2,
+    "good": 3,
+    "non_related": 4
+  },
+  "100088680156689": {
+    "ask_for_service": 7,
+    "bad": 0,
+    "good": 1,
+    "non_related": 2
+  },
+  "Concoc2001": {
+    "ask_for_service": 0,
+    "bad": 0,
+    "good": 0,
+    "non_related": 1
+  },
+  "Huy.Lee.4431": {
+    "ask_for_service": 1,
+    "bad": 2,
+    "good": 0,
+    "non_related": 5
+  },
+  "J0ke.Serious": {
+    "ask_for_service": 1,
+    "bad": 0,
+    "good": 3,
+    "non_related": 0
+  },
+  "Jolly250495": {
+    "ask_for_service": 0,
+    "bad": 0,
+    "good": 0,
+    "non_related": 1
+  },
+  "NML2809": {
+    "ask_for_service": 3,
+    "bad": 1,
+    "good": 0,
+    "non_related": 6
+  },
+  "TrinhspaTT": {
+    "ask_for_service": 2,
+    "bad": 3,
+    "good": 4,
+    "non_related": 2
+  },
+  "annhh.phuonqq": {
+    "ask_for_service": 1,
+    "bad": 0,
+    "good": 0,
+    "non_related": 0
+  },
+  "binn.hung.710": {
+    "ask_for_service": 0,
+    "bad": 0,
+    "good": 0,
+    "non_related": 1
+  },
+  "bit.ko.503": {
+    "ask_for_service": 8,
+    "bad": 1,
+    "good": 0,
+    "non_related": 2
+  },
+  "bong.kem.7543653": {
+    "ask_for_service": 12,
+    "bad": 0,
+    "good": 0,
+    "non_related": 0
+  },
+  "buivannam.com.vn": {
+    "ask_for_service": 6,
+    "bad": 0,
+    "good": 1,
+    "non_related": 4
+  },
+  "canhdung.nguyen.927": {
+    "ask_for_service": 221,
+    "bad": 7,
+    "good": 1,
+    "non_related": 113
+  },
+  "chu.huyen.733450": {
+    "ask_for_service": 2,
+    "bad": 0,
+    "good": 0,
+    "non_related": 0
+  },
+  "daohuonng": {
+    "ask_for_service": 16,
+    "bad": 4,
+    "good": 17,
+    "non_related": 11
+  },
+  "dkhang03": {
+    "ask_for_service": 1,
+    "bad": 1,
+    "good": 0,
+    "non_related": 0
+  },
+  "duc.heu.79": {
+    "ask_for_service": 1,
+    "bad": 0,
+    "good": 0,
+    "non_related": 0
+  },
+  "dulux.fam": {
+    "ask_for_service": 0,
+    "bad": 0,
+    "good": 0,
+    "non_related": 1
+  },
+  "duytacktanben": {
+    "ask_for_service": 0,
+    "bad": 0,
+    "good": 0,
+    "non_related": 1
+  },
+  "fx1901": {
+    "ask_for_service": 0,
+    "bad": 0,
+    "good": 0,
+    "non_related": 1
+  },
+  "giat.say.nhanh.718341": {
+    "ask_for_service": 9,
+    "bad": 0,
+    "good": 0,
+    "non_related": 6
+  },
+  "ha.khanhly.528": {
+    "ask_for_service": 5,
+    "bad": 0,
+    "good": 2,
+    "non_related": 2
+  },
+  "holy.140304": {
+    "ask_for_service": 10,
+    "bad": 1,
+    "good": 0,
+    "non_related": 4
+  },
+  "huy.caoanh.96": {
+    "ask_for_service": 24,
+    "bad": 0,
+    "good": 0,
+    "non_related": 6
+  },
+  "huycanh.huycanh.9": {
+    "ask_for_service": 1,
+    "bad": 0,
+    "good": 0,
+    "non_related": 1
+  },
+  "kieutrang2k2": {
+    "ask_for_service": 3,
+    "bad": 1,
+    "good": 0,
+    "non_related": 10
+  },
+  "koy.tien.712": {
+    "ask_for_service": 3,
+    "bad": 0,
+    "good": 2,
+    "non_related": 2
+  },
+  "ksxdgiang": {
+    "ask_for_service": 6,
+    "bad": 1,
+    "good": 1,
+    "non_related": 3
+  },
+  "lehoa.pham.315": {
+    "ask_for_service": 3,
+    "bad": 0,
+    "good": 0,
+    "non_related": 1
+  },
+  "long.xuyen.52493": {
+    "ask_for_service": 3,
+    "bad": 0,
+    "good": 0,
+    "non_related": 13
+  },
+  "lytieu.son": {
+    "ask_for_service": 9,
+    "bad": 0,
+    "good": 0,
+    "non_related": 0
+  },
+  "maiphuong.levu.5": {
+    "ask_for_service": 125,
+    "bad": 6,
+    "good": 82,
+    "non_related": 32
+  },
+  "manhtuan255": {
+    "ask_for_service": 257,
+    "bad": 34,
+    "good": 3,
+    "non_related": 44
+  },
+  "minhloc.nguyen.98892615": {
+    "ask_for_service": 6,
+    "bad": 0,
+    "good": 2,
+    "non_related": 1
+  },
+  "minhnguyet.tran.39108297": {
+    "ask_for_service": 40,
+    "bad": 0,
+    "good": 0,
+    "non_related": 8
+  },
+  "nga.nguyet.773": {
+    "ask_for_service": 12,
+    "bad": 0,
+    "good": 0,
+    "non_related": 7
+  },
+  "ngatpeooo": {
+    "ask_for_service": 0,
+    "bad": 0,
+    "good": 0,
+    "non_related": 1
+  },
+  "nguyen.duck.3745": {
+    "ask_for_service": 0,
+    "bad": 0,
+    "good": 0,
+    "non_related": 1
+  },
+  "nguyenhung.2608": {
+    "ask_for_service": 6,
+    "bad": 0,
+    "good": 0,
+    "non_related": 1
+  },
+  "nguyenvanngocdat": {
+    "ask_for_service": 1,
+    "bad": 0,
+    "good": 0,
+    "non_related": 2
+  },
+  "nhiem.tich.129": {
+    "ask_for_service": 6,
+    "bad": 2,
+    "good": 9,
+    "non_related": 3
+  },
+  "nich.moi.9210": {
+    "ask_for_service": 2,
+    "bad": 0,
+    "good": 0,
+    "non_related": 0
+  },
+  "noi.n.phuongxa": {
+    "ask_for_service": 0,
+    "bad": 1,
+    "good": 0,
+    "non_related": 0
+  },
+  "oanhoanh.ha.3781": {
+    "ask_for_service": 1,
+    "bad": 0,
+    "good": 0,
+    "non_related": 0
+  },
+  "ozaydo.00": {
+    "ask_for_service": 5,
+    "bad": 0,
+    "good": 4,
+    "non_related": 0
+  },
+  "pe.vit.773": {
+    "ask_for_service": 4,
+    "bad": 0,
+    "good": 0,
+    "non_related": 1
+  },
+  "phan.yenthu.58": {
+    "ask_for_service": 4,
+    "bad": 0,
+    "good": 0,
+    "non_related": 0
+  },
+  "phi.thituyet": {
+    "ask_for_service": 1,
+    "bad": 0,
+    "good": 0,
+    "non_related": 0
+  },
+  "phuonganhnguyen.119": {
+    "ask_for_service": 4,
+    "bad": 0,
+    "good": 0,
+    "non_related": 0
+  },
+  "pizzafatthachhoa": {
+    "ask_for_service": 0,
+    "bad": 0,
+    "good": 0,
+    "non_related": 1
+  },
+  "popodoo.luna.7": {
+    "ask_for_service": 3,
+    "bad": 0,
+    "good": 0,
+    "non_related": 0
+  },
+  "quanghuynh.tuaf": {
+    "ask_for_service": 1,
+    "bad": 0,
+    "good": 0,
+    "non_related": 0
+  },
+  "quenroitynuanoicho": {
+    "ask_for_service": 2,
+    "bad": 1,
+    "good": 0,
+    "non_related": 2
+  },
+  "s.a.n.iscomin": {
+    "ask_for_service": 1,
+    "bad": 1,
+    "good": 0,
+    "non_related": 2
+  },
+  "sun.sunn121512": {
+    "ask_for_service": 75,
+    "bad": 6,
+    "good": 8,
+    "non_related": 24
+  },
+  "suri.suri.50309": {
+    "ask_for_service": 0,
+    "bad": 0,
+    "good": 0,
+    "non_related": 1
+  },
+  "t1.linh": {
+    "ask_for_service": 1,
+    "bad": 0,
+    "good": 0,
+    "non_related": 0
+  },
+  "tenanhhokieu": {
+    "ask_for_service": 664,
+    "bad": 16,
+    "good": 17,
+    "non_related": 111
+  },
+  "theduyet.212.akadeptraivl": {
+    "ask_for_service": 3,
+    "bad": 0,
+    "good": 0,
+    "non_related": 0
+  },
+  "thin.kieu.12": {
+    "ask_for_service": 29,
+    "bad": 0,
+    "good": 0,
+    "non_related": 3
+  },
+  "thuyhuong0033": {
+    "ask_for_service": 0,
+    "bad": 0,
+    "good": 0,
+    "non_related": 1
+  },
+  "thuylinh.pham.75286": {
+    "ask_for_service": 18,
+    "bad": 3,
+    "good": 3,
+    "non_related": 13
+  },
+  "truonggiagn": {
+    "ask_for_service": 4,
+    "bad": 0,
+    "good": 2,
+    "non_related": 1
+  },
+  "ttkhidothuy": {
+    "ask_for_service": 1,
+    "bad": 0,
+    "good": 0,
+    "non_related": 0
+  },
+  "tuananhpham.info": {
+    "ask_for_service": 2,
+    "bad": 0,
+    "good": 0,
+    "non_related": 0
+  },
+  "vuong.buithi.3194": {
+    "ask_for_service": 45,
+    "bad": 0,
+    "good": 2,
+    "non_related": 8
+  },
+  "vuong.ngan.904": {
+    "ask_for_service": 3,
+    "bad": 0,
+    "good": 0,
+    "non_related": 4
+  },
+  "vuong.yen.10": {
+    "ask_for_service": 1,
+    "bad": 0,
+    "good": 0,
+    "non_related": 3
+  },
+  "xcvxcvxcb": {
+    "ask_for_service": 0,
+    "bad": 2,
+    "good": 1,
+    "non_related": 0
+  },
+  "xxtremtroixx": {
+    "ask_for_service": 10,
+    "bad": 1,
+    "good": 0,
+    "non_related": 3
+  },
+  "zonzon.dung": {
+    "ask_for_service": 0,
+    "bad": 1,
+    "good": 0,
+    "non_related": 0
+  }
+}

@@ -5,6 +5,8 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 
+import org.json.JSONArray;
+import org.json.JSONObject;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.PageRequest;
@@ -44,11 +46,16 @@ public class FileServiceImplement implements FileService {
         Resource nResource = resourceLoader.getResource(application.getRawDir()+"n.json");
         Resource updateCommonInfoResource = resourceLoader.getResource(application.getRawDir()+"update_common_info.json");
         Resource userAndServiceProvideResource = resourceLoader.getResource(application.getRawDir()+"user_and_service_provide.json");
+        String jsonString = new String(Files.readAllBytes(Paths.get(application.getInputFolder()+"info_contact.json")));
+        String jsonString1 = new String(Files.readAllBytes(Paths.get(application.getInputFolder()+"avatar_name.json")));
+        String jsonString2 = new String(Files.readAllBytes(Paths.get(application.getInputFolder()+"interaction_types_group.json")));
+        JSONObject jsonObject = new JSONObject(jsonString);
+        JSONObject avatar = new JSONObject(jsonString1);
+        JSONObject interaction = new JSONObject(jsonString2);
         Map<String, ObjectNode> combinedData = new HashMap<>();
 try {
     // List of all JSON resources
     List<Resource> allResources = Arrays.asList(differentRankingResource, nResource, updateCommonInfoResource, userAndServiceProvideResource);
-
 
     for (Resource resource : allResources) {
         JsonNode jsonNode = objectMapper.readTree(resource.getInputStream());
@@ -58,12 +65,12 @@ try {
             // If it's an array, iterate over each element
             for (JsonNode element : jsonNode) {
                 ObjectNode objectNode = (ObjectNode) element;
-                mergeObjectNode(objectNode, combinedData);
+                mergeObjectNode(objectNode, combinedData, jsonObject, interaction, avatar);
             }
         } else if (jsonNode.isObject()) {
             // If it's an object, just cast it to an ObjectNode
             ObjectNode objectNode = (ObjectNode) jsonNode;
-            mergeObjectNode(objectNode, combinedData);
+            mergeObjectNode(objectNode, combinedData, jsonObject, interaction, avatar);
         }else{
             System.out.println("Invalid JSON format");
         }
@@ -105,7 +112,7 @@ try {
     }
 
 
-    private void mergeObjectNode(ObjectNode objectNode, Map<String, ObjectNode> combinedData) {
+    private void mergeObjectNode(ObjectNode objectNode, Map<String, ObjectNode> combinedData, JSONObject contact, JSONObject interaction, JSONObject avatar) throws Exception {
         String owner = null;
         String elementId = null;
         JsonNode group = null;  // Changed from labels to group
@@ -117,6 +124,7 @@ try {
         int giaoDuc = 0;
         int myPham = 0;
 
+
         if (objectNode.has("owner")) {
             owner = objectNode.get("owner").asText();
         } else if (objectNode.has("n") && objectNode.get("n").has("properties") && objectNode.get("n").get("properties").has("owner")) {
@@ -127,6 +135,7 @@ try {
             owner = objectNode.get("username").asText();
 //            System.out.println(objectNode.toString());
         }
+
 
         if (objectNode.has("n") && objectNode.get("n").has("elementId")) {
             elementId = objectNode.get("n").get("elementId").asText();
@@ -153,6 +162,25 @@ try {
                 existingNode = objectMapper.createObjectNode();
                 existingNode.put("owner", owner);
                 combinedData.put(owner, existingNode);
+            }
+
+            Iterator<String> keys = contact.keys();
+            while (keys.hasNext()) {
+                String key = keys.next();
+                JSONArray values = contact.getJSONArray(key);
+                for (int i = 0; i < values.length(); i++) {
+                    if (values.getString(i).toLowerCase().contains(owner.toLowerCase())) {
+                        existingNode.put("contact", key);
+                        break;
+                    }
+                }
+            }
+
+            JSONObject attributes = avatar.getJSONObject(owner);
+            Iterator<String> attributeKeys = attributes.keys();
+            while (attributeKeys.hasNext()) {
+                String attributeKey = attributeKeys.next();
+                existingNode.put(attributeKey, attributes.get(attributeKey).toString());
             }
 
             if (objectNode.has("degree_centrality") && objectNode.get("degree_centrality") != null) {
@@ -182,10 +210,7 @@ try {
                 //existingNode.set("properties", properties);
                 existingNode.put("id", elementId);
                 existingNode.set("group", group);
-
             }
-
-
 
             else if (categories != null) {
                 ObjectNode labelsNode = objectMapper.createObjectNode();
@@ -202,22 +227,41 @@ try {
                 // If the owner already exists in the map, merge the current ObjectNode with the existing one
                 existingNode.setAll(objectNode);
             }
-                try {
-                    String accessToken = application.getFacebookToken(); // Replace with your access token
-                    RestTemplate restTemplate = new RestTemplate();
-                    String facebookApiUrl = "https://graph.facebook.com/" + owner + "?fields=name,profile_pic&access_token=" + accessToken;
-                    JsonNode facebookResponse = restTemplate.getForObject(facebookApiUrl, JsonNode.class);
-                    if (facebookResponse != null && facebookResponse.has("name")) {
-                        existingNode.put("facebook_name", facebookResponse.get("name").asText());
-                        existingNode.put("facebook_profile_pic", facebookResponse.get("profile_pic").asText());
-                    }
-                } catch (Exception e) {
-                    System.err.println("An error occurred while fetching the Facebook name: " + e.getMessage());
-                }
+//                try {
+//                    String accessToken = application.getFacebookToken(); // Replace with your access token
+//                    RestTemplate restTemplate = new RestTemplate();
+//                    String facebookApiUrl = "https://graph.facebook.com/" + owner + "?fields=name,profile_pic&access_token=" + accessToken;
+//                    JsonNode facebookResponse = restTemplate.getForObject(facebookApiUrl, JsonNode.class);
+//                    if (facebookResponse != null && facebookResponse.has("name")) {
+//                        existingNode.put("facebook_name", facebookResponse.get("name").asText());
+//                        existingNode.put("facebook_profile_pic", facebookResponse.get("profile_pic").asText());
+//                    }
+//                } catch (Exception e) {
+//                    System.err.println("An error occurred while fetching the Facebook name: " + e.getMessage());
+//                }
         }
         else {
             // If the owner isn't a key in the map, add the current ObjectNode to the map with its owner as the key
             combinedData.put(owner, objectNode);
+        }
+    }
+
+    private static void addContactAttribute(ObjectNode node, JSONObject jsonObject) {
+        if (node.has("owner")) {
+            String owner = node.get("owner").asText();
+
+            Iterator<String> keys = jsonObject.keys();
+            while (keys.hasNext()) {
+                String key = keys.next();
+                JSONArray values = jsonObject.getJSONArray(key);
+
+                for (int i = 0; i < values.length(); i++) {
+                    if (values.getString(i).equals(owner)) {
+                        node.put("contact", key);
+                        return;
+                    }
+                }
+            }
         }
     }
 
