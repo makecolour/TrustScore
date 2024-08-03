@@ -158,11 +158,11 @@
                                                 </div>
                                                 <div class="cours-more-info">
                                                     <div class="review">
-                                                        <span>${object.get('old_page_rank')}</span>
+                                                        <span>${object.get('first_combine')}</span>
                                                         <ul class="cours-star">
                                                             <c:forEach var="i" begin="1" end="5">
                                                                 <c:choose>
-                                                                    <c:when test="${i <= (object.get('old_page_rank').asDouble() / top1.get('old_page_rank').asDouble() * 5)}">
+                                                                    <c:when test="${i <= (object.get('first_combine').asDouble() / top1.get('first_combine').asDouble() * 5)}">
                                                                         <li class="active"><i class="fa fa-star"></i></li>
                                                                     </c:when>
                                                                     <c:otherwise>
@@ -174,7 +174,7 @@
                                                     </div>
                                                     <div class="price">
 <%--                                                        <del>$190</del>--%>
-                                                    <h5>#${loop.count}</h5>
+                                                    <h5>#${object.get('order').asText()}</h5>
                                                     </div>
                                                 </div>
                                             </div>

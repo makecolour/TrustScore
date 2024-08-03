@@ -515,11 +515,11 @@
                   </div>
                   <div class="cours-more-info">
                     <div class="review">
-                      <span>${object.get('old_page_rank')}</span>
+                      <span>${object.get('first_combine')}</span>
                       <ul class="cours-star">
                         <c:forEach var="i" begin="1" end="5">
                           <c:choose>
-                            <c:when test="${i <= (object.get('old_page_rank').asDouble() / highest.get('old_page_rank').asDouble() * 5)}">
+                            <c:when test="${i <= (object.get('first_combine').asDouble() / highest.get('first_combine').asDouble() * 5)}">
                               <li class="active"><i class="fa fa-star"></i></li>
                             </c:when>
                             <c:otherwise>
@@ -548,7 +548,7 @@
         <div class="container">
           <div class="row">
             <div class="col-md-12 heading-bx left">
-              <h2 class="title-head">Data <span>Visualize</span></h2>
+              <h2 class="title-head">Social Knowledge Graph <span>on Facebook</span></h2>
               <p>Most trusted service providers by consumers</p>
             </div>
           </div>

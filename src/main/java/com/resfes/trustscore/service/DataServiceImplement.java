@@ -2,6 +2,7 @@ package com.resfes.trustscore.service;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.resfes.trustscore.model.Application;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
@@ -10,10 +11,7 @@ import org.springframework.stereotype.Service;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
 import java.util.stream.Collectors;
 
 @Service
@@ -26,17 +24,16 @@ public class DataServiceImplement implements DataService{
         this.application = application;
     }
 
-
     @Override
     public List<JsonNode> top10Users() {
         List<JsonNode> top10Nodes = new ArrayList<>();
         try {
             // Read the JSON file into a list of JsonNodes
             List<JsonNode> nodes = Arrays.asList(objectMapper.readValue(new File(application.getOutputFolder()+application.getNodeFile()), JsonNode[].class));
-            // Sort the list in descending order based on the old_page_rank field
+            // Sort the list in descending order based on the first_combine field
             nodes.sort(Comparator.comparing((JsonNode node) -> {
-                if (node.has("old_page_rank") && !node.get("old_page_rank").isNull()) {
-                    return node.get("old_page_rank").asDouble();
+                if (node.has("first_combine") && !node.get("first_combine").isNull()) {
+                    return node.get("first_combine").asDouble();
                 } else {
                     return 0.0;
                 }
@@ -58,7 +55,7 @@ public class DataServiceImplement implements DataService{
             // Read the JSON file into a list of JsonNodes
             List<JsonNode> nodes = Arrays.asList(objectMapper.readValue(new File(application.getOutputFolder()+application.getNodeFile()), JsonNode[].class));
             // Find the object with the given owner
-            user = nodes.stream().filter(node -> node.get("owner").asText().equals(owner)).findFirst().orElse(null);
+            user = nodes.stream().filter(node -> node.get("owner").asText().equals(owner)&&node.get("group").get(0).asText().contains("service_provider")).findFirst().orElse(null);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -83,15 +80,16 @@ public class DataServiceImplement implements DataService{
     @Override
     public Page<JsonNode> getAllObjects(int page, int size) throws IOException {
         List<JsonNode> nodes = Arrays.asList(objectMapper.readValue(new File(application.getOutputFolder()+application.getNodeFile()), JsonNode[].class));
-        // Filter the nodes to include only those that have old_page_rank
+        // Filter the nodes to include only those that have first_combine
         nodes = nodes.stream()
-                .filter(node -> node.has("old_page_rank") && !node.get("old_page_rank").isNull())
+                .filter(node -> node.has("first_combine") && !node.get("first_combine").isNull()&&node.get("group").get(0).asText().contains("service_provider"))
                 .collect(Collectors.toList());
 
-        // Sort the nodes in descending order based on the old_page_rank field
+
+        // Sort the nodes in descending order based on the first_combine field
         nodes.sort(Comparator.comparing((JsonNode node) -> {
-            if (node.has("old_page_rank") && !node.get("old_page_rank").isNull()) {
-                return node.get("old_page_rank").asDouble();
+            if (node.has("first_combine") && !node.get("first_combine").isNull()) {
+                return node.get("first_combine").asDouble();
             } else {
                 return 0.0;
             }
@@ -111,7 +109,7 @@ public class DataServiceImplement implements DataService{
 
         // Filter the nodes based on the query
         nodes = nodes.stream()
-                .filter(node -> node.has("old_page_rank") && !node.get("old_page_rank").isNull() && node.toString().contains(query))
+                .filter(node -> node.has("first_combine") && !node.get("first_combine").isNull() && node.toString().contains(query)&&node.get("group").get(0).asText().contains("service_provider"))
                 .collect(Collectors.toList());
 
         // Create a Page object from the filtered list
@@ -126,15 +124,15 @@ public class DataServiceImplement implements DataService{
     @Override
     public JsonNode getTopUser() throws IOException {
         List<JsonNode> nodes = Arrays.asList(objectMapper.readValue(new File(application.getOutputFolder()+application.getNodeFile()), JsonNode[].class));
-        // Filter the nodes to include only those that have old_page_rank
+        // Filter the nodes to include only those that have first_combine
         nodes = nodes.stream()
-                .filter(node -> node.has("old_page_rank") && !node.get("old_page_rank").isNull())
+                .filter(node -> node.has("first_combine") && !node.get("first_combine").isNull()&&node.get("group").get(0).asText().contains("service_provider"))
                 .collect(Collectors.toList());
 
-        // Sort the nodes in descending order based on the old_page_rank field
+        // Sort the nodes in descending order based on the first_combine field
         nodes.sort(Comparator.comparing((JsonNode node) -> {
-            if (node.has("old_page_rank") && !node.get("old_page_rank").isNull()) {
-                return node.get("old_page_rank").asDouble();
+            if (node.has("first_combine") && !node.get("first_combine").isNull()) {
+                return node.get("first_combine").asDouble();
             } else {
                 return 0.0;
             }
@@ -142,5 +140,49 @@ public class DataServiceImplement implements DataService{
 
         return nodes.get(0);
     }
+
+    @Override
+    public List<JsonNode> getTopUsers(int n) throws IOException {
+        List<JsonNode> top10Nodes = new ArrayList<>();
+        try {
+            // Read the JSON file into a list of JsonNodes
+            List<JsonNode> nodes = Arrays.asList(objectMapper.readValue(new File(application.getOutputFolder()+application.getNodeFile()), JsonNode[].class));
+            // Sort the list in descending order based on the first_combine field
+            nodes.stream()
+                    .filter(node -> node.has("first_combine") && !node.get("first_combine").isNull() && node.get("group").get(0).asText().contains("service_provider"))
+                    .sorted(Comparator.comparingDouble(node -> node.get("first_combine").asDouble()))
+                    .forEachOrdered(node -> {
+                        // Process each node as needed
+                    });
+            // Get the first 10 objects
+            top10Nodes = nodes.subList(0, n);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return top10Nodes;
+    }
+
+    @Override
+    public List<Map<String, Object>> getAttributes(JsonNode node) {
+        List<Map<String, Object>> attributes = new ArrayList<>();
+
+        Map<String, String> nameValueMap = new HashMap<>();
+        nameValueMap.put("Ask for services", "total_ask_for_service");
+        nameValueMap.put("Bad", "total_bad");
+        nameValueMap.put("Good", "total_good");
+        nameValueMap.put("Non related", "total_non_related");
+
+
+        for (String attributeName : nameValueMap.keySet()) {
+            Map<String, Object> attributeMap = new HashMap<>();
+            attributeMap.put("name", attributeName);
+            attributeMap.put("value", node.get(nameValueMap.get(attributeName)).asInt());
+            attributes.add(attributeMap);
+        }
+
+        return attributes;
+    }
+
 
 }

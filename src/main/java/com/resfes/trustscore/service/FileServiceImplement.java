@@ -41,21 +41,14 @@ public class FileServiceImplement implements FileService {
     private final Application application;
 
     public void mergeJsonFiles() throws IOException {
-        // Load the JSON files
-        Resource differentRankingResource = resourceLoader.getResource(application.getRawDir()+"different_ranking.json");
-        Resource nResource = resourceLoader.getResource(application.getRawDir()+"n.json");
-        Resource updateCommonInfoResource = resourceLoader.getResource(application.getRawDir()+"update_common_info.json");
-        Resource userAndServiceProvideResource = resourceLoader.getResource(application.getRawDir()+"user_and_service_provide.json");
-        String jsonString = new String(Files.readAllBytes(Paths.get(application.getInputFolder()+"info_contact.json")));
-        String jsonString1 = new String(Files.readAllBytes(Paths.get(application.getInputFolder()+"avatar_name.json")));
+        Resource differentRankingResource = resourceLoader.getResource(application.getRawDir()+"ranking_4.json");
+        Resource nResource = resourceLoader.getResource(application.getRawDir()+"nodes_phone.json");
         String jsonString2 = new String(Files.readAllBytes(Paths.get(application.getInputFolder()+"interaction_types_group.json")));
-        JSONObject jsonObject = new JSONObject(jsonString);
-        JSONObject avatar = new JSONObject(jsonString1);
         JSONObject interaction = new JSONObject(jsonString2);
         Map<String, ObjectNode> combinedData = new HashMap<>();
 try {
     // List of all JSON resources
-    List<Resource> allResources = Arrays.asList(differentRankingResource, nResource, updateCommonInfoResource, userAndServiceProvideResource);
+    List<Resource> allResources = Arrays.asList(differentRankingResource, nResource);
 
     for (Resource resource : allResources) {
         JsonNode jsonNode = objectMapper.readTree(resource.getInputStream());
@@ -65,12 +58,12 @@ try {
             // If it's an array, iterate over each element
             for (JsonNode element : jsonNode) {
                 ObjectNode objectNode = (ObjectNode) element;
-                mergeObjectNode(objectNode, combinedData, jsonObject, interaction, avatar);
+                newMergeObjectNode(objectNode, combinedData, interaction);
             }
         } else if (jsonNode.isObject()) {
             // If it's an object, just cast it to an ObjectNode
             ObjectNode objectNode = (ObjectNode) jsonNode;
-            mergeObjectNode(objectNode, combinedData, jsonObject, interaction, avatar);
+            newMergeObjectNode(objectNode, combinedData, interaction);
         }else{
             System.out.println("Invalid JSON format");
         }
@@ -78,28 +71,31 @@ try {
 
     List<Map.Entry<String, ObjectNode>> list = new ArrayList<>(combinedData.entrySet());
 
-// Sort the list
     list.sort((entry1, entry2) -> {
-        double rank1 = entry1.getValue().has("old_page_rank") ? entry1.getValue().get("old_page_rank").asDouble() : 0;
-        double rank2 = entry2.getValue().has("old_page_rank") ? entry2.getValue().get("old_page_rank").asDouble() : 0;
+        double rank1 = entry1.getValue().has("first_combine") ? entry1.getValue().get("first_combine").asDouble() : 0;
+        double rank2 = entry2.getValue().has("first_combine") ? entry2.getValue().get("first_combine").asDouble() : 0;
         return Double.compare(rank2, rank1);
     });
 
-// Create a new LinkedHashMap and put the sorted entries
+    int count = 1;
+    for (int i = 0; i < list.size(); i++) {
+        ObjectNode service = list.get(i).getValue();
+        if(service.get("group").get(0).asText().contains("service_provider")){
+            service.put("order", count);
+            count++;
+        }
+    }
+
     Map<String, ObjectNode> sortedMap = new LinkedHashMap<>();
     for (Map.Entry<String, ObjectNode> entry : list) {
         sortedMap.put(entry.getKey(), entry.getValue());
     }
 
-//    System.out.println(combinedData.values());
-    // Write the combined ObjectNode back to a new JSON file
     objectMapper.enable(SerializationFeature.INDENT_OUTPUT);
     objectMapper.writeValue(resourceLoader.getResource(application.getResultDir()+application.getNodeFile()).getFile(), sortedMap.values());
     FileWriter crunchifyFile = new FileWriter(application.getOutputFolder() + application.getNodeFile());
     objectMapper.writeValue(crunchifyFile, sortedMap.values());
-//    crunchifyFile.write(combinedData.values().toString());
-//    crunchifyFile.flush();
-//    crunchifyFile.close();
+
     }
     catch (Exception e) {
         System.err.println("An error occurred while merging the JSON files:");
@@ -112,7 +108,7 @@ try {
     }
 
 
-    private void mergeObjectNode(ObjectNode objectNode, Map<String, ObjectNode> combinedData, JSONObject contact, JSONObject interaction, JSONObject avatar) throws Exception {
+    private void mergeObjectNode(ObjectNode objectNode, Map<String, ObjectNode> combinedData, JSONObject contact, JSONObject interaction) throws Exception {
         String owner = null;
         String elementId = null;
         JsonNode group = null;  // Changed from labels to group
@@ -127,22 +123,23 @@ try {
 
         if (objectNode.has("owner")) {
             owner = objectNode.get("owner").asText();
-        } else if (objectNode.has("n") && objectNode.get("n").has("properties") && objectNode.get("n").get("properties").has("owner")) {
-            owner = objectNode.get("n").get("properties").get("owner").asText();
+        } else if (objectNode.has("a") && objectNode.get("a").has("properties") && objectNode.get("a").get("properties").has("owner")) {
+            owner = objectNode.get("a").get("properties").get("owner").asText();
         } else if (objectNode.has("User")) {
             owner = objectNode.get("User").asText();
         } else if (objectNode.has("username")) {
+
             owner = objectNode.get("username").asText();
 //            System.out.println(objectNode.toString());
         }
 
 
-        if (objectNode.has("n") && objectNode.get("n").has("elementId")) {
-            elementId = objectNode.get("n").get("elementId").asText();
+        if (objectNode.has("a") && objectNode.get("a").has("elementId")) {
+            elementId = objectNode.get("a").get("elementId").asText();
         }
 
-        if (objectNode.has("n") && objectNode.get("n").has("labels")) {
-            group = objectNode.get("n").get("labels");
+        if (objectNode.has("a") && objectNode.get("a").has("labels")) {
+            group = objectNode.get("a").get("labels");
         }
 
         if (objectNode.has("Categories")) {
@@ -164,23 +161,24 @@ try {
                 combinedData.put(owner, existingNode);
             }
 
-            Iterator<String> keys = contact.keys();
-            while (keys.hasNext()) {
-                String key = keys.next();
-                JSONArray values = contact.getJSONArray(key);
-                for (int i = 0; i < values.length(); i++) {
-                    if (values.getString(i).toLowerCase().contains(owner.toLowerCase())) {
-                        existingNode.put("contact", key);
-                        break;
+            try{
+                Iterator<String> keys = contact.keys();
+                while (keys.hasNext()) {
+                    String key = keys.next();
+                    JSONArray values = contact.getJSONArray(key);
+                    for (int i = 0; i < values.length(); i++) {
+                        if (values.getString(i).toLowerCase().contains(owner.toLowerCase())) {
+                            existingNode.put("contact", key);
+                            break;
+                        }
                     }
                 }
-            }
 
-            JSONObject attributes = avatar.getJSONObject(owner);
-            Iterator<String> attributeKeys = attributes.keys();
-            while (attributeKeys.hasNext()) {
-                String attributeKey = attributeKeys.next();
-                existingNode.put(attributeKey, attributes.get(attributeKey).toString());
+//                JSONObject attributes = avatar.getJSONObject(owner);
+//                existingNode.put("facebook_name", attributes.getString("name"));
+//                existingNode.put("facebook_profile_pic", attributes.getString("link_avatar"));
+            } catch (Exception e) {
+                System.err.println("An error occurred while fetching the contact and avatar attributes: " + e.getMessage());
             }
 
             if (objectNode.has("degree_centrality") && objectNode.get("degree_centrality") != null) {
@@ -206,7 +204,7 @@ try {
                 existingNode.put("owner_weight", objectNode.get("owner_weight").asDouble());
             }
 
-            if (objectNode.has("n")) {
+            if (objectNode.has("a")) {
                 //existingNode.set("properties", properties);
                 existingNode.put("id", elementId);
                 existingNode.set("group", group);
@@ -246,23 +244,98 @@ try {
         }
     }
 
-    private static void addContactAttribute(ObjectNode node, JSONObject jsonObject) {
-        if (node.has("owner")) {
-            String owner = node.get("owner").asText();
+    private void newMergeObjectNode(ObjectNode objectNode, Map<String, ObjectNode> combinedData, JSONObject interaction) throws Exception {
+        String owner = null;
+        int totalAskForService = 0;
+        int totalBad = 0;
+        int totalGood = 0;
+        int totalNonRelated = 0;
 
-            Iterator<String> keys = jsonObject.keys();
-            while (keys.hasNext()) {
-                String key = keys.next();
-                JSONArray values = jsonObject.getJSONArray(key);
+        if (objectNode.has("owner")) {
+            owner = objectNode.get("owner").asText();
+        } else if (objectNode.has("a") && objectNode.get("a").has("properties") && objectNode.get("a").get("properties").has("owner")) {
+            owner = objectNode.get("a").get("properties").get("owner").asText();
+        } else if (objectNode.has("User")) {
+            owner = objectNode.get("User").asText();
+        } else if (objectNode.has("username")) {
+            owner = objectNode.get("username").asText();
+        }
 
-                for (int i = 0; i < values.length(); i++) {
-                    if (values.getString(i).equals(owner)) {
-                        node.put("contact", key);
-                        return;
+        if (owner != null) {
+            ObjectNode existingNode = combinedData.get(owner);
+            if (existingNode == null) {
+                // If the owner does not exist in the map, create a new ObjectNode
+                existingNode = objectMapper.createObjectNode();
+                existingNode.put("owner", owner);
+                combinedData.put(owner, existingNode);
+            }
+
+            if (objectNode.has("a")) {
+                existingNode.put("id", objectNode.get("a").get("elementId").asText());
+                existingNode.put("group", objectNode.get("a").get("labels"));
+                existingNode.put("properties", objectNode.get("a").get("properties"));
+                JsonNode nameNode = objectNode.get("a").get("properties").get("name");
+                JSONArray employee;
+                if (nameNode.isArray()) {
+                    employee = new JSONArray();
+                    for (JsonNode name : nameNode) {
+                        employee.put(name.asText());
+                    }
+                } else {
+                    employee = new JSONArray().put(nameNode.asText());
+                }
+                for (int i = 0; i < employee.length(); i++) {
+                    String userId = employee.getString(i);
+                    if (interaction.has(userId)) {
+                        JSONObject userInteractions = interaction.getJSONObject(userId);
+                        totalAskForService += userInteractions.optInt("ask_for_service", 0);
+                        totalBad += userInteractions.optInt("bad", 0);
+                        totalGood += userInteractions.optInt("good", 0);
+                        totalNonRelated += userInteractions.optInt("non_related", 0);
                     }
                 }
+
+                existingNode.put("total_ask_for_service", totalAskForService);
+                existingNode.put("total_bad", totalBad);
+                existingNode.put("total_good", totalGood);
+                existingNode.put("total_non_related", totalNonRelated);
             }
+
+
+            if (objectNode.has("degree_centrality") && objectNode.get("degree_centrality") != null) {
+                existingNode.put("degree_centrality", objectNode.get("degree_centrality").asDouble());
+            }
+
+            if (objectNode.has("closeness_centrality") && objectNode.get("closeness_centrality") != null) {
+                existingNode.put("closeness_centrality", objectNode.get("closeness_centrality").asDouble());
+            }
+
+            if (objectNode.has("betweenness_centrality") && objectNode.get("betweenness_centrality") != null) {
+                existingNode.put("betweenness_centrality", objectNode.get("betweenness_centrality").asDouble());
+            }
+            if (objectNode.has("old_page_rank") && objectNode.get("old_page_rank") != null) {
+                existingNode.put("old_page_rank", objectNode.get("old_page_rank").asDouble());
+            }
+
+            if (objectNode.has("improved_pagerank") && objectNode.get("improved_pagerank") != null) {
+                existingNode.put("improved_pagerank", objectNode.get("improved_pagerank").asDouble());
+            }
+
+            if(objectNode.has("owner_weight") && objectNode.get("owner_weight") != null){
+                existingNode.put("owner_weight", objectNode.get("owner_weight").asDouble());
+            }
+            if(objectNode.has("first_combine") && objectNode.get("first_combine") != null){
+                existingNode.put("first_combine", objectNode.get("first_combine").asDouble());
+            }
+            else{
+                //existingNode.setAll(objectNode);
+            }
+
         }
+        else {
+            combinedData.put(owner, objectNode);
+        }
+
     }
 
     @Override
@@ -271,7 +344,7 @@ try {
 
         try {
             // Read the original file
-            JsonNode rootNode = objectMapper.readTree(new File(application.getInputFolder()+"r.json"));
+            JsonNode rootNode = objectMapper.readTree(new File(application.getInputFolder()+"relationship_phone.json"));
 
             // Create a list to hold the transformed objects
             List<ObjectNode> transformedNodes = new ArrayList<>();

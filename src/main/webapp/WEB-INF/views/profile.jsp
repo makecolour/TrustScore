@@ -1,4 +1,6 @@
-<%--
+<%@ page import="java.util.Arrays" %>
+<%@ page import="java.util.ArrayList" %>
+<%@ page import="java.util.List" %><%--
   Created by IntelliJ IDEA.
   User: quyen
   Date: 26/06/2024
@@ -104,7 +106,26 @@
                                 </div>
                                 <div class="ttr-post-info">
                                     <div class="ttr-post-title ">
-                                        <h2 class="post-title">${object.hasNonNull('facebook_name') ? object.get('facebook_name').asText() : fn:replace(object.get('owner').asText(), '\"', '')}</h2>
+                                        <h2 class="post-title" id="serviceType"></h2>
+<%--                                        <script>--%>
+<%--                                            // Assuming 'object' is passed as a JSON string from the backend--%>
+<%--                                            var user = ${object};--%>
+
+<%--                                            // Access the service_type attribute--%>
+<%--                                            var serviceType = user.properties.service_type;--%>
+<%--                                            var replacements = {--%>
+<%--                                                'an_uong': 'Ăn Uống',--%>
+<%--                                                'thue_phong': 'Thuê Phòng',--%>
+<%--                                                'van_chuyen': 'Vận Chuyển'--%>
+<%--                                            };--%>
+
+<%--                                            // Replace the values in the service_type array--%>
+<%--                                            var replacedServiceType = serviceType.map(function(service) {--%>
+<%--                                                return replacements[service] || service;--%>
+<%--                                            });--%>
+<%--                                            // Display the service_type in the HTML--%>
+<%--                                            document.getElementById("serviceType").innerHTML = "Service provides: " + replacedServiceType.join(", ");--%>
+<%--                                        </script>--%>
                                     </div>
                                     <div class="ttr-post-text">
                                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
@@ -116,12 +137,7 @@
                                     <div class="col-md-12 col-lg-5">
                                         <ul class="course-features">
                                             <li><i class="ti-book"></i> <span class="label">Topics</span> <span class="value">Web design</span></li>
-                                            <li><i class="ti-help-alt"></i> <span class="label">Host</span> <span class="value">EduChamp</span></li>
-                                            <li><i class="ti-time"></i> <span class="label">Location</span> <span class="value">#45 Road</span></li>
-                                            <li><i class="ti-stats-up"></i> <span class="label">Skill level</span> <span class="value">Beginner</span></li>
-                                            <li><i class="ti-smallcap"></i> <span class="label">Language</span> <span class="value">English</span></li>
-                                            <li><i class="ti-user"></i> <span class="label">Students</span> <span class="value">32</span></li>
-                                            <li><i class="ti-check-box"></i> <span class="label">Assessments</span> <span class="value">Yes</span></li>
+
                                         </ul>
                                     </div>
                                     <div class="col-md-12 col-lg-7">
@@ -132,13 +148,7 @@
                                         <h5 class="m-b5">Event Content</h5>
                                         <ul class="list-checked primary">
                                             <li>Over 37 lectures and 55.5 hours of content!</li>
-                                            <li>LIVE PROJECT End to End Software Testing Training Included.</li>
-                                            <li>Learn Software Testing and Automation basics from a professional trainer from your own desk.</li>
-                                            <li>Information packed practical training starting from basics to advanced testing techniques.</li>
-                                            <li>Best suitable for beginners to advanced level users and who learn faster when demonstrated.</li>
-                                            <li>Course content designed by considering current software testing technology and the job market.</li>
-                                            <li>Practical assignments at the end of every session.</li>
-                                            <li>Practical learning experience with live project work and examples.cv</li>
+
                                         </ul>
                                     </div>
                                 </div>
@@ -147,24 +157,34 @@
                         <div class="col-lg-4 col-md-5 col-sm-12 m-b30">
                             <div class="bg-primary text-white contact-info-bx m-b30">
                                 <h2 class="m-b10 title-head">Contact <span>Information</span></h2>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+<%--                                <p>${object.get("owner")}'s details</p>--%>
                                 <div class="widget widget_getintuch">
                                     <ul>
-                                        <li><i class="ti-location-pin"></i>75k Newcastle St. Ponte Vedra Beach, FL 309382 New York</li>
-                                        <li><i class="ti-mobile"></i>0800-123456 (24/7 Support Line)</li>
-                                        <li><i class="ti-email"></i>info@example.com</li>
+                                        <c:if test="${ownersList.size()>0}">
+                                            <c:forEach items="${ownersList}" var="owner">
+                                                <li><i class="ti-mobile"></i><a style="color: white" href="tel:${owner}">${owner}</a></li>
+                                            </c:forEach>
+                                        </c:if>
+
                                     </ul>
                                 </div>
-                                <h5 class="m-t0 m-b20">Follow Us</h5>
+                                <h5 class="m-t0 m-b20">Facebook links</h5>
                                 <ul class="list-inline contact-social-bx">
-                                    <li><a href="#" class="btn outline radius-xl"><i class="fa fa-facebook"></i></a></li>
-                                    <li><a href="#" class="btn outline radius-xl"><i class="fa fa-twitter"></i></a></li>
-                                    <li><a href="#" class="btn outline radius-xl"><i class="fa fa-linkedin"></i></a></li>
-                                    <li><a href="#" class="btn outline radius-xl"><i class="fa fa-google-plus"></i></a></li>
+                                    <!-- Render the list of names as Facebook links -->
+                                    <c:if test="${not empty namesList}">
+                                        <ul>
+                                            <c:forEach items="${namesList}" var="name">
+                                                <li>
+                                                    <a href="https://www.facebook.com/${name}" target="_blank" class="btn outline radius-xl">
+                                                        <i style="margin: 10px 5px" class="fa fa-facebook"></i>
+                                                    </a>
+                                                </li>
+                                            </c:forEach>
+                                        </ul>
+                                    </c:if>
                                 </ul>
                             </div>
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3448.1298878182047!2d-81.38369578541523!3d30.204840081824198!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88e437ac927a996b%3A0x799695b1a2b970ab!2sNona+Blue+Modern+Tavern!5e0!3m2!1sen!2sin!4v1548177305546" class="align-self-stretch d-flex" style="width:100%; min-width:100%; min-height:400px;" allowfullscreen></iframe>
-                        </div>
+                            <div style="width: 100%; height: 750px; display: block; margin-top: 20px" id="chart-container"></div>                        </div>
                     </div>
                 </div>
             </div>
@@ -179,7 +199,17 @@
     <button class="back-to-top fa fa-chevron-up" ></button>
 </div>
 <!-- External JavaScripts -->
+<script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
 <script src="/assets/js/jquery.min.js"></script>
+<script src="/assets/js/graph/pie-chart.js"></script>
+<script>
+    const container = document.getElementById('chart-container');
+    window.onload = async function() {
+        const data = await fetch('${pageContext.request.contextPath}/api/attributes?owner=${object.get("owner").asText()}').then(response => response.json());
+        const pie = pieChart(data, container.clientWidth, container.clientHeight);
+        container.appendChild(pie);
+    }
+</script>
 <script src="/assets/vendors/bootstrap/js/popper.min.js"></script>
 <script src="/assets/vendors/bootstrap/js/bootstrap.min.js"></script>
 <script src="/assets/vendors/bootstrap-select/bootstrap-select.min.js"></script>

@@ -1,10 +1,13 @@
 package com.resfes.trustscore.controller;
 
 import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.node.ArrayNode;
+import com.fasterxml.jackson.databind.node.TextNode;
 import com.resfes.trustscore.model.Application;
 import com.resfes.trustscore.service.DataService;
 import jakarta.servlet.http.HttpSession;
 import lombok.AllArgsConstructor;
+import org.json.JSONArray;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
@@ -14,6 +17,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import java.io.IOException;
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.List;
 
 @AllArgsConstructor
@@ -34,9 +40,9 @@ public class UtilsController {
     }
 
     @RequestMapping(value = {"/", "/home", "", "/index"})
-    public  ModelAndView home() {
+    public  ModelAndView home() throws IOException {
         ModelAndView modelAndView = new ModelAndView("home");
-        List<JsonNode> objects = dataService.top10Users();
+        List<JsonNode> objects = dataService.getTopUsers(10);
         modelAndView.addObject("FUHL", application.getFuhl());
         modelAndView.addObject("objects", objects);
         modelAndView.addObject("highest", objects.get(0));
@@ -47,6 +53,27 @@ public class UtilsController {
     public ModelAndView getUser(@RequestParam String owner) throws Exception {
         ModelAndView modelAndView = new ModelAndView("profile");
         JsonNode user = dataService.getUser(owner);
+        List<String> namesList = new ArrayList<>();
+        List<String> ownersList = new ArrayList<>();
+        Object nameProperty = user.get("properties").get("name");
+        if (nameProperty instanceof ArrayNode) {
+            ArrayNode nameArray = (ArrayNode) nameProperty;
+            for (int i = 0; i < nameArray.size(); i++) {
+                namesList.add(nameArray.get(i).asText());
+            }
+        } else if (nameProperty instanceof TextNode) {
+            String propertyName = nameProperty.toString().replace("\"", "").trim();
+           namesList.add(propertyName);
+        } else {
+            System.out.println(nameProperty.getClass());
+        }
+        if(user.get("owner").asText().startsWith("0")){
+            for(String phone:user.get("owner").asText().split(",")){
+                ownersList.add(phone);
+            }
+        }
+        modelAndView.addObject("ownersList", ownersList);
+        modelAndView.addObject("namesList", namesList);
         modelAndView.addObject("FUHL", application.getFuhl());
         modelAndView.addObject("object", user);
         return modelAndView;
@@ -63,7 +90,7 @@ public class UtilsController {
             } else {
                 objects = dataService.getAllObjects(page, size); // Page is 0-indexed for getAllObjects
             }
-            modelAndView.addObject("top1", dataService.getTopUser());
+            modelAndView.addObject("top1", dataService.getTopUsers(1).get(0));
             session.setAttribute("query", query);
             modelAndView.addObject("FUHL", application.getFuhl());
             modelAndView.addObject("query", query);

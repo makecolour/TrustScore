@@ -20,9 +20,9 @@ function shadeColor(color, percent) {
 }
 function nodeDetail(d) {
     if (d.group == "service_provider") {
-        return `<strong>Service Provider</strong></br>Name: ${d.facebook_name}</br>FacebookID: ${d.owner}</br>Ranking: ${d.old_page_rank}</br>Services: ${d.services.Categories}</br><a href="/profile?owner=${d.owner}">View Details</a>`;
+        return `<strong>Service Provider</strong></br>Name: ${d.owner}</br>FacebookID: ${d.properties.name}</br>Ranking: ${d.first_combine}</br>Services: ${d.properties.service_type}</br><a href="/profile?owner=${d.owner}">View Details</a>`;
     } else {
-        return `<strong>User</strong></br>Name: ${d.facebook_name}</br>FacebookID: ${d.owner}</br>Ranking: ${d.old_page_rank}</br><a href="/profile?owner=${d.owner}">View Details</a>`;
+        return `<strong>User</strong></br>Name: ${d.owner}</br>FacebookID: ${d.properties.name}</br>Ranking: ${d.first_combine}</br>`;
     }
 }
 // function disjointChart(nodeFile = [], linkFile = []) {
@@ -412,7 +412,7 @@ function barChart (data2)  {
 
     // Declare the y (vertical position) scale.
     const y = d3.scaleLinear()
-        .domain([0, d3.max(data2, d => d.old_page_rank)]).nice()
+        .domain([0, d3.max(data2, d => d.first_combine)]).nice()
         .range([height - marginBottom, marginTop]);
 
     // Create the SVG container.
@@ -429,8 +429,8 @@ function barChart (data2)  {
         .join("rect")
         .style("mix-blend-mode", "multiply") // Darker color when bars overlap during the transition.
         .attr("x", d => x(d.owner))
-        .attr("y", d => y(d.old_page_rank))
-        .attr("height", d => y(0) - y(d.old_page_rank))
+        .attr("y", d => y(d.first_combine))
+        .attr("height", d => y(0) - y(d.first_combine))
         .attr("width", x.bandwidth())
         .on("mouseover", function(event, d) {
             d3.select('#tooltip2').html(nodeDetail(d)).style("visibility", "visible").style("opacity", 1);
@@ -515,10 +515,10 @@ window.onload = async function() {
                     barChartSVG.update((a, b) => a.owner.localeCompare(b.owner));
                     break;
                 case 'ascending':
-                    barChartSVG.update((a, b) => a.old_page_rank - b.old_page_rank);
+                    barChartSVG.update((a, b) => a.first_combine - b.first_combine);
                     break;
                 case 'descending':
-                    barChartSVG.update((a, b) => b.old_page_rank - a.old_page_rank);
+                    barChartSVG.update((a, b) => b.first_combine - a.first_combine);
                     break;
             }
         });

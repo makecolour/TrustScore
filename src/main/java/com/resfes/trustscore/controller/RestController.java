@@ -1,5 +1,6 @@
 package com.resfes.trustscore.controller;
 
+import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.resfes.trustscore.model.Application;
 import com.resfes.trustscore.service.DataService;
@@ -14,6 +15,8 @@ import org.springframework.web.bind.annotation.*;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.List;
+import java.util.Map;
 
 @AllArgsConstructor
 @org.springframework.web.bind.annotation.RestController
@@ -64,7 +67,7 @@ public class RestController {
         HttpHeaders headers = new HttpHeaders();
         headers.add(HttpHeaders.CONTENT_TYPE, "application/json; charset=UTF-8");
         ObjectMapper objectMapper = new ObjectMapper();
-        return new ResponseEntity<>(objectMapper.writeValueAsString(data.top10Users()), headers, HttpStatus.OK);
+        return new ResponseEntity<>(objectMapper.writeValueAsString(data.getTopUsers(10)), headers, HttpStatus.OK);
     }
 
     @GetMapping("/profile")
@@ -73,6 +76,17 @@ public class RestController {
         headers.add(HttpHeaders.CONTENT_TYPE, "application/json; charset=UTF-8");
         ObjectMapper objectMapper = new ObjectMapper();
         return new ResponseEntity<>(objectMapper.writeValueAsString(data.getUser(owner)), headers, HttpStatus.OK);
+    }
+
+    @GetMapping("/attributes")
+    public ResponseEntity<List<Map<String, Object>>> getAttributes(@RequestParam String owner) throws IOException {
+        JsonNode user = data.getUser(owner);
+        List<Map<String, Object>> attributes = data.getAttributes(user);
+
+        HttpHeaders headers = new HttpHeaders();
+        headers.add(HttpHeaders.CONTENT_TYPE, "application/json; charset=UTF-8");
+
+        return new ResponseEntity<>(attributes, headers, HttpStatus.OK);
     }
 
     @GetMapping("/objects")
