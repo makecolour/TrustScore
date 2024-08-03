@@ -1,7 +1,6 @@
 package com.resfes.trustscore.service;
 
 import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.node.ArrayNode;
 import org.springframework.data.domain.Page;
 
 import java.io.IOException;
@@ -16,6 +15,6 @@ public interface DataService {
     Page<JsonNode> searchObjects(String query, int page, int size) throws IOException ;
     JsonNode getTopUser() throws IOException;
     List<JsonNode> getTopUsers(int n) throws IOException;
-    List<Map<String, Object>> getAttributes(JsonNode node);
-
+    List<Map<String, Object>> getInteract(JsonNode node);
+    List<Map<String, Object>> getReact(JsonNode node);
 }

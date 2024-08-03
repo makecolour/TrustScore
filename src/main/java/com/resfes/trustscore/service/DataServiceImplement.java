@@ -164,7 +164,7 @@ public class DataServiceImplement implements DataService{
     }
 
     @Override
-    public List<Map<String, Object>> getAttributes(JsonNode node) {
+    public List<Map<String, Object>> getInteract(JsonNode node) {
         List<Map<String, Object>> attributes = new ArrayList<>();
 
         Map<String, String> nameValueMap = new HashMap<>();
@@ -178,6 +178,28 @@ public class DataServiceImplement implements DataService{
             Map<String, Object> attributeMap = new HashMap<>();
             attributeMap.put("name", attributeName);
             attributeMap.put("value", node.get(nameValueMap.get(attributeName)).asInt());
+            attributes.add(attributeMap);
+        }
+
+        return attributes;
+    }
+
+    @Override
+    public List<Map<String, Object>> getReact(JsonNode node) {
+        List<Map<String, Object>> attributes = new ArrayList<>();
+
+        Map<String, String> nameValueMap = new HashMap<>();
+        nameValueMap.put("Love", "num_loves");
+        nameValueMap.put("Haha", "num_hahas");
+        nameValueMap.put("Like", "num_likes");
+        nameValueMap.put("Care", "num_cares");
+        nameValueMap.put("Angry", "num_angries");
+        nameValueMap.put("Sad", "num_sads");
+
+        for (String attributeName : nameValueMap.keySet()) {
+            Map<String, Object> attributeMap = new HashMap<>();
+            attributeMap.put("name", attributeName);
+            attributeMap.put("value", node.get("properties").get(nameValueMap.get(attributeName)).asInt());
             attributes.add(attributeMap);
         }
 

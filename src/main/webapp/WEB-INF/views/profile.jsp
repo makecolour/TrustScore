@@ -137,7 +137,6 @@
                                     <div class="col-md-12 col-lg-5">
                                         <ul class="course-features">
                                             <li><i class="ti-book"></i> <span class="label">Topics</span> <span class="value">Web design</span></li>
-
                                         </ul>
                                     </div>
                                     <div class="col-md-12 col-lg-7">

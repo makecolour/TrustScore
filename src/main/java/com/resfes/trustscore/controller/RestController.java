@@ -81,7 +81,7 @@ public class RestController {
     @GetMapping("/attributes")
     public ResponseEntity<List<Map<String, Object>>> getAttributes(@RequestParam String owner) throws IOException {
         JsonNode user = data.getUser(owner);
-        List<Map<String, Object>> attributes = data.getAttributes(user);
+        List<Map<String, Object>> attributes = data.getInteract(user);
 
         HttpHeaders headers = new HttpHeaders();
         headers.add(HttpHeaders.CONTENT_TYPE, "application/json; charset=UTF-8");
