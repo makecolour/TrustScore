@@ -469,16 +469,19 @@
         <div class="container">
           <div class="row">
             <div class="col-md-12 heading-bx left">
-              <h2 class="title-head">TOP 10 <span>Service Providers</span></h2>
+              <h2 class="title-head">TOP <span>Service Providers</span></h2>
               <p>Most trusted service providers by consumers</p>
             </div>
             </div>
           <div class="row" id="bar-chart-append">
-              <select id="select-order">
-                <option value="alphabetical">Alphabetical</option>
-                <option value="ascending">Page rank, ascending</option>
-                <option value="descending" selected>Page rank, descending</option>
-              </select>
+              <div class="container">
+                <input type="number" id="numofservice" placeholder="Number of service providers" class="col-3" step="10" min="0">
+                <select id="select-order" class="col-8">
+                  <option value="alphabetical">Alphabetical</option>
+                  <option value="ascending">TFT Score, ascending</option>
+                  <option value="descending" selected>TFT Score, descending</option>
+                </select>
+              </div>
             <div id="tooltip2" class="tooltip bs-tooltip-bottom"></div>
           </div>
         </div>
@@ -517,15 +520,11 @@
                     <div class="review">
                       <span>${object.get('first_combine')}</span>
                       <ul class="cours-star">
-                        <c:forEach var="i" begin="1" end="5">
-                          <c:choose>
-                            <c:when test="${i <= (object.get('first_combine').asDouble() / highest.get('first_combine').asDouble() * 5)}">
-                              <li class="active"><i class="fa fa-star"></i></li>
-                            </c:when>
-                            <c:otherwise>
-                              <li><i class="fa fa-star"></i></li>
-                            </c:otherwise>
-                          </c:choose>
+                        <c:forEach var="i" begin="1" end="${object.get('star').asDouble().intValue()}">
+                          <li class="active"><i class="fa fa-star"></i></li>
+                        </c:forEach>
+                        <c:forEach var="i" begin="${object.get('star').asDouble().intValue() + 1}" end="5">
+                          <li><i class="fa fa-star"></i></li>
                         </c:forEach>
                       </ul>
                     </div>

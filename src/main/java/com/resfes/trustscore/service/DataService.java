@@ -17,4 +17,6 @@ public interface DataService {
     List<JsonNode> getTopUsers(int n) throws IOException;
     List<Map<String, Object>> getInteract(JsonNode node);
     List<Map<String, Object>> getReact(JsonNode node);
+    List<Map<String, Object>> getScores(JsonNode node);
+    List<JsonNode> getComments(String owner) throws IOException;
 }

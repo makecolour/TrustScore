@@ -12,12 +12,12 @@ public class TrustScoreApplication {
     public static void main(String[] args) {
         SpringApplication.run(TrustScoreApplication.class, args);
     }
-//
-//    @Bean
-//    public CommandLineRunner run(FileService mergeService) throws Exception {
-//        return args -> {
-//            mergeService.mergeJsonFiles();
-//            mergeService.transformAndWriteLinks();
-//        };
-//    }
+
+    @Bean
+    public CommandLineRunner run(FileService mergeService) throws Exception {
+        return args -> {
+            mergeService.mergeJsonFiles();
+            mergeService.transformAndWriteLinks();
+        };
+    }
 }

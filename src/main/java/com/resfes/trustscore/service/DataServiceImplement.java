@@ -55,7 +55,7 @@ public class DataServiceImplement implements DataService{
             // Read the JSON file into a list of JsonNodes
             List<JsonNode> nodes = Arrays.asList(objectMapper.readValue(new File(application.getOutputFolder()+application.getNodeFile()), JsonNode[].class));
             // Find the object with the given owner
-            user = nodes.stream().filter(node -> node.get("owner").asText().equals(owner)&&node.get("group").get(0).asText().contains("service_provider")).findFirst().orElse(null);
+            user = nodes.stream().filter(node -> node.get("owner").asText().equals(owner)&&node.get("group").toString().contains("service_provider")).findFirst().orElse(null);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -82,9 +82,8 @@ public class DataServiceImplement implements DataService{
         List<JsonNode> nodes = Arrays.asList(objectMapper.readValue(new File(application.getOutputFolder()+application.getNodeFile()), JsonNode[].class));
         // Filter the nodes to include only those that have first_combine
         nodes = nodes.stream()
-                .filter(node -> node.has("first_combine") && !node.get("first_combine").isNull()&&node.get("group").get(0).asText().contains("service_provider"))
+                .filter(node -> node.has("first_combine") && !node.get("first_combine").isNull()&&node.get("group").toString().contains("service_provider"))
                 .collect(Collectors.toList());
-
 
         // Sort the nodes in descending order based on the first_combine field
         nodes.sort(Comparator.comparing((JsonNode node) -> {
@@ -109,7 +108,7 @@ public class DataServiceImplement implements DataService{
 
         // Filter the nodes based on the query
         nodes = nodes.stream()
-                .filter(node -> node.has("first_combine") && !node.get("first_combine").isNull() && node.toString().contains(query)&&node.get("group").get(0).asText().contains("service_provider"))
+                .filter(node -> node.has("first_combine") && !node.get("first_combine").isNull() && node.toString().contains(query)&&node.get("group").toString().contains("service_provider"))
                 .collect(Collectors.toList());
 
         // Create a Page object from the filtered list
@@ -126,7 +125,7 @@ public class DataServiceImplement implements DataService{
         List<JsonNode> nodes = Arrays.asList(objectMapper.readValue(new File(application.getOutputFolder()+application.getNodeFile()), JsonNode[].class));
         // Filter the nodes to include only those that have first_combine
         nodes = nodes.stream()
-                .filter(node -> node.has("first_combine") && !node.get("first_combine").isNull()&&node.get("group").get(0).asText().contains("service_provider"))
+                .filter(node -> node.has("first_combine") && !node.get("first_combine").isNull()&&node.get("group").toString().contains("service_provider"))
                 .collect(Collectors.toList());
 
         // Sort the nodes in descending order based on the first_combine field
@@ -148,16 +147,18 @@ public class DataServiceImplement implements DataService{
             // Read the JSON file into a list of JsonNodes
             List<JsonNode> nodes = Arrays.asList(objectMapper.readValue(new File(application.getOutputFolder()+application.getNodeFile()), JsonNode[].class));
             // Sort the list in descending order based on the first_combine field
-            nodes.stream()
-                    .filter(node -> node.has("first_combine") && !node.get("first_combine").isNull() && node.get("group").get(0).asText().contains("service_provider"))
-                    .sorted(Comparator.comparingDouble(node -> node.get("first_combine").asDouble()))
-                    .forEachOrdered(node -> {
-                        // Process each node as needed
-                    });
-            // Get the first 10 objects
-            top10Nodes = nodes.subList(0, n);
+            nodes = nodes.stream()
+                    .filter(node -> node.has("first_combine") && !node.get("first_combine").isNull() && node.get("group").toString().contains("service_provider"))
+                    .sorted(Comparator.comparingDouble(node -> - node.get("first_combine").asDouble()))
+                    .collect(Collectors.toList());
 
-        } catch (IOException e) {
+            if (n > nodes.size()) {
+                top10Nodes = nodes;
+            } else {
+                top10Nodes = nodes.subList(0, n);
+            }
+
+        } catch (Exception e) {
             e.printStackTrace();
         }
         return top10Nodes;
@@ -195,6 +196,7 @@ public class DataServiceImplement implements DataService{
         nameValueMap.put("Care", "num_cares");
         nameValueMap.put("Angry", "num_angries");
         nameValueMap.put("Sad", "num_sads");
+        nameValueMap.put("Wow", "num_wows");
 
         for (String attributeName : nameValueMap.keySet()) {
             Map<String, Object> attributeMap = new HashMap<>();
@@ -204,6 +206,41 @@ public class DataServiceImplement implements DataService{
         }
 
         return attributes;
+    }
+
+    @Override
+    public List<Map<String, Object>> getScores(JsonNode node) {
+        List<Map<String, Object>> attributes = new ArrayList<>();
+
+        Map<String, String> nameValueMap = new HashMap<>();
+        nameValueMap.put("Degree Centrality", "degree_centrality");
+        nameValueMap.put("Closeness Centrality", "closeness_centrality");
+        nameValueMap.put("Betweeness Centrality", "betweenness_centrality");
+
+
+        for (String attributeName : nameValueMap.keySet()) {
+            Map<String, Object> attributeMap = new HashMap<>();
+            attributeMap.put("name", attributeName);
+            attributeMap.put("value", node.get(nameValueMap.get(attributeName)).asDouble());
+            attributes.add(attributeMap);
+        }
+
+        return attributes;
+    }
+
+    @Override
+    public List<JsonNode> getComments(String owner) throws IOException {
+        List<JsonNode> comments = new ArrayList<>();
+        JsonNode rootNode = objectMapper.readTree(new File(application.getInputFolder()+application.getCommentsFile()));
+
+        if (rootNode.isArray()) {
+            for (JsonNode node : rootNode) {
+                if (node.has("owner") && node.get("owner").asText().equalsIgnoreCase(owner)) {
+                    comments.add(node);
+                }
+            }
+        }
+        return comments;
     }
 
 

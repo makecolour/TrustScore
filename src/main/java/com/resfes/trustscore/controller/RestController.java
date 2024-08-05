@@ -70,6 +70,14 @@ public class RestController {
         return new ResponseEntity<>(objectMapper.writeValueAsString(data.getTopUsers(10)), headers, HttpStatus.OK);
     }
 
+    @GetMapping("/topUser")
+    public ResponseEntity<String> topUser(@RequestParam int n) throws IOException {
+        HttpHeaders headers = new HttpHeaders();
+        headers.add(HttpHeaders.CONTENT_TYPE, "application/json; charset=UTF-8");
+        ObjectMapper objectMapper = new ObjectMapper();
+        return new ResponseEntity<>(objectMapper.writeValueAsString(data.getTopUsers(n)), headers, HttpStatus.OK);
+    }
+
     @GetMapping("/profile")
     public ResponseEntity<String> getUser(@RequestParam String owner) throws IOException {
         HttpHeaders headers = new HttpHeaders();
@@ -78,7 +86,7 @@ public class RestController {
         return new ResponseEntity<>(objectMapper.writeValueAsString(data.getUser(owner)), headers, HttpStatus.OK);
     }
 
-    @GetMapping("/attributes")
+    @GetMapping("/interacts")
     public ResponseEntity<List<Map<String, Object>>> getAttributes(@RequestParam String owner) throws IOException {
         JsonNode user = data.getUser(owner);
         List<Map<String, Object>> attributes = data.getInteract(user);
@@ -87,6 +95,27 @@ public class RestController {
         headers.add(HttpHeaders.CONTENT_TYPE, "application/json; charset=UTF-8");
 
         return new ResponseEntity<>(attributes, headers, HttpStatus.OK);
+    }
+
+    @GetMapping("/reacts")
+    public ResponseEntity<List<Map<String, Object>>> getReacts(@RequestParam String owner) throws IOException {
+        JsonNode user = data.getUser(owner);
+        List<Map<String, Object>> reacts = data.getReact(user);
+
+        HttpHeaders headers = new HttpHeaders();
+        headers.add(HttpHeaders.CONTENT_TYPE, "application/json; charset=UTF-8");
+
+        return new ResponseEntity<>(reacts, headers, HttpStatus.OK);
+    }
+    @GetMapping("/centrality")
+    public ResponseEntity<List<Map<String, Object>>> getScores(@RequestParam String owner) throws IOException {
+        JsonNode user = data.getUser(owner);
+        List<Map<String, Object>> scores = data.getScores(user);
+
+        HttpHeaders headers = new HttpHeaders();
+        headers.add(HttpHeaders.CONTENT_TYPE, "application/json; charset=UTF-8");
+
+        return new ResponseEntity<>(scores, headers, HttpStatus.OK);
     }
 
     @GetMapping("/objects")

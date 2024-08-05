@@ -160,15 +160,11 @@
                                                     <div class="review">
                                                         <span>${object.get('first_combine')}</span>
                                                         <ul class="cours-star">
-                                                            <c:forEach var="i" begin="1" end="5">
-                                                                <c:choose>
-                                                                    <c:when test="${i <= (object.get('first_combine').asDouble() / top1.get('first_combine').asDouble() * 5)}">
-                                                                        <li class="active"><i class="fa fa-star"></i></li>
-                                                                    </c:when>
-                                                                    <c:otherwise>
-                                                                        <li><i class="fa fa-star"></i></li>
-                                                                    </c:otherwise>
-                                                                </c:choose>
+                                                            <c:forEach var="i" begin="1" end="${object.get('star').asDouble().intValue()}">
+                                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                            </c:forEach>
+                                                            <c:forEach var="i" begin="${object.get('star').asDouble().intValue() + 1}" end="5">
+                                                                <li><i class="fa fa-star"></i></li>
                                                             </c:forEach>
                                                         </ul>
                                                     </div>

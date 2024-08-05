@@ -34,4 +34,7 @@ public class Application {
 
     @Value("${FUHL}")
     private String fuhl;
+
+    @Value("${comments_file}")
+    private String commentsFile;
 }

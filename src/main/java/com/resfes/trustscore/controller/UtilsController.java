@@ -55,6 +55,7 @@ public class UtilsController {
         JsonNode user = dataService.getUser(owner);
         List<String> namesList = new ArrayList<>();
         List<String> ownersList = new ArrayList<>();
+        List<JsonNode> comments = new ArrayList<>();
         Object nameProperty = user.get("properties").get("name");
         if (nameProperty instanceof ArrayNode) {
             ArrayNode nameArray = (ArrayNode) nameProperty;
@@ -72,6 +73,11 @@ public class UtilsController {
                 ownersList.add(phone);
             }
         }
+
+        for(String name:namesList){
+            comments.addAll(dataService.getComments(name));
+        }
+        modelAndView.addObject("comments", comments);
         modelAndView.addObject("ownersList", ownersList);
         modelAndView.addObject("namesList", namesList);
         modelAndView.addObject("FUHL", application.getFuhl());
@@ -90,7 +96,7 @@ public class UtilsController {
             } else {
                 objects = dataService.getAllObjects(page, size); // Page is 0-indexed for getAllObjects
             }
-            modelAndView.addObject("top1", dataService.getTopUsers(1).get(0));
+
             session.setAttribute("query", query);
             modelAndView.addObject("FUHL", application.getFuhl());
             modelAndView.addObject("query", query);

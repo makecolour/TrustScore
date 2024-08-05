@@ -45,10 +45,11 @@ public class FileServiceImplement implements FileService {
         Resource nResource = resourceLoader.getResource(application.getRawDir()+"nodes_phone.json");
         String jsonString2 = new String(Files.readAllBytes(Paths.get(application.getInputFolder()+"interaction_types_group.json")));
         JSONObject interaction = new JSONObject(jsonString2);
+        Resource stars = resourceLoader.getResource(application.getRawDir()+"star_rank.json");
         Map<String, ObjectNode> combinedData = new HashMap<>();
 try {
     // List of all JSON resources
-    List<Resource> allResources = Arrays.asList(differentRankingResource, nResource);
+    List<Resource> allResources = Arrays.asList(differentRankingResource, nResource, stars);
 
     for (Resource resource : allResources) {
         JsonNode jsonNode = objectMapper.readTree(resource.getInputStream());
@@ -326,6 +327,9 @@ try {
             }
             if(objectNode.has("first_combine") && objectNode.get("first_combine") != null){
                 existingNode.put("first_combine", objectNode.get("first_combine").asDouble());
+            }
+            if(objectNode.has("star")&& objectNode.get("star") != null){
+                existingNode.put("star", objectNode.get("star").asDouble());
             }
             else{
                 //existingNode.setAll(objectNode);
