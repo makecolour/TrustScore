@@ -85,7 +85,6 @@ public class DataServiceImplement implements DataService{
                 .filter(node -> node.has("first_combine") && !node.get("first_combine").isNull()&&node.get("group").toString().contains("service_provider"))
                 .collect(Collectors.toList());
 
-        // Sort the nodes in descending order based on the first_combine field
         nodes.sort(Comparator.comparing((JsonNode node) -> {
             if (node.has("first_combine") && !node.get("first_combine").isNull()) {
                 return node.get("first_combine").asDouble();
@@ -93,7 +92,6 @@ public class DataServiceImplement implements DataService{
                 return 0.0;
             }
         }).reversed());
-
         int start = Math.min(page * size, nodes.size());
         int end = Math.min((page + 1) * size, nodes.size());
         List<JsonNode> sublist = nodes.subList(start, end);
@@ -102,16 +100,14 @@ public class DataServiceImplement implements DataService{
     }
 
     @Override
-    public Page<JsonNode> searchObjects(String query, int page, int size) throws IOException {
+    public Page<JsonNode> searchObjects(String query, int page, int size, String service) throws IOException {
         // Get all objects
         List<JsonNode> nodes = Arrays.asList(objectMapper.readValue(new File(application.getOutputFolder()+application.getNodeFile()), JsonNode[].class));
 
-        // Filter the nodes based on the query
         nodes = nodes.stream()
-                .filter(node -> node.has("first_combine") && !node.get("first_combine").isNull() && node.toString().contains(query)&&node.get("group").toString().contains("service_provider"))
+                .filter(node -> node.has("first_combine") && !node.get("first_combine").isNull() && node.toString().contains(query)&&node.get("group").toString().contains("service_provider")&&node.get("properties").get("service_type").toString().toLowerCase().contains(service.toLowerCase()))
                 .collect(Collectors.toList());
 
-        // Create a Page object from the filtered list
         int start = Math.min(page * size, nodes.size());
         int end = Math.min((page + 1) * size, nodes.size());
         List<JsonNode> sublist = nodes.subList(start, end);

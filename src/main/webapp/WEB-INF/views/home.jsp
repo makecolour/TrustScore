@@ -8,6 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -112,9 +113,9 @@
                 data-param5="" data-param6=""
                 data-param7="" data-param8=""
                 data-param9="" data-param10=""
-                data-description="FU Hòa Lạc">
+                data-description="Research Festival">
               <!-- MAIN IMAGE -->
-              <img src="/assets/images/gallery/FUHL.jpg" alt=""
+              <img src="/assets/images/gallery/resfes.png" alt=""
                    data-bgposition="center center"
                    data-bgfit="cover"
                    data-bgrepeat="no-repeat"
@@ -206,47 +207,46 @@
                    data-paddingbottom="[0,0,0,0]"
                    data-paddingleft="[0,0,0,0]"
                    style="z-index: 7; text-transform:capitalize; white-space: unset; color:#fff; font-family:rubik; font-size:18px; line-height:28px; font-weight:400;">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the
-              </div>
+                The Trust Management Website offers trust reputation scores for services provided within the FU-HL group, a large and active community on Facebook associated with FPT University Hanoi.</div>
               <!-- LAYER NR. 4 -->
-              <div class="tp-caption Newspaper-Button rev-btn "
-                   id="slide-100-layer-5"
-                   data-x="['center','center','center','center']"
-                   data-hoffset="['90','80','75','90']"
-                   data-y="['top','top','top','top']"
-                   data-voffset="['400','400','400','420']"
-                   data-width="none"
-                   data-height="none"
-                   data-whitespace="nowrap"
-                   data-type="button"
-                   data-responsive_offset="on"
-                   data-responsive="off"
-                   data-frames='[{"from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"300","ease":"Power1.easeInOut","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(0, 0, 0, 1.00);bg:rgba(255, 255, 255, 1.00);bc:rgba(255, 255, 255, 1.00);bw:1px 1px 1px 1px;"}]'
-                   data-textAlign="['center','center','center','center']"
-                   data-paddingtop="[12,12,12,12]"
-                   data-paddingright="[30,35,35,15]"
-                   data-paddingbottom="[12,12,12,12]"
-                   data-paddingleft="[30,35,35,15]"
-                   style="z-index: 8; white-space: nowrap; outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer; background-color:var(--primary) !important; border:0; border-radius:30px; margin-right:5px;">READ MORE </div>
-              <div class="tp-caption Newspaper-Button rev-btn"
-                   id="slide-100-layer-6"
-                   data-x="['center','center','center','center']"
-                   data-hoffset="['-90','-80','-75','-90']"
-                   data-y="['top','top','top','top']"
-                   data-voffset="['400','400','400','420']"
-                   data-width="none"
-                   data-height="none"
-                   data-whitespace="nowrap"
-                   data-type="button"
-                   data-responsive_offset="on"
-                   data-responsive="off"
-                   data-frames='[{"from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"300","ease":"Power1.easeInOut","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(0, 0, 0, 1.00);bg:rgba(255, 255, 255, 1.00);bc:rgba(255, 255, 255, 1.00);bw:1px 1px 1px 1px;"}]'
-                   data-textAlign="['center','center','center','center']"
-                   data-paddingtop="[12,12,12,12]"
-                   data-paddingright="[30,35,35,15]"
-                   data-paddingbottom="[12,12,12,12]"
-                   data-paddingleft="[30,35,35,15]"
-                   style="z-index: 8; white-space: nowrap; outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer; border-radius:30px;">CONTACT US</div>
+<%--              <div class="tp-caption Newspaper-Button rev-btn "--%>
+<%--                   id="slide-100-layer-5"--%>
+<%--                   data-x="['center','center','center','center']"--%>
+<%--                   data-hoffset="['90','80','75','90']"--%>
+<%--                   data-y="['top','top','top','top']"--%>
+<%--                   data-voffset="['400','400','400','420']"--%>
+<%--                   data-width="none"--%>
+<%--                   data-height="none"--%>
+<%--                   data-whitespace="nowrap"--%>
+<%--                   data-type="button"--%>
+<%--                   data-responsive_offset="on"--%>
+<%--                   data-responsive="off"--%>
+<%--                   data-frames='[{"from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"300","ease":"Power1.easeInOut","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(0, 0, 0, 1.00);bg:rgba(255, 255, 255, 1.00);bc:rgba(255, 255, 255, 1.00);bw:1px 1px 1px 1px;"}]'--%>
+<%--                   data-textAlign="['center','center','center','center']"--%>
+<%--                   data-paddingtop="[12,12,12,12]"--%>
+<%--                   data-paddingright="[30,35,35,15]"--%>
+<%--                   data-paddingbottom="[12,12,12,12]"--%>
+<%--                   data-paddingleft="[30,35,35,15]"--%>
+<%--                   style="z-index: 8; white-space: nowrap; outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer; background-color:var(--primary) !important; border:0; border-radius:30px; margin-right:5px;">READ MORE </div>--%>
+<%--              <div class="tp-caption Newspaper-Button rev-btn"--%>
+<%--                   id="slide-100-layer-6"--%>
+<%--                   data-x="['center','center','center','center']"--%>
+<%--                   data-hoffset="['-90','-80','-75','-90']"--%>
+<%--                   data-y="['top','top','top','top']"--%>
+<%--                   data-voffset="['400','400','400','420']"--%>
+<%--                   data-width="none"--%>
+<%--                   data-height="none"--%>
+<%--                   data-whitespace="nowrap"--%>
+<%--                   data-type="button"--%>
+<%--                   data-responsive_offset="on"--%>
+<%--                   data-responsive="off"--%>
+<%--                   data-frames='[{"from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"300","ease":"Power1.easeInOut","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(0, 0, 0, 1.00);bg:rgba(255, 255, 255, 1.00);bc:rgba(255, 255, 255, 1.00);bw:1px 1px 1px 1px;"}]'--%>
+<%--                   data-textAlign="['center','center','center','center']"--%>
+<%--                   data-paddingtop="[12,12,12,12]"--%>
+<%--                   data-paddingright="[30,35,35,15]"--%>
+<%--                   data-paddingbottom="[12,12,12,12]"--%>
+<%--                   data-paddingleft="[30,35,35,15]"--%>
+<%--                   style="z-index: 8; white-space: nowrap; outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer; border-radius:30px;">CONTACT US</div>--%>
             </li>
             <li data-index="rs-200"
                 data-transition="parallaxvertical"
@@ -270,7 +270,7 @@
                 data-param9="" data-param10=""
                 data-description="FU Hòa Lạc">
               <!-- MAIN IMAGE -->
-              <img src="/assets/images/slider/2.jpg" alt=""
+              <img src="/assets/images/gallery/resfes.png" alt=""
                    data-bgposition="center center"
                    data-bgfit="cover"
                    data-bgrepeat="no-repeat"
@@ -364,48 +364,47 @@
                    data-paddingbottom="[0,0,0,0]"
                    data-paddingleft="[0,0,0,0]"
                    style="z-index: 7; text-transform:capitalize; white-space: unset; color:#fff; font-family:rubik; font-size:18px; line-height:28px; font-weight:400;">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the
-              </div>
+                The Trust Management Website offers trust reputation scores for services provided within the FU-HL group, a large and active community on Facebook associated with FPT University Hanoi.</div>
               <!-- LAYER NR. 4 -->
-              <div onclick="window.location.href='/list'"
-                   class="tp-caption Newspaper-Button rev-btn "
-                   id="slide-200-layer-5"
-                   data-x="['center','center','center','center']"
-                   data-hoffset="['90','80','75','90']"
-                   data-y="['top','top','top','top']"
-                   data-voffset="['400','400','400','420']"
-                   data-width="none"
-                   data-height="none"
-                   data-whitespace="nowrap"
-                   data-type="button"
-                   data-responsive_offset="on"
-                   data-responsive="off"
-                   data-frames='[{"from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"300","ease":"Power1.easeInOut","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(0, 0, 0, 1.00);bg:rgba(255, 255, 255, 1.00);bc:rgba(255, 255, 255, 1.00);bw:1px 1px 1px 1px;"}]'
-                   data-textAlign="['center','center','center','center']"
-                   data-paddingtop="[12,12,12,12]"
-                   data-paddingright="[30,35,35,15]"
-                   data-paddingbottom="[12,12,12,12]"
-                   data-paddingleft="[30,35,35,15]"
-                   style="z-index: 8; white-space: nowrap; outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer; background-color:var(--primary) !important; border:0; border-radius:30px; margin-right:5px;" >READ MORE </div>
-              <div class="tp-caption Newspaper-Button rev-btn"
-                   id="slide-200-layer-6"
-                   data-x="['center','center','center','center']"
-                   data-hoffset="['-90','-80','-75','-90']"
-                   data-y="['top','top','top','top']"
-                   data-voffset="['400','400','400','420']"
-                   data-width="none"
-                   data-height="none"
-                   data-whitespace="nowrap"
-                   data-type="button"
-                   data-responsive_offset="on"
-                   data-responsive="off"
-                   data-frames='[{"from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"300","ease":"Power1.easeInOut","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(0, 0, 0, 1.00);bg:rgba(255, 255, 255, 1.00);bc:rgba(255, 255, 255, 1.00);bw:1px 1px 1px 1px;"}]'
-                   data-textAlign="['center','center','center','center']"
-                   data-paddingtop="[12,12,12,12]"
-                   data-paddingright="[30,35,35,15]"
-                   data-paddingbottom="[12,12,12,12]"
-                   data-paddingleft="[30,35,35,15]"
-                   style="z-index: 8; white-space: nowrap; outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer; border-radius:30px;">CONTACT US</div>
+<%--              <div onclick="window.location.href='/list'"--%>
+<%--                   class="tp-caption Newspaper-Button rev-btn "--%>
+<%--                   id="slide-200-layer-5"--%>
+<%--                   data-x="['center','center','center','center']"--%>
+<%--                   data-hoffset="['90','80','75','90']"--%>
+<%--                   data-y="['top','top','top','top']"--%>
+<%--                   data-voffset="['400','400','400','420']"--%>
+<%--                   data-width="none"--%>
+<%--                   data-height="none"--%>
+<%--                   data-whitespace="nowrap"--%>
+<%--                   data-type="button"--%>
+<%--                   data-responsive_offset="on"--%>
+<%--                   data-responsive="off"--%>
+<%--                   data-frames='[{"from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"300","ease":"Power1.easeInOut","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(0, 0, 0, 1.00);bg:rgba(255, 255, 255, 1.00);bc:rgba(255, 255, 255, 1.00);bw:1px 1px 1px 1px;"}]'--%>
+<%--                   data-textAlign="['center','center','center','center']"--%>
+<%--                   data-paddingtop="[12,12,12,12]"--%>
+<%--                   data-paddingright="[30,35,35,15]"--%>
+<%--                   data-paddingbottom="[12,12,12,12]"--%>
+<%--                   data-paddingleft="[30,35,35,15]"--%>
+<%--                   style="z-index: 8; white-space: nowrap; outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer; background-color:var(--primary) !important; border:0; border-radius:30px; margin-right:5px;" >READ MORE </div>--%>
+<%--              <div class="tp-caption Newspaper-Button rev-btn"--%>
+<%--                   id="slide-200-layer-6"--%>
+<%--                   data-x="['center','center','center','center']"--%>
+<%--                   data-hoffset="['-90','-80','-75','-90']"--%>
+<%--                   data-y="['top','top','top','top']"--%>
+<%--                   data-voffset="['400','400','400','420']"--%>
+<%--                   data-width="none"--%>
+<%--                   data-height="none"--%>
+<%--                   data-whitespace="nowrap"--%>
+<%--                   data-type="button"--%>
+<%--                   data-responsive_offset="on"--%>
+<%--                   data-responsive="off"--%>
+<%--                   data-frames='[{"from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"300","ease":"Power1.easeInOut","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(0, 0, 0, 1.00);bg:rgba(255, 255, 255, 1.00);bc:rgba(255, 255, 255, 1.00);bw:1px 1px 1px 1px;"}]'--%>
+<%--                   data-textAlign="['center','center','center','center']"--%>
+<%--                   data-paddingtop="[12,12,12,12]"--%>
+<%--                   data-paddingright="[30,35,35,15]"--%>
+<%--                   data-paddingbottom="[12,12,12,12]"--%>
+<%--                   data-paddingleft="[30,35,35,15]"--%>
+<%--                   style="z-index: 8; white-space: nowrap; outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer; border-radius:30px;">CONTACT US</div>--%>
             </li>
             <!-- SLIDE  -->
           </ul>
@@ -474,9 +473,10 @@
             </div>
             </div>
           <div class="row" id="bar-chart-append">
-              <div class="container">
+              <div class="container" style="margin: 20px; margin-top: 0px">
                 <input type="number" id="numofservice" placeholder="Number of service providers" class="col-3" step="10" min="0">
                 <select id="select-order" class="col-8">
+                  <h6 class="dropdown-item-text">Order</h6>
                   <option value="alphabetical">Alphabetical</option>
                   <option value="ascending">TFT Score, ascending</option>
                   <option value="descending" selected>TFT Score, descending</option>
@@ -572,34 +572,6 @@
                   </div>
                 </div>
               </form>
-            </div>
-          </div>
-          <div class="mw800 m-auto">
-            <div class="row">
-              <div class="col-md-4 col-sm-6">
-                <div class="cours-search-bx m-b30">
-                  <div class="icon-box">
-                    <h3><i class="ti-user"></i><span class="counter">50</span>K</h3>
-                  </div>
-                  <span class="cours-search-text">Over 50000 Facebook users</span>
-                </div>
-              </div>
-              <div class="col-md-4 col-sm-6">
-                <div class="cours-search-bx m-b30">
-                  <div class="icon-box">
-                    <h3><i class="ti-book"></i><span class="counter">100</span></h3>
-                  </div>
-                  <span class="cours-search-text">More than 100 Service Providers</span>
-                </div>
-              </div>
-              <div class="col-md-4 col-sm-12">
-                <div class="cours-search-bx m-b30">
-                  <div class="icon-box">
-                    <h3><i class="ti-layout-list-post"></i><span class="counter">100</span>K</h3>
-                  </div>
-                  <span class="cours-search-text">Based on 100000 posts and reviews</span>
-                </div>
-              </div>
             </div>
           </div>
         </div>
@@ -742,7 +714,7 @@
         window.location.href = "/list";
     });
 </script>
-  <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
   <script src="/js/graph/graphs.js"></script>
 <%--  <script src="/js/graph/disjoint-graph.js"></script>--%>
 </body>

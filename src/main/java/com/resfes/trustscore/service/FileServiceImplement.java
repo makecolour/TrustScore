@@ -274,7 +274,38 @@ try {
             if (objectNode.has("a")) {
                 existingNode.put("id", objectNode.get("a").get("elementId").asText());
                 existingNode.put("group", objectNode.get("a").get("labels"));
-                existingNode.put("properties", objectNode.get("a").get("properties"));
+                JsonNode properties = objectNode.get("a").get("properties");
+                existingNode.put("properties", properties);
+                if(properties.has("service_type"))
+                {
+                    JsonNode serviceType = properties.get("service_type");
+                    if(serviceType.toString().contains("van_chuyen"))
+                    {
+                        existingNode.put("facebook_profile_pic", "/assets/images/services/transport.png");
+                    }
+                    else if(serviceType.toString().contains("an_uong"))
+                    {
+                        existingNode.put("facebook_profile_pic", "/assets/images/services/food.png");
+                    }
+                    else if(serviceType.toString().contains("thue_phong"))
+                    {
+                        existingNode.put("facebook_profile_pic", "/assets/images/services/rent.png");
+                    }
+                    else if(serviceType.toString().contains("giat_la"))
+                    {
+                        existingNode.put("facebook_profile_pic", "/assets/images/services/laundry.png");
+                    }
+                    else if(serviceType.toString().contains("giao_duc"))
+                    {
+                        existingNode.put("facebook_profile_pic", "/assets/images/services/edu.png");
+                    }
+                    else if(serviceType.toString().contains("my_pham"))
+                    {
+                        existingNode.put("facebook_profile_pic", "/assets/images/services/cosmetic.png");
+                    }else{
+                        existingNode.put("facebook_profile_pic", "/assets/images/services/other.png");
+                    }
+                }
                 JsonNode nameNode = objectNode.get("a").get("properties").get("name");
                 JSONArray employee;
                 if (nameNode.isArray()) {
@@ -334,6 +365,7 @@ try {
             else{
                 //existingNode.setAll(objectNode);
             }
+
 
         }
         else {

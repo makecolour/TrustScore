@@ -46,7 +46,10 @@
 
     <!-- SHORTCODES ============================================= -->
     <link rel="stylesheet" type="text/css" href="/assets/css/shortcodes/shortcodes.css">
-
+    <!-- REVOLUTION SLIDER CSS ============================================= -->
+    <link rel="stylesheet" type="text/css" href="/assets/vendors/revolution/css/layers.css">
+    <link rel="stylesheet" type="text/css" href="/assets/vendors/revolution/css/settings.css">
+    <link rel="stylesheet" type="text/css" href="/assets/vendors/revolution/css/navigation.css">
     <!-- STYLESHEETS ============================================= -->
     <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
     <link class="skin" rel="stylesheet" type="text/css" href="/assets/css/color/color-1.css">
@@ -121,7 +124,7 @@
 <%--                            </div>--%>
 
                             <div class="widget">
-                                <a href=${FUHL} target="_blank"><img src="/assets/images/adv/adv.jpg" alt=""/></a>
+                                <a href="https://www.facebook.com/fptedu.resfes" target="_blank"><img src="/assets/images/adv/adv.jpg" alt=""/></a>
                             </div>
                         </div>
                         <%--show course --%>
@@ -160,12 +163,21 @@
                                                     <div class="review">
                                                         <span>${object.get('first_combine')}</span>
                                                         <ul class="cours-star">
-                                                            <c:forEach var="i" begin="1" end="${object.get('star').asDouble().intValue()}">
-                                                                <li class="active"><i class="fa fa-star"></i></li>
-                                                            </c:forEach>
-                                                            <c:forEach var="i" begin="${object.get('star').asDouble().intValue() + 1}" end="5">
-                                                                <li><i class="fa fa-star"></i></li>
-                                                            </c:forEach>
+                                                            <c:choose>
+                                                                <c:when test="${object.get('star').asDouble() <= 0}">
+                                                                    <c:forEach var="i" begin="1" end="5">
+                                                                        <li><i class="fa fa-star"></i></li>
+                                                                    </c:forEach>
+                                                                </c:when>
+                                                                <c:otherwise>
+                                                                    <c:forEach var="i" begin="1" end="${object.get('star').asDouble().intValue()}">
+                                                                        <li class="active"><i class="fa fa-star"></i></li>
+                                                                    </c:forEach>
+                                                                    <c:forEach var="i" begin="${object.get('star').asDouble().intValue() + 1}" end="5">
+                                                                        <li><i class="fa fa-star"></i></li>
+                                                                    </c:forEach>
+                                                                </c:otherwise>
+                                                            </c:choose>
                                                         </ul>
                                                     </div>
                                                     <div class="price">

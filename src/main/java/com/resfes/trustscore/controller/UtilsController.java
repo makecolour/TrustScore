@@ -87,17 +87,17 @@ public class UtilsController {
 
 
     @RequestMapping("/list")
-    public ModelAndView list(HttpSession session, @RequestParam(value = "q", required = false) String query, @RequestParam(value = "page", defaultValue = "0") int page, @RequestParam(value = "size", defaultValue = "12") int size) {
-        ModelAndView modelAndView = new ModelAndView("list");// Page is 0-indexed for PageRequest
-        Page<JsonNode> objects = null;
+    public ModelAndView list(HttpSession session, @RequestParam(value = "q", required = false) String query, @RequestParam(value = "page", defaultValue = "0") int page, @RequestParam(value = "size", defaultValue = "9") int size, @RequestParam(value = "service", defaultValue = "") String service) {
+        ModelAndView modelAndView = new ModelAndView("list");
         try {
+            Page<JsonNode> objects;
             if (query != null && !query.trim().isEmpty()) {
-                objects = dataService.searchObjects(query, page, size); // Page is 0-indexed for searchObjects
+                objects = dataService.searchObjects(query, page, size, service);
             } else {
-                objects = dataService.getAllObjects(page, size); // Page is 0-indexed for getAllObjects
+                objects = dataService.getAllObjects(page, size);
             }
-
             session.setAttribute("query", query);
+
             modelAndView.addObject("FUHL", application.getFuhl());
             modelAndView.addObject("query", query);
             modelAndView.addObject("objects", objects.getContent());
@@ -108,7 +108,6 @@ public class UtilsController {
         }
         return modelAndView;
     }
-
     @GetMapping("/about")
     public ModelAndView about() {
         ModelAndView modelAndView = new ModelAndView("about");

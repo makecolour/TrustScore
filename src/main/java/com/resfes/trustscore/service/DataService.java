@@ -12,7 +12,7 @@ public interface DataService {
     JsonNode getUser(String owner);
     List<JsonNode> getObjectsWithId() throws IOException;
     Page<JsonNode> getAllObjects(int page, int size) throws IOException;
-    Page<JsonNode> searchObjects(String query, int page, int size) throws IOException ;
+    Page<JsonNode> searchObjects(String query, int page, int size, String service) throws IOException ;
     JsonNode getTopUser() throws IOException;
     List<JsonNode> getTopUsers(int n) throws IOException;
     List<Map<String, Object>> getInteract(JsonNode node);

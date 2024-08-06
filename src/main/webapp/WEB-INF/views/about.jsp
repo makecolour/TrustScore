@@ -65,7 +65,7 @@
     <!-- Inner Content Box ==== -->
     <div class="page-content">
         <!-- Page Heading Box ==== -->
-        <div class="page-banner ovbl-dark" style="background-image:url(/assets/images/banner/banner2.jpg);">
+        <div class="page-banner ovbl-dark" style="background-image:url(/assets/images/gallery/resfes.png);">
             <div class="container">
                 <div class="page-banner-entry">
                     <h1 class="text-white">About us</h1>
@@ -84,56 +84,56 @@
         <!-- Page Content Box ==== -->
         <div class="content-block">
             <!-- About Us ==== -->
-            <div class="section-area section-sp1">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-3 col-md-6 col-sm-6 m-b30">
-                            <div class="feature-container">
-                                <div class="feature-md text-white m-b20">
-                                    <a href="#" class="icon-cell"><img src="/assets/images/icon/icon1.png" alt=""/></a>
-                                </div>
-                                <div class="icon-content">
-                                    <h5 class="ttr-tilte">Our Philosophy</h5>
-                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod..</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 col-sm-6 m-b30">
-                            <div class="feature-container">
-                                <div class="feature-md text-white m-b20">
-                                    <a href="#" class="icon-cell"><img src="/assets/images/icon/icon2.png" alt=""/></a>
-                                </div>
-                                <div class="icon-content">
-                                    <h5 class="ttr-tilte">Kingster's Principle</h5>
-                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod..</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 col-sm-6 m-b30">
-                            <div class="feature-container">
-                                <div class="feature-md text-white m-b20">
-                                    <a href="#" class="icon-cell"><img src="/assets/images/icon/icon3.png" alt=""/></a>
-                                </div>
-                                <div class="icon-content">
-                                    <h5 class="ttr-tilte">Key Of Success</h5>
-                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod..</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 col-sm-6 m-b30">
-                            <div class="feature-container">
-                                <div class="feature-md text-white m-b20">
-                                    <a href="#" class="icon-cell"><img src="/assets/images/icon/icon4.png" alt=""/></a>
-                                </div>
-                                <div class="icon-content">
-                                    <h5 class="ttr-tilte">Our Philosophy</h5>
-                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod..</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<%--            <div class="section-area section-sp1">--%>
+<%--                <div class="container">--%>
+<%--                    <div class="row">--%>
+<%--                        <div class="col-lg-3 col-md-6 col-sm-6 m-b30">--%>
+<%--                            <div class="feature-container">--%>
+<%--                                <div class="feature-md text-white m-b20">--%>
+<%--                                    <a href="#" class="icon-cell"><img src="/assets/images/icon/icon1.png" alt=""/></a>--%>
+<%--                                </div>--%>
+<%--                                <div class="icon-content">--%>
+<%--                                    <h5 class="ttr-tilte">Our Philosophy</h5>--%>
+<%--                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod..</p>--%>
+<%--                                </div>--%>
+<%--                            </div>--%>
+<%--                        </div>--%>
+<%--                        <div class="col-lg-3 col-md-6 col-sm-6 m-b30">--%>
+<%--                            <div class="feature-container">--%>
+<%--                                <div class="feature-md text-white m-b20">--%>
+<%--                                    <a href="#" class="icon-cell"><img src="/assets/images/icon/icon2.png" alt=""/></a>--%>
+<%--                                </div>--%>
+<%--                                <div class="icon-content">--%>
+<%--                                    <h5 class="ttr-tilte">Kingster's Principle</h5>--%>
+<%--                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod..</p>--%>
+<%--                                </div>--%>
+<%--                            </div>--%>
+<%--                        </div>--%>
+<%--                        <div class="col-lg-3 col-md-6 col-sm-6 m-b30">--%>
+<%--                            <div class="feature-container">--%>
+<%--                                <div class="feature-md text-white m-b20">--%>
+<%--                                    <a href="#" class="icon-cell"><img src="/assets/images/icon/icon3.png" alt=""/></a>--%>
+<%--                                </div>--%>
+<%--                                <div class="icon-content">--%>
+<%--                                    <h5 class="ttr-tilte">Key Of Success</h5>--%>
+<%--                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod..</p>--%>
+<%--                                </div>--%>
+<%--                            </div>--%>
+<%--                        </div>--%>
+<%--                        <div class="col-lg-3 col-md-6 col-sm-6 m-b30">--%>
+<%--                            <div class="feature-container">--%>
+<%--                                <div class="feature-md text-white m-b20">--%>
+<%--                                    <a href="#" class="icon-cell"><img src="/assets/images/icon/icon4.png" alt=""/></a>--%>
+<%--                                </div>--%>
+<%--                                <div class="icon-content">--%>
+<%--                                    <h5 class="ttr-tilte">Our Philosophy</h5>--%>
+<%--                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod..</p>--%>
+<%--                                </div>--%>
+<%--                            </div>--%>
+<%--                        </div>--%>
+<%--                    </div>--%>
+<%--                </div>--%>
+<%--            </div>--%>
             <!-- About Us END ==== -->
             <!-- Our Story ==== -->
             <div class="section-area bg-gray section-sp1 our-story">
@@ -143,11 +143,11 @@
                             <h2 class="m-b10">Our Story</h2>
                             <h5 class="fw4">It is a long established fact that a reade.</h5>
                             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-                            <a href="#" class="btn">Read More</a>
+                            <a href="#" class="btn">So, we chose to </a>
                         </div>
                         <div class="col-lg-7 col-md-12 heading-bx p-lr">
                             <div class="video-bx">
-                                <img src="/assets/images/about/pic1.jpg" alt=""/>
+                                <img src="/assets/images/about/pic1.jpg" alt="Presentation goes here"/>
                                 <a href="https://www.youtube.com/watch?v=x_sJzVe9P_8" class="popup-youtube video"><i class="fa fa-play"></i></a>
                             </div>
                         </div>
@@ -163,33 +163,33 @@
                             <div class="col-lg-3 col-md-6 col-sm-6 col-6 m-b30">
                                 <div class="counter-style-1">
                                     <div class="text-primary">
-                                        <span class="counter">3000</span><span>+</span>
+                                        <span class="counter">58,000</span><span>+</span>
                                     </div>
-                                    <span class="counter-text">Completed Projects</span>
+                                    <span class="counter-text">Comments</span>
                                 </div>
                             </div>
                             <div class="col-lg-3 col-md-6 col-sm-6 col-6 m-b30">
                                 <div class="counter-style-1">
                                     <div class="text-black">
-                                        <span class="counter">2500</span><span>+</span>
+                                        <span class="counter">4800</span><span>+</span>
                                     </div>
-                                    <span class="counter-text">Happy Clients</span>
+                                    <span class="counter-text">Posts</span>
                                 </div>
                             </div>
                             <div class="col-lg-3 col-md-6 col-sm-6 col-6 m-b30">
                                 <div class="counter-style-1">
                                     <div class="text-primary">
-                                        <span class="counter">1500</span><span>+</span>
+                                        <span class="counter">6300</span><span>+</span>
                                     </div>
-                                    <span class="counter-text">Questions Answered</span>
+                                    <span class="counter-text">Users</span>
                                 </div>
                             </div>
                             <div class="col-lg-3 col-md-6 col-sm-6 col-6 m-b30">
                                 <div class="counter-style-1">
                                     <div class="text-black">
-                                        <span class="counter">1000</span><span>+</span>
+                                        <span class="counter">3</span><span>+</span>
                                     </div>
-                                    <span class="counter-text">Ordered Coffee's</span>
+                                    <span class="counter-text">Months of Researching</span>
                                 </div>
                             </div>
                         </div>
@@ -203,10 +203,10 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="join-content-bx text-white">
-                                <h2>Learn a new skill online on <br/> your time</h2>
-                                <h4><span class="counter">57,000 </span> Online Courses</h4>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                                <a href="#" class="btn button-md">Join Now</a>
+                                <h2>The Trust Management Project</h2>
+<%--                                <h4><span class="counter">57,000 </span> Online Courses</h4>--%>
+                                <p>offers trust reputation scores for services provided within the FU-HL group, a large and active community on Facebook associated with FPT University Hanoi. This system recommends services from reputable providers and shares their contact information, enabling users to easily connect with and utilize these services.</p>
+                                <a href="https://www.facebook.com/groups/fuhoalac" class="btn button-md">FU-HL</a>
                             </div>
                         </div>
                     </div>

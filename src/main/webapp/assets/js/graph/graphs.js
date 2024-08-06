@@ -419,7 +419,8 @@ function barChart (data2)  {
     const svg = d3.create("svg")
         .attr("viewBox", [0, 0, width, height])
         .attr("style", `max-width: ${width}px; height: auto; font: 10px rubik; overflow: visible;`)
-        .attr('viewBox', `0 0 ${width} ${height}`);
+        .attr('viewBox', `0 0 ${width} ${height}`).attr("width", width)
+        .attr("height", height).call(zoom);
 
 
     const bar = svg.append("g")
@@ -463,9 +464,27 @@ function barChart (data2)  {
             .attr("y", 0)
             .attr("fill", "currentColor")
             .attr("text-anchor", "start")
-            .text("↑ Page Rank"))
+            .text("↑ TFT Score"))
         .call(g => g.select(".domain").remove());
 
+    svg.call(d3.zoom().on("zoom", function () {
+         svg.attr("transform", d3.event.transform);
+    }))
+    function zoom(svg) {
+        const extent = [[marginLeft, marginTop], [width - marginRight, height - marginTop]];
+
+        svg.call(d3.zoom()
+            .scaleExtent([1, 8])
+            .translateExtent(extent)
+            .extent(extent)
+            .on("zoom", zoomed));
+
+        function zoomed(event) {
+            x.range([marginLeft, width - marginRight].map(d => event.transform.applyX(d)));
+            svg.selectAll(".bars rect").attr("x", d => x(d.letter)).attr("width", x.bandwidth());
+            svg.selectAll(".x-axis").call(xAxis);
+        }
+    }
     // Return the chart, with an update function that takes as input a domain
     // comparator and transitions the x axis and bar positions accordingly.
     return Object.assign(svg.node(), {
@@ -492,11 +511,11 @@ function barChart (data2)  {
 }
 
 window.onload = async function() {
-    const data2 = await fetch('/api/top10').then(response => response.json());
+    var data2 = await fetch('/api/topUser?n=10').then(response => response.json());
     const node = await fetch('/api/objects').then(response => response.json());
     const link = await fetch('/api/link').then(response => response.json());
 
-    const barChartSVG = barChart(data2);
+    var barChartSVG = barChart(data2);
     const disjointSVG = disjointChart(node, link);
 
     barChartSVG.style.marginTop = 30;
@@ -505,6 +524,20 @@ window.onload = async function() {
     barChartAppend.append(barChartSVG);
     const append = document.getElementById('disjoint-append');
     append.appendChild(disjointSVG);
+
+    const numOfService = document.getElementById('numofservice');
+    numOfService.addEventListener('change', async function() {
+        const value = numOfService.value;
+        if (!isNaN(value) && value.trim() !== '') {
+            data2 = await fetch(`/api/topUser?n=${value}`).then(response => response.json());
+            barChartAppend.removeChild(barChartSVG);
+            barChartSVG = barChart(data2);
+            barChartAppend.append(barChartSVG);
+
+        } else {
+            console.log('The value is not a number:', value);
+        }
+    });
 
     $(document).ready(function() {
         $('.selectpicker').selectpicker();

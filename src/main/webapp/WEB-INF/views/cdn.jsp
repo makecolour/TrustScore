@@ -11,13 +11,22 @@
     <title>Title</title>
 </head>
 <body>
-<div id="tooltip" style="position: absolute; opacity: 0;"></div>
 
-<div id="append-bar-chart" class="bar-chart">
-    <svg id="bar-chart" width="1400" height="500"></svg>
+<div class="row" id="bar-chart-append">
+    <div class="container" style="margin: 20px; margin-top: 0px">
+        <input type="number" id="numofservice" placeholder="Number of service providers" class="col-3" step="10" min="0">
+        <select id="select-order" class="col-8">
+            <h6 class="dropdown-item-text">Order</h6>
+            <option value="alphabetical">Alphabetical</option>
+            <option value="ascending">TFT Score, ascending</option>
+            <option value="descending" selected>TFT Score, descending</option>
+        </select>
+    </div>
+    <div id="tooltip2" class="tooltip bs-tooltip-bottom"></div>
 </div>
+
 <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
-<script src="/js/graph/disjoint-graph.js"></script>
+<script src="/js/graph/graphs.js"></script>
 
 </body>
 </html>

@@ -53,7 +53,10 @@
 
     <!-- SHORTCODES ============================================= -->
     <link rel="stylesheet" type="text/css" href="/assets/css/shortcodes/shortcodes.css">
-
+    <!-- REVOLUTION SLIDER CSS ============================================= -->
+    <link rel="stylesheet" type="text/css" href="/assets/vendors/revolution/css/layers.css">
+    <link rel="stylesheet" type="text/css" href="/assets/vendors/revolution/css/settings.css">
+    <link rel="stylesheet" type="text/css" href="/assets/vendors/revolution/css/navigation.css">
     <!-- STYLESHEETS ============================================= -->
     <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
     <link class="skin" rel="stylesheet" type="text/css" href="/assets/css/color/color-1.css">
@@ -98,7 +101,7 @@
         <div class="page-banner ovbl-dark" style="background-image:url(
         <c:choose>
             <c:when test="${object.hasNonNull('facebook_profile_pic')}">${object.get('facebook_profile_pic').asText()}</c:when>
-            <c:otherwise>/assets/images/gallery/FUHL.jpg</c:otherwise>
+            <c:otherwise>/assets/images/gallery/resfes.png</c:otherwise>
         </c:choose>);">
             <div class="container">
                 <div class="page-banner-entry">
@@ -231,7 +234,7 @@
                                         </ul>
                                     </div>
                                     <div class="col-md-12 col-lg-4">
-                                        <h5 class="m-b5">Interactions</h5>
+                                        <h5 class="m-b5">Feedbacks</h5>
                                         <div style="width: 100%; display: block; margin: 20px 0px"
                                              id="chart-container"></div>
                                     </div>
@@ -296,7 +299,7 @@
         <button class="back-to-top fa fa-chevron-up"></button>
     </div>
     <!-- External JavaScripts -->
-    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+    <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
     <script src="/assets/js/jquery.min.js"></script>
     <script src="/assets/js/graph/pie-chart.js"></script>
     <script>
