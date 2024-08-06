@@ -391,11 +391,11 @@ function disjointChart(nodeFile={}, linkFile={}) {
     return svg.node();
 }
 
-function barChart (data2)  {
+function barChart (data2,  parentWidth = 1200, parentHeight = 400)  {
 
     // Specify the chart’s dimensions.
-    const width = 1200;
-    const height = 400;
+    const width = parentWidth;
+    const height = Math.min(parentHeight, width/3);
     const marginTop = 20;
     const marginRight = 0;
     const marginBottom = 30;
@@ -510,28 +510,33 @@ function barChart (data2)  {
 
 }
 
+const numOfService = document.getElementById('numofservice');
+const append = document.getElementById('disjoint-append');
+const barChartAppend = document.getElementById('bar-chart-append');
 window.onload = async function() {
+
     var data2 = await fetch('/api/topUser?n=10').then(response => response.json());
     const node = await fetch('/api/objects').then(response => response.json());
     const link = await fetch('/api/link').then(response => response.json());
 
-    var barChartSVG = barChart(data2);
+    adjustHeight(barChartAppend);
+
+    var barChartSVG = barChart(data2, barChartAppend.clientWidth, barChartAppend.clientHeight);
     const disjointSVG = disjointChart(node, link);
 
-    barChartSVG.style.marginTop = 30;
-    const barChartAppend = document.getElementById('bar-chart-append');
+    barChartSVG.style.margin = "30px 0px";
 
     barChartAppend.append(barChartSVG);
-    const append = document.getElementById('disjoint-append');
+
     append.appendChild(disjointSVG);
 
-    const numOfService = document.getElementById('numofservice');
+
     numOfService.addEventListener('change', async function() {
         const value = numOfService.value;
         if (!isNaN(value) && value.trim() !== '') {
             data2 = await fetch(`/api/topUser?n=${value}`).then(response => response.json());
             barChartAppend.removeChild(barChartSVG);
-            barChartSVG = barChart(data2);
+            barChartSVG = barChart(data2, barChartAppend.clientWidth, barChartAppend.clientHeight);
             barChartAppend.append(barChartSVG);
 
         } else {
@@ -555,11 +560,18 @@ window.onload = async function() {
                     break;
             }
         });
-
     });
 }
 
+function adjustHeight(container) {
+    const width = container.clientWidth;
+    container.style.height = width/3 + 'px';
+    container.style.margin = width/12 + 'px 0px';
+}
 
+window.onresize = function() {
+    adjustHeight(barChartAppend);
+}
 
 
 
