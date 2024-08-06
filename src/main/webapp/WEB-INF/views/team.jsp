@@ -6,12 +6,12 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<div class="section-area section-sp2 bg-fix ovbl-dark" style="background-image:url(/assets/images/background/bg1.jpg);">
+<div class="section-area section-sp2 bg-fix ovbl-dark" style="background-image:url(/assets/images/gallery/resfes.png);">
     <div class="container">
         <div class="row">
             <div class="col-md-12 text-white heading-bx left">
                 <h2 class="title-head text-uppercase">Who <span>we are</span></h2>
-                <p>A research by</p>
+                <p>A research project by</p>
             </div>
         </div>
         <div class="testimonial-carousel owl-carousel owl-btn-1 col-12 p-lr0">
@@ -21,7 +21,7 @@
                         <img src="/assets/images/testimonials/pic2.jpg" alt="">
                     </div>
                     <div class="testimonial-info">
-                        <h5 class="name">Mr.Pham Van Duong</h5>
+                        <h5 class="name">M.S.Pham Van Duong</h5>
                         <p>-Instructor</p>
                     </div>
 <%--                    <div class="testimonial-content">--%>
@@ -35,7 +35,7 @@
                         <img src="/assets/images/testimonials/pic2.jpg" alt="">
                     </div>
                     <div class="testimonial-info">
-                        <h5 class="name">Bui Duc Hieu</h5>
+                        <h5 class="name">Nguyen Huy Duc Hieu</h5>
                         <p>-Project Leader</p>
                     </div>
                     <%--                    <div class="testimonial-content">--%>
@@ -61,7 +61,7 @@
             <div class="item">
                 <div class="testimonial-bx">
                     <div class="testimonial-thumb">
-                        <img src="/assets/images/testimonials/pic2.jpg" alt="">
+                        <img src="/assets/images/team/QuyenNT.jpg" alt="">
                     </div>
                     <div class="testimonial-info">
                         <h5 class="name">Nguyen Thuong Quyen</h5>

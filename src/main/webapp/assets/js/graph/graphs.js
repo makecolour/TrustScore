@@ -566,7 +566,7 @@ window.onload = async function() {
 function adjustHeight(container) {
     const width = container.clientWidth;
     container.style.height = width/3 + 'px';
-    container.style.margin = width/12 + 'px 0px';
+    container.style.marginBottom = width/12 + 'px';
 }
 
 window.onresize = function() {

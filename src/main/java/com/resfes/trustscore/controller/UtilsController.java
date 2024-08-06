@@ -77,6 +77,7 @@ public class UtilsController {
         for(String name:namesList){
             comments.addAll(dataService.getComments(name));
         }
+
         modelAndView.addObject("comments", comments);
         modelAndView.addObject("ownersList", ownersList);
         modelAndView.addObject("namesList", namesList);
@@ -87,17 +88,31 @@ public class UtilsController {
 
 
     @RequestMapping("/list")
-    public ModelAndView list(HttpSession session, @RequestParam(value = "q", required = false) String query, @RequestParam(value = "page", defaultValue = "0") int page, @RequestParam(value = "size", defaultValue = "9") int size, @RequestParam(value = "service", defaultValue = "") String service) {
+    public ModelAndView list(HttpSession session, @RequestParam(value = "q", required = false) String query, @RequestParam(value = "page", defaultValue = "0") int page, @RequestParam(value = "size", defaultValue = "9") int size, @RequestParam(value = "service", defaultValue = "", required = false) String service) {
         ModelAndView modelAndView = new ModelAndView("list");
+        if(page < 0){
+            page = 0;
+        }
+        if(size < 1){
+            size = 1;
+        }
+        if(size > 100){
+            size = 100;
+        }
+
         try {
             Page<JsonNode> objects;
-            if (query != null && !query.trim().isEmpty()) {
+            if (query != null && !query.trim().isEmpty()|| service != null && !service.trim().isEmpty()) {
+                if(query == null){
+                    query = "";
+                }
                 objects = dataService.searchObjects(query, page, size, service);
             } else {
                 objects = dataService.getAllObjects(page, size);
             }
             session.setAttribute("query", query);
 
+            modelAndView.addObject("service", service);
             modelAndView.addObject("FUHL", application.getFuhl());
             modelAndView.addObject("query", query);
             modelAndView.addObject("objects", objects.getContent());

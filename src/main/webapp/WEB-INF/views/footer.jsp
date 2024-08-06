@@ -20,7 +20,7 @@
 <%--                            <li><a href="#" class="btn-link"><i class="fa fa-facebook"></i></a></li>--%>
 <%--                            <li><a href="#" class="btn-link"><i class="fa fa-twitter"></i></a></li>--%>
 <%--                            <li><a href="#" class="btn-link"><i class="fa fa-linkedin"></i></a></li>--%>
-                            <li><a href="mailto:quyennthe180534@fpt.edu.vn?subject=Trust Management" class="btn-link"><i class="fa fa-google-plus"></i></a></li>
+                            <li><a href="mailto:Duongpv14@fe.edu.vn?subject=Trust Management" class="btn-link"><i class="fa fa-google-plus"></i></a></li>
                         </ul>
                     </div>
                     <div class="pt-btn-join">
@@ -34,7 +34,7 @@
                 <div class="col-lg-4 col-md-12 col-sm-12 footer-col-4">
                     <div class="widget">
                         <h5 class="footer-title">Trust Management</h5>
-                        <p class="text-capitalize m-b20">FPT Edu Research Festival</p>
+                        <p class="text-capitalize m-b20">FPT Edu Research Festival project</p>
 <%--                        <div class="subscribe-form m-b20">--%>
 <%--                            <form class="subscription-form" action="http://educhamp.themetrades.com/demo/assets/script/mailchamp.php" method="post">--%>
 <%--                                <div class="ajax-message"></div>--%>
@@ -65,8 +65,8 @@
                                 <h5 class="footer-title">Research Documents</h5>
                                 <ul>
 <%--                                    link cac document--%>
-                                    <li><a href="http://educhamp.themetrades.com/admin/index.html">Dashboard</a></li>
-                                    <li><a href="blog-classic-grid.html">Blog</a></li>
+                                    <li><a href="/documents/list">Research Documents</a></li>
+                                    <li><a href="/">Resfes Presentation</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -76,10 +76,11 @@
                     <div class="widget widget_gallery gallery-grid-4">
                         <h5 class="footer-title">Our Gallery</h5>
                         <ul class="magnific-image">
-                            <li><a href="/assets/images/gallery/pic1.jpg" class="magnific-anchor"><img src="/assets/images/gallery/pic1.jpg" alt=""></a></li>
-                            <li><a href="/assets/images/gallery/pic2.jpg" class="magnific-anchor"><img src="/assets/images/gallery/pic2.jpg" alt=""></a></li>
-                            <li><a href="/assets/images/gallery/pic3.jpg" class="magnific-anchor"><img src="/assets/images/gallery/pic3.jpg" alt=""></a></li>
-                            <li><a href="/assets/images/gallery/pic4.jpg" class="magnific-anchor"><img src="/assets/images/gallery/pic4.jpg" alt=""></a></li>
+                            <li><a href="/assets/images/services/food.png" class="magnific-anchor"><img src="/assets/images/services/food.png" alt=""></a></li>
+                            <li><a href="/assets/images/services/transport.png" class="magnific-anchor"><img src="/assets/images/services/transport.png" alt=""></a></li>
+                            <li><a href="/assets/images/services/edu.png" class="magnific-anchor"><img src="/assets/images/services/edu.png" alt=""></a></li>
+                            <li><a href="/assets/images/services/rent.png" class="magnific-anchor"><img src="/assets/images/services/rent.png" alt=""></a></li>
+                            <li><a href="/assets/images/services/cosmetic.png" class="magnific-anchor"><img src="/assets/images/services/cosmetic.png" alt=""></a></li>
                         </ul>
                     </div>
                 </div>

@@ -421,42 +421,42 @@
             <div class="col-lg-4 col-md-4 col-sm-6">
               <div class="service-bx">
                 <div class="action-box">
-                  <img src="/assets/images/our-services/pic1.jpg" alt="">
+                  <img src="/assets/images/our-services/pic1.png" alt="">
                 </div>
                 <div class="info-bx text-center">
                   <div class="feature-box-sm radius bg-white">
-                    <i class="fa fa-bank text-primary"></i>
+                    <i class="fa fa-address-book-o text-primary"></i>
                   </div>
                   <h4><a href="/list">Service Providers</a></h4>
-                  <a href="#" class="btn radius-xl">View More</a>
+                  <a href="/list" class="btn radius-xl">View More</a>
                 </div>
               </div>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-6">
               <div class="service-bx">
                 <div class="action-box">
-                  <img src="/assets/images/our-services/pic2.jpg" alt="">
+                  <img src="/assets/images/our-services/pic2.png" alt="">
                 </div>
                 <div class="info-bx text-center">
                   <div class="feature-box-sm radius bg-white">
-                    <i class="fa fa-book text-primary"></i>
+                    <i class="fa fa-file-text-o text-primary"></i>
                   </div>
                   <h4><a href="/documents/list">Research Documents</a></h4>
-                  <a href="#" class="btn radius-xl">View More</a>
+                  <a href="/documents/list" class="btn radius-xl">View More</a>
                 </div>
               </div>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-12">
               <div class="service-bx m-b0">
                 <div class="action-box">
-                  <img src="/assets/images/our-services/pic3.jpg" alt="">
+                  <img src="/assets/images/our-services/pic3.png" alt="">
                 </div>
                 <div class="info-bx text-center">
                   <div class="feature-box-sm radius bg-white">
-                    <i class="fa fa-file-text-o text-primary"></i>
+                    <i class="fa fa-users text-primary"></i>
                   </div>
                   <h4><a href="/about">About Us</a></h4>
-                  <a href="#" class="btn radius-xl">View More</a>
+                  <a href="/about" class="btn radius-xl">View More</a>
                 </div>
               </div>
             </div>

@@ -15,11 +15,11 @@
     <meta name="robots" content=""/>
 
     <!-- DESCRIPTION -->
-    <meta name="description" content="Service Providers"/>
+    <meta name="description" content="Trust Management: Service Providers"/>
 
     <!-- OG -->
-    <meta property="og:title" content="Service Providers"/>
-    <meta property="og:description" content="Service Providers"/>
+    <meta property="og:title" content="Trust Management: Service Providers"/>
+    <meta property="og:description" content="Trust Management: Service Providers"/>
     <meta property="og:image" content=""/>
     <meta name="format-detection" content="telephone=no">
 
@@ -28,7 +28,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="/assets/images/favicon.png"/>
 
     <!-- PAGE TITLE HERE ============================================= -->
-    <title>Service Providers</title>
+    <title>Trust Management: Service Providers</title>
 
     <!-- MOBILE SPECIFIC ============================================= -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -104,24 +104,71 @@
                                 </div>
                             </div>
 
-<%--                            &lt;%&ndash;                            search course by subject&ndash;%&gt;--%>
-
-<%--                            <div class="widget widget_archive">--%>
-<%--                                <h5 class="widget-title style-1">All Subject</h5>--%>
-<%--                                <ul>--%>
-<%--                                    <c:if test="${empty subjectSet}">--%>
-<%--                                        <p>No subject available.</p>--%>
-<%--                                    </c:if>--%>
-<%--                                    <c:if test="${not empty subjectSet}">--%>
-<%--                                        <li><a href="${pageContext.request.contextPath}/course">General</a></li>--%>
-<%--                                        <c:forEach items="${subjectSet}" var="sub">--%>
-<%--                                            <li>--%>
-<%--                                                <a href="${pageContext.request.contextPath}/course/search?courseSearch=${param.courseSearch}&subjectId=${sub.id}">${sub.name}- ${sub.code}</a>--%>
-<%--                                            </li>--%>
-<%--                                        </c:forEach>--%>
-<%--                                    </c:if>--%>
-<%--                                </ul>--%>
-<%--                            </div>--%>
+                            <div class="widget widget_archive">
+                                <h5 class="widget-title style-1">Services</h5>
+                                <ul>
+                                    <li>
+                                        <c:choose>
+                                            <c:when test="${empty query}">
+                                                <a href="${pageContext.request.contextPath}/list">General</a>
+                                            </c:when>
+                                            <c:otherwise>
+                                                <a href="${pageContext.request.contextPath}/list?q=${query}">All services</a>
+                                            </c:otherwise>
+                                        </c:choose>
+                                    </li>
+                                    <li>
+                                        <c:choose>
+                                            <c:when test="${empty query}">
+                                                <a href="${pageContext.request.contextPath}/list?service=an_uong">Food and Beverage</a>
+                                            </c:when>
+                                            <c:otherwise>
+                                                <a href="${pageContext.request.contextPath}/list?q=${query}&service=an_uong">Food and Beverage</a>
+                                            </c:otherwise>
+                                        </c:choose>
+                                    </li>
+                                    <li>
+                                        <c:choose>
+                                            <c:when test="${empty query}">
+                                                <a href="${pageContext.request.contextPath}/list?service=thue_phong">Renting</a>
+                                            </c:when>
+                                            <c:otherwise>
+                                                <a href="${pageContext.request.contextPath}/list?q=${query}&service=thue_phong">Renting</a>
+                                            </c:otherwise>
+                                        </c:choose>
+                                    </li>
+                                    <li>
+                                        <c:choose>
+                                            <c:when test="${empty query}">
+                                                <a href="${pageContext.request.contextPath}/list?service=giat_la">Laundry</a>
+                                            </c:when>
+                                            <c:otherwise>
+                                                <a href="${pageContext.request.contextPath}/list?q=${query}&service=giat_la">Laundry</a>
+                                            </c:otherwise>
+                                        </c:choose>
+                                    </li>
+                                    <li>
+                                        <c:choose>
+                                            <c:when test="${empty query}">
+                                                <a href="${pageContext.request.contextPath}/list?service=giao_duc">Education</a>
+                                            </c:when>
+                                            <c:otherwise>
+                                                <a href="${pageContext.request.contextPath}/list?q=${query}&service=giao_duc">Education</a>
+                                            </c:otherwise>
+                                        </c:choose>
+                                    </li>
+                                    <li>
+                                        <c:choose>
+                                            <c:when test="${empty query}">
+                                                <a href="${pageContext.request.contextPath}/list?service=my_pham">Cosmetics</a>
+                                            </c:when>
+                                            <c:otherwise>
+                                                <a href="${pageContext.request.contextPath}/list?q=${query}&service=my_pham">Cosmetics</a>
+                                            </c:otherwise>
+                                        </c:choose>
+                                    </li>
+                                </ul>
+                            </div>
 
                             <div class="widget">
                                 <a href="https://www.facebook.com/fptedu.resfes" target="_blank"><img src="/assets/images/adv/adv.jpg" alt=""/></a>
@@ -194,18 +241,18 @@
                             <div aria-label="Page navigation" class="pagination-bx rounded-sm gray clearfix">
                                 <ul class="pagination">
                                     <c:if test="${currentPage > 0}">
-                                        <li class="previous"><a href="${pageContext.request.contextPath}/list?q=${query}&page=${currentPage - 1}"><i class="ti-arrow-left"></i> Prev</a></li>
+                                        <li class="previous"><a href="${pageContext.request.contextPath}/list?q=${query}&service=${service}&page=${currentPage - 1}"><i class="ti-arrow-left"></i> Prev</a></li>
                                     </c:if>
                                     <c:if test="${totalPages <= 3}">
                                         <c:forEach var="i" begin="0" end="${totalPages-1}">
-                                            <li class=" ${i == currentPage ? 'active' : ''}"> <a href="${pageContext.request.contextPath}/list?q=${query}&page=${i}">
+                                            <li class=" ${i == currentPage ? 'active' : ''}"> <a href="${pageContext.request.contextPath}/list?q=${query}&service=${service}&page=${i}">
                                                 ${i+1}</a>
                                             </li>
                                         </c:forEach>
                                     </c:if>
                                     <c:if test="${totalPages > 3}">
                                         <c:forEach var="i" begin="0" end="3">
-                                            <li class="${i == currentPage ? 'active' : ''}"><a href="${pageContext.request.contextPath}/list?q=${query}&page=${i}">
+                                            <li class="${i == currentPage ? 'active' : ''}"><a href="${pageContext.request.contextPath}/list?q=${query}&service=${service}&page=${i}">
                                                 ${i+1}</a>
                                             </li>
 
@@ -217,7 +264,7 @@
                                             <c:if test="${currentPage > 3}">
                                             <c:forEach var="i" begin="${currentPage-1}" end="${currentPage+1}">
                                                 <li class="${i == currentPage ? 'active' : ''}">
-                                                    <a href="${pageContext.request.contextPath}/list?q=${query}&page=${i}">${i+1}</a>
+                                                    <a href="${pageContext.request.contextPath}/list?q=${query}&service=${service}&page=${i}">${i+1}</a>
                                                 </li>
                                             </c:forEach>
                                                 <li>
@@ -228,13 +275,13 @@
                                         </c:if>
                                         <c:forEach var="i" begin="${totalPages - 2}" end="${totalPages-1}">
                                             <li class=" ${i == currentPage ? 'active' : ''}">
-                                                <a href="${pageContext.request.contextPath}/list?q=${query}&page=${i}">${i+1}</a>
+                                                <a href="${pageContext.request.contextPath}/list?q=${query}&service=${service}&page=${i}">${i+1}</a>
                                             </li>
                                         </c:forEach>
                                     </c:if>
                                     <c:if test="${currentPage < totalPages - 1}">
                                         <li class="next">
-                                            <a href="${pageContext.request.contextPath}/list?q=${query}&page=${currentPage + 1}">Next <i class="ti-arrow-right"></i></a></li>
+                                            <a href="${pageContext.request.contextPath}/list?q=${query}&service=${service}&page=${currentPage + 1}">Next <i class="ti-arrow-right"></i></a></li>
                                     </c:if>
                                         </ul>
                             </div>

@@ -26,7 +26,7 @@
                     <div class="secondary-inner">
                         <ul>
 <%--                            <li><a href="javascript:;" class="btn-link"><i class="fa fa-facebook"></i></a></li>--%>
-                            <li><a href="mailto:quyennthe180534@fpt.edu.vn?subject=Trust Management" class="btn-link"><i class="fa fa-google-plus"></i></a></li>
+                            <li><a href="mailto:Duongpv14@fe.edu.vn?subject=Trust Management" class="btn-link"><i class="fa fa-google-plus"></i></a></li>
 <%--                            <li><a href="javascript:;" class="btn-link"><i class="fa fa-linkedin"></i></a></li>--%>
                             <!-- Search Button ==== -->
                             <li class="search-btn"><button id="quik-search-btn" type="button" class="btn-link"><i class="fa fa-search"></i></button></li>

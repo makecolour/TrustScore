@@ -22,11 +22,11 @@
     <meta name="robots" content=""/>
 
     <!-- DESCRIPTION -->
-    <meta name="description" content="${object.get('owner').asText()} Profile"/>
+    <meta name="description" content="Trust Management: ${object.get('owner').asText()} Profile"/>
 
     <!-- OG -->
-    <meta property="og:title" content="${object.get('owner').asText()} Profile"/>
-    <meta property="og:description" content="${object.get('owner').asText()} Profile"/>
+    <meta property="og:title" content="Trust Management: ${object.get('owner').asText()} Profile"/>
+    <meta property="og:description" content="Trust Management: ${object.get('owner').asText()} Profile"/>
     <meta property="og:image" content=""/>
     <meta name="format-detection" content="telephone=no">
 
@@ -35,7 +35,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="/assets/images/favicon.png"/>
 
     <!-- PAGE TITLE HERE ============================================= -->
-    <title>${object.get('owner').asText()} Profile</title>
+    <title>Trust Management: ${object.get('owner').asText()} Profile</title>
 
     <!-- MOBILE SPECIFIC ============================================= -->
     <meta name="viewport" content="width=device-width, initial-scale=1">

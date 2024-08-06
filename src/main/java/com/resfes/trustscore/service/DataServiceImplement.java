@@ -105,7 +105,7 @@ public class DataServiceImplement implements DataService{
         List<JsonNode> nodes = Arrays.asList(objectMapper.readValue(new File(application.getOutputFolder()+application.getNodeFile()), JsonNode[].class));
 
         nodes = nodes.stream()
-                .filter(node -> node.has("first_combine") && !node.get("first_combine").isNull() && node.toString().contains(query)&&node.get("group").toString().contains("service_provider")&&node.get("properties").get("service_type").toString().toLowerCase().contains(service.toLowerCase()))
+                .filter(node -> node.has("first_combine") && !node.get("first_combine").isNull() && node.toString().contains(query)&&node.get("group").toString().contains("service_provider")&&node.get("properties").get("service_type").toString().contains(service))
                 .collect(Collectors.toList());
 
         int start = Math.min(page * size, nodes.size());
