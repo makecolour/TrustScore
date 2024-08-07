@@ -25,21 +25,33 @@ public class RestController {
     private final FileService fileService;
     private final Application application;
     private final DataService data;
-    
-    
-    @RequestMapping(value = "/mergeAll", method = RequestMethod.GET)
-    public ResponseEntity<String> mergeJsonFiles(@RequestParam String key) throws IOException {
+
+    @GetMapping("/mergeAll")
+    public ResponseEntity<String> mergeJsonFiles(@RequestHeader("Authorization") String authHeader) throws IOException {
         HttpHeaders headers = new HttpHeaders();
         headers.add(HttpHeaders.CONTENT_TYPE, "application/json; charset=UTF-8");
-        if(fileService.checkKey(key)){
-            fileService.mergeJsonFiles();
-            fileService.transformAndWriteLinks();
-            return new ResponseEntity<>("Files merged successfully", headers, HttpStatus.OK);
+
+        // Extract Bearer token
+        if (authHeader == null || !authHeader.startsWith("Bearer ")) {
+            return new ResponseEntity<>("Unauthorized", headers, HttpStatus.UNAUTHORIZED);
         }
-        return new ResponseEntity<>("Invalid key", headers, HttpStatus.OK);
+        String authToken = authHeader.substring(7);
+
+        // Check authentication token
+        if (!isValidToken(authToken)) {
+            return new ResponseEntity<>("Unauthorized", headers, HttpStatus.UNAUTHORIZED);
+        }
+
+        // Merge files
+        fileService.mergeJsonFiles();
+        fileService.transformAndWriteLinks();
+        return new ResponseEntity<>("Files merged successfully", headers, HttpStatus.OK);
     }
 
-
+    // Method to validate the authentication token
+    private boolean isValidToken(String authToken) {
+        return fileService.checkKey(authToken);
+    }
 
     @RequestMapping(value = "/node", method = RequestMethod.GET)
     public ResponseEntity<String> getNodeJsonFile() throws IOException {
