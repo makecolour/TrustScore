@@ -130,6 +130,16 @@
                                     <li>
                                         <c:choose>
                                             <c:when test="${empty query}">
+                                                <a href="${pageContext.request.contextPath}/list?service=van_chuyen">Transportation</a>
+                                            </c:when>
+                                            <c:otherwise>
+                                                <a href="${pageContext.request.contextPath}/list?q=${query}&service=van_chuyen">Transportation</a>
+                                            </c:otherwise>
+                                        </c:choose>
+                                    </li>
+                                    <li>
+                                        <c:choose>
+                                            <c:when test="${empty query}">
                                                 <a href="${pageContext.request.contextPath}/list?service=thue_phong">Renting</a>
                                             </c:when>
                                             <c:otherwise>
