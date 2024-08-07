@@ -112,7 +112,7 @@
                                 <div class="info-bx">
                                     <ul class="media-post">
                                         <li><a href="#"><i class="fa fa-calendar"></i>${pdfInfo.lastModified}</a></li>
-                                        <li><a href="#"><i class="fa fa-comments-o"></i>${pdfInfo.size}Kb</a></li>
+                                        <li><a href="#"><i class="fa fa-hdd-o"></i>${pdfInfo.size}Kb</a></li>
                                     </ul>
                                     <h5 class="post-title"><a href="#">${pdfInfo.fileName}</a></h5>
                                     <div id="pdf-viewer">

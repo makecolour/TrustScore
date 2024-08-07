@@ -103,13 +103,13 @@
                                 <div class="ttr-post-info">
                                     <ul class="media-post">
                                         <li><a href="#"><i class="fa fa-calendar"></i>${file.lastModified}</a></li>
-                                        <li><a href="#"><i class="fa fa-user"></i>Nigga</a></li>
+                                        <li><a href="#"><i class="fa fa-user"></i>Trust Management</a></li>
                                     </ul>
                                     <h5 class="post-title"><a href="/documents/view?fileName=${file.fileName}">${file.fileName}</a></h5>
                                     <p>Knowing that, you’ve optimised your pages countless amount of times, written tons.</p>
                                     <div class="post-extra">
                                         <a href="/documents/view?fileName=${file.fileName}" class="btn-link">READ MORE</a>
-                                        <a href="/documents/view?fileName=${file.fileName}" class="comments-bx"><i class="fa fa-comments-o"></i>${file.size}Kb</a>
+                                        <a href="/documents/view?fileName=${file.fileName}" class="comments-bx"><i class="fa-hdd-o"></i>${file.size}Kb</a>
                                     </div>
                                 </div>
 

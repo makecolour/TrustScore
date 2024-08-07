@@ -370,7 +370,7 @@ dl dd { margin-bottom: 10px; }
 	Text Color
 ====================*/
 .bg-tp { background-color: transparent; }
-.bg-primary { background-color: ; }
+.bg-primary { background-color:transparent ; }
 .bg-white { background-color: #FFF; }
 .bg-black { background-color: #000; }
 .bg-gray { background-color: #F7F9FB; }

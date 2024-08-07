@@ -536,5 +536,4 @@ try {
         Path path = Paths.get(thumbnailPath).toAbsolutePath();
         return Files.exists(path);
     }
-
 }

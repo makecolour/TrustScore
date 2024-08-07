@@ -131,7 +131,7 @@
                         <div class="col-lg-8 col-md-7 col-sm-12">
                             <div class="courses-post">
                                 <div class="ttr-post-media media-effect">
-                                    <a href="https://www.facebook.com/groups/356018761148436/user/${fn:replace(object.get('owner').asText(), '\"', '')}">
+                                    <a href="#">
                                         <c:choose>
                                             <c:when test="${object.hasNonNull('facebook_profile_pic')}">
                                                 <img src="${object.get('facebook_profile_pic').asText()}" alt="">

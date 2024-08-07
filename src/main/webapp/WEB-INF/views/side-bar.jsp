@@ -38,7 +38,7 @@
                                     <h6 class="post-title"><a href="/documents/view?fileName=${file.fileName}">${file.fileName}</a></h6>
                                 </div>
                                 <ul class="media-post">
-                                    <li><a href="/documents/view?fileName=${file.fileName}"><i class="fa fa-calendar"></i><fmt:formatDate value="${file.lastModified}" type="both" dateStyle="medium" pattern="MMM dd yyyy"/></a></li>
+                                    <li><a href="/documents/view?fileName=${file.fileName}"><i class="fa fa-hdd-o"></i><fmt:formatDate value="${file.lastModified}" type="both" dateStyle="medium" pattern="MMM dd yyyy"/></a></li>
                                     <li><a href="/documents/view?fileName=${file.fileName}"><i class="fa fa-comments-o"></i>${file.size}Kb</a></li>
                                 </ul>
                             </div>
@@ -47,56 +47,56 @@
                 </c:if>
             </div>
         </div>
-        <div class="widget widget-newslatter">
-            <h6 class="widget-title">Newsletter</h6>
-            <div class="news-box">
-                <p>Enter your e-mail and subscribe to our newsletter.</p>
-                <form class="subscription-form" action="http://educhamp.themetrades.com/demo/assets/script/mailchamp.php" method="post">
-                    <div class="ajax-message"></div>
-                    <div class="input-group">
-                        <input name="dzEmail" required="required" type="email" class="form-control" placeholder="Your Email Address"/>
-                        <button name="submit" value="Submit" type="submit" class="btn black radius-no">
-                            <i class="fa fa-paper-plane-o"></i>
-                        </button>
-                    </div>
-                </form>
-            </div>
-        </div>
-        <div class="widget widget_gallery gallery-grid-4">
-            <h6 class="widget-title">Our Gallery</h6>
-            <ul>
-                <li><div><a href="#"><img src="/assets/images/gallery/pic2.jpg" alt=""></a></div></li>
-                <li><div><a href="#"><img src="/assets/images/gallery/pic1.jpg" alt=""></a></div></li>
-                <li><div><a href="#"><img src="/assets/images/gallery/pic5.jpg" alt=""></a></div></li>
-                <li><div><a href="#"><img src="/assets/images/gallery/pic7.jpg" alt=""></a></div></li>
-                <li><div><a href="#"><img src="/assets/images/gallery/pic8.jpg" alt=""></a></div></li>
-                <li><div><a href="#"><img src="/assets/images/gallery/pic9.jpg" alt=""></a></div></li>
-                <li><div><a href="#"><img src="/assets/images/gallery/pic3.jpg" alt=""></a></div></li>
-                <li><div><a href="#"><img src="/assets/images/gallery/pic4.jpg" alt=""></a></div></li>
-            </ul>
-        </div>
-        <div class="widget widget_tag_cloud">
-            <h6 class="widget-title">Tags</h6>
-            <div class="tagcloud">
-                <a href="#">Design</a>
-                <a href="#">User interface</a>
-                <a href="#">SEO</a>
-                <a href="#">WordPress</a>
-                <a href="#">Development</a>
-                <a href="#">Joomla</a>
-                <a href="#">Design</a>
-                <a href="#">User interface</a>
-                <a href="#">SEO</a>
-                <a href="#">WordPress</a>
-                <a href="#">Development</a>
-                <a href="#">Joomla</a>
-                <a href="#">Design</a>
-                <a href="#">User interface</a>
-                <a href="#">SEO</a>
-                <a href="#">WordPress</a>
-                <a href="#">Development</a>
-                <a href="#">Joomla</a>
-            </div>
-        </div>
+<%--        <div class="widget widget-newslatter">--%>
+<%--            <h6 class="widget-title">Newsletter</h6>--%>
+<%--            <div class="news-box">--%>
+<%--                <p>Enter your e-mail and subscribe to our newsletter.</p>--%>
+<%--                <form class="subscription-form" action="http://educhamp.themetrades.com/demo/assets/script/mailchamp.php" method="post">--%>
+<%--                    <div class="ajax-message"></div>--%>
+<%--                    <div class="input-group">--%>
+<%--                        <input name="dzEmail" required="required" type="email" class="form-control" placeholder="Your Email Address"/>--%>
+<%--                        <button name="submit" value="Submit" type="submit" class="btn black radius-no">--%>
+<%--                            <i class="fa fa-paper-plane-o"></i>--%>
+<%--                        </button>--%>
+<%--                    </div>--%>
+<%--                </form>--%>
+<%--            </div>--%>
+<%--        </div>--%>
+<%--        <div class="widget widget_gallery gallery-grid-4">--%>
+<%--            <h6 class="widget-title">Our Gallery</h6>--%>
+<%--            <ul>--%>
+<%--                <li><div><a href="#"><img src="/assets/images/gallery/pic2.jpg" alt=""></a></div></li>--%>
+<%--                <li><div><a href="#"><img src="/assets/images/gallery/pic1.jpg" alt=""></a></div></li>--%>
+<%--                <li><div><a href="#"><img src="/assets/images/gallery/pic5.jpg" alt=""></a></div></li>--%>
+<%--                <li><div><a href="#"><img src="/assets/images/gallery/pic7.jpg" alt=""></a></div></li>--%>
+<%--                <li><div><a href="#"><img src="/assets/images/gallery/pic8.jpg" alt=""></a></div></li>--%>
+<%--                <li><div><a href="#"><img src="/assets/images/gallery/pic9.jpg" alt=""></a></div></li>--%>
+<%--                <li><div><a href="#"><img src="/assets/images/gallery/pic3.jpg" alt=""></a></div></li>--%>
+<%--                <li><div><a href="#"><img src="/assets/images/gallery/pic4.jpg" alt=""></a></div></li>--%>
+<%--            </ul>--%>
+<%--        </div>--%>
+<%--        <div class="widget widget_tag_cloud">--%>
+<%--            <h6 class="widget-title">Tags</h6>--%>
+<%--            <div class="tagcloud">--%>
+<%--                <a href="#">Design</a>--%>
+<%--                <a href="#">User interface</a>--%>
+<%--                <a href="#">SEO</a>--%>
+<%--                <a href="#">WordPress</a>--%>
+<%--                <a href="#">Development</a>--%>
+<%--                <a href="#">Joomla</a>--%>
+<%--                <a href="#">Design</a>--%>
+<%--                <a href="#">User interface</a>--%>
+<%--                <a href="#">SEO</a>--%>
+<%--                <a href="#">WordPress</a>--%>
+<%--                <a href="#">Development</a>--%>
+<%--                <a href="#">Joomla</a>--%>
+<%--                <a href="#">Design</a>--%>
+<%--                <a href="#">User interface</a>--%>
+<%--                <a href="#">SEO</a>--%>
+<%--                <a href="#">WordPress</a>--%>
+<%--                <a href="#">Development</a>--%>
+<%--                <a href="#">Joomla</a>--%>
+<%--            </div>--%>
+<%--        </div>--%>
     </aside>
 </div>
