@@ -26,7 +26,7 @@ public class RestController {
     private final Application application;
     private final DataService data;
 
-    @GetMapping("/mergeAll")
+    @RequestMapping("/mergeAll")
     public ResponseEntity<String> mergeJsonFiles(@RequestHeader("Authorization") String authHeader) throws IOException {
         HttpHeaders headers = new HttpHeaders();
         headers.add(HttpHeaders.CONTENT_TYPE, "application/json; charset=UTF-8");
