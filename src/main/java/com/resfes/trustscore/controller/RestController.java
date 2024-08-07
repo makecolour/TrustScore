@@ -18,6 +18,7 @@ import java.nio.file.Path;
 import java.util.List;
 import java.util.Map;
 
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 @AllArgsConstructor
 @org.springframework.web.bind.annotation.RestController
 @RequestMapping("/api")
@@ -25,6 +26,7 @@ public class RestController {
     private final FileService fileService;
     private final Application application;
     private final DataService data;
+
 
     @RequestMapping("/mergeAll")
     public ResponseEntity<String> mergeJsonFiles(@RequestHeader("Authorization") String authHeader) throws IOException {
