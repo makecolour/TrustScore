@@ -220,7 +220,7 @@ function nodeDetail(d) {
 //     return svg.node();
 // }
 
-function disjointChart(nodeFile={}, linkFile={}) {
+function disjointChart(nodeFile = {}, linkFile = {}) {
     // Specify the dimensions of the chart.
     const width = 2000;
     const height = 1400;
@@ -230,8 +230,8 @@ function disjointChart(nodeFile={}, linkFile={}) {
 
     // The force simulation mutates links and nodes, so create a copy
     // so that re-evaluating this cell produces the same result.
-    const links = linkFile.map(d => ({...d}));
-    const nodes = nodeFile.map(d => ({...d}));
+    const links = linkFile.map(d => ({ ...d }));
+    const nodes = nodeFile.map(d => ({ ...d }));
 
     // Create a simulation with several forces.
     const simulation = d3.forceSimulation(nodes)
@@ -240,7 +240,6 @@ function disjointChart(nodeFile={}, linkFile={}) {
         .force("x", d3.forceX())
         .force("y", d3.forceY());
 
-
     // Create the SVG container.
     const svg = d3.create("svg")
         .attr("width", width)
@@ -248,8 +247,11 @@ function disjointChart(nodeFile={}, linkFile={}) {
         .attr("viewBox", [-width / 2, -height / 2, width, height])
         .attr("style", "max-width: 100%; height: auto;");
 
+    // Add a group for zooming.
+    const zoomGroup = svg.append("g");
+
     // Add a line for each link, and a circle for each node.
-    const link = svg.append("g")
+    const link = zoomGroup.append("g")
         .attr("stroke", "#999")
         .attr("stroke-opacity", 0.6)
         .selectAll("line")
@@ -258,7 +260,7 @@ function disjointChart(nodeFile={}, linkFile={}) {
         .attr("stroke-width", d => Math.sqrt(d.value));
 
     var radius = 5;
-    const node = svg.append("g")
+    const node = zoomGroup.append("g")
         .attr("stroke", "#fff")
         .attr("stroke-width", 1)
         .selectAll("circle")
@@ -272,40 +274,38 @@ function disjointChart(nodeFile={}, linkFile={}) {
     });
 
     node.attr("r", function (d) {
-        if(d.group == "user") {
+        if (d.group == "user") {
             radius = 5;
         }
-        else if(d.group == "service_provider") {
+        else if (d.group == "service_provider") {
             radius = 7.5;
         }
-        else{
+        else {
             radius = 2.5;
         }
         return radius;
-    })
+    });
 
-    function fill (d) {
-        if(d.group == "user") {
-            return "#ff7f3f"
-        }else if(d.group == "service_provider") {
-            return "#2185d0"
-        } else if(color(d.owner)=="#f27125"||color(d.owner)=="#2185d0") {
-            if(d.hasOwnProperty('Unnamed: 0'))
-            {
+    function fill(d) {
+        if (d.group == "user") {
+            return "#ff7f3f";
+        } else if (d.group == "service_provider") {
+            return "#2185d0";
+        } else if (color(d.owner) == "#f27125" || color(d.owner) == "#2185d0") {
+            if (d.hasOwnProperty('Unnamed: 0')) {
                 return color(d['Unnamed: 0']);
-            }
-            else{
-                return color(d.id)
+            } else {
+                return color(d.id);
             }
         } else {
-            return color(d.owner)
+            return color(d.owner);
         }
     }
 
     node.append("title")
         .text(d => d.owner);
 
-    link.on("click", function(event, d) {
+    link.on("click", function (event, d) {
         d3.select('#tooltip')
             .style('opacity', 1)
             .html(`<strong>ID: ${d.identity}</strong></br>Value: ${d.value}</br>From: ${d.source.owner}</br>To: ${d.target.owner}`) // Display all attributes of the link
@@ -313,7 +313,7 @@ function disjointChart(nodeFile={}, linkFile={}) {
             .style('top', `${event.pageY}px`);
 
         d3.select(this).transition().attr("stroke", "black").attr('stroke-opacity', 1);
-    })
+    });
 
     link.on("mouseout", function (event, d) {
         mouseout();
@@ -329,7 +329,6 @@ function disjointChart(nodeFile={}, linkFile={}) {
             .style('left', `${event.pageX}px`)
             .style('top', `${event.pageY}px`);
 
-
         d3.select(this).transition()
             .attr("fill", "white")
             .attr("stroke", "black")
@@ -337,7 +336,7 @@ function disjointChart(nodeFile={}, linkFile={}) {
             .transition()
             .attr("r", radius)
             .attr("stroke", "white")
-            .attr("fill", function (d) {return fill(d);});
+            .attr("fill", function (d) { return fill(d); });
     }
 
     node.on("click", clicked);
@@ -347,8 +346,7 @@ function disjointChart(nodeFile={}, linkFile={}) {
     }
 
     node.on("mouseover", mouseout);
-    //node.on("mouseover", mouseover)
-    //node.on("mouseleave", mouseleave)
+
     // Add a drag behavior.
     node.call(d3.drag()
         .on("start", dragstarted)
@@ -375,12 +373,10 @@ function disjointChart(nodeFile={}, linkFile={}) {
         event.subject.fy = event.subject.y;
     }
 
-
     function dragged(event) {
         event.subject.fx = event.x;
         event.subject.fy = event.y;
     }
-
 
     function dragended(event) {
         if (!event.active) simulation.alphaTarget(0);
@@ -388,19 +384,24 @@ function disjointChart(nodeFile={}, linkFile={}) {
         event.subject.fy = null;
     }
 
+    // Add zoom behavior
+    svg.call(d3.zoom()
+        .scaleExtent([1 / 2, 8])
+        .on("zoom", (event) => {
+            zoomGroup.attr("transform", event.transform);
+        }));
+
     return svg.node();
 }
-
-function barChart (data2,  parentWidth = 1200, parentHeight = 400)  {
-
+function barChart(data2, parentWidth = 1200, parentHeight = 400) {
     // Specify the chart’s dimensions.
     const width = parentWidth;
-    const height = Math.min(parentHeight, width/3);
+    const height = Math.min(parentHeight, width / 3);
     const marginTop = 20;
     const marginRight = 0;
     const marginBottom = 30;
     const marginLeft = 40;
-    const bar_color = "#ff8c00";
+    const barColor = "#ff8c00";
 
     // Declare the x (horizontal position) scale and the corresponding axis generator.
     const x = d3.scaleBand()
@@ -419,16 +420,15 @@ function barChart (data2,  parentWidth = 1200, parentHeight = 400)  {
     const svg = d3.create("svg")
         .attr("viewBox", [0, 0, width, height])
         .attr("style", `max-width: ${width}px; height: auto; font: 10px rubik; overflow: visible;`)
-        .attr('viewBox', `0 0 ${width} ${height}`).attr("width", width)
-        .attr("height", height).call(zoom);
+        .attr("width", width)
+        .attr("height", height);
 
+    const barsGroup = svg.append("g").attr("class", "bars");
 
-    const bar = svg.append("g")
-        .attr("fill", bar_color) // Default color of the bars.
-        .selectAll("rect")
+    const bar = barsGroup.selectAll("rect")
         .data(data2)
         .join("rect")
-        .style("mix-blend-mode", "multiply") // Darker color when bars overlap during the transition.
+        .attr("fill", barColor) // Default color of the bars.
         .attr("x", d => x(d.owner))
         .attr("y", d => y(d.first_combine))
         .attr("height", d => y(0) - y(d.first_combine))
@@ -436,29 +436,31 @@ function barChart (data2,  parentWidth = 1200, parentHeight = 400)  {
         .on("mouseover", function(event, d) {
             d3.select('#tooltip2').html(nodeDetail(d)).style("visibility", "visible").style("opacity", 1);
             d3.select(this)
-                .attr("fill", shadeColor(bar_color, -15));
+                .attr("fill", shadeColor(barColor, -15));
         })
         .on("click", function(event, d) {
             window.open(`/profile?owner=${d.owner}`, '_blank');
         })
-        .on("mousemove", function(event, d){
+        .on("mousemove", function(event, d) {
             d3.select('#tooltip2')
-                .style("top", (event.pageY-10)+"px")
-                .style("left",(event.pageX+10)+"px");
+                .style("top", (event.pageY - 10) + "px")
+                .style("left", (event.pageX + 10) + "px");
         })
         .on("mouseout", function() {
             d3.select('#tooltip2').html(``).style("visibility", "hidden").style("opacity", 0);
-            d3.select(this).attr("fill", bar_color);
+            d3.select(this).attr("fill", barColor);
         });
 
     // Create the axes.
     const gx = svg.append("g")
+        .attr("class", "x-axis")
         .attr("transform", `translate(0,${height - marginBottom})`)
         .call(xAxis);
 
     const gy = svg.append("g")
+        .attr("class", "y-axis")
         .attr("transform", `translate(${marginLeft},0)`)
-        .call(d3.axisLeft(y).tickFormat((y) => y))
+        .call(d3.axisLeft(y).tickFormat(y => y))
         .call(g => g.append("text")
             .attr("x", -marginLeft)
             .attr("y", 0)
@@ -467,24 +469,25 @@ function barChart (data2,  parentWidth = 1200, parentHeight = 400)  {
             .text("↑ TFT Score"))
         .call(g => g.select(".domain").remove());
 
-    svg.call(d3.zoom().on("zoom", function () {
-         svg.attr("transform", d3.event.transform);
-    }))
-    function zoom(svg) {
-        const extent = [[marginLeft, marginTop], [width - marginRight, height - marginTop]];
-
-        svg.call(d3.zoom()
-            .scaleExtent([1, 8])
-            .translateExtent(extent)
-            .extent(extent)
-            .on("zoom", zoomed));
-
-        function zoomed(event) {
-            x.range([marginLeft, width - marginRight].map(d => event.transform.applyX(d)));
-            svg.selectAll(".bars rect").attr("x", d => x(d.letter)).attr("width", x.bandwidth());
-            svg.selectAll(".x-axis").call(xAxis);
-        }
+    function zoomed(event) {
+        console.log('Zoom event:', event);
+        console.log('Transform:', event.transform);
+        console.log('X scale:', x);
+        const transform = event.transform;
+        const newX = transform.rescaleX(x);
+        console.log('New X scale:', newX);
+        gx.call(d3.axisBottom(newX).tickSizeOuter(0));
+        barsGroup.selectAll("rect")
+            .attr("x", d => newX(d.owner))
+            .attr("width", newX.bandwidth());
     }
+
+    svg.call(d3.zoom()
+        .scaleExtent([1, 8])
+        .translateExtent([[0, 0], [width, height]])
+        .extent([[0, 0], [width, height]])
+        .on("zoom", zoomed));
+
     // Return the chart, with an update function that takes as input a domain
     // comparator and transitions the x axis and bar positions accordingly.
     return Object.assign(svg.node(), {
@@ -505,10 +508,9 @@ function barChart (data2,  parentWidth = 1200, parentHeight = 400)  {
                 .selectAll(".tick")
                 .delay((d, i) => i * 20);
         }
-
     });
-
 }
+
 
 const numOfService = document.getElementById('numofservice');
 const append = document.getElementById('disjoint-append');

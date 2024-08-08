@@ -620,6 +620,8 @@
 <script src="/assets/vendors/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
 <script src="/assets/vendors/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
 <script src="/assets/vendors/revolution/js/extensions/revolution.extension.video.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+<script src="/js/graph/graphs.js"></script>
 <script>
   jQuery(document).ready(function() {
     var ttrevapi;
@@ -707,15 +709,14 @@
     }
   });
 
-  document.getElementById("slide-200-layer-5").addEventListener("click", function() {
-    window.location.href = "/list";
-  });
-    document.getElementById("slide-100-layer-5").addEventListener("click", function() {
-        window.location.href = "/list";
-    });
+  // document.getElementById("slide-200-layer-5").addEventListener("click", function() {
+  //   window.location.href = "/list";
+  // });
+  //   document.getElementById("slide-100-layer-5").addEventListener("click", function() {
+  //       window.location.href = "/list";
+  //   });
 </script>
-<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
-  <script src="/js/graph/graphs.js"></script>
+
 <%--  <script src="/js/graph/disjoint-graph.js"></script>--%>
 </body>
 

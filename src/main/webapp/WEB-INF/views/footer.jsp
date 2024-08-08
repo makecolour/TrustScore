@@ -55,18 +55,19 @@
                                 <h5 class="footer-title">Trust Management</h5>
                                 <ul>
                                     <li><a href="/">Home</a></li>
-                                    <li><a href="/about">About us</a></li>
-                                    <li><a href="/">Service providers</a></li>
+                                    <li><a href="/list">Service Providers</a></li>
+                                    <li><a href="/about">About Us</a></li>
                                 </ul>
                             </div>
                         </div>
                         <div class="col-6 col-lg-6 col-md-6 col-sm-6">
                             <div class="widget footer_widget">
-                                <h5 class="footer-title">Research Documents</h5>
+                                <h5 class="footer-title">Research</h5>
                                 <ul>
 <%--                                    link cac document--%>
                                     <li><a href="/documents/list">Research Documents</a></li>
                                     <li><a href="/">Resfes Presentation</a></li>
+                                    <li><a href="/">Trust Management Extension</a></li>
                                 </ul>
                             </div>
                         </div>

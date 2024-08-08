@@ -140,15 +140,15 @@
                 <div class="container">
                     <div class="row align-items-center d-flex">
                         <div class="col-lg-5 col-md-12 heading-bx">
-                            <h2 class="m-b10">The beginning</h2>
-                            <h5 class="fw4">How did we start this project?</h5>
+                            <h2 class="m-b10">Our Story</h2>
+                            <h5 class="fw4">Why did we start this project?</h5>
                             <p>Recognizing the critical importance of safety and trust in online transactions, particularly on social media and the internet at large, our team, consisting of members Nguyen Huy Duc Hieu, Mai Phu Trong, and Nguyen Thuong Quyen, under the guidance of Master Pham Van Duong, has commenced project X to address this issue. This initiative aims to enhance the reliability of digital marketplaces, ensuring a secure environment for users to conduct their business.</p>
                             <a href="#project" class="btn">So, we started</a>
                         </div>
                         <div class="col-lg-7 col-md-12 heading-bx p-lr">
                             <div class="video-bx">
-                                <img src="/assets/images/about/pic1.jpg" alt="Presentation goes here"/>
-                                <a href="https://www.youtube.com/watch?v=x_sJzVe9P_8" class="popup-youtube video"><i class="fa fa-play"></i></a>
+                                <img src="/assets/images/about/A.png" alt="Presentation goes here"/>
+                                <a href="https://www.youtube.com/live/jfKfPfyJRdk" class="popup-youtube video"><i class="fa fa-play"></i></a>
                             </div>
                         </div>
                     </div>

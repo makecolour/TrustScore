@@ -21,12 +21,12 @@
                         <img src="/assets/images/testimonials/pic2.jpg" alt="">
                     </div>
                     <div class="testimonial-info">
-                        <h5 class="name">M.S.Pham Van Duong</h5>
+                        <h5 class="name">M.S. Pham Van Duong</h5>
                         <p>-Instructor</p>
                     </div>
-<%--                    <div class="testimonial-content">--%>
-<%--                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type...</p>--%>
-<%--                    </div>--%>
+                    <div class="testimonial-content">
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type...</p>
+                    </div>
                 </div>
             </div>
             <div class="item">
@@ -38,9 +38,9 @@
                         <h5 class="name">Nguyen Huy Duc Hieu</h5>
                         <p>-Project Leader</p>
                     </div>
-                    <%--                    <div class="testimonial-content">--%>
-                    <%--                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type...</p>--%>
-                    <%--                    </div>--%>
+                    <div class="testimonial-content">
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type...</p>
+                    </div>
                 </div>
             </div>
             <div class="item">
@@ -52,9 +52,9 @@
                         <h5 class="name">Mai Phu Trong</h5>
                         <p>-Project Member</p>
                     </div>
-<%--                    <div class="testimonial-content">--%>
-<%--                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type...</p>--%>
-<%--                    </div>--%>
+                    <div class="testimonial-content">
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type...</p>
+                    </div>
                 </div>
             </div>
 
@@ -67,9 +67,9 @@
                         <h5 class="name">Nguyen Thuong Quyen</h5>
                         <p>-Project Member</p>
                     </div>
-<%--                    <div class="testimonial-content">--%>
-<%--                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type...</p>--%>
-<%--                    </div>--%>
+                    <div class="testimonial-content">
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type...</p>
+                    </div>
                 </div>
             </div>
         </div>

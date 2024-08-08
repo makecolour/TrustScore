@@ -51,13 +51,14 @@
                         </li>
                         <li><a href="/list">Service Providers</a>
                         </li>
-                        <li class="add-mega-menu"><a href="javascript:">Documents <i class="fa fa-chevron-down"></i></a>
+                        <li class="add-mega-menu"><a href="javascript:">Research <i class="fa fa-chevron-down"></i></a>
                             <ul class="sub-menu add-menu">
                                 <li class="add-menu-left">
-                                    <h5 class="menu-adv-title">Documents</h5>
+                                    <h5 class="menu-adv-title">Research Results</h5>
                                     <ul>
-                                        <li><a href="/documents/list">Research Documents </a></li>
+                                        <li><a href="/documents/list">Research Documents</a></li>
                                         <li><a href="/">Resfes Presentation</a></li>
+                                        <li><a href="/">Trust Management Extension</a></li>
                                     </ul>
                                 </li>
                                 <li class="add-menu-right">
