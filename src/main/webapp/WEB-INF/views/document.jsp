@@ -19,11 +19,11 @@
     <meta name="robots" content="" />
 
     <!-- DESCRIPTION -->
-    <meta name="description" content="Research Document: ${pdfInfo.fileName}" />
+    <meta name="description" content="Trust Management: ${pdfInfo.fileName}" />
 
     <!-- OG -->
-    <meta property="og:title" content="Research Document: ${pdfInfo.fileName}" />
-    <meta property="og:description" content="Research Document: ${pdfInfo.fileName}" />
+    <meta property="og:title" content="Trust Management: ${pdfInfo.fileName}" />
+    <meta property="og:description" content="Trust Management: ${pdfInfo.fileName}" />
     <meta property="og:image" content="" />
     <meta name="format-detection" content="telephone=no">
 
@@ -32,7 +32,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="/assets/images/favicon.png" />
 
     <!-- PAGE TITLE HERE ============================================= -->
-    <title>Research Document: ${pdfInfo.fileName}</title>
+    <title>Trust Management: ${pdfInfo.fileName}</title>
 
     <!-- MOBILE SPECIFIC ============================================= -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -84,7 +84,7 @@
         <div class="page-banner ovbl-dark" style="background-image:url(/assets/images/banner/banner2.jpg);">
             <div class="container">
                 <div class="page-banner-entry">
-                    <h1 class="text-white">Blog Details</h1>
+                    <h1 class="text-white">Research Document: ${pdfInfo.fileName.toString().replace(".pdf", "")}</h1>
                 </div>
             </div>
         </div>
@@ -93,7 +93,7 @@
             <div class="container">
                 <ul class="list-inline">
                     <li><a href="/">Home</a></li>
-                    <li>Blog Details</li>
+                    <li>Research Document: ${pdfInfo.fileName.toString().replace(".pdf", "")}</li>
                 </ul>
             </div>
         </div>
@@ -111,10 +111,10 @@
                                 </div>
                                 <div class="info-bx">
                                     <ul class="media-post">
-                                        <li><a href="#"><i class="fa fa-calendar"></i>${pdfInfo.lastModified}</a></li>
-                                        <li><a href="#"><i class="fa fa-hdd-o"></i>${pdfInfo.size}Kb</a></li>
+                                        <li><a href="${pageContext.request.contextPath}${pdfPath}"><i class="fa fa-calendar"></i>${pdfInfo.lastModified}</a></li>
+                                        <li><a href="${pageContext.request.contextPath}${pdfPath}"><i class="fa fa-hdd-o"></i>${pdfInfo.size}Kb</a></li>
                                     </ul>
-                                    <h5 class="post-title"><a href="#">${pdfInfo.fileName}</a></h5>
+                                    <h5 class="post-title"><a href="${pageContext.request.contextPath}${pdfPath}">${pdfInfo.fileName.toString().replace(".pdf", "")}</a></h5>
                                     <div id="pdf-viewer">
                                         <iframe id="pc-tab" src="${pageContext.request.contextPath}${pdfPath}" allowfullscreen webkitallowfullscreen></iframe>
                                     </div>

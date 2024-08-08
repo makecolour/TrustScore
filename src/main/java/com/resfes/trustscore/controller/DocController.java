@@ -62,8 +62,8 @@ public class DocController {
         return modelAndView;
     }
 
-    @GetMapping("/pdf/{fileName:.+}")
-    public ResponseEntity<Resource> downloadPdf(@PathVariable String fileName) throws IOException {
+    @GetMapping("/pdf")
+    public ResponseEntity<Resource> downloadPdf(@RequestParam String fileName) throws IOException {
         Resource resource = resourceLoader.getResource(fileService.getPdfFilePath(fileName));
         if (!resource.exists()) {
             return ResponseEntity.notFound().build();
