@@ -58,7 +58,7 @@
                                     <ul>
                                         <li><a href="/documents/list">Research Documents</a></li>
                                         <li><a href="/">Resfes Presentation</a></li>
-                                        <li><a href="/">Trust Management Extension</a></li>
+                                        <li><a href="https://github.com/makecolour/TrustScoreExtension">Trust Management Extension</a></li>
                                     </ul>
                                 </li>
                                 <li class="add-menu-right">
