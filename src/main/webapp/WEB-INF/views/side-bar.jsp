@@ -38,8 +38,8 @@
                                     <h6 class="post-title"><a href="/documents/view?fileName=${file.fileName}">${file.fileName}</a></h6>
                                 </div>
                                 <ul class="media-post">
-                                    <li><a href="/documents/view?fileName=${file.fileName}"><i class="fa fa-hdd-o"></i><fmt:formatDate value="${file.lastModified}" type="both" dateStyle="medium" pattern="MMM dd yyyy"/></a></li>
-                                    <li><a href="/documents/view?fileName=${file.fileName}"><i class="fa fa-comments-o"></i>${file.size}Kb</a></li>
+                                    <li><a href="/documents/view?fileName=${file.fileName}"><i class="fa fa-calendar"></i><fmt:formatDate value="${file.lastModified}" type="both" dateStyle="medium" pattern="MMM dd yyyy"/></a></li>
+                                    <li><a href="/documents/view?fileName=${file.fileName}"><i class="fa fa-hdd-o"></i>${file.size}Kb</a></li>
                                 </ul>
                             </div>
                         </div>

@@ -286,6 +286,7 @@ function disjointChart(nodeFile = {}, linkFile = {}) {
         return radius;
     });
 
+
     function fill(d) {
         if (d.group == "user") {
             return "#ff7f3f";
@@ -334,7 +335,18 @@ function disjointChart(nodeFile = {}, linkFile = {}) {
             .attr("stroke", "black")
             .attr("r", radius * 2)
             .transition()
-            .attr("r", radius)
+            .attr("r", function (d){
+                if (d.group == "user") {
+                    radius = 5;
+                }
+                else if (d.group == "service_provider") {
+                    radius = 7.5;
+                }
+                else {
+                    radius = 2.5;
+                }
+                return radius;
+            })
             .attr("stroke", "white")
             .attr("fill", function (d) { return fill(d); });
     }
