@@ -25,6 +25,18 @@ public class DataServiceImplement implements DataService{
     }
 
     @Override
+    public List<JsonNode> getAll() {
+        List<JsonNode> nodes = new ArrayList<>();
+        try {
+            // Read the JSON file into a list of JsonNodes
+            nodes = Arrays.asList(objectMapper.readValue(new File(application.getOutputFolder()+application.getNodeFile()), JsonNode[].class));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return nodes;
+    }
+
+    @Override
     public List<JsonNode> top10Users() {
         List<JsonNode> top10Nodes = new ArrayList<>();
         try {

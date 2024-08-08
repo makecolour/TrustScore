@@ -140,5 +140,12 @@ public class RestController {
         return new ResponseEntity<>(objectMapper.writeValueAsString(data.getObjectsWithId()), headers, HttpStatus.OK);
     }
 
+    @GetMapping("/allUsers")
+    public ResponseEntity<String> getAll() throws IOException {
+        HttpHeaders headers = new HttpHeaders();
+        headers.add(HttpHeaders.CONTENT_TYPE, "application/json; charset=UTF-8");
+        ObjectMapper objectMapper = new ObjectMapper();
+        return new ResponseEntity<>(objectMapper.writeValueAsString(data.getAll()), headers, HttpStatus.OK);
+    }
 
 }

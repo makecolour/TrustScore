@@ -469,7 +469,7 @@
           <div class="row">
             <div class="col-md-12 heading-bx left">
               <h2 class="title-head">TOP <span>Service Providers</span></h2>
-              <p>Most trusted service providers by consumers</p>
+              <p><i class="fa fa-bar-chart-o"> </i>Most trusted service providers by consumers</p>
             </div>
             </div>
           <div class="row" id="bar-chart-append">
@@ -548,7 +548,7 @@
           <div class="row">
             <div class="col-md-12 heading-bx left">
               <h2 class="title-head">Social Knowledge Graph <span>on Facebook</span></h2>
-              <p>Most trusted service providers by consumers</p>
+              <p><i class="fa fa-area-chart" id="service"> </i> Most trusted service providers by consumers</p>
             </div>
           </div>
           <div class="row" id="disjoint-append" >

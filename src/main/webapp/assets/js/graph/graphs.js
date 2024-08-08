@@ -530,7 +530,7 @@ const barChartAppend = document.getElementById('bar-chart-append');
 window.onload = async function() {
 
     var data2 = await fetch('/api/topUser?n=10').then(response => response.json());
-    const node = await fetch('/api/objects').then(response => response.json());
+    const node = await fetch('/api/allUsers').then(response => response.json());
     const link = await fetch('/api/link').then(response => response.json());
 
     adjustHeight(barChartAppend);
@@ -543,7 +543,6 @@ window.onload = async function() {
     barChartAppend.append(barChartSVG);
 
     append.appendChild(disjointSVG);
-
 
     numOfService.addEventListener('change', async function() {
         const value = numOfService.value;

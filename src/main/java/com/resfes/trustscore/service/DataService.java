@@ -8,6 +8,7 @@ import java.util.List;
 import java.util.Map;
 
 public interface DataService {
+    List<JsonNode> getAll();
     List<JsonNode> top10Users();
     JsonNode getUser(String owner);
     List<JsonNode> getObjectsWithId() throws IOException;
