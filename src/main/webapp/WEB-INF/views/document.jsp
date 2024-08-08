@@ -54,7 +54,32 @@
     <!-- STYLESHEETS ============================================= -->
     <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
     <link class="skin" rel="stylesheet" type="text/css" href="/assets/css/color/color-1.css">
-
+    <style>
+        .section-area {
+            margin-bottom: 0px;
+            margin-top: 0px;
+            padding: 0px;
+        }
+        .tooltip{
+            margin: 10px;
+            margin-right: 15px;
+            position: absolute;
+            opacity: 0;
+            overflow: auto;
+            overflow-wrap: anywhere;
+            background: linear-gradient(315deg, rgba(0, 191, 255, 0.8), rgba(255, 127, 63, 0.8));;
+            border-radius: 5px;
+            padding: 10px;
+            border: 1px solid #F0F0F0;
+            color: white;
+        }
+        .section-sp1 {
+            padding-top: 20px;
+        }
+        .section-sp3 {
+            padding-bottom: 30px;
+        }
+    </style>
     <style>
         /* Base style for iframe */
         #pdf-viewer iframe {
@@ -132,7 +157,7 @@
                                         <li><a href="https://www.facebook.com/sharer/sharer.php?u=${pageContext.request.scheme}://${pageContext.request.serverName}:${pageContext.request.serverPort}${pageContext.request.contextPath}/documents/view?fileName=${pdfInfo.fileName}" class="btn outline radius-xl" target="_blank"><i class="fa fa-facebook"></i></a></li>
                                         <li><a href="https://twitter.com/intent/tweet?url=${pageContext.request.scheme}://${pageContext.request.serverName}:${pageContext.request.serverPort}${pageContext.request.contextPath}/documents/view?fileName=${pdfInfo.fileName}&text=Check%20this%20out!" class="btn outline radius-xl" target="_blank"><i class="fa fa-twitter"></i></a></li>
                                         <li><a href="https://www.linkedin.com/shareArticle?mini=true&url=${pageContext.request.scheme}://${pageContext.request.serverName}:${pageContext.request.serverPort}${pageContext.request.contextPath}/documents/view?fileName=${pdfInfo.fileName}&title=Check%20this%20out!" class="btn outline radius-xl" target="_blank"><i class="fa fa-linkedin"></i></a></li>
-                                        <li><a href="https://plus.google.com/share?url=${pageContext.request.scheme}://${pageContext.request.serverName}:${pageContext.request.serverPort}${pageContext.request.contextPath}/documents/view?fileName=${pdfInfo.fileName}" class="btn outline radius-xl" target="_blank"><i class="fa fa-google-plus"></i></a></li>                                    </ul>
+                                    </ul>
                                     <div class="ttr-divider bg-gray"><i class="icon-dot c-square"></i></div>
                                 </div>
                             </div>

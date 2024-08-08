@@ -148,7 +148,7 @@
                         <div class="col-lg-7 col-md-12 heading-bx p-lr">
                             <div class="video-bx">
                                 <img src="/assets/images/about/A.png" alt="Presentation goes here"/>
-                                <a href="https://www.youtube.com/live/jfKfPfyJRdk" class="popup-youtube video"><i class="fa fa-play"></i></a>
+                                <a href="https://www.youtube.com/watch?v=ketQTGwA4Lo" class="popup-youtube video"><i class="fa fa-play"></i></a>
                             </div>
                         </div>
                     </div>

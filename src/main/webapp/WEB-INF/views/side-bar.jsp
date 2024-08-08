@@ -35,7 +35,7 @@
                             <div class="ttr-post-media"> <img src="${file.thumbnailPath}" width="200" height="143" alt=""> </div>
                             <div class="ttr-post-info">
                                 <div class="ttr-post-header">
-                                    <h6 class="post-title"><a href="/documents/view?fileName=${file.fileName}">${file.fileName}</a></h6>
+                                    <h6 class="post-title"><a href="/documents/view?fileName=${file.fileName}">${file.fileName.toString().replace(".pdf", "")}</a></h6>
                                 </div>
                                 <ul class="media-post">
                                     <li><a href="/documents/view?fileName=${file.fileName}"><i class="fa fa-calendar"></i><fmt:formatDate value="${file.lastModified}" type="both" dateStyle="medium" pattern="MMM dd yyyy"/></a></li>
