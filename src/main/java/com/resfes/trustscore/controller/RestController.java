@@ -148,4 +148,11 @@ public class RestController {
         return new ResponseEntity<>(objectMapper.writeValueAsString(data.getAll()), headers, HttpStatus.OK);
     }
 
+    @GetMapping("/comments")
+    public ResponseEntity<List<JsonNode>> getComments(@RequestParam String owner) throws IOException {
+        HttpHeaders headers = new HttpHeaders();
+        headers.add(HttpHeaders.CONTENT_TYPE, "application/json; charset=UTF-8");
+        return new ResponseEntity<>(data.getComments(owner), headers, HttpStatus.OK);
+    }
+
 }

@@ -405,23 +405,27 @@ function disjointChart(nodeFile = {}, linkFile = {}) {
 
     return svg.node();
 }
+
 function barChart(data2, parentWidth = 1200, parentHeight = 400) {
     // Specify the chart’s dimensions.
     const width = parentWidth;
-    const height = Math.min(parentHeight, width / 3);
+    const height = Math.min(parentHeight, width / 2);
     const marginTop = 20;
-    const marginRight = 0;
-    const marginBottom = 30;
-    const marginLeft = 40;
+    const marginRight = 20;  // Margin for better padding
+    const marginBottom = 40; // Margin for x-axis label
+    const marginLeft = 50;   // Margin for y-axis label
     const barColor = "#ff8c00";
+    const hoverColor = "#d47400"; // Color for hover effect
 
-    // Declare the x (horizontal position) scale and the corresponding axis generator.
+    // Declare the x (horizontal position) scale using d3.scaleBand() for padding and centering.
     const x = d3.scaleBand()
-        .domain(data2.map(d => d.owner))
+        .domain(d3.range(data2.length))
         .range([marginLeft, width - marginRight])
-        .padding(0.1);
+        .padding(0.1); // Adjust padding between bars
 
-    const xAxis = d3.axisBottom(x).tickSizeOuter(0);
+    const xAxis = d3.axisBottom(x)
+        .tickFormat(i => data2[i].owner)
+        .tickSizeOuter(0);
 
     // Declare the y (vertical position) scale.
     const y = d3.scaleLinear()
@@ -430,10 +434,10 @@ function barChart(data2, parentWidth = 1200, parentHeight = 400) {
 
     // Create the SVG container.
     const svg = d3.create("svg")
-        .attr("viewBox", [0, 0, width, height])
-        .attr("style", `max-width: ${width}px; height: auto; font: 10px rubik; overflow: visible;`)
-        .attr("width", width)
-        .attr("height", height);
+        .attr("viewBox", `0 0 ${width} ${height}`)
+        .attr("style", "max-width: 100%; height: auto; font: 10px rubik; overflow: visible;")
+        .attr("width", "100%")
+        .attr("height", "auto");
 
     const barsGroup = svg.append("g").attr("class", "bars");
 
@@ -441,19 +445,20 @@ function barChart(data2, parentWidth = 1200, parentHeight = 400) {
         .data(data2)
         .join("rect")
         .attr("fill", barColor) // Default color of the bars.
-        .attr("x", d => x(d.owner))
+        .attr("x", (d, i) => x(i))
         .attr("y", d => y(d.first_combine))
         .attr("height", d => y(0) - y(d.first_combine))
-        .attr("width", x.bandwidth())
+        .attr("width", x.bandwidth()) // Width based on scaleBand
         .on("mouseover", function(event, d) {
-            d3.select('#tooltip2').html(nodeDetail(d)).style("visibility", "visible").style("opacity", 1);
-            d3.select(this)
-                .attr("fill", shadeColor(barColor, -15));
+            d3.select('#tooltip2').html(nodeDetail(d))
+                .style("visibility", "visible")
+                .style("opacity", 1);
+            d3.select(this).attr("fill", hoverColor);
         })
         .on("click", function(event, d) {
             window.open(`/profile?owner=${d.owner}`, '_blank');
         })
-        .on("mousemove", function(event, d) {
+        .on("mousemove", function(event) {
             d3.select('#tooltip2')
                 .style("top", (event.pageY - 10) + "px")
                 .style("left", (event.pageX + 10) + "px");
@@ -467,36 +472,47 @@ function barChart(data2, parentWidth = 1200, parentHeight = 400) {
     const gx = svg.append("g")
         .attr("class", "x-axis")
         .attr("transform", `translate(0,${height - marginBottom})`)
-        .call(xAxis);
+        .call(xAxis)
+        .call(g => g.selectAll(".tick text")
+            .attr("x", 0)
+            .attr("dy", "1.25em")
+            .attr("text-anchor", "middle")) // Center text on each bar
+        .call(g => g.append("text")
+            .attr("x", width / 2)
+            .attr("y", 50)
+            .attr("fill", "currentColor")
+            .attr("text-anchor", "middle")
+            .attr("font-weight", "bold")
+            .text("Owner")); // Added x-axis label
 
     const gy = svg.append("g")
         .attr("class", "y-axis")
         .attr("transform", `translate(${marginLeft},0)`)
         .call(d3.axisLeft(y).tickFormat(y => y))
         .call(g => g.append("text")
-            .attr("x", -marginLeft)
-            .attr("y", 0)
+            .attr("x", -marginLeft + 10)
+            .attr("y", -10)
             .attr("fill", "currentColor")
             .attr("text-anchor", "start")
-            .text("↑ TFT Score"))
+            .attr("font-weight", "bold")
+            .text("↑ TFT Score")) // Enhanced y-axis label
         .call(g => g.select(".domain").remove());
 
     function zoomed(event) {
-        console.log('Zoom event:', event);
-        console.log('Transform:', event.transform);
-        console.log('X scale:', x);
         const transform = event.transform;
-        const newX = transform.rescaleX(x);
-        console.log('New X scale:', newX);
-        gx.call(d3.axisBottom(newX).tickSizeOuter(0));
+
+        // Manually handle zoom for scaleBand
+        const zx = x.copy().range(x.range().map(d => transform.applyX(d)));
+
+        gx.call(d3.axisBottom(zx).tickFormat(i => data2[i].owner).tickSizeOuter(0));
         barsGroup.selectAll("rect")
-            .attr("x", d => newX(d.owner))
-            .attr("width", newX.bandwidth());
+            .attr("x", (d, i) => zx(i))
+            .attr("width", zx.bandwidth());
     }
 
     svg.call(d3.zoom()
         .scaleExtent([1, 8])
-        .translateExtent([[0, 0], [width, height]])
+        .translateExtent([[-100, -100], [width + 100, height + 100]]) // Allows zooming out of SVG bounds
         .extent([[0, 0], [width, height]])
         .on("zoom", zoomed));
 
@@ -504,7 +520,8 @@ function barChart(data2, parentWidth = 1200, parentHeight = 400) {
     // comparator and transitions the x axis and bar positions accordingly.
     return Object.assign(svg.node(), {
         update(order) {
-            x.domain(data2.sort(order).map(d => d.owner));
+            data2.sort(order);
+            x.domain(d3.range(data2.length));
 
             const t = svg.transition()
                 .duration(750);
@@ -513,7 +530,7 @@ function barChart(data2, parentWidth = 1200, parentHeight = 400) {
                 .order()
                 .transition(t)
                 .delay((d, i) => i * 20)
-                .attr("x", d => x(d.owner));
+                .attr("x", (d, i) => x(i));
 
             gx.transition(t)
                 .call(xAxis)
@@ -522,7 +539,6 @@ function barChart(data2, parentWidth = 1200, parentHeight = 400) {
         }
     });
 }
-
 
 const numOfService = document.getElementById('numofservice');
 const append = document.getElementById('disjoint-append');
@@ -551,7 +567,7 @@ window.onload = async function() {
             barChartAppend.removeChild(barChartSVG);
             barChartSVG = barChart(data2, barChartAppend.clientWidth, barChartAppend.clientHeight);
             barChartAppend.append(barChartSVG);
-
+            $('#select-order').selectpicker('val', 'descending');
         } else {
             console.log('The value is not a number:', value);
         }
@@ -578,7 +594,7 @@ window.onload = async function() {
 
 function adjustHeight(container) {
     const width = container.clientWidth;
-    container.style.height = width/3 + 'px';
+    container.style.height = width/12*5 + 'px';
     container.style.marginBottom = width/12 + 'px';
 }
 
