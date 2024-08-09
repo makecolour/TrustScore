@@ -205,38 +205,91 @@
             iframe.remove();
             const pdfjsLib = window['pdfjs-dist/build/pdf'];
             pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.8.335/pdf.worker.min.js';
-            pdfjsLib.getDocument('${pageContext.request.contextPath}${pdfPath}').promise.then(function(pdfDoc_) {
-                console.log('PDF loaded');
-                var numPages = pdfDoc_.numPages;
-                console.log('Number of Pages: ' + numPages);
 
-                for(let pageNum = 1; pageNum <= numPages; pageNum++) {
-                    pdfDoc_.getPage(pageNum).then(function(page) {
-                        var unscaledViewport = page.getViewport({scale: 1.0});
-                        var scale = pdfViewerWidth / unscaledViewport.width; // Calculate scale based on the pdf-viewer width
-                        scale = Math.min(scale, 1.5); // Adjust this value as needed
+            // Create a div to contain the label and range input
+            const scaleContainer = document.createElement('div');
+            scaleContainer.classList.add('form-group', 'row', 'col-12');
 
-                        var viewport = page.getViewport({scale: scale});
-                        var canvas = document.createElement('canvas');
-                        canvas.id = 'pdf-canvas-' + pageNum;
-                        var context = canvas.getContext('2d');
-                        canvas.height = viewport.height;
-                        canvas.width = viewport.width;
+            // Create a label for the range input
+            const scaleLabel = document.createElement('label');
+            scaleLabel.htmlFor = 'scaleInput';
+            scaleLabel.innerText = 'Sharpness: 5';
+            scaleLabel.classList.add('form-label', 'col-md-3', 'col-xs-3');
 
-                        document.getElementById('pdf-viewer').appendChild(canvas);
+            // Create a range input for selecting the viewport scale
+            const scaleInput = document.createElement('input');
+            scaleInput.type = 'range';
+            scaleInput.min = '1';
+            scaleInput.max = '7';
+            scaleInput.step = '0.5';
+            scaleInput.value = '5';
+            scaleInput.id = 'scaleInput';
+            scaleInput.classList.add('form-control', 'col-md-7', 'col-xs-7');
 
-                        var renderContext = {
-                            canvasContext: context,
-                            viewport: viewport
-                        };
-                        var renderTask = page.render(renderContext);
-                        renderTask.promise.then(function () {
-                            console.log('Page ' + pageNum + ' rendered');
+            // Append the label and input to the div
+            scaleContainer.appendChild(scaleLabel);
+            scaleContainer.appendChild(scaleInput);
+
+            // Ensure the parent element exists before inserting the new nodes
+            if (pdfViewer && pdfViewer.parentNode) {
+                pdfViewer.parentNode.insertBefore(scaleContainer, pdfViewer);
+            }
+
+            // Function to render the PDF pages
+            function renderPDF(scale) {
+                pdfjsLib.getDocument('${pageContext.request.contextPath}${pdfPath}').promise.then(function(pdfDoc_) {
+                    console.log('PDF loaded');
+                    var numPages = pdfDoc_.numPages;
+                    console.log('Number of Pages: ' + numPages);
+
+                    // Clear previous canvases
+                    pdfViewer.innerHTML = '';
+
+                    for(let pageNum = 1; pageNum <= numPages; pageNum++) {
+                        pdfDoc_.getPage(pageNum).then(function(page) {
+                            var viewport = page.getViewport({scale: scale});
+                            var canvas = document.createElement('canvas');
+                            canvas.id = 'pdf-canvas-' + pageNum;
+                            var context = canvas.getContext('2d');
+                            canvas.height = viewport.height;
+                            canvas.width = viewport.width;
+
+                            // Adjust canvas size to fit the parent element
+                            const adjustedScale = pdfViewerWidth / viewport.width;
+                            canvas.style.width = pdfViewerWidth + 'px';
+                            canvas.style.height = (viewport.height * adjustedScale) + 'px';
+
+                            document.getElementById('pdf-viewer').appendChild(canvas);
+
+                            var renderContext = {
+                                canvasContext: context,
+                                viewport: viewport
+                            };
+                            var renderTask = page.render(renderContext);
+                            renderTask.promise.then(function () {
+                                console.log('Page ' + pageNum + ' rendered');
+
+                                // Create a footer for the page number
+                                const footer = document.createElement('div');
+                                footer.innerText = 'Page ' + pageNum + ' of ' + numPages;
+                                footer.style.fontSize = '0.5em';
+                                footer.style.textAlign = 'center';
+                                canvas.parentNode.insertBefore(footer, canvas.nextSibling);
+                            });
                         });
-                    });
-                }
-            }).catch(function(error) {
-                console.log(error);
+                    }
+                }).catch(function(error) {
+                    console.log(error);
+                });
+            }
+
+            // Initial render with default scale
+            renderPDF(scaleInput.value);
+
+            // Update render when scale changes
+            scaleInput.addEventListener('change', function() {
+                scaleLabel.innerText = 'Sharpness: ' + this.value;
+                renderPDF(this.value);
             });
         }
     });
