@@ -10,9 +10,9 @@
     <!-- META ============================================= -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="keywords" content=""/>
-    <meta name="author" content=""/>
-    <meta name="robots" content=""/>
+    <meta name="keywords" content="Trust Management, service providers, list, Research Festival, ResFes, FPTEdu, LLM, data, TFT score, large language model, trust worthiness, social networks, knowledge graph, FPT University" />
+    <meta name="author" content="Trust Management" />
+    <meta name=”robots” content=”all” />
 
     <!-- DESCRIPTION -->
     <meta name="description" content="Trust Management: Service Providers"/>

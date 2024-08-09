@@ -14,24 +14,24 @@
     <!-- META ============================================= -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="keywords" content="" />
-    <meta name="author" content="" />
-    <meta name="robots" content="" />
+    <meta name="keywords" content="Trust Management, research, document, ${pdfInfo.fileName.toString().replace(".pdf", "")}, pdf, Research Festival, ResFes, FPTEdu, LLM, data, TFT score, large language model, trust worthiness, social networks, knowledge graph, FPT University" />
+    <meta name="author" content="Trust Management" />
+    <meta name=”robots” content=”all” />
 
     <!-- DESCRIPTION -->
-    <meta name="description" content="Trust Management: ${pdfInfo.fileName}" />
+    <meta name="description" content="Trust Management: ${pdfInfo.fileName.toString().replace(".pdf", "")}" />
 
     <!-- OG -->
-    <meta property="og:title" content="Trust Management: ${pdfInfo.fileName}" />
-    <meta property="og:description" content="Trust Management: ${pdfInfo.fileName}" />
+    <meta property="og:title" content="Trust Management: ${pdfInfo.fileName.toString().replace(".pdf", "")}" />
+    <meta property="og:description" content="Trust Management: ${pdfInfo.fileName.toString().replace(".pdf", "")}" />
     <meta property="og:image" content="/assets/images/favicon.png" />
     <meta name="format-detection" content="telephone=no">
     <meta property="og:url" content="${pageContext.request.contextPath}/documents/view?fileName=${pdfInfo.fileName}">
     <meta name="twitter:card" content="/assets/images/logo-white-2.png">
 
     <!--  Non-Essential, But Recommended -->
-    <meta property="og:description" content="Research document ${pdfInfo.fileName.toString().replace(".pdf", "")}">
-    <meta property="og:site_name" content="Trust Management: ${pdfInfo.fileName}">
+    <meta property="og:description" content="Research document ${pdfInfo.fileName.toString().replace(".pdf", "")} by Trust Management team">
+    <meta property="og:site_name" content="Trust Management: ${pdfInfo.fileName.toString().replace(".pdf", "")}">
     <meta name="twitter:image:alt" content="Trust Management">
 
     <!-- FAVICONS ICON ============================================= -->
@@ -39,7 +39,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="/assets/images/favicon.png" />
 
     <!-- PAGE TITLE HERE ============================================= -->
-    <title>Trust Management: ${pdfInfo.fileName}</title>
+    <title>Trust Management: ${pdfInfo.fileName.toString().replace(".pdf", "")}</title>
 
     <!-- MOBILE SPECIFIC ============================================= -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
