@@ -20,8 +20,15 @@
     <!-- OG -->
     <meta property="og:title" content="Trust Management: Service Providers"/>
     <meta property="og:description" content="Trust Management: Service Providers"/>
-    <meta property="og:image" content=""/>
+    <meta property="og:image" content="/assets/images/favicon.png" />
     <meta name="format-detection" content="telephone=no">
+    <meta property="og:url" content="${pageContext.request.contextPath}/list">
+    <meta name="twitter:card" content="/assets/images/logo-white-2.png">
+
+    <!--  Non-Essential, But Recommended -->
+    <meta property="og:description" content="List of analyzed service providers by Trust Management project">
+    <meta property="og:site_name" content="Trust Management: Service Providers">
+    <meta name="twitter:image:alt" content="Trust Management">
 
     <!-- FAVICONS ICON ============================================= -->
     <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon"/>

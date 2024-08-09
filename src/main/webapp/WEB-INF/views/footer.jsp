@@ -52,7 +52,7 @@
                     <div class="row">
                         <div class="col-6 col-lg-6 col-md-6 col-sm-6">
                             <div class="widget footer_widget">
-                                <h5 class="footer-title">Trust Management</h5>
+                                <h5 class="footer-title">Services</h5>
                                 <ul>
                                     <li><a href="/">Home</a></li>
                                     <li><a href="/list">Service Providers</a></li>

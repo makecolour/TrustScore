@@ -23,8 +23,15 @@
   <!-- OG -->
   <meta property="og:title" content="Trust Management: Error" />
   <meta property="og:description" content="Trust Management: Error" />
-  <meta property="og:image" content="" />
+  <meta property="og:image" content="/assets/images/favicon.png" />
   <meta name="format-detection" content="telephone=no">
+  <meta property="og:url" content="${pageContext.request.contextPath}/error">
+  <meta name="twitter:card" content="/assets/images/logo-white-2.png">
+
+  <!--  Non-Essential, But Recommended -->
+  <meta property="og:description" content="Error">
+  <meta property="og:site_name" content="Trust Management: Error">
+  <meta name="twitter:image:alt" content="Trust Management">
 
   <!-- FAVICONS ICON ============================================= -->
   <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon" />

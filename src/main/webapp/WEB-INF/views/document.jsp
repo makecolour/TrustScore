@@ -24,8 +24,15 @@
     <!-- OG -->
     <meta property="og:title" content="Trust Management: ${pdfInfo.fileName}" />
     <meta property="og:description" content="Trust Management: ${pdfInfo.fileName}" />
-    <meta property="og:image" content="" />
+    <meta property="og:image" content="/assets/images/favicon.png" />
     <meta name="format-detection" content="telephone=no">
+    <meta property="og:url" content="${pageContext.request.contextPath}/documents/view?fileName=${pdfInfo.fileName}">
+    <meta name="twitter:card" content="/assets/images/logo-white-2.png">
+
+    <!--  Non-Essential, But Recommended -->
+    <meta property="og:description" content="Research document ${pdfInfo.fileName.toString().replace(".pdf", "")}">
+    <meta property="og:site_name" content="Trust Management: ${pdfInfo.fileName}">
+    <meta name="twitter:image:alt" content="Trust Management">
 
     <!-- FAVICONS ICON ============================================= -->
     <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon" />
@@ -106,7 +113,7 @@
     <!-- Content -->
     <div class="page-content bg-white">
         <!-- inner page banner -->
-        <div class="page-banner ovbl-dark" style="background-image:url(/assets/images/banner/banner2.jpg);">
+        <div class="page-banner ovbl-dark" style="background-image:url(/assets/images/gallery/resfes.png);">
             <div class="container">
                 <div class="page-banner-entry">
                     <h1 class="text-white">Research Document: ${pdfInfo.fileName.toString().replace(".pdf", "")}</h1>

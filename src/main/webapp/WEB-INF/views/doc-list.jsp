@@ -26,8 +26,15 @@
     <!-- OG -->
     <meta property="og:title" content="Trust Management: Research Documents" />
     <meta property="og:description" content="Trust Management: Research Documents" />
-    <meta property="og:image" content="" />
+    <meta property="og:image" content="/assets/images/favicon.png" />
     <meta name="format-detection" content="telephone=no">
+    <meta property="og:url" content="${pageContext.request.contextPath}/documents/list">
+    <meta name="twitter:card" content="/assets/images/logo-white-2.png">
+
+    <!--  Non-Essential, But Recommended -->
+    <meta property="og:description" content="List of research documents of Trust Management project">
+    <meta property="og:site_name" content="Trust Management: Research Documents">
+    <meta name="twitter:image:alt" content="Trust Management">
 
     <!-- FAVICONS ICON ============================================= -->
     <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon" />
@@ -103,10 +110,10 @@
                                 <div class="ttr-post-info">
                                     <ul class="media-post">
                                         <li><a href="/documents/view?fileName=${file.fileName}"><i class="fa fa-calendar"></i>${file.lastModified}</a></li>
-                                        <li><a href="/documents/view?fileName=${file.fileName}"><i class="fa fa-user"></i>Trust Management</a></li>
+                                        <li><a href="/about"><i class="fa fa-user"></i>Trust Management</a></li>
                                     </ul>
                                     <h5 class="post-title"><a href="/documents/view?fileName=${file.fileName}">${file.fileName.toString().replace(".pdf","")}</a></h5>
-                                    <p>Knowing that, you’ve optimised your pages countless amount of times, written tons.</p>
+                                    <p>A research document of Trust Management team: ${file.fileName}</p>
                                     <div class="post-extra">
                                         <a href="/documents/view?fileName=${file.fileName}" class="btn-link">READ MORE</a>
                                         <a href="/documents/view?fileName=${file.fileName}" class="comments-bx"><i class="fa fa-hdd-o"></i>${file.size}Kb</a>
