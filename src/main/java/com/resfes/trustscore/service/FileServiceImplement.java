@@ -303,8 +303,11 @@ try {
                     {
                         existingNode.put("facebook_profile_pic", "/assets/images/services/cosmetic.png");
                     }else{
-                        existingNode.put("facebook_profile_pic", "/assets/images/services/other.png");
+                        existingNode.put("facebook_profile_pic", "/assets/images/gallery/FUHL.jpg");
                     }
+                }
+                else{
+                    existingNode.put("facebook_profile_pic", "/assets/images/services/other.png");
                 }
                 JsonNode nameNode = objectNode.get("a").get("properties").get("name");
                 JSONArray employee;

@@ -44,6 +44,24 @@ function pieChart(data = [], parentWidth = 270, parentHeight = 270) {
         }else if(x.data.name.includes("Like")) {
 
         }
+        else if(x.data.name.includes("Love")) {
+
+        }
+        else if(x.data.name.includes("Care")) {
+
+        }
+        else if(x.data.name.includes("Haha")) {
+
+        }
+        else if(x.data.name.includes("Wow")) {
+
+        }
+        else if(x.data.name.includes("Sad")) {
+
+        }
+        else if(x.data.name.includes("Angry")) {
+
+        }
         return color(x.data.name);
     }
     const tooltip = d3.select("#tooltip");

@@ -85,12 +85,17 @@
             padding: 10px;
             border: 1px solid #F0F0F0;
             color: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
         }
         .section-sp1 {
             padding-top: 20px;
         }
         .section-sp3 {
             padding-bottom: 30px;
+        }
+        .fa-star {
+            font-size: 24px; /* Increase the size of the star */
+            color: yellow; /* Change the color to yellow */
         }
     </style>
 
@@ -112,8 +117,28 @@
         </c:choose>);">
             <div class="container">
                 <div class="page-banner-entry">
-                    <h1 class="text-white">${object.hasNonNull('facebook_name') ? object.get('facebook_name').asText() : fn:replace(object.get('owner').asText(), '\"', '')}'s
-                        Details</h1>
+                    <h1 class="text-white">${object.hasNonNull('facebook_name') ? object.get('facebook_name').asText() : fn:replace(object.get('owner').asText(), '\"', '')}'s Details</h1>
+                    <h2 class="text-white">
+                       Rank #${object.get("order")}
+                    </h2>
+                    <ul class="cours-star">
+                    <c:choose>
+                        <c:when test="${object.get('star').asDouble() <= 0}">
+                            <c:forEach var="i" begin="1" end="5">
+                                <li><i class="fa fa-star"></i></li>
+                            </c:forEach>
+                        </c:when>
+                        <c:otherwise>
+                            <c:forEach var="i" begin="1" end="${object.get('star').asDouble().intValue()}">
+                                <li class="active"><i class="fa fa-star"></i></li>
+                            </c:forEach>
+                            <c:forEach var="i" begin="${object.get('star').asDouble().intValue() + 1}" end="5">
+                                <li><i class="fa fa-star"></i></li>
+                            </c:forEach>
+                        </c:otherwise>
+                    </c:choose>
+                    </ul>
+
                 </div>
             </div>
         </div>
