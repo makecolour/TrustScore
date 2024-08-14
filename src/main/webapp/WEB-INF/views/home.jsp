@@ -566,7 +566,7 @@
       </div>
 
       <!-- Form -->
-      <div class="section-area section-sp1 ovpr-dark bg-fix online-cours" style="background-image:url(/assets/images/gallery/FUHL.jpg);">
+      <div class="section-area section-sp1 ovpr-dark bg-fix online-cours" style="background-image:url(/assets/images/gallery/resfes.png);">
         <div class="container">
           <div class="row">
             <div class="col-md-12 text-center text-white">
@@ -613,7 +613,7 @@
 <script src="/assets/vendors/masonry/filter.js"></script>
 <script src="/assets/vendors/owl-carousel/owl.carousel.js"></script>
 <script src="/assets/js/functions.js"></script>
-<script src="/assets/js/contact.js"></script>
+<%--<script src="/assets/js/contact.js"></script>--%>
 <script src='/assets/vendors/switcher/switcher.js'></script>
 <!-- Revolution JavaScripts Files -->
 <script src="/assets/vendors/revolution/js/jquery.themepunch.tools.min.js"></script>

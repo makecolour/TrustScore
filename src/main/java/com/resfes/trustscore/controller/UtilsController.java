@@ -44,6 +44,7 @@ public class UtilsController {
         ModelAndView modelAndView = new ModelAndView("home");
         List<JsonNode> objects = dataService.getTopUsers(10);
         modelAndView.addObject("FUHL", application.getFuhl());
+        modelAndView.addObject("email", application.getEmail());
         modelAndView.addObject("objects", objects);
         modelAndView.addObject("highest", objects.get(0));
         return modelAndView;
@@ -82,6 +83,7 @@ public class UtilsController {
         modelAndView.addObject("ownersList", ownersList);
         modelAndView.addObject("namesList", namesList);
         modelAndView.addObject("FUHL", application.getFuhl());
+        modelAndView.addObject("email", application.getEmail());
         modelAndView.addObject("object", user);
         return modelAndView;
     }
@@ -114,6 +116,7 @@ public class UtilsController {
 
             modelAndView.addObject("service", service);
             modelAndView.addObject("FUHL", application.getFuhl());
+            modelAndView.addObject("email", application.getEmail());
             modelAndView.addObject("query", query);
             modelAndView.addObject("objects", objects.getContent());
             modelAndView.addObject("currentPage", page);
@@ -127,6 +130,7 @@ public class UtilsController {
     public ModelAndView about() {
         ModelAndView modelAndView = new ModelAndView("about");
         modelAndView.addObject("FUHL", application.getFuhl());
+        modelAndView.addObject("email", application.getEmail());
         return modelAndView;
     }
 

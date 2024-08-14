@@ -20,11 +20,11 @@
 <%--                            <li><a href="#" class="btn-link"><i class="fa fa-facebook"></i></a></li>--%>
 <%--                            <li><a href="#" class="btn-link"><i class="fa fa-twitter"></i></a></li>--%>
 <%--                            <li><a href="#" class="btn-link"><i class="fa fa-linkedin"></i></a></li>--%>
-                            <li><a href="mailto:Duongpv14@fe.edu.vn?subject=Trust Management" class="btn-link"><i class="fa fa-google-plus"></i></a></li>
+                            <li><a href="mailto:${email}?subject=Trust Management" class="btn-link"><i class="fa fa-google-plus"></i></a></li>
                         </ul>
                     </div>
                     <div class="pt-btn-join">
-                        <a href="/" class="btn ">Follow us</a>
+                        <a href="/contact" class="btn ">Contact Us</a>
                     </div>
                 </div>
             </div>
@@ -34,25 +34,24 @@
                 <div class="col-lg-4 col-md-12 col-sm-12 footer-col-4">
                     <div class="widget">
                         <h5 class="footer-title">Trust Management</h5>
-                        <p class="text-capitalize m-b20">FPT Edu Research Festival project</p>
-<%--                        <div class="subscribe-form m-b20">--%>
-<%--                            <form class="subscription-form" action="http://educhamp.themetrades.com/demo/assets/script/mailchamp.php" method="post">--%>
-<%--                                <div class="ajax-message"></div>--%>
-<%--                                <div class="input-group">--%>
-<%--                                    <input name="email" required="required http://localhost:8080/test/homeed"  class="form-control" placeholder="Your Email Address" type="email">--%>
-<%--                                    <span class="input-group-btn">--%>
-<%--											<button name="submit" value="Submit" type="submit" class="btn"><i class="fa fa-arrow-right"></i></button>--%>
-<%--										</span>--%>
-<%--                                </div>--%>
-<%--                            </form>--%>
-<%--                        </div>--%>
+                        <p class="text-capitalize m-b20">A Novel Approach of Reputation Trust Metric Based on Knowledge Graph Combined with Large Language Model for Improving Trust Worthiness Calculation on Social Networks</p>
+                        <div class="subscribe-form m-b20">
+                            <form class="subscription-form" action="/contact" method="get">
+                                <div class="input-group">
+                                    <input name="email" class="form-control" placeholder="Your Email Address" type="email">
+                                    <span class="input-group-btn">
+											<button name="submit" value="Submit" type="submit" class="btn"><i class="fa fa-arrow-right"></i></button>
+                                    </span>
+                                </div>
+                            </form>
+                        </div>
                     </div>
                 </div>
                 <div class="col-12 col-lg-5 col-md-7 col-sm-12">
                     <div class="row">
                         <div class="col-6 col-lg-6 col-md-6 col-sm-6">
                             <div class="widget footer_widget">
-                                <h5 class="footer-title">Services</h5>
+                                <h5 class="footer-title">Project</h5>
                                 <ul>
                                     <li><a href="/">Home</a></li>
                                     <li><a href="/list">Service Providers</a></li>

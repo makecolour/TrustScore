@@ -42,25 +42,25 @@ function pieChart(data = [], parentWidth = 270, parentHeight = 270) {
         }else if(x.data.name.includes("Ask for services")) {
             return "#FBE29F"
         }else if(x.data.name.includes("Like")) {
-
+            return "#4267B2"
         }
         else if(x.data.name.includes("Love")) {
-
+            return "#E1306C"
         }
         else if(x.data.name.includes("Care")) {
-
+            return "#F7B5CA"
         }
         else if(x.data.name.includes("Haha")) {
-
+            return "#FCAF45"
         }
         else if(x.data.name.includes("Wow")) {
-
+            return "#F56040"
         }
         else if(x.data.name.includes("Sad")) {
-
+            return "#833AB4"
         }
         else if(x.data.name.includes("Angry")) {
-
+            return "#FD1D1D"
         }
         return color(x.data.name);
     }

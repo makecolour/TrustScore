@@ -1,5 +1,6 @@
 package com.resfes.trustscore.controller;
 
+import com.resfes.trustscore.model.Application;
 import com.resfes.trustscore.model.PDFInfo;
 import com.resfes.trustscore.service.FileService;
 import jakarta.servlet.http.HttpSession;
@@ -28,6 +29,7 @@ import java.util.Optional;
 public class DocController {
     private final FileService fileService;
     private final ResourceLoader resourceLoader;
+    private final Application application;
 
     @RequestMapping("/list")
     ModelAndView list(HttpSession session, @RequestParam(value = "q", required = false, defaultValue = "") String query, @RequestParam(value = "page", defaultValue = "0") int page, @RequestParam(value = "size", defaultValue = "9") int size) {
@@ -46,6 +48,7 @@ public class DocController {
         } catch (Exception e) {
             e.printStackTrace();
         }
+        modelAndView.addObject("email", application.getEmail());
         return modelAndView;
     }
     @RequestMapping("/")
@@ -91,6 +94,7 @@ public class DocController {
         if(pdfInfo.isEmpty()) {
             throw new RuntimeException("File not found");
         }
+        modelAndView.addObject("email", application.getEmail());
         modelAndView.addObject("pdfInfo", pdfInfo.get());
         modelAndView.addObject("pdfPath", pdfPath);
         modelAndView.addObject("newest", newest3);

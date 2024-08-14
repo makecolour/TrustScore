@@ -146,15 +146,16 @@
             <div class="section-area bg-gray section-sp1 our-story">
                 <div class="container">
                     <div class="row align-items-center d-flex">
-                        <div class="col-lg-5 col-md-12 heading-bx">
+                        <div class="col-lg-7 col-md-12 heading-bx">
                             <h2 class="m-b10">Our Story</h2>
                             <h5 class="fw4">Why did we start this project?</h5>
-                            <p>Recognizing the critical importance of safety and trust in online transactions, particularly on social media and the internet at large, our team, consisting of members Nguyen Huy Duc Hieu, Mai Phu Trong, and Nguyen Thuong Quyen, under the guidance of Master Pham Van Duong, has commenced project X to address this issue. This initiative aims to enhance the reliability of digital marketplaces, ensuring a secure environment for users to conduct their business.</p>
-                            <a href="#project" class="btn">So, we started</a>
+                            <p>Social media platforms, notably Facebook, have evolved beyond mere networking and sharing spaces into ideal marketplaces. However, unlike established e-commerce platforms such as Shopee or Lazada, social media lacks effective methods for evaluating service providers and customers.</p>
+                            <p>Recognizing the importance of safety and trust in online transactions, especially on social media, our team—comprising Nguyen Huy Duc Hieu, Mai Phu Trong, and Nguyen Thuong Quyen, under the mentorship of Master Pham Van Duong—has initiated the <strong>Trust Management project</strong>. This project is dedicated to enhancing the credibility of digital marketplaces, thereby ensuring a secure and trustworthy environment for users to engage in commerce. The goal is to create a robust framework that not only facilitates transactions but also instills confidence in the digital economy.</p>
+                            <a href="#project" class="btn">So, we started it!</a>
                         </div>
-                        <div class="col-lg-7 col-md-12 heading-bx p-lr">
+                        <div class="col-lg-5 col-md-12 heading-bx p-lr">
                             <div class="video-bx">
-                                <img src="/assets/images/about/A.png" alt="Presentation goes here"/>
+                                <img src="/assets/images/about/start.png" alt="Presentation goes here"/>
                                 <a href="https://www.youtube.com/watch?v=ketQTGwA4Lo" class="popup-youtube video"><i class="fa fa-play"></i></a>
                             </div>
                         </div>
@@ -212,8 +213,8 @@
                             <div class="join-content-bx text-white">
                                 <h2>The project</h2>
 <%--                                <h4><span class="counter">57,000 </span> Online Courses</h4>--%>
-                                <p>The Trust Management Project offers trust reputation scores for services provided within the FU-HL group, a large and active community on Facebook associated with FPT University Hanoi. This system recommends services from reputable providers and shares their contact information, enabling users to easily connect with and utilize these services.</p>
-                                <a href="https://www.facebook.com/groups/fuhoalac" target="_blank" class="btn button-md">FU-HL</a>
+                                <p>The <strong>Trust Management project</strong> offers trust reputation scores for services provided within the FU-HL group, a large and active community on Facebook associated with FPT University Hanoi with about 56000 members and more than 1500 posts per day. This system recommends services from reputable providers and shares their contact information, enabling users to easily connect with and utilize these services.</p>
+                                <a href="${FUHL}" target="_blank" class="btn button-md">FU-HL</a>
                             </div>
                         </div>
                     </div>
@@ -242,7 +243,7 @@
 <script src="/assets/vendors/masonry/filter.js"></script>
 <script src="/assets/vendors/owl-carousel/owl.carousel.js"></script>
 <script src="/assets/js/functions.js"></script>
-<script src="/assets/js/contact.js"></script>
+<%--<script src="/assets/js/contact.js"></script>--%>
 <script src='/assets/vendors/switcher/switcher.js'></script>
 <script>
     $(document).ready(function(){

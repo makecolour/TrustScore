@@ -94,8 +94,8 @@
             padding-bottom: 30px;
         }
         .fa-star {
-            font-size: 24px; /* Increase the size of the star */
-            color: yellow; /* Change the color to yellow */
+            font-size: 40px;
+            margin: 5px;
         }
     </style>
 
@@ -130,7 +130,7 @@
                         </c:when>
                         <c:otherwise>
                             <c:forEach var="i" begin="1" end="${object.get('star').asDouble().intValue()}">
-                                <li class="active"><i class="fa fa-star"></i></li>
+                                <li class="active"><i class="fa fa-star" style="color: yellow;"></i></li>
                             </c:forEach>
                             <c:forEach var="i" begin="${object.get('star').asDouble().intValue() + 1}" end="5">
                                 <li><i class="fa fa-star"></i></li>

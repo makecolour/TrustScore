@@ -18,21 +18,21 @@
             <div class="item">
                 <div class="testimonial-bx">
                     <div class="testimonial-thumb">
-                        <img src="/assets/images/testimonials/pic2.jpg" alt="">
+                        <img src="/assets/images/team/MSDuong.jpg" alt="">
                     </div>
                     <div class="testimonial-info">
                         <h5 class="name">M.S. Pham Van Duong</h5>
                         <p>-Instructor</p>
                     </div>
                     <div class="testimonial-content">
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type...</p>
+                        <p>Trust Management: The foundation of reliability and honesty.</p>
                     </div>
                 </div>
             </div>
             <div class="item">
                 <div class="testimonial-bx">
                     <div class="testimonial-thumb">
-                        <img src="/assets/images/testimonials/pic2.jpg" alt="">
+                        <img src="/assets/images/team/HieuNHD.jpg" alt="">
                     </div>
                     <div class="testimonial-info">
                         <h5 class="name">Nguyen Huy Duc Hieu</h5>
@@ -46,7 +46,7 @@
             <div class="item">
                 <div class="testimonial-bx">
                     <div class="testimonial-thumb">
-                        <img src="/assets/images/testimonials/pic2.jpg" alt="">
+                        <img src="/assets/images/team/TrongMP.png" alt="">
                     </div>
                     <div class="testimonial-info">
                         <h5 class="name">Mai Phu Trong</h5>
@@ -68,7 +68,7 @@
                         <p>-Project Member</p>
                     </div>
                     <div class="testimonial-content">
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type...</p>
+                        <p>As a victim of online scams, I truly hope that our project can go even further in the future. This could be a stepping stone towards more secure digital interactions and a safer online community for everyone.</p>
                     </div>
                 </div>
             </div>

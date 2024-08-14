@@ -37,4 +37,10 @@ public class Application {
 
     @Value("${comments_file}")
     private String commentsFile;
+
+    @Value("${admin.email}")
+    private String email;
+
+    @Value("${spring.mail.username}")
+    private String mailUsername;
 }
