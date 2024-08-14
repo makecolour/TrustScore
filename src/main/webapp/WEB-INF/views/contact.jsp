@@ -86,7 +86,7 @@
 		<!-- Breadcrumb row END -->
 		<div id="overlay" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background-color:rgba(0,0,0,0.7); z-index:1000; justify-content:center; align-items:center;">
 			<div style="position:relative; width:80%; max-width:800px; background-color:white; padding:20px; border-radius:10px;">
-				<button id="close-overlay" style="position:absolute; top:10px; right:10px; background:none; border:none; font-size:20px; cursor:pointer;">&times;</button>
+				<button id="close-overlay" style="position:absolute; top:5px; right:10px; background:none; border:none; font-size:30px; cursor:pointer;">&times;</button>
 				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.5063419425232!2d105.52271427509262!3d21.01241668063286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135abc60e7d3f19%3A0x2be9d7d0b5abcbf4!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBGUFQgSMOgIE7hu5lp!5e0!3m2!1svi!2s!4v1723633772379!5m2!1svi!2s" class="align-self-stretch d-flex" style="width:100%; min-width:100%; min-height:400px;" allowfullscreen></iframe>
 			</div>
 		</div>
@@ -100,7 +100,7 @@
 							<p>If you have any suggestions or contributions for the project, please feel free to contact us using the adjacent form, or directly:</p>
 							<div class="widget widget_getintuch">	
 								<ul>
-									<li id="location-link"><i class="ti-location-pin" href="https://maps.app.goo.gl/uwDSUGAVo2hHcuXT7"></i>FPT University, Hoa Lac Hi-tech Park, km 29, Thang Long Avenue, Thach That Province, Hanoi, Vietnam</li>
+									<li id="location-link"><i class="ti-location-pin"></i>FPT University, Hoa Lac Hi-tech Park, km 29, Thang Long Avenue, Thach That Province, Hanoi, Vietnam</li>
 <%--									<li><i class="ti-mobile"></i></li>--%>
 									<li id="email"><i class="ti-email"></i>${email}</li>
 								</ul>
