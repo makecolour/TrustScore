@@ -476,14 +476,14 @@ function barChart(data2, parentWidth = 1200, parentHeight = 400) {
         .call(g => g.selectAll(".tick text")
             .attr("x", 0)
             .attr("dy", "1.25em")
-            .attr("text-anchor", "middle")) // Center text on each bar
+            .attr("text-anchor", "middle"))
         .call(g => g.append("text")
             .attr("x", width / 2)
             .attr("y", 50)
             .attr("fill", "currentColor")
             .attr("text-anchor", "middle")
             .attr("font-weight", "bold")
-            .text("Owner")); // Added x-axis label
+            .text("Service Provider"));
 
     const gy = svg.append("g")
         .attr("class", "y-axis")

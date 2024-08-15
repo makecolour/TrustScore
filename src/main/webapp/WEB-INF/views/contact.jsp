@@ -107,9 +107,9 @@
 							</div>
 							<h5 class="m-t0 m-b20">Share This Project</h5>
 							<ul class="list-inline contact-social-bx">
-								<li><a href="https://www.facebook.com/sharer/sharer.php?u=${pageContext.request.scheme}://${pageContext.request.serverName}:${pageContext.request.serverPort}${pageContext.request.contextPath}/documents/view?fileName=${pdfInfo.fileName}" class="btn outline radius-xl" target="_blank"><i class="fa fa-facebook"></i></a></li>
-								<li><a href="https://twitter.com/intent/tweet?url=${pageContext.request.scheme}://${pageContext.request.serverName}:${pageContext.request.serverPort}${pageContext.request.contextPath}/documents/view?fileName=${pdfInfo.fileName}&text=Check%20this%20out!" class="btn outline radius-xl" target="_blank"><i class="fa fa-twitter"></i></a></li>
-								<li><a href="https://www.linkedin.com/shareArticle?mini=true&url=${pageContext.request.scheme}://${pageContext.request.serverName}:${pageContext.request.serverPort}${pageContext.request.contextPath}/documents/view?fileName=${pdfInfo.fileName}&title=Check%20this%20out!" class="btn outline radius-xl" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+								<li><a href="https://www.facebook.com/sharer/sharer.php?u=${pageContext.request.scheme}://${pageContext.request.serverName}:${pageContext.request.serverPort}${pageContext.request.contextPath}" class="btn outline radius-xl" target="_blank"><i class="fa fa-facebook"></i></a></li>
+								<li><a href="https://twitter.com/intent/tweet?url=${pageContext.request.scheme}://${pageContext.request.serverName}:${pageContext.request.serverPort}${pageContext.request.contextPath}&text=Check%20this%20out!" class="btn outline radius-xl" target="_blank"><i class="fa fa-twitter"></i></a></li>
+								<li><a href="https://www.linkedin.com/shareArticle?mini=true&url=${pageContext.request.scheme}://${pageContext.request.serverName}:${pageContext.request.serverPort}${pageContext.request.contextPath}&title=Check%20this%20out!" class="btn outline radius-xl" target="_blank"><i class="fa fa-linkedin"></i></a></li>
 							</ul>
 						</div>
 
