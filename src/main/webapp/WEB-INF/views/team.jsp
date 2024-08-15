@@ -39,7 +39,7 @@
                         <p>-Project Leader</p>
                     </div>
                     <div class="testimonial-content">
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type...</p>
+                        <p>Your trust is our priority!</p>
                     </div>
                 </div>
             </div>
@@ -53,7 +53,7 @@
                         <p>-Project Member</p>
                     </div>
                     <div class="testimonial-content">
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type...</p>
+                        <p>Have trust issues with services in FU-HL? Come to our website!</p>
                     </div>
                 </div>
             </div>

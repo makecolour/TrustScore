@@ -155,8 +155,8 @@
                         </div>
                         <div class="col-lg-5 col-md-12 heading-bx p-lr">
                             <div class="video-bx">
-                                <img src="/assets/images/about/start.png" alt="Presentation goes here"/>
-                                <a href="https://www.youtube.com/watch?v=ketQTGwA4Lo" class="popup-youtube video"><i class="fa fa-play"></i></a>
+                                <img src="/assets/images/about/start.png" alt="FPT Education Research Festival 2024 Trailer"/>
+                                <a href="https://www.youtube.com/watch?v=_0CuhosiUlo" class="popup-youtube video"><i class="fa fa-play"></i></a>
                             </div>
                         </div>
                     </div>

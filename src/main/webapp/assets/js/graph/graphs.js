@@ -407,32 +407,28 @@ function disjointChart(nodeFile = {}, linkFile = {}) {
 }
 
 function barChart(data2, parentWidth = 1200, parentHeight = 400) {
-    // Specify the chart’s dimensions.
     const width = parentWidth;
     const height = Math.min(parentHeight, width / 2);
     const marginTop = 20;
-    const marginRight = 20;  // Margin for better padding
-    const marginBottom = 40; // Margin for x-axis label
-    const marginLeft = 50;   // Margin for y-axis label
+    const marginRight = 20;
+    const marginBottom = 40;
+    const marginLeft = 50;
     const barColor = "#ff8c00";
-    const hoverColor = "#d47400"; // Color for hover effect
+    const hoverColor = "#d47400";
 
-    // Declare the x (horizontal position) scale using d3.scaleBand() for padding and centering.
     const x = d3.scaleBand()
         .domain(d3.range(data2.length))
         .range([marginLeft, width - marginRight])
-        .padding(0.1); // Adjust padding between bars
+        .padding(0.1);
 
     const xAxis = d3.axisBottom(x)
         .tickFormat(i => data2[i].owner)
         .tickSizeOuter(0);
 
-    // Declare the y (vertical position) scale.
     const y = d3.scaleLinear()
         .domain([0, d3.max(data2, d => d.first_combine)]).nice()
         .range([height - marginBottom, marginTop]);
 
-    // Create the SVG container.
     const svg = d3.create("svg")
         .attr("viewBox", `0 0 ${width} ${height}`)
         .attr("style", "max-width: 100%; height: auto; font: 10px rubik; overflow: visible;")
@@ -444,11 +440,11 @@ function barChart(data2, parentWidth = 1200, parentHeight = 400) {
     const bar = barsGroup.selectAll("rect")
         .data(data2)
         .join("rect")
-        .attr("fill", barColor) // Default color of the bars.
+        .attr("fill", barColor)
         .attr("x", (d, i) => x(i))
         .attr("y", d => y(d.first_combine))
         .attr("height", d => y(0) - y(d.first_combine))
-        .attr("width", x.bandwidth()) // Width based on scaleBand
+        .attr("width", x.bandwidth())
         .on("mouseover", function(event, d) {
             d3.select('#tooltip2').html(nodeDetail(d))
                 .style("visibility", "visible")
@@ -468,7 +464,6 @@ function barChart(data2, parentWidth = 1200, parentHeight = 400) {
             d3.select(this).attr("fill", barColor);
         });
 
-    // Create the axes.
     const gx = svg.append("g")
         .attr("class", "x-axis")
         .attr("transform", `translate(0,${height - marginBottom})`)
@@ -512,12 +507,10 @@ function barChart(data2, parentWidth = 1200, parentHeight = 400) {
 
     svg.call(d3.zoom()
         .scaleExtent([1, 8])
-        .translateExtent([[-100, -100], [width + 100, height + 100]]) // Allows zooming out of SVG bounds
+        .translateExtent([[-100, -100], [width + 100, height + 100]])
         .extent([[0, 0], [width, height]])
         .on("zoom", zoomed));
 
-    // Return the chart, with an update function that takes as input a domain
-    // comparator and transitions the x axis and bar positions accordingly.
     return Object.assign(svg.node(), {
         update(order) {
             data2.sort(order);
