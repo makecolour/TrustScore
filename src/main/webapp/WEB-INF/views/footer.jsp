@@ -60,10 +60,10 @@
                         </div>
                         <div class="col-6 col-lg-6 col-md-6 col-sm-6">
                             <div class="widget footer_widget">
-                                <h5 class="footer-title">Research</h5>
+                                <h5 class="footer-title">Research Results</h5>
                                 <ul>
                                     <li><a href="/documents/list">Research Documents</a></li>
-                                    <li><a href="/">Resfes Presentation</a></li>
+                                    <li><a href="/">ResFes Presentation</a></li>
                                     <li><a href="https://github.com/makecolour/TrustScoreExtension" target="_blank">Trust Management Extension</a></li>
                                 </ul>
                             </div>
@@ -72,7 +72,7 @@
                 </div>
                 <div class="col-12 col-lg-3 col-md-5 col-sm-12 footer-col-4">
                     <div class="widget widget_gallery gallery-grid-4">
-                        <h5 class="footer-title">Our Gallery</h5>
+                        <h5 class="footer-title">Services Gallery</h5>
                         <ul class="magnific-image">
                             <li><a href="/assets/images/services/food.png" class="magnific-anchor"><img src="/assets/images/services/food.png" alt=""></a></li>
                             <li><a href="/assets/images/services/transport.png" class="magnific-anchor"><img src="/assets/images/services/transport.png" alt=""></a></li>

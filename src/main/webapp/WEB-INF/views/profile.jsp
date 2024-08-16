@@ -163,7 +163,7 @@
                         <div class="col-lg-8 col-md-7 col-sm-12">
                             <div class="courses-post">
                                 <div class="ttr-post-media media-effect">
-                                    <a href="#">
+                                    <a href="#" id="copy-url">
                                         <c:choose>
                                             <c:when test="${object.hasNonNull('facebook_profile_pic')}">
                                                 <img src="${object.get('facebook_profile_pic').asText()}" alt="">
@@ -171,7 +171,8 @@
                                             <c:otherwise>
                                                 <img src="/assets/images/gallery/FUHL.jpg" alt="">
                                             </c:otherwise>
-                                        </c:choose></a>
+                                        </c:choose>
+                                    </a>
                                 </div>
                                 <div class="ttr-post-info">
                                     <div class="ttr-post-title ">
@@ -357,6 +358,15 @@
             adjustHeight(container);
             adjustHeight(container2);
         }
+        document.getElementById('copy-url').addEventListener('click', function(event) {
+            event.preventDefault();
+            const url = window.location.href;
+            navigator.clipboard.writeText(url).then(function() {
+                console.log('URL copied to clipboard');
+            }).catch(function(error) {
+                console.error('Error copying URL: ', error);
+            });
+        });
     </script>
     <script src="/assets/vendors/bootstrap/js/popper.min.js"></script>
     <script src="/assets/vendors/bootstrap/js/bootstrap.min.js"></script>

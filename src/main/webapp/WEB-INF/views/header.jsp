@@ -35,7 +35,7 @@
                 <!-- Search Box ==== -->
                 <div class="nav-search-bar">
                     <form action="/list" accept-charset="UTF-8">
-                        <input value="" type="text" class="form-control" name="q" placeholder="Find a service provider">
+                        <input value="" type="text" class="form-control" name="q" placeholder="Looking for a service provider?">
                         <span><i class="ti-search"></i></span>
                     </form>
                     <span id="search-remove"><i class="ti-close"></i></span>
@@ -55,7 +55,7 @@
                                 <li class="add-menu-left">
                                     <h5 class="menu-adv-title">Research Results</h5>
                                     <ul>
-                                        <li><a href="/documents/list">Research Document</a></li>
+                                        <li><a href="/documents/list">Research Documents</a></li>
                                         <li><a href="/presentation">ResFes Presentation</a></li>
                                         <li><a href="https://github.com/makecolour/TrustScoreExtension" target="_blank">Trust Management Extension</a></li>
                                     </ul>

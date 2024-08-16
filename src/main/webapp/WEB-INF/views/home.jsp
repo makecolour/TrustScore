@@ -573,7 +573,7 @@
               <h5>Find Who You Trust</h5>
               <form class="cours-search" action="/list">
                 <div class="input-group">
-                  <input type="text" class="form-control" placeholder="Find a service provider?" name="q">
+                  <input type="text" class="form-control" placeholder="Looking for a service provider?" name="q">
                   <div class="input-group-append">
                     <button class="btn" type="submit">Search</button>
                   </div>
