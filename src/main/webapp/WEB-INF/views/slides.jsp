@@ -123,7 +123,7 @@
                                 <div class="profile-social">
                                     <ul class="list-inline m-a0">
                                         <li><a href="https://www.facebook.com/sharer/sharer.php?u=${pageContext.request.scheme}://${pageContext.request.serverName}:${pageContext.request.serverPort}${pageContext.request.contextPath}/presentation" target="_blank"><i class="fa fa-facebook"></i></a></li>
-                                        <li><a href="https://twitter.com/intent/tweet?url=${pageContext.request.scheme}://${pageContext.request.serverName}:${pageContext.request.serverPort}${pageContext.request.contextPath}/presentation&text=Trust%20Management%20Presentation%20at%FPTEdu%20ResFes2024!" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                                        <li><a href="https://twitter.com/intent/tweet?url=${pageContext.request.scheme}://${pageContext.request.serverName}:${pageContext.request.serverPort}${pageContext.request.contextPath}/presentation&text=Trust%20Management%20Presentation%20at%20FPTEdu%20ResFes2024!" target="_blank"><i class="fa fa-twitter"></i></a></li>
                                         <li><a href="https://www.linkedin.com/shareArticle?mini=true&url=${pageContext.request.scheme}://${pageContext.request.serverName}:${pageContext.request.serverPort}${pageContext.request.contextPath}/presentation&title=Trust%20Management%20Presentation%20at%20FPTEdu%20ResFes2024!" target="_blank"><i class="fa fa-linkedin"></i></a></li>
                                     </ul>
                                 </div>
