@@ -50,11 +50,12 @@
                     <div class="row">
                         <div class="col-6 col-lg-6 col-md-6 col-sm-6">
                             <div class="widget footer_widget">
-                                <h5 class="footer-title">Project</h5>
+                                <h5 class="footer-title">The Project</h5>
                                 <ul>
                                     <li><a href="/">Home</a></li>
                                     <li><a href="/list">Service Providers</a></li>
                                     <li><a href="/about">About Us</a></li>
+                                    <li><a href="/contact">Contact Us</a></li>
                                 </ul>
                             </div>
                         </div>
