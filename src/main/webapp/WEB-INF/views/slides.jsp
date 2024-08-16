@@ -10,13 +10,12 @@
 <html lang="en">
 
 <head>
-
     <!-- META ============================================= -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="keywords" content="Trust Management, research, document, list, Research Festival, ResFes, FPTEdu, LLM, data, TFT score, large language model, trust worthiness, social networks, knowledge graph, FPT University" />
     <meta name="author" content="Trust Management" />
-    <meta name=”robots” content=”all” />
+    <meta name="robots" content="all" />
 
     <!-- DESCRIPTION -->
     <meta name="description" content="Presentation of Trust Management team at FPT Education Research Festival 2024" />
@@ -60,30 +59,30 @@
     <!-- STYLESHEETS ============================================= -->
     <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
     <link class="skin" rel="stylesheet" type="text/css" href="/assets/css/color/color-1.css">
-<style>
-    .iframe-container {
-        position: relative;
-        width: 100%;
-        padding-bottom: 56.25%; /* 16:9 aspect ratio */
-        height: 0;
-        overflow: hidden;
-    }
+    <style>
+        .iframe-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+        }
 
-    .iframe-container iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        border: none;
-    }
-</style>
+        .iframe-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
 </head>
 <body id="bg">
 <div class="page-wraper">
     <div id="loading-icon-bx"></div>
     <!-- Header Top ==== -->
-   <jsp:include page="header.jsp"></jsp:include>
+    <jsp:include page="header.jsp"></jsp:include>
     <!-- header END ==== -->
     <!-- Content -->
     <div class="page-content bg-white">
@@ -149,18 +148,21 @@
                                                 <ul class="filters" data-toggle="buttons">
                                                     <li data-filter="manual" class="btn active">
                                                         <input type="radio" name="presentationMode" value="manual" checked>
-                                                        <a href="#"><span>Manual</span></a>
+                                                        <a href="#"><span>Static</span></a>
                                                     </li>
                                                     <li data-filter="auto" class="btn">
                                                         <input type="radio" name="presentationMode" value="auto">
-                                                        <a href="#"><span>Auto</span></a>
+                                                        <a href="#"><span>Slideshow</span></a>
+                                                    </li>
+                                                    <li data-filter="change">
+                                                        <a href="#"><span>Backup Link</span></a>
                                                     </li>
                                                 </ul>
                                             </div>
                                         </div>
                                         <div class="courses-filter">
                                             <div class="iframe-container">
-                                                <iframe id="slides"  frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+                                                <iframe id="slides" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
                                             </div>
                                         </div>
                                     </div>
@@ -208,7 +210,6 @@
 <script>
     document.addEventListener("DOMContentLoaded", function () {
         updateIframeSrc(false);
-
     });
 
     function updateIframeSrc(auto) {
@@ -219,7 +220,7 @@
             console.log("Auto mode");
         }
         else {
-            iframe.src = baseSrc + "false&delayms=0";
+            iframe.src = baseSrc + "false&delayms=5000";
             console.log("Manual mode");
         }
     }
@@ -231,12 +232,25 @@
     document.querySelector('li[data-filter="auto"]').addEventListener('click', function() {
         updateIframeSrc(true);
     });
+
+    document.querySelector('li[data-filter="change"]').addEventListener('click', function() {
+        window.open("https://fptuniversity-my.sharepoint.com/:p:/g/personal/quyennthe180534_fpt_edu_vn/EVPKOUwij85EnLkvAzMQG_sBOSIw8Vo6orFSB0oJuP-QPA?e=tCroDF&nav=eyJzSWQiOjI4NywiY0lkIjowfQ")
+    });
+
     document.getElementById('demo-video-tab').addEventListener('click', function() {
         const iframe = document.getElementById("demo-vid");
         iframe.src = "https://www.youtube.com/embed/xPtBy2NX4Cg?si=tk34pWpjQroyik4A&autoplay=1";
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const element = document.querySelector('.some-element');
+        if (element) {
+            element.classList.add('loaded');
+        } else {
+            console.error('Element not found');
+        }
     });
 </script>
 </body>
 
 </html>
-
