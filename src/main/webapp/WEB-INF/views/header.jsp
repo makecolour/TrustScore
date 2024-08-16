@@ -25,10 +25,9 @@
                 <div class="secondary-menu">
                     <div class="secondary-inner">
                         <ul>
-<%--                            <li><a href="javascript:;" class="btn-link"><i class="fa fa-facebook"></i></a></li>--%>
-                            <li><a href="mailto:${email}?subject=Trust Management" class="btn-link"><i class="fa fa-google-plus"></i></a></li>
-<%--                            <li><a href="javascript:;" class="btn-link"><i class="fa fa-linkedin"></i></a></li>--%>
-                            <!-- Search Button ==== -->
+                            <li><a href="https://www.facebook.com/sharer/sharer.php?u=${pageContext.request.scheme}://${pageContext.request.serverName}:${pageContext.request.serverPort}${pageContext.request.contextPath}" class="btn-link" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="https://twitter.com/intent/tweet?url=${pageContext.request.scheme}://${pageContext.request.serverName}:${pageContext.request.serverPort}${pageContext.request.contextPath}&text=Trust%20Management%20project" class="btn-link" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="https://www.linkedin.com/shareArticle?mini=true&url=${pageContext.request.scheme}://${pageContext.request.serverName}:${pageContext.request.serverPort}${pageContext.request.contextPath}&title=Trust%20Management%20project" class="btn-link" target="_blank"><i class="fa fa-linkedin"></i></a></li>
                             <li class="search-btn"><button id="quik-search-btn" type="button" class="btn-link"><i class="fa fa-search"></i></button></li>
                         </ul>
                     </div>
@@ -56,9 +55,9 @@
                                 <li class="add-menu-left">
                                     <h5 class="menu-adv-title">Research Results</h5>
                                     <ul>
-                                        <li><a href="/documents/list">Research Documents</a></li>
-                                        <li><a href="/">Resfes Presentation</a></li>
-                                        <li><a href="https://github.com/makecolour/TrustScoreExtension">Trust Management Extension</a></li>
+                                        <li><a href="/documents/list">Research Document</a></li>
+                                        <li><a href="/presentation">ResFes Presentation</a></li>
+                                        <li><a href="https://github.com/makecolour/TrustScoreExtension" target="_blank">Trust Management Extension</a></li>
                                     </ul>
                                 </li>
                                 <li class="add-menu-right">

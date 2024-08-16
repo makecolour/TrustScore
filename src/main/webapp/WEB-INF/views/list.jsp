@@ -15,11 +15,10 @@
     <meta name=”robots” content=”all” />
 
     <!-- DESCRIPTION -->
-    <meta name="description" content="Trust Management: Service Providers"/>
+    <meta name="description" content="List of analyzed service providers by Trust Management project"/>
 
     <!-- OG -->
     <meta property="og:title" content="Trust Management: Service Providers"/>
-    <meta property="og:description" content="Trust Management: Service Providers"/>
     <meta property="og:image" content="/assets/images/favicon.png" />
     <meta name="format-detection" content="telephone=no">
     <meta property="og:url" content="${pageContext.request.contextPath}/list">

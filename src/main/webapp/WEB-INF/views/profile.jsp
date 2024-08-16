@@ -22,18 +22,17 @@
     <meta name=”robots” content=”all” />
 
     <!-- DESCRIPTION -->
-    <meta name="description" content="Trust Management: ${object.get('owner').asText()} Profile"/>
+    <meta name="description" content="Detail statistics of service provider ${object.get('owner').asText()}"/>
 
     <!-- OG -->
     <meta property="og:title" content="Trust Management: ${object.get('owner').asText()} Profile"/>
-    <meta property="og:description" content="Trust Management: ${object.get('owner').asText()} Profile"/>
     <meta property="og:image" content="/assets/images/favicon.png" />
     <meta name="format-detection" content="telephone=no">
     <meta property="og:url" content="${pageContext.request.contextPath}/profile?owner=${object.get('owner').asText()}">
     <meta name="twitter:card" content="/assets/images/logo-white-2.png">
 
     <!--  Non-Essential, But Recommended -->
-    <meta property="og:description" content="Profile of service provider ${object.get('owner').asText()}">
+    <meta property="og:description" content="Detail statistics of service provider ${object.get('owner').asText()}">
     <meta property="og:site_name" content="Trust Management: ${object.get('owner').asText()} Profile">
     <meta name="twitter:image:alt" content="Trust Management">
 
@@ -147,6 +146,7 @@
             <div class="container">
                 <ul class="list-inline">
                     <li><a href="${pageContext.request.contextPath}/">Home</a></li>
+                    <li><a href="${pageContext.request.contextPath}/list">Service Providers</a></li>
                     <li> ${object.hasNonNull('facebook_name') ? object.get('facebook_name').asText() : fn:replace(object.get('owner').asText(), '\"', '')}'s
                         Details
                     </li>

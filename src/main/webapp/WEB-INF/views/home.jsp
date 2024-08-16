@@ -22,11 +22,10 @@
   <meta name=”robots” content=”all” />
 
   <!-- DESCRIPTION -->
-  <meta name="description" content="Trust Management: Home" />
+  <meta name="description" content="Landing page of Trust Management project" />
 
   <!-- OG -->
   <meta property="og:title" content="Trust Management: Home" />
-  <meta property="og:description" content="Trust Management: Home" />
   <meta property="og:image" content="/assets/images/favicon.png" />
   <meta name="format-detection" content="telephone=no">
   <meta property="og:url" content="${pageContext.request.contextPath}/">
@@ -613,7 +612,7 @@
 <script src="/assets/vendors/masonry/filter.js"></script>
 <script src="/assets/vendors/owl-carousel/owl.carousel.js"></script>
 <script src="/assets/js/functions.js"></script>
-<%--<script src="/assets/js/contact.js"></script>--%>
+  <%--<script src="/assets/js/contact.js"></script>--%>
 <script src='/assets/vendors/switcher/switcher.js'></script>
 <!-- Revolution JavaScripts Files -->
 <script src="/assets/vendors/revolution/js/jquery.themepunch.tools.min.js"></script>

@@ -19,11 +19,10 @@
     <meta name=”robots” content=”all” />
 
     <!-- DESCRIPTION -->
-    <meta name="description" content="Trust Management: About Us" />
+    <meta name="description" content="About the Trust Management team and project" />
 
     <!-- OG -->
     <meta property="og:title" content="Trust Management: About Us" />
-    <meta property="og:description" content="About Us" />
     <meta property="og:image" content="/assets/images/favicon.png" />
     <meta name="format-detection" content="telephone=no">
     <meta property="og:url" content="${pageContext.request.contextPath}/about">
@@ -162,8 +161,7 @@
                     </div>
                 </div>
             </div>
-            <!-- Our Story END ==== -->
-            <!-- Our Status ==== -->
+
             <div class="section-area content-inner section-sp1" id="project">
                 <div class="container">
                     <div class="section-content">

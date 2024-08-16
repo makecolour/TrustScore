@@ -17,10 +17,10 @@
 
 	<!-- OG -->
 	<meta property="og:title" content="Trust Management: Contact" />
-	<meta property="og:description" content="Trust Management: Contact" />
+	<meta property="og:description" content="Contact to Trust Management team" />
 	<meta property="og:image" content="/assets/images/favicon.png" />
 	<meta name="format-detection" content="telephone=no">
-	<meta property="og:url" content="${pageContext.request.contextPath}/">
+	<meta property="og:url" content="${pageContext.request.contextPath}/contact">
 	<meta name="twitter:card" content="/assets/images/logo-white-2.png">
 
 	<!--  Non-Essential, But Recommended -->
@@ -55,7 +55,12 @@
 	<!-- STYLESHEETS ============================================= -->
 	<link rel="stylesheet" type="text/css" href="/assets/css/style.css">
 	<link class="skin" rel="stylesheet" type="text/css" href="/assets/css/color/color-1.css">
-	
+
+	<style>
+		#location-link, #email {
+			cursor: pointer;
+		}
+	</style>
 </head>
 <body id="bg">
 <div class="page-wraper">
@@ -108,8 +113,8 @@
 							<h5 class="m-t0 m-b20">Share This Project</h5>
 							<ul class="list-inline contact-social-bx">
 								<li><a href="https://www.facebook.com/sharer/sharer.php?u=${pageContext.request.scheme}://${pageContext.request.serverName}:${pageContext.request.serverPort}${pageContext.request.contextPath}" class="btn outline radius-xl" target="_blank"><i class="fa fa-facebook"></i></a></li>
-								<li><a href="https://twitter.com/intent/tweet?url=${pageContext.request.scheme}://${pageContext.request.serverName}:${pageContext.request.serverPort}${pageContext.request.contextPath}&text=Check%20this%20out!" class="btn outline radius-xl" target="_blank"><i class="fa fa-twitter"></i></a></li>
-								<li><a href="https://www.linkedin.com/shareArticle?mini=true&url=${pageContext.request.scheme}://${pageContext.request.serverName}:${pageContext.request.serverPort}${pageContext.request.contextPath}&title=Check%20this%20out!" class="btn outline radius-xl" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+								<li><a href="https://twitter.com/intent/tweet?url=${pageContext.request.scheme}://${pageContext.request.serverName}:${pageContext.request.serverPort}${pageContext.request.contextPath}&text=Trust%20Management%20project" class="btn outline radius-xl" target="_blank"><i class="fa fa-twitter"></i></a></li>
+								<li><a href="https://www.linkedin.com/shareArticle?mini=true&url=${pageContext.request.scheme}://${pageContext.request.serverName}:${pageContext.request.serverPort}${pageContext.request.contextPath}&title=Trust%20Management%20project" class="btn outline radius-xl" target="_blank"><i class="fa fa-linkedin"></i></a></li>
 							</ul>
 						</div>
 

@@ -19,11 +19,10 @@
     <meta name=”robots” content=”all” />
 
     <!-- DESCRIPTION -->
-    <meta name="description" content="Trust Management: ${pdfInfo.fileName.toString().replace(".pdf", "")}" />
+    <meta name="description" content="Research document ${pdfInfo.fileName.toString().replace(".pdf", "")} by Trust Management team" />
 
     <!-- OG -->
     <meta property="og:title" content="Trust Management: ${pdfInfo.fileName.toString().replace(".pdf", "")}" />
-    <meta property="og:description" content="Trust Management: ${pdfInfo.fileName.toString().replace(".pdf", "")}" />
     <meta property="og:image" content="/assets/images/favicon.png" />
     <meta name="format-detection" content="telephone=no">
     <meta property="og:url" content="${pageContext.request.contextPath}/documents/view?fileName=${pdfInfo.fileName}">
@@ -125,6 +124,7 @@
             <div class="container">
                 <ul class="list-inline">
                     <li><a href="/">Home</a></li>
+                    <li><a href="/documents/list">Research Documents</a></li>
                     <li>Research Document: ${pdfInfo.fileName.toString().replace(".pdf", "")}</li>
                 </ul>
             </div>
@@ -162,8 +162,8 @@
                                     <h6>SHARE </h6>
                                     <ul class="list-inline contact-social-bx">
                                         <li><a href="https://www.facebook.com/sharer/sharer.php?u=${pageContext.request.scheme}://${pageContext.request.serverName}:${pageContext.request.serverPort}${pageContext.request.contextPath}/documents/view?fileName=${pdfInfo.fileName}" class="btn outline radius-xl" target="_blank"><i class="fa fa-facebook"></i></a></li>
-                                        <li><a href="https://twitter.com/intent/tweet?url=${pageContext.request.scheme}://${pageContext.request.serverName}:${pageContext.request.serverPort}${pageContext.request.contextPath}/documents/view?fileName=${pdfInfo.fileName}&text=Check%20this%20out!" class="btn outline radius-xl" target="_blank"><i class="fa fa-twitter"></i></a></li>
-                                        <li><a href="https://www.linkedin.com/shareArticle?mini=true&url=${pageContext.request.scheme}://${pageContext.request.serverName}:${pageContext.request.serverPort}${pageContext.request.contextPath}/documents/view?fileName=${pdfInfo.fileName}&title=Check%20this%20out!" class="btn outline radius-xl" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                                        <li><a href="https://twitter.com/intent/tweet?url=${pageContext.request.scheme}://${pageContext.request.serverName}:${pageContext.request.serverPort}${pageContext.request.contextPath}/documents/view?fileName=${pdfInfo.fileName}&text=Research%20document%20${pdfInfo.fileName.toString().replace(".pdf", "")}%20by%20Trust%20Management%20team" class="btn outline radius-xl" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                                        <li><a href="https://www.linkedin.com/shareArticle?mini=true&url=${pageContext.request.scheme}://${pageContext.request.serverName}:${pageContext.request.serverPort}${pageContext.request.contextPath}/documents/view?fileName=${pdfInfo.fileName}&title=Research%20document%20${pdfInfo.fileName.toString().replace(".pdf", "")}%20by%20Trust%20Management%20team" class="btn outline radius-xl" target="_blank"><i class="fa fa-linkedin"></i></a></li>
                                     </ul>
                                     <div class="ttr-divider bg-gray"><i class="icon-dot c-square"></i></div>
                                 </div>

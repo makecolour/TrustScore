@@ -18,11 +18,10 @@
   <meta name=”robots” content=”all” />
 
   <!-- DESCRIPTION -->
-  <meta name="description" content="Trust Management: Error" />
+  <meta name="description" content="Error" />
 
   <!-- OG -->
   <meta property="og:title" content="Trust Management: Error" />
-  <meta property="og:description" content="Trust Management: Error" />
   <meta property="og:image" content="/assets/images/favicon.png" />
   <meta name="format-detection" content="telephone=no">
   <meta property="og:url" content="${pageContext.request.contextPath}/error">

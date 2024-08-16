@@ -133,6 +133,13 @@ public class UtilsController {
         modelAndView.addObject("email", application.getEmail());
         return modelAndView;
     }
+    @GetMapping("/presentation")
+    public ModelAndView presentation() {
+        ModelAndView modelAndView = new ModelAndView("slides");
+        modelAndView.addObject("FUHL", application.getFuhl());
+        modelAndView.addObject("email", application.getEmail());
+        return modelAndView;
+    }
 
     @GetMapping("/test")
     public ModelAndView test() {
